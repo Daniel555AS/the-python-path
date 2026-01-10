@@ -1,0 +1,463 @@
+{
+  "title": "Mathematical and Text Operations",
+  "description": "",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "In Python, we can perform operations with both numbers and text (strings). This learning unit will teach you how to use the most important operators for mathematical calculations and basic text manipulation."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Basic Mathematical Operations"
+    },
+    {
+      "type": "paragraph",
+      "text": "Python supports the most common numeric operators:"
+    },
+    {
+      "type": "table",
+      "headers": ["Operator", "Meaning", "Example", "Result"],
+      "rows": [
+        [
+          "<code class=\"language-python\">+</code>",
+          "Addition",
+          "<code class=\"language-python\">3 + 5</code>",
+          "<code class=\"language-python\">8</code>"
+        ],
+        [
+          "<code class=\"language-python\">-</code>",
+          "Subtraction",
+          "<code class=\"language-python\">10 - 4</code>",
+          "<code class=\"language-python\">6</code>"
+        ],
+        [
+          "<code class=\"language-python\">*</code>",
+          "Multiplication",
+          "<code class=\"language-python\">6 * 2</code>",
+          "<code class=\"language-python\">12</code>"
+        ],
+        [
+          "<code class=\"language-python\">/</code>",
+          "Division",
+          "<code class=\"language-python\">9 / 2</code>",
+          "<code class=\"language-python\">4.5</code>"
+        ],
+        [
+          "<code class=\"language-python\">//</code>",
+          "Integer division",
+          "<code class=\"language-python\">9 // 2</code>",
+          "<code class=\"language-python\">4</code>"
+        ],
+        [
+          "<code class=\"language-python\">%</code>",
+          "Modulo (remainder)",
+          "<code class=\"language-python\">9 % 2</code>",
+          "<code class=\"language-python\">1</code>"
+        ],
+        [
+          "<code class=\"language-python\">**</code>",
+          "Exponent",
+          "<code class=\"language-python\">2 ** 3</code>",
+          "<code class=\"language-python\">8</code>"
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Code examples:"
+    },
+    {
+      "type": "code",
+      "text": "a = 10\nb = 3\n\nprint(a + b)   # 13\nprint(a - b)    # 7\nprint(a * b)    # 30\nprint(a / b)    # 3.333...\nprint(a // b)    # 3 -> integer division\nprint(a % b)    # 1 -> remainder\nprint(a ** b)    # 1000 -> 10^3"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "13\n7\n30\n3.3333333333333335\n3\n1\n1000"
+    },
+    {
+      "type": "test-button",
+      "text": "Try >>",
+      "code": "a = 10\nb = 3\n\nprint(a + b)   # 13\nprint(a - b)    # 7\nprint(a * b)    # 30\nprint(a / b)    # 3.333...\nprint(a // b)    # 3 -> integer division\nprint(a % b)    # 1 -> remainder\nprint(a ** b)    # 1000 -> 10^3"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Note:</strong><br>The division <code class=\"language-python\">/</code> always returns a <code class=\"language-python\">float</code> (decimal number). If you want a division without decimals, use <code class=\"language-python\">//</code>."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Text Operations (Strings)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Python allows string manipulation using special operators such as:"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Concatenation (joining text) → operator <code class=\"language-python\">+</code>"
+    },
+    {
+      "type": "code",
+      "text": "subject1 = \"Programming\"\nsubject2 = \"Mathematics\"\n\ntext = subject1 + \" \" + subject2\nprint(text)    # Programming Mathematics"
+    },
+    {
+      "type": "test-button",
+      "text": "Try >>",
+      "code": "subject1 = \"Programming\"\nsubject2 = \"Mathematics\"\n\ntext = subject1 + \" \" + subject2\nprint(text)    # Programming Mathematics"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Text repetition → operator <code class=\"language-python\">*</code>"
+    },
+    {
+      "type": "code",
+      "text": "print(\"Hello \" * 3)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output"
+    },
+    {
+      "type": "code",
+      "text": "Hello Hello Hello "
+    },
+    {
+      "type": "test-button",
+      "text": "Try >>",
+      "code": "print(\"Hello \" * 3)"
+    },
+    {
+      "type": "paragraph",
+      "text": "This is useful for creating separators or patterns."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Combining Text and Numbers"
+    },
+    {
+      "type": "paragraph",
+      "text": "You cannot directly add text to numbers."
+    },
+    {
+      "type": "paragraph",
+      "text": "This will give an error:"
+    },
+    {
+      "type": "code",
+      "text": "print(\"Age: \" + 25)    # ERROR"
+    },
+    {
+      "type": "test-button",
+      "text": "Try Error >>",
+      "code": "print(\"Age: \" + 25)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Solution: convert the number to a string:"
+    },
+    {
+      "type": "code",
+      "text": "print(\"Age: \" + str(25))"
+    },
+    {
+      "type": "test-button",
+      "text": "Try >>",
+      "code": "print(\"Age: \" + str(25))"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Important Rules"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Numeric operations only work with numbers",
+        "Text operations only work with text",
+        "If you mix numbers and text → you must convert one to the type of the other"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Example"
+    },
+    {
+      "type": "code",
+      "text": "number = 5\ntext = \"5\"\n\nprint(number + int(text))   # 10\nprint(str(number) + text)   # 55"
+    },
+    {
+      "type": "test-button",
+      "text": "Try >>",
+      "code": "number = 5\ntext = \"5\"\n\nprint(number + int(text))   # 10\nprint(str(number) + text)   # 55"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Combined Examples"
+    },
+    {
+      "type": "paragraph",
+      "text": "Create a message using operations:"
+    },
+    {
+      "type": "code",
+      "text": "price = 120\ntax = price * 0.19\ntotal = price + tax\n\nmessage = \"The total is: \" + str(total)\nprint(message)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "The total is: 142.8"
+    },
+    {
+      "type": "test-button",
+      "text": "Try >>",
+      "code": "price = 120\ntax = price * 0.19\ntotal = price + tax\n\nmessage = \"The total is: \" + str(total)\nprint(message)"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Best Practices"
+    },
+    {
+      "type": "paragraph",
+      "text": "Use spaces when concatenating text (if necessary):"
+    },
+    {
+      "type": "code",
+      "text": "\"Hello\" + \"world\"    # Helloworld\n\"Hello \" + \"world\"    # Hello world"
+    },
+    {
+      "type": "paragraph",
+      "text": "Convert types when mixing numbers and strings:"
+    },
+    {
+      "type": "code",
+      "text": "str(), int(), float()"
+    },
+    {
+      "type": "paragraph",
+      "text": "Use repetition for separators:"
+    },
+    {
+      "type": "code",
+      "text": "print(\"-\" * 40)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "----------------------------------------"
+    },
+    {
+      "type": "test-button",
+      "text": "Try >>",
+      "code": "print(\"-\" * 40)"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Practice Exercises"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Exercise 1: Basic Calculator"
+    },
+    {
+      "type": "paragraph",
+      "text": "Create three variables: <code class=\"language-python\">a</code>, <code class=\"language-python\">b</code>, <code class=\"language-python\">c</code>."
+    },
+    {
+      "type": "paragraph",
+      "text": "Assign numeric values and display:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "The sum of the three",
+        "The average",
+        "The result of <code class=\"language-python\">a * c</code>"
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practice >>",
+      "code": "# Create three variables: a, b, c.\n# Assign numeric values and display:\n# - The sum of the three\n# - The average\n# - The result of a * c"
+    },
+    {
+      "type": "collapsible",
+      "title": "View possible solution",
+      "content": [
+        {
+          "type": "code",
+          "text": "a = 10\nb = 20\nc = 5\n\nsum_result = a + b + c\naverage = sum_result / 3\nproduct = a * c\n\nprint(\"Sum:\", sum_result)\nprint(\"Average:\", average)\nprint(\"Product:\", product)"
+        },
+        {
+          "type": "test-button",
+          "text": "Try solution >>",
+          "code": "a = 10\nb = 20\nc = 5\n\nsum_result = a + b + c\naverage = sum_result / 3\nproduct = a * c\n\nprint(\"Sum:\", sum_result)\nprint(\"Average:\", average)\nprint(\"Product:\", product)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Exercise 2: Text Concatenation"
+    },
+    {
+      "type": "paragraph",
+      "text": "Join the following parts to form a single sentence (Display it on screen):"
+    },
+    {
+      "type": "code",
+      "text": "part1 = \"Python \"\npart2 = \"is \"\npart3 = \"awesome\""
+    },
+    {
+      "type": "test-button",
+      "text": "Practice >>",
+      "code": "# Join the following parts to form a single sentence (Display it on screen):\n# part1 = \"Python \"\n# part2 = \"is \"\n# part3 = \"awesome\""
+    },
+    {
+      "type": "collapsible",
+      "title": "View possible solution",
+      "content": [
+        {
+          "type": "code",
+          "text": "part1 = \"Python \"\npart2 = \"is \"\npart3 = \"awesome\"\n\nsentence = part1 + part2 + part3\nprint(sentence)"
+        },
+        {
+          "type": "test-button",
+          "text": "Try solution >>",
+          "code": "part1 = \"Python \"\npart2 = \"is \"\npart3 = \"awesome\"\n\nsentence = part1 + part2 + part3\nprint(sentence)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Exercise 3: String Repetition"
+    },
+    {
+      "type": "paragraph",
+      "text": "Create a variable that contains a symbol (e.g., \"*\") and repeat it 20 times (Display it on screen)."
+    },
+    {
+      "type": "test-button",
+      "text": "Practice >>",
+      "code": "# Create a variable that contains a symbol (e.g., \"*\")\n# and repeat it 20 times (Display it on screen)"
+    },
+    {
+      "type": "collapsible",
+      "title": "View possible solution",
+      "content": [
+        {
+          "type": "code",
+          "text": "symbol = \"*\"\nprint(symbol * 20)"
+        },
+        {
+          "type": "test-button",
+          "text": "Try solution >>",
+          "code": "symbol = \"*\"\nprint(symbol * 20)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Exercise 4: Convert Before Adding"
+    },
+    {
+      "type": "paragraph",
+      "text": "You have a number stored as text:"
+    },
+    {
+      "type": "code",
+      "text": "number = \"40\""
+    },
+    {
+      "type": "paragraph",
+      "text": "Convert the number to an integer and add 7. Finally, display the result on screen."
+    },
+    {
+      "type": "test-button",
+      "text": "Practice >>",
+      "code": "# You have a number stored as text:\n# number = \"40\"\n# Convert the number to an integer and add 7.\n# Finally, display the result on screen."
+    },
+    {
+      "type": "collapsible",
+      "title": "View possible solution",
+      "content": [
+        {
+          "type": "code",
+          "text": "number = \"40\"\nnumber = int(number)\nprint(number + 7)"
+        },
+        {
+          "type": "test-button",
+          "text": "Try solution >>",
+          "code": "number = \"40\"\nnumber = int(number)\nprint(number + 7)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Exercise 5: Final Combined Message"
+    },
+    {
+      "type": "paragraph",
+      "text": "Using the following variables:"
+    },
+    {
+      "type": "code",
+      "text": "name = \"Linus\"\nage = 55"
+    },
+    {
+      "type": "paragraph",
+      "text": "Create a message like this:"
+    },
+    {
+      "type": "code",
+      "text": "Linus is 55 years old"
+    },
+    {
+      "type": "paragraph",
+      "text": "Finally, display the message on screen."
+    },
+    {
+      "type": "test-button",
+      "text": "Practice >>",
+      "code": "# Using the following variables:\n# name = \"Linus\"\n# age = 55\n# Create a message like: Linus is 55 years old\n# Finally, display the message on screen"
+    },
+    {
+      "type": "collapsible",
+      "title": "View possible solution",
+      "content": [
+        {
+          "type": "code",
+          "text": "name = \"Linus\"\nage = 55\n\nmessage = name + \" is \" + str(age) + \" years old\"\nprint(message)"
+        },
+        {
+          "type": "test-button",
+          "text": "Try solution >>",
+          "code": "name = \"Linus\"\nage = 55\n\nmessage = name + \" is \" + str(age) + \" years old\"\nprint(message)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Topic Conclusion"
+    },
+    {
+      "type": "paragraph",
+      "text": "In this unit you learned:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "That Python can perform basic mathematical operations with <code class=\"language-python\">+</code>, <code class=\"language-python\">-</code>, <code class=\"language-python\">*</code>, <code class=\"language-python\">/</code>, <code class=\"language-python\">%</code>, <code class=\"language-python\">//</code>, and <code class=\"language-python\">**</code>",
+        "That text strings can be joined using <code class=\"language-python\">+</code> and repeated using <code class=\"language-python\">*</code>",
+        "That string operations follow their own rules (for example, adding texts = concatenation)",
+        "That it is important to understand data types to avoid errors and write clearer code"
+      ]
+    }
+  ]
+}
