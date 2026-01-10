@@ -1,5 +1,5 @@
 {
-  "title": "Qué es Python y cómo funciona",
+  "title": "Qué es Python y Cómo Funciona",
   "description": "",
   "content": [
     {
@@ -17,13 +17,13 @@
     {
       "type": "list",
       "items": [
-        "Desarrollo web",
-        "Inteligencia Artificial y Machine Learning",
-        "Análisis de datos",
-        "Automatización de tareas",
-        "Desarrollo de videojuegos",
-        "Scripting en servidores",
-        "Aplicaciones de escritorio"
+        "Desarrollo web.",
+        "Inteligencia Artificial y Machine Learning.",
+        "Análisis de datos.",
+        "Automatización de tareas.",
+        "Desarrollo de videojuegos.",
+        "Scripting en servidores.",
+        "Aplicaciones de escritorio."
       ]
     },
     {
@@ -32,11 +32,11 @@
     },
     {
       "type": "subtitle1",
-      "text": "Características principales de Python"
+      "text": "Características Principales de Python"
     },
     {
       "type": "subtitle2",
-      "text": "✔ Sintaxis sencilla"
+      "text": "✔ Sintaxis Sencilla"
     },
     {
       "type": "paragraph",
@@ -74,9 +74,9 @@
     {
       "type": "list",
       "items": [
-        "Probar ideas rápidamente",
-        "Ejecutar código en entornos interactivos como Pyodide (en navegador) o en un terminal",
-        "Detectar errores línea por línea"
+        "Probar ideas rápidamente.",
+        "Ejecutar código en entornos interactivos como Pyodide (en navegador) o en un terminal.",
+        "Detectar errores línea por línea."
       ]
     },
     {
@@ -94,17 +94,17 @@
     {
       "type": "list",
       "items": [
-        "Windows",
-        "macOS",
-        "Linux",
-        "Navegadores (gracias a Pyodide)",
-        "Servidores",
-        "Microcontroladores (MicroPython)"
+        "Windows.",
+        "macOS.",
+        "Linux.",
+        "Navegadores (gracias a Pyodide).",
+        "Servidores.",
+        "Microcontroladores (MicroPython)."
       ]
     },
     {
       "type": "subtitle2",
-      "text": "✔ Tipado dinámico"
+      "text": "✔ Tipado Dinámico"
     },
     {
       "type": "paragraph",
@@ -120,11 +120,11 @@
     },
     {
       "type": "subtitle1",
-      "text": "¿Cómo funciona Python internamente?"
+      "text": "¿Cómo Funciona Python Internamente?"
     },
     {
       "type": "subtitle2",
-      "text": "El intérprete de Python"
+      "text": "El Intérprete de Python"
     },
     {
       "type": "paragraph",
@@ -137,9 +137,9 @@
     {
       "type": "list",
       "items": [
-        "Escribes <code class=\"language-python\">programa.py</code>",
-        "Python lo convierte en bytecode (<code class=\"language-python\">.pyc</code>)",
-        "El bytecode se ejecuta en la Python Virtual Machine (PVM)"
+        "Escribes <code class=\"language-python\">programa.py</code>.",
+        "Python lo convierte en bytecode (<code class=\"language-python\">.pyc</code>).",
+        "El bytecode se ejecuta en la Python Virtual Machine (PVM)."
       ]
     },
     {
@@ -148,7 +148,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "¿Para qué se usa Python?"
+      "text": "¿Para Qué Se Usa Python?"
     },
     {
       "type": "paragraph",
@@ -192,7 +192,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Primer vistazo a código Python"
+      "text": "Primer Vistazo a Código Python"
     },
     {
       "type": "code",
@@ -213,7 +213,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Conclusión del tema"
+      "text": "Conclusión de la Unidad"
     },
     {
       "type": "paragraph",
