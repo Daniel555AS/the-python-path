@@ -1,10 +1,10 @@
 {
-  "title": "Dein erstes Programm: <code class=\"language-python\">print()</code>",
+  "title": "Dein Erstes Programm: <code class=\"language-python\">print()</code>",
   "description": "",
   "content": [
     {
       "type": "subtitle1",
-      "text": "Was ist ein Programm in Python?"
+      "text": "Was Ist Ein Programm in Python?"
     },
     {
       "type": "paragraph",
@@ -16,7 +16,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Die Funktion <code class=\"language-python\">print()</code>: Dein erstes Werkzeug"
+      "text": "Die Funktion <code class=\"language-python\">print()</code>: Dein Erstes Werkzeug"
     },
     {
       "type": "paragraph",
@@ -49,7 +49,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Was kann ich mit <code class=\"language-python\">print()</code> anzeigen?"
+      "text": "Was Kann Ich Mit <code class=\"language-python\">print()</code> Anzeigen?"
     },
     {
       "type": "subtitle2",
@@ -77,7 +77,7 @@
     },
     {
       "type": "test-button",
-      "text": "Alles ausprobieren >>",
+      "text": "Alles Ausprobieren >>",
       "code": "print(\"Python lernen macht Spaß\")\n\nprint(2025)\n\nname = \"Python\"\nprint(name)"
     },
     {
@@ -94,7 +94,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Mehrere Werte gleichzeitig anzeigen"
+      "text": "Mehrere Werte Gleichzeitig Anzeigen"
     },
     {
       "type": "paragraph",
@@ -123,7 +123,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Wie <code class=\"language-python\">print()</code> intern funktioniert"
+      "text": "Wie <code class=\"language-python\">print()</code> Intern Funktioniert"
     },
     {
       "type": "paragraph",
@@ -136,13 +136,13 @@
     {
       "type": "list",
       "items": [
-        "<code class=\"language-python\">sep</code> → Definiert den Trenner zwischen Elementen",
-        "<code class=\"language-python\">end</code> → Definiert, was am Ende der Zeile ausgegeben wird"
+        "<code class=\"language-python\">sep</code> → Definiert den Trenner zwischen Elementen.",
+        "<code class=\"language-python\">end</code> → Definiert, was am Ende der Zeile ausgegeben wird."
       ]
     },
     {
       "type": "subtitle2",
-      "text": "Beispiel mit <code class=\"language-python\">sep</code>:"
+      "text": "Beispiel Mit <code class=\"language-python\">sep</code>:"
     },
     {
       "type": "code",
@@ -163,7 +163,7 @@
     },
     {
       "type": "subtitle2",
-      "text": "Beispiel mit <code class=\"language-python\">end</code>:"
+      "text": "Beispiel Mit <code class=\"language-python\">end</code>:"
     },
     {
       "type": "code",
@@ -197,10 +197,10 @@
     {
       "type": "list",
       "items": [
-        "<code class=\"language-python\">\\n</code> → Zeilenumbruch",
-        "<code class=\"language-python\">\\t</code> → Tabulator",
-        "<code class=\"language-python\">\\\"</code> → Anführungszeichen innerhalb von Anführungszeichen",
-        "<code class=\"language-python\">\\\\</code> → Literaler Backslash"
+        "<code class=\"language-python\">\\n</code> → Zeilenumbruch.",
+        "<code class=\"language-python\">\\t</code> → Tabulator.",
+        "<code class=\"language-python\">\\\"</code> → Anführungszeichen innerhalb von Anführungszeichen.",
+        "<code class=\"language-python\">\\\\</code> → Literaler Backslash."
       ]
     },
     {
@@ -230,7 +230,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Ein sehr häufiger Fehler bei der Verwendung von <code class=\"language-python\">print()</code>"
+      "text": "Ein Sehr Häufiger Fehler Bei Der Verwendung Von <code class=\"language-python\">print()</code>"
     },
     {
       "type": "paragraph",
@@ -246,12 +246,12 @@
     },
     {
       "type": "test-button",
-      "text": "Fehler ausprobieren >>",
+      "text": "Fehler Ausprobieren >>",
       "code": "print(\"Hallo)"
     },
     {
       "type": "subtitle1",
-      "text": "Minimale Struktur eines Python-Programms"
+      "text": "Minimale Struktur Eines Python-Programms"
     },
     {
       "type": "code",
@@ -301,11 +301,11 @@
     },
     {
       "type": "subtitle1",
-      "text": "Geführte Übung: Dein erstes echtes Script"
+      "text": "Geführte Übung: Dein Erstes Echtes Script"
     },
     {
       "type": "paragraph",
-      "text": "Wir werden eine persönlichere Nachricht anzeigen"
+      "text": "Wir werden eine persönlichere Nachricht anzeigen."
     },
     {
       "type": "code",
@@ -330,7 +330,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Fazit des Themas"
+      "text": "Fazit der Einheit"
     },
     {
       "type": "paragraph",
@@ -339,15 +339,16 @@
     {
       "type": "list",
       "items": [
-        "Was ein Programm in Python ist",
-        "Wie die Funktion <code class=\"language-python\">print()</code> funktioniert",
-        "Wie man <code class=\"language-python\">sep</code> und <code class=\"language-python\">end</code> verwendet",
-        "Wie man Zeilenumbrüche und Tabulatoren steuert",
-        "Wie man ein gültiges Minimalprogramm schreibt"
+        "Was ein Programm in Python ist.",
+        "Wie die Funktion <code class=\"language-python\">print()</code> funktioniert.",
+        "Wie man <code class=\"language-python\">sep</code> und <code class=\"language-python\">end</code> verwendet.",
+        "Wie man Zeilenumbrüche und Tabulatoren steuert.",
+        "Wie man ein gültiges Minimalprogramm schreibt."
       ]
     },
     {
       "type": "paragraph",
-      "text": "<code class=\"language-python\">print()</code> ist das Werkzeug, das du ständig verwenden wirst, um Ergebnisse anzuzeigen, Ideen zu debuggen und mit dem Benutzer zu kommunizieren"    }
+      "text": "<code class=\"language-python\">print()</code> ist das Werkzeug, das du ständig verwenden wirst, um Ergebnisse anzuzeigen, Ideen zu debuggen und mit dem Benutzer zu kommunizieren."
+    }
   ]
 }
