@@ -1,0 +1,223 @@
+{
+  "title": "Qué es Python y cómo funciona",
+  "description": "",
+  "content": [
+    {
+      "type": "subtitle1",
+      "text": "¿Qué es Python?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Python es un lenguaje de programación de alto nivel, creado por Guido van Rossum y publicado en 1991. Su principal característica es su sintaxis clara y legible, lo que facilita aprenderlo incluso si nunca has programado antes."
+    },
+    {
+      "type": "paragraph",
+      "text": "Es un lenguaje multipropósito, lo que significa que se puede usar en una gran variedad de áreas:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Desarrollo web",
+        "Inteligencia Artificial y Machine Learning",
+        "Análisis de datos",
+        "Automatización de tareas",
+        "Desarrollo de videojuegos",
+        "Scripting en servidores",
+        "Aplicaciones de escritorio"
+      ]
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Parte del éxito de Python viene de su enorme comunidad y su ecosistema de librerías. Por ejemplo, para IA tienes TensorFlow, para datos Pandas, para web Django, etc."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Características principales de Python"
+    },
+    {
+      "type": "subtitle2",
+      "text": "✔ Sintaxis sencilla"
+    },
+    {
+      "type": "paragraph",
+      "text": "Python está diseñado para que el código sea fácil de leer, como si fuera casi inglés."
+    },
+    {
+      "type": "code",
+      "text": "print('Hola, Mundo')"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Hola, Mundo"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "print('Hola, Mundo')"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br>Si una línea de Python \"suena\" a lo que estás intentando hacer, probablemente es la forma correcta de escribirlo."
+    },
+    {
+      "type": "subtitle2",
+      "text": "✔ Interpretado"
+    },
+    {
+      "type": "paragraph",
+      "text": "Python no necesita compilarse antes de ejecutarse. El código se ejecuta línea por línea mediante el intérprete.<br><br>Esto permite:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Probar ideas rápidamente",
+        "Ejecutar código en entornos interactivos como Pyodide (en navegador) o en un terminal",
+        "Detectar errores línea por línea"
+      ]
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Como Python es interpretado, si hay un error en la línea 80, Python ejecutará las primeras 79 sin problema y solo fallará cuando llegue a la 80."
+    },
+    {
+      "type": "subtitle2",
+      "text": "✔ Multiplataforma"
+    },
+    {
+      "type": "paragraph",
+      "text": "Python funciona en:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Windows",
+        "macOS",
+        "Linux",
+        "Navegadores (gracias a Pyodide)",
+        "Servidores",
+        "Microcontroladores (MicroPython)"
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "✔ Tipado dinámico"
+    },
+    {
+      "type": "paragraph",
+      "text": "No necesitas indicar el tipo de variable (<code class=\"language-python\">int</code>, <code class=\"language-python\">string</code>, etc.). Python lo detecta automáticamente."
+    },
+    {
+      "type": "code",
+      "text": "x = 10     # entero\nx = \"Hola\"  # ahora es una cadena"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br> La flexibilidad del tipado dinámico es poderosa, pero a veces causa errores difíciles de detectar. Más adelante aprenderás buenas prácticas para evitar esto."
+    },
+    {
+      "type": "subtitle1",
+      "text": "¿Cómo funciona Python internamente?"
+    },
+    {
+      "type": "subtitle2",
+      "text": "El intérprete de Python"
+    },
+    {
+      "type": "paragraph",
+      "text": "El intérprete toma tu código <code class=\"language-python\">.py</code>, lo transforma en bytecode, y ese bytecode lo ejecuta una máquina virtual."
+    },
+    {
+      "type": "paragraph",
+      "text": "Resumen del proceso:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Escribes <code class=\"language-python\">programa.py</code>",
+        "Python lo convierte en bytecode (<code class=\"language-python\">.pyc</code>)",
+        "El bytecode se ejecuta en la Python Virtual Machine (PVM)"
+      ]
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>El bytecode es una versión optimizada que permite que tu programa arranque más rápido la próxima vez."
+    },
+    {
+      "type": "subtitle1",
+      "text": "¿Para qué se usa Python?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Python es extremadamente versátil. Algunos usos prácticos:"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Automatización"
+    },
+    {
+      "type": "paragraph",
+      "text": "Puedes automatizar casi cualquier cosa: renombrar archivos, enviar correos, leer documentos, trabajar con APIs..."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Desarrollo Web"
+    },
+    {
+      "type": "paragraph",
+      "text": "Frameworks como Django o Flask permiten crear aplicaciones web completas."
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br> Django es \"baterías incluidas\", Flask es más minimalista. Más adelante podrás elegir según tus necesidades."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ciencia de Datos y IA"
+    },
+    {
+      "type": "paragraph",
+      "text": "Es el estándar en análisis de datos: Pandas, NumPy, Matplotlib, TensorFlow, Scikit-Learn..."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Videojuegos"
+    },
+    {
+      "type": "paragraph",
+      "text": "Con librerías como Pygame puedes crear juegos 2D."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Primer vistazo a código Python"
+    },
+    {
+      "type": "code",
+      "text": "name = input('¿Cómo te llamas?')\nprint('Hola', name)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "¿Cómo te llamas? Daniel\nHola Daniel"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "name = input('¿Cómo te llamas?')\nprint('Hola', name)"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Conclusión del tema"
+    },
+    {
+      "type": "paragraph",
+      "text": "En este primer tema aprendiste qué es Python, cuáles son sus características más importantes y cómo funciona su intérprete. También viste sus aplicaciones más comunes y un primer fragmento de código."
+    }
+  ]
+}

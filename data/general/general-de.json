@@ -1,0 +1,11 @@
+{
+  "menu": {
+    "home": "Startseite",
+    "roadMap": "Lernpfad",
+    "trainingArea": "Übungsbereich",
+    "playAndLearn": "Spiel und lerne!"
+  },
+  "footer": {
+    "createdBy": "Erstellt von "
+  }
+}

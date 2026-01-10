@@ -1,0 +1,315 @@
+{
+  "title": "Comments and basic code style",
+  "description": "",
+  "content": [
+    {
+      "type": "subtitle1",
+      "text": "What is a comment in Python?"
+    },
+    {
+      "type": "paragraph",
+      "text": "A comment is a part of the code that is not executed. It is used to explain what a block of instructions does, clarify the logic behind a calculation, or leave reminders."
+    },
+    {
+      "type": "paragraph",
+      "text": "In Python, comments are written using the symbol <code class=\"language-python\">#</code>:"
+    },
+    {
+      "type": "code",
+      "text": "# this is how you write a comment"
+    },
+    {
+      "type": "paragraph",
+      "text": "Everything that comes after <code class=\"language-python\">#</code> on that line will be ignored by Python."
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Note:</strong><br>Comments are for humans, not for the interpreter. They give clarity to the code and help you remember what you were trying to do when you read it again later."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Single-line comments"
+    },
+    {
+      "type": "paragraph",
+      "text": "This is the most common type. They are placed above a line of code or to its right."
+    },
+    {
+      "type": "paragraph",
+      "text": "Example:"
+    },
+    {
+      "type": "code",
+      "text": "# This program shows a greeting\nprint(\"Hello\")  # Displays text on screen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "Hello"
+    },
+    {
+      "type": "test-button",
+      "text": "Try it >>",
+      "code": "# This program shows a greeting\nprint(\"Hello\")  # Displays text on screen"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br>Avoid writing obvious comments like:<br><code class=\"language-python\">x = x + 1   # I add 1 to x</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Good comments explain the why, not the what."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Multiline comments (explanatory text)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Python does not have a special symbol for multiline comments like other languages, but you can use triple quotes <code class=\"language-python\">\"\"\" \"\"\"</code> to write long text that won't be executed if it is not assigned to a variable."
+    },
+    {
+      "type": "paragraph",
+      "text": "It is commonly used at the beginning of a file or at the start of functions."
+    },
+    {
+      "type": "paragraph",
+      "text": "Example"
+    },
+    {
+      "type": "code",
+      "text": "\"\"\"\nThis program calculates the area of a circle.\nThe user enters the radius and the result is shown.\n\"\"\""
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Note:</strong><br>Technically, this is an unused string literal, but Python ignores it, so it works as a comment."
+    },
+    {
+      "type": "subtitle1",
+      "text": "What are comments really for?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Comments are not decoration. They are useful when:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "They explain the intention behind a solution",
+        "They clarify complicated parts of the code",
+        "They document important decisions",
+        "They help whoever reads the code (including you)"
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Note:</strong><br>If you have to explain too much, maybe the code is too complex. Sometimes the best option is to simplify the code, not write more comments."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Basic code style: writing clean code"
+    },
+    {
+      "type": "paragraph",
+      "text": "Python is famous for promoting a clear and readable style. Here are some essential rules:"
+    },
+    {
+      "type": "subtitle2",
+      "text": "1. Use descriptive variable names"
+    },
+    {
+      "type": "paragraph",
+      "text": "❌ Bad:"
+    },
+    {
+      "type": "code",
+      "text": "x = 10\ny = 20"
+    },
+    {
+      "type": "paragraph",
+      "text": "✅ Good:"
+    },
+    {
+      "type": "code",
+      "text": "age = 10\nyears_experience = 20"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Note:</strong><br>A good name prevents the need for unnecessary comments."
+    },
+    {
+      "type": "subtitle2",
+      "text": "2. Spaces around operators"
+    },
+    {
+      "type": "paragraph",
+      "text": "This greatly improves readability."
+    },
+    {
+      "type": "paragraph",
+      "text": "❌ Without spaces:"
+    },
+    {
+      "type": "code",
+      "text": "sum=10+5"
+    },
+    {
+      "type": "paragraph",
+      "text": "✅ With spaces:"
+    },
+    {
+      "type": "code",
+      "text": "sum = 10 + 5"
+    },
+    {
+      "type": "subtitle2",
+      "text": "3. One idea per line"
+    },
+    {
+      "type": "paragraph",
+      "text": "❌ Hard to read:"
+    },
+    {
+      "type": "code",
+      "text": "a = 10; b = 20; print(a+b)"
+    },
+    {
+      "type": "paragraph",
+      "text": "✅ Clear and simple:"
+    },
+    {
+      "type": "code",
+      "text": "a = 10\nb = 20\nprint(a + b)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "30"
+    },
+    {
+      "type": "test-button",
+      "text": "Try it >>",
+      "code": "a = 10\nb = 20\nprint(a + b)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "4. Keep lines short"
+    },
+    {
+      "type": "paragraph",
+      "text": "The general recommendation is not to exceed 79 characters per line (PEP 8)."
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br>If you need to write something long, split it into several parts using <code class=\"language-python\">\\</code> or concatenation."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Comments in real code"
+    },
+    {
+      "type": "paragraph",
+      "text": "Let's look at a more realistic example of how to use comments to clarify an idea:"
+    },
+    {
+      "type": "code",
+      "text": "# Calculate the final price with discount\nprice = 100\ndiscount = 0.15\n\n# Apply discount\nfinal_price = price - (price * discount)\n\nprint(\"Final price:\", final_price)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "Final price: 85.0"
+    },
+    {
+      "type": "test-button",
+      "text": "Try it >>",
+      "code": "# Calculate the final price with discount\nprice = 100\ndiscount = 0.15\n\n# Apply discount\nfinal_price = price - (price * discount)\n\nprint(\"Final price:\", final_price)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Here the comments explain the purpose, not the mathematical operation."
+    },
+    {
+      "type": "subtitle1",
+      "text": "When should you NOT comment?"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong> Use this golden rule:<br><strong>\"Comment when the reader might get confused; don't comment on obvious things.\"</strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "❌ Unnecessary comment:"
+    },
+    {
+      "type": "code",
+      "text": "print(\"Hello\")  # prints Hello"
+    },
+    {
+      "type": "paragraph",
+      "text": "❌ Comments that duplicate code:"
+    },
+    {
+      "type": "code",
+      "text": "x = 5   # x is now 5"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Guided exercise"
+    },
+    {
+      "type": "paragraph",
+      "text": "Add useful comments to this code snippet:"
+    },
+    {
+      "type": "code",
+      "text": "name = \"Juan\"\nage = 22\ncurrent_year = 2025\n\nprint(\"Your name is:\", name)\nprint(\"Your age in 5 years will be:\", age + 5)"
+    },
+    {
+      "type": "test-button",
+      "text": "Practice >>",
+      "code": "name = \"Juan\"\nage = 22\ncurrent_year = 2025\n\nprint(\"Your name is:\", name)\nprint(\"Your age in 5 years will be:\", age + 5)"
+    },
+    {
+      "type": "collapsible",
+      "title": "See possible solution",
+      "content": [
+        {
+          "type": "code",
+          "text": "# User data\nname = \"Juan\"\nage = 22\ncurrent_year = 2025\n\n# Show information\nprint(\"Your name is:\", name)\n\n# Calculate future age (current age + 5)\nprint(\"Your age in 5 years will be:\", age + 5)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Topic conclusion"
+    },
+    {
+      "type": "paragraph",
+      "text": "In this topic you learned"
+    },
+    {
+      "type": "list",
+      "items": [
+        "How to write comments with <code class=\"language-python\">#</code>",
+        "How to create explanatory comments with triple quotes",
+        "Good practices for style and readability",
+        "What makes a comment useful",
+        "How to write clearer and more structured code"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Comments will be your allies as you move on to more complex programs."
+    }
+  ]
+}

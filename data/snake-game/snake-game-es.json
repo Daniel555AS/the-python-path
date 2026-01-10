@@ -1,0 +1,12 @@
+{
+    "title": "Juego de la Serpiente",
+    "score": "Puntuación",
+    "gameOverTitle": "Fin del Juego",
+    "gameOverMessage": "Puntuación Final",
+    "playAgain": "Jugar de Nuevo",
+    "goHome": "Volver al Inicio",
+    "answerCorrectTitle": "¡Respuesta Correcta!",
+    "answerIncorrectTitle": "Respuesta Incorrecta",
+    "correctAnswerWas": "La respuesta correcta era",
+    "congratulationsMessage": "¡Felicidades, sigue así y continúa aprendiendo!"
+}

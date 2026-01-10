@@ -1,0 +1,354 @@
+{
+  "title": "Tu primer programa: <code class=\"language-python\">print()</code>",
+  "description": "",
+  "content": [
+    {
+      "type": "subtitle1",
+      "text": "¿Qué es un programa en Python?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Un programa en Python es simplemente un archivo de texto que contiene instrucciones que el intérprete ejecutará línea por línea. La estructura mínima de un programa puede ser algo tan simple como una línea que muestre un mensaje en pantalla."
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>En Python, cada línea se ejecuta en orden, de arriba hacia abajo. No necesitas una función principal obligatoria como en otros lenguajes."
+    },
+    {
+      "type": "subtitle1",
+      "text": "La función <code class=\"language-python\">print()</code>: tu primera herramienta"
+    },
+    {
+      "type": "paragraph",
+      "text": "La función <code class=\"language-python\">print()</code> sirve para mostrar información en pantalla. Es el punto de partida clásico en cualquier lenguaje de programación."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo básico:"
+    },
+    {
+      "type": "code",
+      "text": "print(\"Hola, Mundo\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Al ejecutar este programa, Python mostrará:"
+    },
+    {
+      "type": "code",
+      "text": "Hola, Mundo"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "print(\"Hola, Mundo\")"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br>Todo lo que quieras mostrar debe ir dentro de los paréntesis de <code class=\"language-python\">print()</code>. Si es texto, debe estar entre comillas."
+    },
+    {
+      "type": "subtitle1",
+      "text": "¿Qué puedo mostrar con <code class=\"language-python\">print()</code>?"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Texto (cadenas - <code class=\"language-python\">str</code>)"
+    },
+    {
+      "type": "code",
+      "text": "print(\"Aprender Python es divertido\")"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Números"
+    },
+    {
+      "type": "code",
+      "text": "print(2025)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Variables"
+    },
+    {
+      "type": "code",
+      "text": "name = \"Python\"\nprint(name)"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar todos >>",
+      "code": "print(\"Aprender Python es divertido\")\n\nprint(2025)\n\nname = \"Python\"\nprint(name)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida esperada:"
+    },
+    {
+      "type": "code",
+      "text": "Aprender Python es divertido\n2025\nPython"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>A diferencia de muchos lenguajes, Python no necesita que declares el tipo de variable; basta con asignarla."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Mostrar varios valores a la vez"
+    },
+    {
+      "type": "paragraph",
+      "text": "Python permite imprimir varios elementos separados por comas:"
+    },
+    {
+      "type": "code",
+      "text": "print(\"Tu edad es:\", 22)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Tu edad es: 22"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "print(\"Tu edad es:\", 22)"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Cuando usas comas dentro de <code class=\"language-python\">print()</code>, Python agrega un espacio automáticamente entre cada elemento."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Cómo funciona <code class=\"language-python\">print()</code> internamente"
+    },
+    {
+      "type": "paragraph",
+      "text": "Aunque <code class=\"language-python\">print()</code> parece simple, tiene varios parámetros útiles:"
+    },
+    {
+      "type": "code",
+      "text": "print(objetos, sep=\" \", end=\"\\n\")"
+    },
+    {
+      "type": "list",
+      "items": [
+        "<code class=\"language-python\">sep</code> → Define el separador entre elementos",
+        "<code class=\"language-python\">end</code> → Define lo que se imprime al final de la línea"
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejemplo usando <code class=\"language-python\">sep</code>:"
+    },
+    {
+      "type": "code",
+      "text": "print(\"Python\", \"JavaScript\", \"Go\", sep=\" | \")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Python | JavaScript | Go"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "print(\"Python\", \"JavaScript\", \"Go\", sep=\" | \")"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejemplo usando <code class=\"language-python\">end</code>:"
+    },
+    {
+      "type": "code",
+      "text": "print(\"Hola\", end=\"...\")\nprint(\"Mundo\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Hola...Mundo"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "print(\"Hola\", end=\"...\")\nprint(\"Mundo\")"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Por defecto, <code class=\"language-python\">end</code> usa <code class=\"language-python\">\\n</code>, es decir, un salto de línea. Por eso cada <code class=\"language-python\">print()</code> aparece en una línea nueva."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Espacios, saltos de línea y caracteres especiales"
+    },
+    {
+      "type": "paragraph",
+      "text": "Puedes controlar el formato del texto usando secuencias especiales:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "<code class=\"language-python\">\\n</code> → Salto de línea",
+        "<code class=\"language-python\">\\t</code> → Tabulación",
+        "<code class=\"language-python\">\\\"</code> → Comillas dentro de comillas",
+        "<code class=\"language-python\">\\\\</code> → Barra invertida literal"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo:"
+    },
+    {
+      "type": "code",
+      "text": "print(\"Línea 1\\nLínea 2\\nLínea 3\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Línea 1\nLínea 2\nLínea 3"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "print(\"Línea 1\\nLínea 2\\nLínea 3\")"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Nota:</strong><br>Las secuencias de escape te permiten controlar exactamente cómo se ve el texto que imprimes. Son muy útiles para mostrar menús o resultados con formato."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Un error muy común al usar <code class=\"language-python\">print()</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Si olvidas cerrar las comillas:"
+    },
+    {
+      "type": "code",
+      "text": "print(\"Hola)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Python mostrará un error de sintaxis."
+    },
+    {
+      "type": "test-button",
+      "text": "Probar error >>",
+      "code": "print(\"Hola)"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Estructura mínima de un programa en Python"
+    },
+    {
+      "type": "code",
+      "text": "print(\"Hola desde mi primer programa en Python\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Esto ya es un programa completo, válido y funcional."
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Hola desde mi primer programa en Python"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "print(\"Hola desde mi primer programa en Python\")"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip</strong><br>Piensa en un programa como una lista de instrucciones. Si tienes dos líneas:"
+    },
+    {
+      "type": "code",
+      "text": "print(\"Primera línea\")\nprint(\"Segunda línea\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Python siempre las ejecutará en ese orden."
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Primera línea\nSegunda línea"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "print(\"Primera línea\")\nprint(\"Segunda línea\")"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejercicio guiado: tu primer script real"
+    },
+    {
+      "type": "paragraph",
+      "text": "Vamos a mostrar un mensjae más personalizado"
+    },
+    {
+      "type": "code",
+      "text": "nombre = \"TU NOMBRE\"\nprint(\"¡Bienvenido,\", nombre, \"al mundo de Python!\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "¡Bienvenido, TU NOMBRE al mundo de Python!"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota</strong><br>Puedes reemplazar <code class=\"language-python\">\"TU NOMBRE\"</code> por tu propio nombre."
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "nombre = \"TU NOMBRE\"\nprint(\"¡Bienvenido,\", nombre, \"al mundo de Python!\")"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Conclusión del tema"
+    },
+    {
+      "type": "paragraph",
+      "text": "En este tema aprendiste:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Qué es un programa en Python",
+        "Cómo funciona <code class=\"language-python\">print()</code>",
+        "Cómo usar <code class=\"language-python\">sep</code> y <code class=\"language-python\">end</code>",
+        "Cómo controlar saltos de línea y tabulaciones",
+        "Cómo escribir un programa mínimo válido"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "<code class=\"language-python\">print()</code> es la herramienta que usarás constantemente para ver resultados, depurar ideas y comunicarse con el usuario."
+    }
+  ]
+}

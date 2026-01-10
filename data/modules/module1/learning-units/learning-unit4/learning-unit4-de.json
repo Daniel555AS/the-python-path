@@ -1,0 +1,583 @@
+{
+  "title": "Variablen und grundlegende Datentypen",
+  "description": "",
+  "content": [
+    {
+      "type": "subtitle1",
+      "text": "Was ist eine Variable?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Eine Variable ist ein Name, der verwendet wird, um einen Wert im Speicher zu speichern. Du kannst dir eine Variable wie eine beschriftete Box vorstellen, in der du entscheidest, was hineinkommt."
+    },
+    {
+      "type": "paragraph",
+      "text": "Zum Beispiel:"
+    },
+    {
+      "type": "code",
+      "text": "name = \"Python\"\nalter = 33"
+    },
+    {
+      "type": "paragraph",
+      "text": "Hier:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Das \"Label\" ist <code class=\"language-python\">name</code> oder <code class=\"language-python\">alter</code>",
+        "Der Inhalt ist <code class=\"language-python\">\"Python\"</code> und <code class=\"language-python\">33</code>"
+      ]
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Hinweis:</strong><br>Das Zeichen <code class=\"language-python\">=</code> bedeutet in Python nicht \"mathematisch gleich\", sondern \"einen Wert zuweisen\". Das heißt: \"Speichere diesen Wert in dieser Variable\"."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Python und dynamische Typisierung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Python bestimmt den Typ einer Variable automatisch anhand des zugewiesenen Werts."
+    },
+    {
+      "type": "code",
+      "text": "x = 10       # int (Ganzzahl)\nx = \"Hallo\"   # str (Zeichenkette)"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tipp:</strong><br>Du kannst den Typ jederzeit ändern, aber vermeide es. Ein konsistenter Typ macht deinen Code verständlicher."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Regeln zum Benennen von Variablen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Python erlaubt viele gültige Namen, aber du musst diese Regeln befolgen:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Nur Buchstaben, Zahlen und Unterstriche sind erlaubt",
+        "Der Name darf nicht mit einer Zahl beginnen",
+        "Keine Leerzeichen verwenden",
+        "Vermeide reservierte Wörter (<code class=\"language-python\">for</code>, <code class=\"language-python\">if</code>, <code class=\"language-python\">print</code>, usw.)"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Gültige Beispiele:"
+    },
+    {
+      "type": "code",
+      "text": "benutzer_name = \"Ana\"\nalter2 = 30\n_total = 99"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ungültige Beispiele:"
+    },
+    {
+      "type": "code",
+      "text": "2alter = 10\nmeine variable = \"text\"\nfor = 5"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Hinweis:</strong><br>Verwende beschreibende Namen. Dein Code wird leichter lesbar sein, ohne viele Kommentare."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Grundlegende Datentypen in Python"
+    },
+    {
+      "type": "paragraph",
+      "text": "Schauen wir uns die häufigsten Datentypen an:"
+    },
+    {
+      "type": "subtitle2",
+      "text": "1. Ganzzahlen – <code class=\"language-python\">int</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Zahlen ohne Dezimalstellen."
+    },
+    {
+      "type": "code",
+      "text": "alter = 20\njahr = 2025"
+    },
+    {
+      "type": "subtitle2",
+      "text": "2. Fließkommazahlen – <code class=\"language-python\">float</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Zahlen mit Dezimalstellen."
+    },
+    {
+      "type": "code",
+      "text": "preis = 19.99\ntemperatur = 36.5"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tipp:</strong><br>Floats können aufgrund ihrer internen Darstellung manchmal überraschende Ergebnisse liefern:"
+    },
+    {
+      "type": "code",
+      "text": "print(0.1 + 0.2)\n# 0.30000000000000004"
+    },
+    {
+      "type": "paragraph",
+      "text": "Aber keine Sorge, später erfährst du mehr darüber."
+    },
+    {
+      "type": "subtitle2",
+      "text": "3. Zeichenketten – <code class=\"language-python\">str</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Beliebiger Text in einfachen oder doppelten Anführungszeichen."
+    },
+    {
+      "type": "code",
+      "text": "name = \"Python\"\nnachricht = 'Hallo Welt'"
+    },
+    {
+      "type": "paragraph",
+      "text": "Für längere Texte kannst du dreifache Anführungszeichen verwenden:"
+    },
+    {
+      "type": "code",
+      "text": "langer_text = \"\"\"Dies ist ein Text,\nder mehrere Zeilen umfasst\"\"\""
+    },
+    {
+      "type": "subtitle2",
+      "text": "4. Booleans – <code class=\"language-python\">bool</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Sie repräsentieren wahr oder falsch:"
+    },
+    {
+      "type": "code",
+      "text": "aktiv = True\nangemeldet = False"
+    },
+    {
+      "type": "paragraph",
+      "text": "Sie werden sehr häufig in Bedingungen verwendet."
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Hinweis:</strong><br>In Python beginnen <code class=\"language-python\">True</code> und <code class=\"language-python\">False</code> mit einem Großbuchstaben."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Den Typ einer Variable anzeigen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Mit der Funktion <code class=\"language-python\">type()</code> kannst du den Datentyp herausfinden:"
+    },
+    {
+      "type": "code",
+      "text": "x = 10\nprint(type(x))   # &lt;class 'int'&gt;"
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "x = 10\nprint(type(x))"
+    },
+    {
+      "type": "paragraph",
+      "text": "Das ist sehr nützlich, wenn du lernst."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Operationen je nach Datentyp"
+    },
+    {
+      "type": "paragraph",
+      "text": "Jeder Typ hat eigene Operationen:"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ganzzahlen und Floats"
+    },
+    {
+      "type": "code",
+      "text": "a = 10\nb = 2.5\nergebnis = a + b   # 12.5"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Zeichenketten"
+    },
+    {
+      "type": "paragraph",
+      "text": "Verkettung:"
+    },
+    {
+      "type": "code",
+      "text": "gruss = \"Hallo\" + \" \" + \"Welt\"\nprint(gruss)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgabe:"
+    },
+    {
+      "type": "code",
+      "text": "Hallo Welt"
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "gruss = \"Hallo\" + \" \" + \"Welt\"\nprint(gruss)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Wiederholung:"
+    },
+    {
+      "type": "code",
+      "text": "print(\"Hallo\" * 3)\n# HalloHalloHallo"
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "print(\"Hallo\" * 3)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Booleans"
+    },
+    {
+      "type": "code",
+      "text": "wahr = True\nfalsch = False\nprint(wahr and falsch)  # False"
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "wahr = True\nfalsch = False\nprint(wahr and falsch)  # False"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Typumwandlung (Casting)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Python erlaubt es, Werte manuell umzuwandeln:"
+    },
+    {
+      "type": "code",
+      "text": "alter = \"20\"\nalter = int(alter)\nprint(type(alter))    # &lt;class 'int'&gt;"
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "alter = \"20\"\nalter = int(alter)\nprint(type(alter))"
+    },
+    {
+      "type": "paragraph",
+      "text": "Oder von Zahl zu Text:"
+    },
+    {
+      "type": "code",
+      "text": "x = 10\ntext = str(x)\nprint(type(text))    # &lt;class 'str'&gt;"
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "x = 10\ntext = str(x)\nprint(type(text))"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tipp:</strong><br><code class=\"language-python\">input()</code> gibt immer einen String zurück, deshalb musst du ihn manchmal in <code class=\"language-python\">int</code> oder <code class=\"language-python\">float</code> umwandeln."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Komplette Beispiele"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Beispiel 1: Benutzerinformationen"
+    },
+    {
+      "type": "code",
+      "text": "name = \"Python\"\nalter = 33\ngroesse = 1.74\nist_volljaehrig = True\n\nprint(\"Name:\", name)\nprint(\"Alter:\", alter)\nprint(\"Größe:\", groesse)\nprint(\"Volljährig:\", ist_volljaehrig)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgabe:"
+    },
+    {
+      "type": "code",
+      "text": "Name: Python\nAlter: 33\nGröße: 1.74\nVolljährig: True"
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "name = \"Python\"\nalter = 33\ngroesse = 1.74\nist_volljaehrig = True\n\nprint(\"Name:\", name)\nprint(\"Alter:\", alter)\nprint(\"Größe:\", groesse)\nprint(\"Volljährig:\", ist_volljaehrig)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Beispiel 2: Typumwandlung"
+    },
+    {
+      "type": "code",
+      "text": "zahl = \"15\"\nzahl = int(zahl)\nprint(\"Summe:\", zahl + 5)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgabe:"
+    },
+    {
+      "type": "code",
+      "text": "Summe: 20"
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "zahl = \"15\"\nzahl = int(zahl)\nprint(\"Summe:\", zahl + 5)"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Häufige Fehler"
+    },
+    {
+      "type": "paragraph",
+      "text": "❌ Fehler beim Umwandeln von nicht-numerischem Text:"
+    },
+    {
+      "type": "code",
+      "text": "int(\"hallo\")\n# ValueError"
+    },
+    {
+      "type": "test-button",
+      "text": "Fehler ausprobieren >>",
+      "code": "int(\"hallo\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "❌ Inkompatible Typen mischen:"
+    },
+    {
+      "type": "code",
+      "text": "print(\"Alter: \" + 20)\n# TypeError"
+    },
+    {
+      "type": "test-button",
+      "text": "Fehler ausprobieren >>",
+      "code": "print(\"Alter: \" + 20)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Lösung:"
+    },
+    {
+      "type": "code",
+      "text": "print(\"Alter:\", 20)\n# oder\nprint(\"Alter: \" + str(20))"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgabe:"
+    },
+    {
+      "type": "code",
+      "text": "Alter: 20\nAlter: 20"
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "print(\"Alter:\", 20)\n# oder\nprint(\"Alter: \" + str(20))"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Hinweis:</strong><br>Diese Fehler passieren sehr häufig am Anfang. Mit der Zeit wirst du sie vermeiden können."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Praktische Übungen"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Übung 1: Grundlegende Variablen erstellen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Erstelle Variablen für:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Deinen Namen",
+        "Dein Alter",
+        "Deine Stadt",
+        "Ob du volljährig bist (True/False)",
+        "Deine Größe (float)"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Gib sie anschließend mit <code class=\"language-python\">print()</code> aus."
+    },
+    {
+      "type": "test-button",
+      "text": "Üben >>",
+      "code": "# Übung 1: Grundlegende Variablen erstellen\n# Erstelle Variablen für:\n# - Deinen Namen\n# - Dein Alter\n# - Deine Stadt\n# - Ob du volljährig bist (True/False)\n# - Deine Größe (float)\n# Gib sie anschließend mit print() aus"
+    },
+    {
+      "type": "collapsible",
+      "title": "Mögliche Lösung anzeigen",
+      "content": [
+        {
+          "type": "code",
+          "text": "name = \"DEIN NAME\"\nalter = 22\nstadt = \"DEINE STADT\"\nist_volljaehrig = True\ngroesse = 1.85\n\nprint(name, alter, stadt, ist_volljaehrig, groesse)"
+        },
+        {
+          "type": "test-button",
+          "text": "Lösung ausprobieren >>",
+          "code": "name = \"DEIN NAME\"\nalter = 22\nstadt = \"DEINE STADT\"\nist_volljaehrig = True\ngroesse = 1.85\n\nprint(name, alter, stadt, ist_volljaehrig, groesse)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Übung 2: Summe mit Umwandlung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Eine Variable enthält eine Zahl als Text (<code class=\"language-python\">\"25\"</code>). Wandle diesen Wert in eine Ganzzahl um und addiere 10. Gib dann das Ergebnis aus."
+    },
+    {
+      "type": "test-button",
+      "text": "Üben >>",
+      "code": "# Eine Variable enthält eine Zahl als Text (\"25\").\n# Wandle diesen Wert in eine Ganzzahl um und addiere 10. Gib dann das Ergebnis aus."
+    },
+    {
+      "type": "collapsible",
+      "title": "Mögliche Lösung anzeigen",
+      "content": [
+        {
+          "type": "code",
+          "text": "zahl = \"25\"      # Die Zahl kommt als Text\nzahl = int(zahl)   # Umwandlung in int\nprint(zahl + 10)"
+        },
+        {
+          "type": "test-button",
+          "text": "Lösung ausprobieren >>",
+          "code": "zahl = \"25\"      # Die Zahl kommt als Text\nzahl = int(zahl)   # Umwandlung in int\nprint(zahl + 10)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Übung 3: Gemischte Typen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Erstelle drei Variablen:"
+    },
+    {
+      "type": "code",
+      "text": "a = 10\nb = 3.5\nc = \"Python\""
+    },
+    {
+      "type": "paragraph",
+      "text": "Gib aus:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Die Summe von <code class=\"language-python\">a</code> und <code class=\"language-python\">b</code>",
+        "Die Verkettung \"Ich mag \" + <code class=\"language-python\">c</code>",
+        "Den Typ jeder Variable mit <code class=\"language-python\">type()</code>"
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Üben >>",
+      "code": "# a = 10\n# b = 3.5\n# c = \"Python\"\n# Gib aus:\n# 1. Die Summe von a und b\n# 2. Die Verkettung \"Ich mag \" + c\n# 3. Den Typ jeder Variable mit type()"
+    },
+    {
+      "type": "collapsible",
+      "title": "Mögliche Lösung anzeigen",
+      "content": [
+        {
+          "type": "code",
+          "text": "a = 10\nb = 3.5\nc = \"Python\"\n\nprint(a + b)\nprint(\"Ich mag \" + c)\nprint(type(a), type(b), type(c))"
+        },
+        {
+          "type": "test-button",
+          "text": "Lösung ausprobieren >>",
+          "code": "a = 10\nb = 3.5\nc = \"Python\"\n\nprint(a + b)\nprint(\"Ich mag \" + c)\nprint(type(a), type(b), type(c))"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Übung 4: Eine Nachricht erstellen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Erstelle Variablen:"
+    },
+    {
+      "type": "code",
+      "text": "name = \"Camilo\"\nalter = 30"
+    },
+    {
+      "type": "paragraph",
+      "text": "Und gib eine Nachricht aus wie:"
+    },
+    {
+      "type": "code",
+      "text": "Hallo Camilo, du bist 30 Jahre alt."
+    },
+    {
+      "type": "paragraph",
+      "text": "Verwende Verkettung oder Kommata."
+    },
+    {
+      "type": "test-button",
+      "text": "Üben >>",
+      "code": "# Erstelle Variablen:\n# name = \"Camilo\"\n# alter = 30\n# Gib eine Nachricht aus wie:\n# Hallo Camilo, du bist 30 Jahre alt.\n# Verwende Verkettung oder Kommata"
+    },
+    {
+      "type": "collapsible",
+      "title": "Mögliche Lösung anzeigen",
+      "content": [
+        {
+          "type": "code",
+          "text": "name = \"Camilo\"\nalter = 30\n\nprint(\"Hallo \" + name + \", du bist \" + str(alter) + \" Jahre alt.\")\n# oder mit Kommata\nprint(\"Hallo\", name + \", du bist\", alter, \"Jahre alt.\")"
+        },
+        {
+          "type": "test-button",
+          "text": "Lösung ausprobieren >>",
+          "code": "name = \"Camilo\"\nalter = 30\n\nprint(\"Hallo \" + name + \", du bist \" + str(alter) + \" Jahre alt.\")\n# oder mit Kommata\nprint(\"Hallo\", name + \", du bist\", alter, \"Jahre alt.\")"
+        }
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Themenzusammenfassung"
+    },
+    {
+      "type": "paragraph",
+      "text": "In diesem Thema hast du gelernt:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Was eine Variable ist",
+        "Wie man sie erstellt und zuweist",
+        "Die grundlegenden Datentypen: <code class=\"language-python\">int</code>, <code class=\"language-python\">float</code>, <code class=\"language-python\">str</code>, <code class=\"language-python\">bool</code>",
+        "Wie man Typen umwandelt",
+        "Häufige Fehler im Umgang mit Werten",
+        "Gute Praktiken für Variablennamen"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Diese Grundlagen werden für alles, was du später programmierst, entscheidend sein."
+    },
+    {}
+  ]
+}

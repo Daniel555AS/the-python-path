@@ -1,0 +1,223 @@
+{
+  "title": "Was ist Python und wie funktioniert es?",
+  "description": "",
+  "content": [
+    {
+      "type": "subtitle1",
+      "text": "Was ist Python?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Python ist eine hoch­entwickelte Programmiersprache, die von Guido van Rossum entwickelt und 1991 veröffentlicht wurde. Ihr Hauptmerkmal ist ihre klare und gut lesbare Syntax, die es erleichtert, sie zu lernen – selbst wenn man noch nie zuvor programmiert hat."
+    },
+    {
+      "type": "paragraph",
+      "text": "Es ist eine vielseitige Programmiersprache, was bedeutet, dass sie in einer Vielzahl von Bereichen eingesetzt werden kann:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Webentwicklung",
+        "Künstliche Intelligenz und Machine Learning",
+        "Datenanalyse",
+        "Automatisierung von Aufgaben“",
+        "Spieleentwicklung",
+        "Server-Scripting",
+        "Desktop-Anwendungen"
+      ]
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Hinweis:</strong><br>Ein großer Teil des Erfolgs von Python stammt aus seiner riesigen Community und seinem umfangreichen Bibliotheksökosystem. Zum Beispiel gibt es für KI TensorFlow, für Datenanalyse Pandas, für Webentwicklung Django usw."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Hauptmerkmale von Python"
+    },
+    {
+      "type": "subtitle2",
+      "text": "✔ Einfache Syntax"
+    },
+    {
+      "type": "paragraph",
+      "text": "Python ist so entwickelt, dass der Code leicht zu lesen ist – fast so, als wäre er auf Englisch geschrieben."
+    },
+    {
+      "type": "code",
+      "text": "print('Hallo, Welt')"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgabe:"
+    },
+    {
+      "type": "code",
+      "text": "Hallo, Welt"
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "print('Hallo, Welt')"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tipp:</strong><br>Wenn eine Python-Zeile \"klingt\", wie das, was du erreichen willst, ist sie wahrscheinlich die richtige Art, es zu schreiben."
+    },
+    {
+      "type": "subtitle2",
+      "text": "✔ Interpretiert"
+    },
+    {
+      "type": "paragraph",
+      "text": "Python muss nicht vor der Ausführung kompiliert werden. Der Code wird Zeile für Zeile vom Interpreter ausgeführt.<br><br>Dies ermöglicht:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Ideen schnell ausprobieren",
+        "Code in interaktiven Umgebungen wie Pyodide (im Browser) oder im Terminal ausführen",
+        "Fehler Zeile für Zeile erkennen"
+      ]
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Hinweis:</strong><br>Da Python interpretiert wird, führt es die ersten 79 Zeilen problemlos aus, und ein Fehler tritt nur auf, wenn die 80. Zeile erreicht wird."
+    },
+    {
+      "type": "subtitle2",
+      "text": "✔ Plattformübergreifend"
+    },
+    {
+      "type": "paragraph",
+      "text": "Python läuft auf:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Windows",
+        "macOS",
+        "Linux",
+        "Webbrowser (dank Pyodide)",
+        "Server",
+        "Mikrocontroller (MicroPython)"
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "✔ Dynamische Typisierung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Du musst den Variablentyp (<code class=\"language-python\">int</code>, <code class=\"language-python\">string</code> usw.) nicht angeben. Python erkennt ihn automatisch."
+    },
+    {
+      "type": "code",
+      "text": "x = 10      # Ganzzahl\nx = \"Hallo\"  # Jetzt ist es eine Zeichenkette (String)"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tipp:</strong><br>Die Flexibilität der dynamischen Typisierung ist mächtig, kann aber manchmal schwer zu entdeckende Fehler verursachen. Später wirst du Best Practices lernen, um dies zu vermeiden."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Wie funktioniert Python intern?"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Der Python-Interpreter"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Interpreter nimmt deinen <code class=\"language-python\">.py</code>-Code, wandelt ihn in Bytecode um, und dieser Bytecode wird von einer virtuellen Maschine ausgeführt."
+    },
+    {
+      "type": "paragraph",
+      "text": "Prozessübersicht:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Du schreibst <code class=\"language-python\">programm.py</code>",
+        "Python wandelt es in Bytecode um (<code class=\"language-python\">.pyc</code>)",
+        "Der Bytecode wird in der Python Virtual Machine (PVM) ausgeführt"
+      ]
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Hinweis:</strong><br>Bytecode ist eine optimierte Version, die es deinem Programm ermöglicht, beim nächsten Mal schneller zu starten."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Wofür wird Python verwendet?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Python ist äußerst vielseitig. Einige praktische Anwendungsbereiche:"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Automatisierung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Du kannst fast alles automatisieren: Dateien umbenennen, E-Mails senden, Dokumente lesen, mit APIs arbeiten..."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Webentwicklung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Frameworks wie Django oder Flask ermöglichen es, vollständige Webanwendungen zu erstellen."
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Hinweis:</strong><br>Django ist \"batteries included\", Flask ist minimalistischer. Später kannst du je nach deinen Bedürfnissen wählen."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Datenwissenschaft und KI"
+    },
+    {
+      "type": "paragraph",
+      "text": "Es ist der Standard in der Datenanalyse: Pandas, NumPy, Matplotlib, TensorFlow, Scikit-Learn..."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Videospiele"
+    },
+    {
+      "type": "paragraph",
+      "text": "Mit Bibliotheken wie Pygame kannst du 2D-Spiele erstellen."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Erster Blick auf Python-Code"
+    },
+    {
+      "type": "code",
+      "text": "name = input('Wie heißt du?')\nprint('Hallo', name)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgabe:"
+    },
+    {
+      "type": "code",
+      "text": "Wie heißt du? Daniel\nHallo Daniel"
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "name = input('Wie heißt du?')\nprint('Hallo', name)"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Fazit des Themas"
+    },
+    {
+      "type": "paragraph",
+      "text": "In diesem ersten Thema hast du gelernt, was Python ist, welche seine wichtigsten Merkmale sind und wie sein Interpreter funktioniert. Außerdem hast du seine gängigsten Anwendungsbereiche und einen ersten Codeausschnitt kennengelernt."
+    }
+  ]
+}

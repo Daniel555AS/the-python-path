@@ -1,0 +1,42 @@
+{
+  "title": "1.🧩Fundamentals of the Language",
+  "description": "In this module, you will learn what Python is and how to create your first programs. You will learn how to display text, use variables, work with numbers and strings, perform basic operations, and interact with the user through data input.",
+  "steps": [
+    {
+      "name": "1. What is Python and how does it work?",
+      "description": "Introduction to the language, its features, readable syntax, and its uses.",
+      "color": "#FFD43B",
+      "unit": "learning-unit1"
+    },
+    {
+      "name": "2. Your first program:<code>print()</code>",
+      "description": "How to display text on the screen and understand the basic structure of a program.",
+      "color": "#3776AB",
+      "unit": "learning-unit2"
+    },
+    {
+      "name": "3. Comments and basic code style",
+      "description": "Using <code>#</code> to document code and keep it readable.",
+      "color": "#1B983A",
+      "unit": "learning-unit3"
+    },
+    {
+      "name": "4. Variables and basic data types",
+      "description": "What variables are, how to create them, and the most common types: <code>int</code>, <code>float</code>, <code>str</code>, <code>bool</code>.",
+      "color": "#6464FF",
+      "unit": "learning-unit4"
+    },
+    {
+      "name": "5. Mathematical and text operations",
+      "description": "Using <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code> operators, string concatenation, and repetition",
+      "color": "#FFD43B",
+      "unit": "learning-unit5"
+    },
+    {
+      "name": "6. Data input with <code>input()</code>",
+      "description": "How to receive information from the user and process it.",
+      "color": "#3776AB",
+      "unit": "learning-unit6"
+    }
+  ]
+}

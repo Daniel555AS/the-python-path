@@ -1,0 +1,48 @@
+{
+  "title": "Python-Lernfahrplan",
+  "description": "Begib dich auf den Weg, um ein Python-Pro 😎 von Grund auf zu werden.",
+  "steps": [
+    {
+      "name": "1.🧩Grundlagen der Programmiersprache",
+      "description": "In diesem Modul lernst du, was Python ist und wie du deine ersten Programme erstellst. Du erfährst, wie man Text ausgibt, Variablen verwendet, mit Zahlen und Zeichenketten arbeitet, einfache Operationen durchführt und mit Benutzereingaben interagiert.",
+      "color": "#FFD43B",
+      "module": "module1"
+    },
+    {
+      "name": "2.🔁Ablaufsteuerung",
+      "description": "In diesem Modul lernst du, wie du die Ausführung deines Programms steuerst. Du wirst Bedingungen verwenden, um Entscheidungen zu treffen, Schleifen, um Aktionen zu wiederholen, und logische Operatoren, um Bedingungen zu kombinieren. Außerdem lernst du, wie man Schleifen gemäß der Logik deines Programms unterbricht oder fortsetzt.",
+      "color": "#3776AB",
+      "module": "module2"
+    },
+    {
+      "name": "3.📦Datenstrukturen",
+      "description": "In diesem Modul lernst du, wie man verschiedene Arten von Sammlungen in Python verwaltet. Du erfährst, wie man Listen, Tupel, Wörterbücher und Mengen verwendet, um Informationen zu speichern und zu organisieren, sowie wie man ihre Elemente durchläuft und manipuliert.",
+      "color": "#1B983A",
+      "module" : "module3"
+    },
+    {
+      "name": "4.⚙️Funktionen und Wiederverwendbarkeit von Code",
+      "description": "In diesem Modul lernst du, wie man Funktionen erstellt und verwendet, um deinen Code zu organisieren und Wiederholungen zu vermeiden. Du erfährst, wie man Werte übergibt und zurückgibt, optionale Parameter verwendet und den Geltungsbereich von Variablen versteht. Außerdem lernst du verschachtelte Funktionen und Lambda-Ausdrücke kennen.",
+      "color": "#6464FF",
+      "module": "module4"
+    },
+    {
+      "name": "5.📂Umgang mit Text und Daten",
+      "description": "In diesem Modul lernst du, wie man mit Textketten arbeitet, sie verändert und mit verschiedenen Techniken formatiert. Du erfährst auch, wie man Text in Listen umwandelt und umgekehrt, und wendest das Gelernte in kleinen praktischen Projekten wie einem Wortzähler oder einem Passwortprüfer an.",
+      "color": "#FFD43B",
+      "module": "module5"
+    },
+    {
+      "name": "6.🧱Logisches Denken und erweiterte Funktionen",
+      "description": "In diesem Modul entwickelst du deine Programmierlogik weiter, indem du fortgeschrittene Techniken lernst. Du erfährst, wie man rekursive Funktionen, List Comprehensions und eingebaute Python-Funktionen verwendet, um Probleme effizienter zu lösen. Außerdem lernst du, Funktionen wie Objekte zu behandeln, um flexibleren Code zu erstellen.",
+      "color": "#3776AB",
+      "module": "module6"
+    },
+    {
+      "name": "7.⚠️Fehler- und Ausnahmebehandlung",
+      "description": "In diesem Modul lernst du, die häufigsten Fehler in Python zu erkennen und sie mithilfe von Ausnahmen zu kontrollieren. Du wirst die Blöcke <code>try</code>, <code>except</code>, <code>finally</code> und <code>else</code> verwenden, um Fehler sicher zu handhaben und deine Programme korrekt am Laufen zu halten.",
+      "color": "#1B983A",
+      "module": "module7"
+    }
+  ]
+}

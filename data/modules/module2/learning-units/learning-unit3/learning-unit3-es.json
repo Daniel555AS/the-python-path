@@ -1,0 +1,399 @@
+{
+  "title": "Bucles while y for",
+  "description": "",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "En programación, muchas tareas requieren repetir acciones: mostrar mensajes varias veces, contar números, o procesar texto carácter por carácter. Los bucles permiten ejecutar un mismo bloque de código múltiples veces sin necesidad de escribirlo repetidamente. En Python, los dos bucles principales son <code class=\"language-python\">while</code> y <code class=\"language-python\">for</code>."
+    },
+    {
+      "type": "subtitle1",
+      "text": "¿Qué es un bucle?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Un bucle es una estructura de control que repite un conjunto de instrucciones mientras se cumpla una condición o mientras existan elementos por recorrer."
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Sin bucles, los programas serían largos, repetitivos y difíciles de mantener."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Bucle <code class=\"language-python\">while</code>"
+    },
+    {
+      "type": "subtitle2",
+      "text": "¿Cómo funciona?"
+    },
+    {
+      "type": "paragraph",
+      "text": "El bucle <code class=\"language-python\">while</code> repite el código mientras una condición sea verdadera. Antes de cada repetición, Python evalúa la condición."
+    },
+    {
+      "type": "code",
+      "text": "contador = 1\nwhile contador <= 5:\n\tprint(contador)\n\tcontador = contador + 1"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "1\n2\n3\n4\n5"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "contador = 1\nwhile contador <= 5:\n\tprint(contador)\n\tcontador = contador + 1"
+    },
+    {
+      "type": "tip",
+      "text": "💡 <strong>Tip:</strong><br>El <code class=\"language-python\">while</code> es ideal cuando no sabes cuántas veces se repetirá el bucle, pero sí sabes cuándo debe terminar."
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Si la condición nunca se vuelve falsa, el programa entrará en un bucle infinito."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Controlando el bucle <code class=\"language-python\">while</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Normalmente se usa una variable de control que cambia en cada repetición."
+    },
+    {
+      "type": "code",
+      "text": "x = 0\nwhile x < 3:\n\tprint(\"Hola\")\n\tx += 1"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Hola\nHola\nHola"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "x = 0\nwhile x < 3:\n\tprint(\"Hola\")\n\tx += 1"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Bucle <code class=\"language-python\">for</code>"
+    },
+    {
+      "type": "subtitle2",
+      "text": "¿Cómo funciona?"
+    },
+    {
+      "type": "paragraph",
+      "text": "El bucle <code class=\"language-python\">for</code> se usa para recorrer una secuencia.\nEn esta unidad, la secuencia principal será un string (<code class=\"language-python\">str</code>), ya que una cadena es una colección de caracteres ordenados."
+    },
+    {
+      "type": "code",
+      "text": "for letra in \"Python\":\n\tprint(letra)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "P\ny\nt\nh\no\nn"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "for letra in \"Python\":\n\tprint(letra)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Esto significa que el bucle toma un carácter a la vez y lo asigna a la variable <code class=\"language-python\">letra</code>."
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Aunque aún no se han visto listas, los strings ya permiten entender el concepto de \"recorrer una secuencia\"."
+    },
+    {
+      "type": "subtitle2",
+      "text": "¿Qué significa \"recorrer una secuencia\"?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Recorrer una secuencia significa acceder a cada elemento uno por uno, en orden. En el caso de los strings:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Cada carácter es un elemento.",
+        "Se recorren de izquierda a derecha."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "💡 <strong>Tip:</strong><br>El <code class=\"language-python\">for</code> es ideal cuando ya sabes qué vas a recorrer, como un texto o un rango de números."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Uso de <code class=\"language-python\">range()</code> con <code class=\"language-python\">for</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "<code class=\"language-python\">range()</code> permite generar una secuencia de números."
+    },
+    {
+      "type": "code",
+      "text": "for i in range(5):\n\tprint(i)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "0\n1\n2\n3\n4"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "for i in range(5):\n\tprint(i)"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br><code class=\"language-python\">range(5)</code> genera los números del <code class=\"language-python\">0</code> al <code class=\"language-python\">4</code>"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejemplos prácticos"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejemplo 1: Contar del 1 al 5 con <code class=\"language-python\">while</code>"
+    },
+    {
+      "type": "code",
+      "text": "n = 1\nwhile n <= 5:\n\tprint(n)\n\tn += 1"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "1\n2\n3\n4\n5"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "n = 1\nwhile n <= 5:\n\tprint(n)\n\tn += 1"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejemplo 2: Mostrar cada letra de una palabra"
+    },
+    {
+      "type": "code",
+      "text": "for c in \"Hola\":\n\tprint(c)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "H\no\nl\na"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "for c in \"Hola\":\n\tprint(c)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejemplo 3: Repetir un mensaje varias veces"
+    },
+    {
+      "type": "code",
+      "text": "for i in range(3):\n\tprint(\"Aprendiendo Python\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Aprendiendo Python\nAprendiendo Python\nAprendiendo Python"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "for i in range(3):\n\tprint(\"Aprendiendo Python\")"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejercicios para practicar"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 1: Contador con while"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea una variable llamada <code class=\"language-python\">contador</code> que empiece en 1.<br>Usa un bucle <code class=\"language-python\">while</code> para mostrar los números del 1 al 10, uno por uno."
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea una variable llamada contador que empiece en 1.\n# Usa un bucle while para mostrar los números del 1 al\n# 10, uno por uno."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "contador = 1\nwhile contador <= 10:\n\tprint(contador)\n\tcontador += 1"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar solución >>",
+          "code": "contador = 1\nwhile contador <= 10:\n\tprint(contador)\n\tcontador += 1"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 2: Cuenta regresiva"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea una variable llamada <code class=\"language-python\">n</code> con el valor 5.<br>Usa un bucle <code class=\"language-python\">while</code> para mostrar una cuenta regresiva hasta llegar a 1."
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea una variable llamada n con el valor 5.\n# Usa un bucle while para mostrar una cuenta regresiva\n# hasta llegar a 1."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "n = 5\nwhile n >= 1:\n\tprint(n)\n\tn -= 1"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar solución >>",
+          "code": "n = 5\nwhile n >= 1:\n\tprint(n)\n\tn -= 1"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 3: Recorrer un texto"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea una variable llamada <code class=\"language-python\">palabra</code> con cualquier texto.<br>Usa un bucle <code class=\"language-python\">for</code> para mostrar cada carácter de la palabra en una línea distinta."
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea una variable llamada palabra con cualquier\n# texto. Usa un bucle for para mostrar cada carácter de\n# la palabra en una línea distinta."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "palabra = \"Python\"\nfor letra in palabra:\n\tprint(letra)"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar solución >>",
+          "code": "palabra = \"Python\"\nfor letra in palabra:\n\tprint(letra)"
+        }
+      ]
+    },
+    {
+        "type": "subtitle2",
+        "text": "Ejercicio 4: Contar letras"
+    },
+    {
+        "type": "paragraph",
+        "text": "Usa un bucle <code class=\"language-python\">for</code> para contar cuántas letras tiene la palabra <code class=\"language-python\">\"programacion\"</code>.<br>Utiliza una variable contadora."
+    },
+    {
+        "type": "test-button",
+        "text": "Practicar >>",
+        "code": "# Usa un bucle for para contar cuántas letras tiene la\n# palabra \"programacion\".\n# Utiliza una variable contadora."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "contador = 0\nfor letra in \"programacion\":\n\tcontador += 1\n\nprint(contador)"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar solución >>",
+          "code": "contador = 0\nfor letra in \"programacion\":\n\tcontador += 1\n\nprint(contador)"
+        }
+      ]
+    },
+    {
+        "type": "subtitle2",
+        "text": "Ejercicio 5: Número pares"
+    },
+    {
+        "type": "paragraph",
+        "text": "Usa un bucle <code class=\"language-python\">for</code> y <code class=\"language-python\">range()</code> para mostrar los números pares del 0 al 10."
+    },
+    {
+        "type": "test-button",
+        "text": "Practicar >>",
+        "code": "# Usa un bucle for y range() para mostrar los números\n# pares del 0 al 10."
+    },
+        {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "for i in range(0, 11, 2):\n\tprint(i)"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar solución >>",
+          "code": "for i in range(0, 11, 2):\n\tprint(i)"
+        }
+      ]
+    },
+    {
+        "type": "subtitle1",
+        "text": "Conclusión de la unidad"
+    },
+    {
+        "type": "paragraph",
+        "text": "En esta unidad aprendiste que:"
+    },
+    {
+        "type": "list",
+        "items": [
+            "Los bucles permiten repetir instrucciones sin duplicar código.",
+            "El bucle <code class=\"language-python\">while</code> repite acciones mientras una condición sea verdadera.",
+            "El bucle <code class=\"language-python\">for</code> sirve para recorrer secuencias, como cadenas de texto.",
+            "Un string es una secuencia de caracteres que puede recorrerse uno por uno.",
+            "<code class=\"language-python\">range()</code> facilita la repetición controlada con números.",
+            "Elegir el bucle correcto hace que el código sea más claro y eficiente."
+        ]
+    }
+  ]
+}

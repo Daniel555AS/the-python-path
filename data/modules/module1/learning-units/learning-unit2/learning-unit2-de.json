@@ -1,0 +1,353 @@
+{
+  "title": "Dein erstes Programm: <code class=\"language-python\">print()</code>",
+  "description": "",
+  "content": [
+    {
+      "type": "subtitle1",
+      "text": "Was ist ein Programm in Python?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ein Programm in Python ist einfach eine Textdatei, die Anweisungen enthält, die der Interpreter Zeile für Zeile ausführt. Die minimale Struktur eines Programms kann so einfach sein wie eine einzelne Zeile, die eine Nachricht auf dem Bildschirm anzeigt."
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Hinweis:</strong><br>In Python wird jede Zeile der Reihe nach von oben nach unten ausgeführt. Du brauchst keine obligatorische Hauptfunktion wie in anderen Sprachen."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Die Funktion <code class=\"language-python\">print()</code>: Dein erstes Werkzeug"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Funktion <code class=\"language-python\">print()</code> wird verwendet, um Informationen auf dem Bildschirm anzuzeigen. Sie ist der klassische Ausgangspunkt in jeder Programmiersprache."
+    },
+    {
+      "type": "paragraph",
+      "text": "Einfaches Beispiel:"
+    },
+    {
+      "type": "code",
+      "text": "print(\"Hallo, Welt\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Beim Ausführen dieses Programms zeigt Python Folgendes an:"
+    },
+    {
+      "type": "code",
+      "text": "Hallo, Welt"
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "print(\"Hallo, Welt\")"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tipp:</strong><br>Alles, was du anzeigen möchtest, muss in den Klammern von <code class=\"language-python\">print()</code> stehen. Wenn es Text ist, muss er in Anführungszeichen gesetzt werden."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Was kann ich mit <code class=\"language-python\">print()</code> anzeigen?"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Text (Zeichenketten - <code class=\"language-python\">str</code>)"
+    },
+    {
+      "type": "code",
+      "text": "print(\"Python lernen macht Spaß\")"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Zahlen"
+    },
+    {
+      "type": "code",
+      "text": "print(2025)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Variablen"
+    },
+    {
+      "type": "code",
+      "text": "name = \"Python\"\nprint(name)"
+    },
+    {
+      "type": "test-button",
+      "text": "Alles ausprobieren >>",
+      "code": "print(\"Python lernen macht Spaß\")\n\nprint(2025)\n\nname = \"Python\"\nprint(name)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Erwartete Ausgabe:"
+    },
+    {
+      "type": "code",
+      "text": "Python lernen macht Spaß\n2025\nPython"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Hinweis:</strong><br>Im Gegensatz zu vielen Sprachen muss man in Python den Variablentyp nicht deklarieren; es reicht, sie zuzuweisen."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Mehrere Werte gleichzeitig anzeigen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Python erlaubt es, mehrere Elemente durch Kommas getrennt auszugeben:"
+    },
+    {
+      "type": "code",
+      "text": "print(\"Dein Alter ist:\", 22)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgabe:"
+    },
+    {
+      "type": "code",
+      "text": "Dein Alter ist: 22"
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "print(\"Dein Alter ist:\", 22)"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Hinweis:</strong><br>Wenn du Kommas innerhalb von <code class=\"language-python\">print()</code> verwendest, fügt Python automatisch ein Leerzeichen zwischen jedem Element ein."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Wie <code class=\"language-python\">print()</code> intern funktioniert"
+    },
+    {
+      "type": "paragraph",
+      "text": "Obwohl <code class=\"language-python\">print()</code> einfach erscheint, hat es mehrere nützliche Parameter:"
+    },
+    {
+      "type": "code",
+      "text": "print(objekte, sep=\" \", end=\"\\n\")"
+    },
+    {
+      "type": "list",
+      "items": [
+        "<code class=\"language-python\">sep</code> → Definiert den Trenner zwischen Elementen",
+        "<code class=\"language-python\">end</code> → Definiert, was am Ende der Zeile ausgegeben wird"
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Beispiel mit <code class=\"language-python\">sep</code>:"
+    },
+    {
+      "type": "code",
+      "text": "print(\"Python\", \"JavaScript\", \"Go\", sep=\" | \")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgabe:"
+    },
+    {
+      "type": "code",
+      "text": "Python | JavaScript | Go"
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "print(\"Python\", \"JavaScript\", \"Go\", sep=\" | \")"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Beispiel mit <code class=\"language-python\">end</code>:"
+    },
+    {
+      "type": "code",
+      "text": "print(\"Hallo\", end=\"...\")\nprint(\"Welt\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgabe:"
+    },
+    {
+      "type": "code",
+      "text": "Hallo...Welt"
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "print(\"Hallo\", end=\"...\")\nprint(\"Welt\")"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Hinweis:</strong><br>Standardmäßig verwendet <code class=\"language-python\">end</code> <code class=\"language-python\">\n</code>, also einen Zeilenumbruch. Deshalb erscheint jede <code class=\"language-python\">print()</code> in einer neuen Zeile."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Leerzeichen, Zeilenumbrüche und Sonderzeichen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Du kannst das Textformat mit speziellen Sequenzen steuern:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "<code class=\"language-python\">\\n</code> → Zeilenumbruch",
+        "<code class=\"language-python\">\\t</code> → Tabulator",
+        "<code class=\"language-python\">\\\"</code> → Anführungszeichen innerhalb von Anführungszeichen",
+        "<code class=\"language-python\">\\\\</code> → Literaler Backslash"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Beispiel:"
+    },
+    {
+      "type": "code",
+      "text": "print(\"Zeile 1\\nZeile 2\\nZeile 3\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgabe:"
+    },
+    {
+      "type": "code",
+      "text": "Zeile 1\nZeile 2\nZeile 3"
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "print(\"Zeile 1\\nZeile 2\\nZeile 3\")"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Hinweis:</strong><br>Escape-Sequenzen ermöglichen es dir, genau zu steuern, wie der ausgegebene Text aussieht. Sie sind sehr nützlich, um Menüs oder formatiere Ergebnisse anzuzeigen."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ein sehr häufiger Fehler bei der Verwendung von <code class=\"language-python\">print()</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Wenn du vergisst, die Anführungszeichen zu schließen:"
+    },
+    {
+      "type": "code",
+      "text": "print(\"Hallo)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Python zeigt einen Syntaxfehler an."
+    },
+    {
+      "type": "test-button",
+      "text": "Fehler ausprobieren >>",
+      "code": "print(\"Hallo)"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Minimale Struktur eines Python-Programms"
+    },
+    {
+      "type": "code",
+      "text": "print(\"Hallo von meinem ersten Python-Programm\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Dies ist bereits ein vollständiges, gültiges und funktionierendes Programm."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgabe:"
+    },
+    {
+      "type": "code",
+      "text": "Hallo von meinem ersten Python-Programm"
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "print(\"Hallo von meinem ersten Python-Programm\")"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tipp</strong><br>Betrachte ein Programm als eine Liste von Anweisungen. Wenn du zwei Zeilen hast:"
+    },
+    {
+      "type": "code",
+      "text": "print(\"Erste Zeile\")\nprint(\"Zweite Zeile\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Python führt sie immer in dieser Reihenfolge aus."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgabe:"
+    },
+    {
+      "type": "code",
+      "text": "Erste Zeile\nZweite Zeile"
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "print(\"Erste Zeile\")\nprint(\"Zweite Zeile\")"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Geführte Übung: Dein erstes echtes Script"
+    },
+    {
+      "type": "paragraph",
+      "text": "Wir werden eine persönlichere Nachricht anzeigen"
+    },
+    {
+      "type": "code",
+      "text": "name = \"DEIN NAME\"\nprint(\"Willkommen,\", name, \"in der Welt von Python!\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgabe:"
+    },
+    {
+      "type": "code",
+      "text": "Willkommen, DEIN NAME in der Welt von Python!"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Hinweis:</strong><br>Du kannst <code class=\"language-python\">\"DEIN NAME\"</code> durch deinen eigenen Namen ersetzen."
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "name = \"DEIN NAME\"\nprint(\"Willkommen,\", name, \"in der Welt von Python!\")"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Fazit des Themas"
+    },
+    {
+      "type": "paragraph",
+      "text": "In diesem Thema hast du gelernt:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Was ein Programm in Python ist",
+        "Wie die Funktion <code class=\"language-python\">print()</code> funktioniert",
+        "Wie man <code class=\"language-python\">sep</code> und <code class=\"language-python\">end</code> verwendet",
+        "Wie man Zeilenumbrüche und Tabulatoren steuert",
+        "Wie man ein gültiges Minimalprogramm schreibt"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "<code class=\"language-python\">print()</code> ist das Werkzeug, das du ständig verwenden wirst, um Ergebnisse anzuzeigen, Ideen zu debuggen und mit dem Benutzer zu kommunizieren"    }
+  ]
+}

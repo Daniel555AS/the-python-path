@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning... - TPP</title>
+
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/learning-unit.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+</head>
+
+<body data-page="learning-unit">
+    <!-- Main hero section with animated background -->
+    <div class="hero">
+        <canvas id="bubbles"></canvas>
+        <!-- Header with hamburger menu and language selector -->
+        <header class="main-header">
+            <!-- Hamburger menu button -->
+            <div id="menu-btn" class="menu-btn">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+            <!-- Language selector dropdown -->
+            <div class="language-dropdown">
+                <button class="language-btn">
+                    <div class="flag us"></div>
+                    <span class="lang-text">English</span>
+                </button>
+                <div class="language-options">
+                    <div class="language-option" data-lang="es">
+                        <div class="flag es"></div>
+                        <span>Español</span>
+                    </div>
+                    <div class="language-option" data-lang="de">
+                        <div class="flag de"></div>
+                        <span>Deutsch</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Side navigation menu -->
+        <nav id="side-menu" class="side-menu">
+            <ul>
+                <li><a href="../index.html" data-i18n="menu.home"></a></li>
+                <li><a href="../pages/roadmap.html" data-i18n="menu.roadMap"></a></li>
+                <li><a href="../pages/training-area.html" data-i18n="menu.trainingArea"></a></li>
+                <li><a href="../pages/snake-game.html" data-i18n="menu.playAndLearn"></a></li>
+            </ul>
+        </nav>
+
+        <!-- Learning unit content section -->
+        <section class="unit-container">
+            <button id="back-btn" class="back-btn">
+                <
+            </button>
+            <h1 id="unit-title"></h1>
+            <p id="unit-description"></p>
+
+            <div id="unit-content"></div>
+        </section>
+    </div>
+
+    <footer id="main-footer">
+        <p>
+            <span data-i18n="footer.createdBy"></span>
+            <a href="https://github.com/Daniel555AS" target="_blank">Daniel555AS</a>
+        </p>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/learning-unit.js"></script>
+</body>
+
+</html>

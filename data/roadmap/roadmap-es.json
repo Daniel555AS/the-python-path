@@ -1,0 +1,48 @@
+{
+  "title": "Python Ruta de Aprendizaje",
+  "description": "Embárcate en el camino para convertirte en un Pro😎 de Python desde cero.",
+  "steps": [
+    {
+      "name": "1.🧩Fundamentos del Lenguaje",
+      "description": "En este módulo aprenderás qué es Python y cómo crear tus primeros programas. Conocerás cómo mostrar texto, usar variables, trabajar con números y cadenas, realizar operaciones básicas e interactuar con el usuario mediante entradas de datos.",
+      "color": "#FFD43B",
+      "module": "module1"
+    },
+    {
+      "name": "2.🔁Control de Flujo",
+      "description": "En este módulo aprenderás a controlar cómo se ejecuta tu programa. Usarás condicionales para tomar decisiones, bucles para repetir acciones y operadores lógicos para combinar condiciones. También verás cómo interrumpir o continuar ciclos según la lógica de tu programa.",
+      "color": "#3776AB",
+      "module": "module2"
+    },
+    {
+      "name": "3.📦Estructuras de Datos",
+      "description": "En este módulo aprenderás a manejar distintos tipos de colecciones en Python. Conocerás cómo usar listas, tuplas, diccionarios y conjuntos para almacenar y organizar información, además de recorrer y manipular sus elementos.",
+      "color": "#1B983A",
+      "module" : "module3"
+    },
+    {
+      "name": "4.⚙️Funciones y Reutilización de Código",
+      "description": "En este módulo aprenderás a crear y usar funciones para organizar tu código y evitar repeticiones. Verás cómo pasar y devolver valores, usar parámetros opcionales y entender el alcance de las variables. También conocerás las funciones anidadas y las expresiones lambda.",
+      "color": "#6464FF",
+      "module": "module4"
+    },
+    {
+      "name": "5.📂Manejo de Texto y Datos",
+      "description": "En este módulo aprenderás a trabajar con cadenas de texto, modificarlas y formatearlas usando distintas técnicas. También verás cómo convertir texto en listas y viceversa, y aplicarás lo aprendido en pequeños proyectos prácticos como un contador de palabras o un verificador de contraseñas.",
+      "color": "#FFD43B",
+      "module": "module5"
+    },
+    {
+      "name": "6.🧱Pensamiento Lógico y Funciones Avanzadas",
+      "description": "En este módulo desarrollarás tu lógica de programación aprendiendo técnicas más avanzadas. Verás cómo usar funciones recursivas, comprensiones de listas y funciones integradas de Python para resolver problemas de forma más eficiente. También aprenderás a tratar las funciones como objetos para crear código más flexible..",
+      "color": "#3776AB",
+      "module": "module6"
+    },
+    {
+      "name": "7.⚠️Manejo de Errores y Excepciones",
+      "description": "En este módulo aprenderás a identificar los errores más comunes en Python y a controlarlos mediante excepciones. Usarás bloques <code>try</code>, <code>except</code>, <code>finally</code> y <code>else</code> para manejar fallos de forma segura y mantener tus programas funcionando correctamente.",
+      "color": "#1B983A",
+      "module": "module7"
+    }
+  ]
+}

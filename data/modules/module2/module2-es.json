@@ -1,0 +1,30 @@
+{
+    "title": "2.🔁Control de Flujo",
+    "description": "En este módulo aprenderás a controlar cómo se ejecuta tu programa. Usarás condicionales para tomar decisiones, bucles para repetir acciones y operadores lógicos para combinar condiciones. También verás cómo interrumpir o continuar ciclos según la lógica de tu programa.",
+    "steps": [
+        {
+            "name": "1. Condicionales: <code>if</code>, <code>elif</code>, <code>else</code>",
+            "description": "En esta unidad aprenderás a permitir que tu programa tome decisiones usando <code>if</code>, <code>elif</code> y <code>else</code>, de modo que el código pueda ejecutar acciones diferentes según las condiciones que se cumplan. Verás cómo se comporta el flujo cuando una condición es verdadera, qué ocurre cuando ninguna coincide y cómo encadenar múltiples opciones.",
+            "color": "#FFD43B",
+            "unit": "learning-unit1"
+        },
+        {
+            "name": "2. Operadores lógicos y de comparación",
+            "description":"Aquí entenderás cómo funcionan operadores como <code>==</code>, <code>!=</code>, <code><</code>, <code>></code>, <code><=</code>, <code>>=</code>, y cómo combinarlos con <code>and</code>, <code>or</code> y <code>not</code> para construir condiciones más complejas. Esto te permitirá evaluar varias situaciones al mismo tiempo y crear decisiones más precisas dentro de tus estructuras condicionales.",
+            "color": "#3776AB",
+            "unit": "learning-unit2"
+        },
+        {
+            "name": "3. Bucles <code>while</code> y <code>for</code>",
+            "description": "En esta unidad aprenderás a repetir instrucciones usando <code>while</code> y <code>for</code>, lo que permite repetir tareas sin escribir el mismo código muchas veces. Así mismo, aprenderás a recorrer una secuencia de caracteres (<code>str</code>).",
+            "color": "#1B983A",
+            "unit": "learning-unit3"
+        },
+        {
+            "name": "4 Control de flujo en bucles",
+            "description": "Aquí descubrirás cómo modificar la ejecución interna de un bucle usando instrucciones especiales como <code>break</code> para detenerlo antes de tiempo, <code>continue</code> para saltar una repetición específica y <code>pass</code> para dejar un bloque vacío que completarás más adelante. Estas herramientas te permiten tener un control más preciso y flexible sobre el comportamiento de tus ciclos.",
+            "color": "#6464FF",
+            "unit": "learning-unit4"
+        }
+    ]
+}

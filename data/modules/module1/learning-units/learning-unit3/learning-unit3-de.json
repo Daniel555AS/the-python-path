@@ -1,0 +1,315 @@
+{
+  "title": "Kommentare und grundlegender Code-Stil",
+  "description": "",
+  "content": [
+    {
+      "type": "subtitle1",
+      "text": "Was ist ein Kommentar in Python?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ein Kommentar ist ein Teil des Codes, der nicht ausgeführt wird. Er dient dazu, zu erklären, was ein Anweisungsblock tut, die Logik hinter einer Berechnung zu verdeutlichen oder Erinnerungen zu hinterlassen."
+    },
+    {
+      "type": "paragraph",
+      "text": "In Python schreibt man Kommentare mit dem Symbol <code class=\"language-python\">#</code>:"
+    },
+    {
+      "type": "code",
+      "text": "# so schreibt man einen Kommentar"
+    },
+    {
+      "type": "paragraph",
+      "text": "Alles, was nach <code class=\"language-python\">#</code> in derselben Zeile steht, wird von Python ignoriert."
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Hinweis:</strong><br>Kommentare sind für Menschen, nicht für den Interpreter. Sie machen den Code verständlicher und helfen dir zu erinnern, was du meintest, wenn du ihn später erneut liest."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Einzeilige Kommentare"
+    },
+    {
+      "type": "paragraph",
+      "text": "Dies ist die häufigste Art. Sie werden über eine Codezeile oder rechts daneben geschrieben."
+    },
+    {
+      "type": "paragraph",
+      "text": "Beispiel:"
+    },
+    {
+      "type": "code",
+      "text": "# Dieses Programm zeigt eine Begrüßung an\nprint(\"Hallo\")  # Zeigt Text auf dem Bildschirm"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgabe:"
+    },
+    {
+      "type": "code",
+      "text": "Hallo"
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "# Dieses Programm zeigt eine Begrüßung an\nprint(\"Hallo\")  # Zeigt Text auf dem Bildschirm"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tipp:</strong><br>Vermeide offensichtliche Kommentare wie:<br><code class=\"language-python\">x = x + 1   # ich addiere 1 zu x</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Gute Kommentare erklären das Warum, nicht das Was."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Mehrzeilige Kommentare (erklärender Text)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Python hat kein spezielles Symbol für mehrzeilige Kommentare wie andere Sprachen, aber du kannst dreifache Anführungszeichen <code class=\"language-python\">\"\"\" \"\"\"</code> verwenden, um längeren Text zu schreiben, der nicht ausgeführt wird, solange er keiner Variablen zugewiesen ist."
+    },
+    {
+      "type": "paragraph",
+      "text": "Dies wird normalerweise am Anfang einer Datei oder zu Beginn von Funktionen verwendet."
+    },
+    {
+      "type": "paragraph",
+      "text": "Beispiel"
+    },
+    {
+      "type": "code",
+      "text": "\"\"\"\nDieses Programm berechnet die Fläche eines Kreises.\nDer Benutzer gibt den Radius ein und das Ergebnis wird angezeigt.\n\"\"\""
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Hinweis:</strong><br>Technisch gesehen ist dies ein ungenutztes Stringliteral, aber Python ignoriert es, sodass es als Kommentar funktioniert."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Wofür sind Kommentare wirklich?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Kommentare sind keine Dekoration. Sie sind nützlich, wenn:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Sie die Absicht hinter einer Lösung erklären",
+        "Sie komplizierte Teile des Codes verdeutlichen",
+        "Sie wichtige Entscheidungen dokumentieren",
+        "Sie den Leser des Codes unterstützen (auch dich selbst)"
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Hinweis:</strong><br>Wenn du zu viel erklären musst, ist der Code vielleicht zu komplex. Oft ist es besser, den Code zu vereinfachen, statt mehr Kommentare zu schreiben."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Grundlegender Code-Stil: sauberen Code schreiben"
+    },
+    {
+      "type": "paragraph",
+      "text": "Python ist dafür bekannt, einen klaren und gut lesbaren Stil zu fördern. Hier einige wichtige Regeln:"
+    },
+    {
+      "type": "subtitle2",
+      "text": "1. Verwende beschreibende Variablennamen"
+    },
+    {
+      "type": "paragraph",
+      "text": "❌ Schlecht:"
+    },
+    {
+      "type": "code",
+      "text": "x = 10\ny = 20"
+    },
+    {
+      "type": "paragraph",
+      "text": "✅ Gut:"
+    },
+    {
+      "type": "code",
+      "text": "alter = 10\njahre_erfahrung = 20"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Hinweis:</strong><br>Ein guter Name verhindert unnötige Kommentare."
+    },
+    {
+      "type": "subtitle2",
+      "text": "2. Leerzeichen um Operatoren"
+    },
+    {
+      "type": "paragraph",
+      "text": "Das verbessert die Lesbarkeit enorm."
+    },
+    {
+      "type": "paragraph",
+      "text": "❌ Ohne Leerzeichen:"
+    },
+    {
+      "type": "code",
+      "text": "summe=10+5"
+    },
+    {
+      "type": "paragraph",
+      "text": "✅ Mit Leerzeichen:"
+    },
+    {
+      "type": "code",
+      "text": "summe = 10 + 5"
+    },
+    {
+      "type": "subtitle2",
+      "text": "3. Eine Idee pro Zeile"
+    },
+    {
+      "type": "paragraph",
+      "text": "❌ Schwer zu lesen:"
+    },
+    {
+      "type": "code",
+      "text": "a = 10; b = 20; print(a+b)"
+    },
+    {
+      "type": "paragraph",
+      "text": "✅ Klar und einfach:"
+    },
+    {
+      "type": "code",
+      "text": "a = 10\nb = 20\nprint(a + b)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgabe:"
+    },
+    {
+      "type": "code",
+      "text": "30"
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "a = 10\nb = 20\nprint(a + b)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "4. Halte Zeilen kurz"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die allgemeine Empfehlung lautet, nicht mehr als 79 Zeichen pro Zeile zu verwenden (PEP 8)."
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tipp:</strong><br>Wenn du etwas Langes schreiben musst, teile es auf mehrere Teile auf, z. B. mit <code class=\"language-python\">\\</code> oder durch Konkatenation."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Kommentare im echten Code"
+    },
+    {
+      "type": "paragraph",
+      "text": "Hier ein realistischeres Beispiel dafür, wie man Kommentare verwendet, um eine Idee zu verdeutlichen:"
+    },
+    {
+      "type": "code",
+      "text": "# Wir berechnen den Endpreis mit Rabatt\npreis = 100\nrabatt = 0.15\n\n# Rabatt anwenden\nendpreis = preis - (preis * rabatt)\n\nprint(\"Endpreis:\", endpreis)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgabe:"
+    },
+    {
+      "type": "code",
+      "text": "Endpreis: 85.0"
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "# Wir berechnen den Endpreis mit Rabatt\npreis = 100\nrabatt = 0.15\n\n# Rabatt anwenden\nendpreis = preis - (preis * rabatt)\n\nprint(\"Endpreis:\", endpreis)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Hier erklären Kommentare den Zweck, nicht die mathematische Operation."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Wann solltest du NICHT kommentieren?"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tipp:</strong> Merke dir diese goldene Regel:<br><strong>\"Kommentiere, wenn der Leser verwirrt sein könnte; kommentiere nicht das Offensichtliche.\"</strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "❌ Unnötiger Kommentar:"
+    },
+    {
+      "type": "code",
+      "text": "print(\"Hallo\")  # druckt Hallo"
+    },
+    {
+      "type": "paragraph",
+      "text": "❌ Kommentare, die den Code duplizieren:"
+    },
+    {
+      "type": "code",
+      "text": "x = 5   # x ist jetzt 5"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Geführte Übung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Füge diesem Codeausschnitt hilfreiche Kommentare hinzu:"
+    },
+    {
+      "type": "code",
+      "text": "name = \"Juan\"\nalter = 22\naktuelles_jahr = 2025\n\nprint(\"Dein Name ist:\", name)\nprint(\"Dein Alter in 5 Jahren wird sein:\", alter + 5)"
+    },
+    {
+      "type": "test-button",
+      "text": "Üben >>",
+      "code": "name = \"Juan\"\nalter = 22\naktuelles_jahr = 2025\n\nprint(\"Dein Name ist:\", name)\nprint(\"Dein Alter in 5 Jahren wird sein:\", alter + 5)"
+    },
+    {
+      "type": "collapsible",
+      "title": "Mögliche Lösung ansehen",
+      "content": [
+        {
+          "type": "code",
+          "text": "# Benutzerdaten\nname = \"Juan\"\nalter = 22\naktuelles_jahr = 2025\n\n# Informationen anzeigen\nprint(\"Dein Name ist:\", name)\n\n# Zukünftiges Alter berechnen (aktuelles Alter + 5)\nprint(\"Dein Alter in 5 Jahren wird sein:\", alter + 5)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Zusammenfassung des Themas"
+    },
+    {
+      "type": "paragraph",
+      "text": "In diesem Thema hast du gelernt"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Wie man Kommentare mit <code class=\"language-python\">#</code> schreibt",
+        "Wie man erklärende Kommentare mit dreifachen Anführungszeichen erstellt",
+        "Gute Praktiken für Stil und Lesbarkeit",
+        "Was einen Kommentar nützlich macht",
+        "Wie man klareren und besser strukturierten Code schreibt"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Kommentare werden deine Verbündeten sein, während du zu komplexeren Programmen fortschreitest."
+    }
+  ]
+}

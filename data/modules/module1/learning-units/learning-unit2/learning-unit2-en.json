@@ -1,0 +1,354 @@
+{
+  "title": "Your first program: <code class=\"language-python\">print()</code>",
+  "description": "",
+  "content": [
+    {
+      "type": "subtitle1",
+      "text": "What is a program in Python?"
+    },
+    {
+      "type": "paragraph",
+      "text": "A program in Python is simply a text file that contains instructions which the interpreter will execute line by line. The minimal structure of a program can be as simple as a single line that displays a message on the screen."
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Note:</strong><br>In Python, each line is executed in order, from top to bottom. You don’t need a mandatory main function like in other languages."
+    },
+    {
+      "type": "subtitle1",
+      "text": "The <code class=\"language-python\">print()</code> function: your first tool"
+    },
+    {
+      "type": "paragraph",
+      "text": "The <code class=\"language-python\">print()</code> function is used to display information on the screen. It is the classic starting point in any programming language."
+    },
+    {
+      "type": "paragraph",
+      "text": "Basic example:"
+    },
+    {
+      "type": "code",
+      "text": "print(\"Hello, World\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "When you run this program, Python will display:"
+    },
+    {
+      "type": "code",
+      "text": "Hello, World"
+    },
+    {
+      "type": "test-button",
+      "text": "Try it >>",
+      "code": "print(\"Hello, World\")"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br>Everything you want to display must go inside the parentheses of <code class=\"language-python\">print()</code>. If it is text, it must be enclosed in quotation marks."
+    },
+    {
+      "type": "subtitle1",
+      "text": "What can I display with <code class=\"language-python\">print()</code>?"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Text (strings - <code class=\"language-python\">str</code>)"
+    },
+    {
+      "type": "code",
+      "text": "print(\"Learning Python is fun\")"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Numbers"
+    },
+    {
+      "type": "code",
+      "text": "print(2025)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Variables"
+    },
+    {
+      "type": "code",
+      "text": "name = \"Python\"\nprint(name)"
+    },
+    {
+      "type": "test-button",
+      "text": "Try them all >>",
+      "code": "print(\"Learning Python is fun\")\n\nprint(2025)\n\nname = \"Python\"\nprint(name)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Expected output:"
+    },
+    {
+      "type": "code",
+      "text": "Learning Python is fun\n2025\nPython"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Note:</strong><br>Unlike many languages, Python does not require you to declare the variable type; simply assigning it is enough."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Display multiple values at once"
+    },
+    {
+      "type": "paragraph",
+      "text": "Python allows you to print multiple elements separated by commas:"
+    },
+    {
+      "type": "code",
+      "text": "print(\"Your age is:\", 22)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "Your age is: 22"
+    },
+    {
+      "type": "test-button",
+      "text": "Try it >>",
+      "code": "print(\"Your age is:\", 22)"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Note:</strong><br>When you use commas inside <code class=\"language-python\">print()</code>, Python automatically adds a space between each element."
+    },
+    {
+      "type": "subtitle1",
+      "text": "How <code class=\"language-python\">print()</code> works internally"
+    },
+    {
+      "type": "paragraph",
+      "text": "Although <code class=\"language-python\">print()</code> seems simple, it has several useful parameters:"
+    },
+    {
+      "type": "code",
+      "text": "print(objects, sep=\" \", end=\"\\n\")"
+    },
+    {
+      "type": "list",
+      "items": [
+        "<code class=\"language-python\">sep</code> → Defines the separator between elements",
+        "<code class=\"language-python\">end</code> → Defines what is printed at the end of the line"
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Example using <code class=\"language-python\">sep</code>:"
+    },
+    {
+      "type": "code",
+      "text": "print(\"Python\", \"JavaScript\", \"Go\", sep=\" | \")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "Python | JavaScript | Go"
+    },
+    {
+      "type": "test-button",
+      "text": "Try it >>",
+      "code": "print(\"Python\", \"JavaScript\", \"Go\", sep=\" | \")"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Example using <code class=\"language-python\">end</code>:"
+    },
+    {
+      "type": "code",
+      "text": "print(\"Hello\", end=\"...\")\nprint(\"World\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "Hello...World"
+    },
+    {
+      "type": "test-button",
+      "text": "Try it >>",
+      "code": "print(\"Hello\", end=\"...\")\nprint(\"World\")"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Note:</strong><br>By default, <code class=\"language-python\">end</code> uses <code class=\"language-python\">\n</code>, that is, a newline. That’s why each <code class=\"language-python\">print()</code> appears on a new line."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Spaces, newlines, and special characters"
+    },
+    {
+      "type": "paragraph",
+      "text": "You can control the text format using special sequences:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "<code class=\"language-python\">\\n</code> → Newline",
+        "<code class=\"language-python\">\\t</code> → Tab",
+        "<code class=\"language-python\">\\\"</code> → Quotes Within Quotes",
+        "<code class=\"language-python\">\\\\</code> → Literal Backslash"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Example:"
+    },
+    {
+      "type": "code",
+      "text": "print(\"Line 1\\nLine 2\\nLine 3\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "Line 1\nLine 2\nLine 3"
+    },
+    {
+      "type": "test-button",
+      "text": "Try it >>",
+      "code": "print(\"Line 1\\nLine 2\\nLine 3\")"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Note:</strong><br>Escape sequences allow you to control exactly how the text you print looks. They are very useful for displaying menus or formatted output."
+    },
+    {
+      "type": "subtitle1",
+      "text": "A very common mistake when using <code class=\"language-python\">print()</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "If you forget to close the quotation marks:"
+    },
+    {
+      "type": "code",
+      "text": "print(\"Hello)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Python will show a syntax error."
+    },
+    {
+      "type": "test-button",
+      "text": "Try error >>",
+      "code": "print(\"Hello)"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Minimal structure of a Python program"
+    },
+    {
+      "type": "code",
+      "text": "print(\"Hello from my first Python program\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "This is already a complete, valid, and functional program."
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "Hello from my first Python program"
+    },
+    {
+      "type": "test-button",
+      "text": "Try it >>",
+      "code": "print(\"Hello from my first Python program\")"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip</strong><br>Think of a program as a list of instructions. If you have two lines:"
+    },
+    {
+      "type": "code",
+      "text": "print(\"First line\")\nprint(\"Second line\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Python will always execute them in that order."
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "First line\nSecond line"
+    },
+    {
+      "type": "test-button",
+      "text": "Try it >>",
+      "code": "print(\"First line\")\nprint(\"Second line\")"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Guided exercise: your first real script"
+    },
+    {
+      "type": "paragraph",
+      "text": "Let's display a more personalized message."
+    },
+    {
+      "type": "code",
+      "text": "name = \"YOUR NAME\"\nprint(\"Welcome,\", name, \"to the world of Python!\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "Welcome, YOUR NAME to the world of Python!"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Note:</strong><br>You can replace <code class=\"language-python\">\"YOUR NAME\"</code> with your own name."
+    },
+    {
+      "type": "test-button",
+      "text": "Try it >>",
+      "code": "name = \"YOUR NAME\"\nprint(\"Welcome,\", name, \"to the world of Python!\")"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Conclusion of the topic"
+    },
+    {
+      "type": "paragraph",
+      "text": "In this topic you learned:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "What a program in Python is",
+        "How <code class=\"language-python\">print()</code> works",
+        "How to use <code class=\"language-python\">sep</code> and <code class=\"language-python\">end</code>",
+        "How to control newlines and tabs",
+        "How to write a minimal valid program"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "<code class=\"language-python\">print()</code> is the tool you will constantly use to see results, debug ideas, and communicate with the user."
+    }
+  ]
+}

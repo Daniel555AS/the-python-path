@@ -1,0 +1,178 @@
+.roadmap-container {
+  position: relative;
+  z-index: 1;
+  padding: 4rem 2rem 6rem;
+  margin-top: 6rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.hero {
+  min-height: 100vh;
+  overflow: visible;
+  display: block;
+  padding-top: 2rem;
+}
+
+.roadmap-container {
+  margin-top: 2rem;
+}
+
+#roadmap-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: rgb(255, 212, 59);
+  font-weight: 700;
+}
+
+#roadmap-description {
+  font-size: 1.2rem;
+  color: rgb(208, 208, 208);
+  margin-bottom: 3rem;
+}
+
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding: 2rem 0;
+  width: 90%;
+  max-width: 800px;
+  box-sizing: border-box;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, rgb(255, 212, 59), rgb(55, 118, 171), rgb(80, 250, 123));
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 1.5rem 2rem;
+  box-sizing: border-box;
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: left;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-content {
+  position: relative;
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid var(--step-color);
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+}
+
+.timeline-content h3 {
+  color: var(--step-color);
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.timeline-content p {
+  font-size: 1rem;
+  color: rgb(240, 240, 240);
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 1.5rem;
+  width: 18px;
+  height: 18px;
+  background-color: var(--step-color);
+  border-radius: 50%;
+  z-index: 1;
+  border: 3px solid rgb(255, 255, 255);
+}
+
+.timeline-item.left::before {
+  right: -9px;
+}
+
+.timeline-item.right::before {
+  left: -9px;
+}
+
+.timeline-content code {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: rgb(100, 213, 13);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: "Fira Code", monospace;
+}
+
+.back-btn {
+  display: inline-block;
+  background: rgb(29, 31, 29);
+  color: rgb(210, 207, 25);
+  border: 2px solid rgb(210, 207, 25);
+  padding: 0.4rem 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  margin-bottom: 1.5rem;
+  margin-top: -1rem;
+  text-align: left;
+  font-weight: 900;
+}
+
+.back-btn-wrapper {
+  text-align: left;
+  width: 100%;
+}
+
+.back-btn:hover {
+  background: rgb(210, 207, 25);
+  color: rgb(13, 15, 13);
+  border-color: rgb(210, 207, 25);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 8px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 2.5rem;
+    text-align: left;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    left: 0;
+  }
+
+  .timeline-item::before {
+    left: 0;
+  }
+}

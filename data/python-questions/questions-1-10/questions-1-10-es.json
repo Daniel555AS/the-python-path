@@ -1,0 +1,310 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple-choice",
+      "content": [
+        {
+          "type": "subtitle2",
+          "text": "¿Cuál es una de las principales razones por las que Python es considerado fácil de aprender?"
+        }
+      ],
+      "options": [
+        {
+          "label": "A",
+          "text": "Usa muchos símbolos y operadores",
+          "correct": false
+        },
+        {
+          "label": "B",
+          "text": "Su sintaxis es clara y legible",
+          "correct": true
+        },
+        {
+          "label": "C",
+          "text": "Necesita compilación previa",
+          "correct": false
+        },
+        {
+          "label": "D",
+          "text": "Solo funciona en un sistema operativo",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "content": [
+        {
+          "type": "subtitle2",
+          "text": "Python es un lenguaje multipropósito porque…"
+        }
+      ],
+      "options": [
+        {
+          "label": "A",
+          "text": "Solo se usa para desarrollo web",
+          "correct": false
+        },
+        {
+          "label": "B",
+          "text": "Puede ejecutarse solo en servidores",
+          "correct": false
+        },
+        {
+          "label": "C",
+          "text": "Es exclusivo para inteligencia artificial",
+          "correct": false
+        },
+        {
+          "label": "D",
+          "text": "Puede utilizarse en muchas áreas diferentes",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "multiple-choice",
+      "content": [
+        {
+          "type": "subtitle2",
+          "text": "¿Cuál de las siguientes NO es un uso mencionado de Python en el contenido?"
+        }
+      ],
+      "options": [
+        {
+          "label": "A",
+          "text": "Programación de sistemas operativos",
+          "correct": true
+        },
+        {
+          "label": "B",
+          "text": "Automatización de tareas",
+          "correct": false
+        },
+        {
+          "label": "C",
+          "text": "Desarrollo de videojuegos",
+          "correct": false
+        },
+        {
+          "label": "D",
+          "text": "Análisis de datos",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "multiple-choice",
+      "content": [
+        {
+          "type": "subtitle2",
+          "text": "Observa el siguiente código:"
+        },
+        {
+          "type": "code",
+          "text": "print(\"Hola, Mundo\")"
+        },
+        {
+          "type": "subtitle2",
+          "text": "¿Qué característica principal de Python se demuestra aquí?"
+        }
+      ],
+      "options": [
+        {
+          "label": "A",
+          "text": "Tipado fuerte",
+          "correct": false
+        },
+        {
+          "label": "B",
+          "text": "Sintaxis sencilla",
+          "correct": true
+        },
+        {
+          "label": "C",
+          "text": "Multithreading",
+          "correct": false
+        },
+        {
+          "label": "D",
+          "text": "Compilación previa",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "multiple-choice",
+      "content": [
+        {
+          "type": "subtitle2",
+          "text": "¿Qué significa que Python sea un lenguaje interpretado?"
+        }
+      ],
+      "options": [
+        {
+          "label": "A",
+          "text": "Que primero se convierte completamente en código máquina",
+          "correct": false
+        },
+        {
+          "label": "B",
+          "text": "Que se ejecuta línea por línea mediante un intérprete",
+          "correct": true
+        },
+        {
+          "label": "C",
+          "text": "Que necesita compilarse antes de ejecutarse",
+          "correct": false
+        },
+        {
+          "label": "D",
+          "text": "Que solo funciona en navegadores",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "type": "multiple-choice",
+      "content": [
+        {
+          "type": "subtitle2",
+          "text": "¿Cuál es el orden correcto del funcionamiento interno de Python?"
+        }
+      ],
+      "options": [
+        {
+          "label": "A",
+          "text": "Código → Código máquina → Ejecución",
+          "correct": false
+        },
+        {
+          "label": "B",
+          "text": "Código → Compilador → Ejecutable",
+          "correct": false
+        },
+        {
+          "label": "C",
+          "text": "Código → Bytecode → Máquina Virtual de Python",
+          "correct": true
+        },
+        {
+          "label": "D",
+          "text": "Código → Navegador → Ejecución",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "type": "multiple-choice",
+      "content": [
+        {
+          "type": "subtitle2",
+          "text": "Analiza el siguiente código"
+        },
+        {
+          "type": "code",
+          "text": "x = 10\nx = \"Hola\""
+        },
+        {
+          "type": "subtitle2",
+          "text": "¿Qué característica de Python permite que este código sea válido?"
+        }
+      ],
+      "options": [
+        {
+          "label": "A",
+          "text": "Compilación dinámica",
+          "correct": false
+        },
+        {
+          "label": "B",
+          "text": "Tipado dinámico",
+          "correct": true
+        },
+        {
+          "label": "C",
+          "text": "Tipado estricto",
+          "correct": false
+        },
+        {
+          "label": "D",
+          "text": "Herencia múltiple",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "type": "true-false",
+      "content": [
+        {
+          "type": "subtitle2",
+          "text": "Python puede ejecutarse en Windows, macOS, Linux y también en navegadores."
+        }
+      ],
+      "options": [
+        {
+          "label": "True",
+          "text": "Verdadero",
+          "correct": true
+        },
+        {
+          "label": "False",
+          "text": "Falso",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "type": "true-false",
+      "content": [
+        {
+          "type": "subtitle2",
+          "text": "Si Python encuentra un error en la línea 80, no ejecuta ninguna de las líneas anteriores."
+        }
+      ],
+      "options": [
+        {
+          "label": "True",
+          "text": "Verdadero",
+          "correct": false
+        },
+        {
+          "label": "False",
+          "text": "Falso",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "type": "true-false",
+      "content": [
+        {
+          "type": "subtitle2",
+          "text": "El bytecode permite que los programas en Python arranquen más rápido en ejecuciones posteriores."
+        }
+      ],
+      "options": [
+        {
+          "label": "True",
+          "text": "Verdadero",
+          "correct": true
+        },
+        {
+          "label": "False",
+          "text": "Falso",
+          "correct": false
+        }
+      ]
+    }
+  ]
+}

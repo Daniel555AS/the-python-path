@@ -1,0 +1,36 @@
+{
+    "title": "",
+    "description": "",
+    "steps": [
+        {
+            "name": "1. Definir funciones con <code>def</code>",
+            "description": "Qué son las funciones, cómo se crean y por qué ayudam a organizar el código.",
+            "color": "",
+            "unit": "learning-unit1"
+        },
+        {
+            "name": "2. Parámetros y valores de retorno",
+            "description": "Cómo enviar y recibir información dentro de una función.",
+            "color": "",
+            "unit": "learning-unit2"
+        },
+        {
+            "name": "3. Funciones con argumentos por defecto",
+            "description": "Parámetros opcionales y uso de argumentos nombrados.",
+            "color": "",
+            "unit": "learning-unit3"
+        },
+        {
+            "name": "4. Alcance de las variables",
+            "description": "Diferencia entre variables locales y globales.",
+            "color": "",
+            "unit": "learning-unit4"
+        },
+        {
+            "name": "5. Funciones anidadas y lambdas (básico)",
+            "description":  "Introducción a funciones dentro de funciones y funciones cortas con <code>lambda</code>.",
+            "color": "",
+            "unit": "learning-unit5"
+        }
+    ]
+}

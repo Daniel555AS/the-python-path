@@ -1,0 +1,93 @@
+.hero-title {
+  font-size: 6rem;
+  z-index: +1;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 12px rgba(153, 153, 153, 0.8);
+  line-height: 1.2;
+  transition: transform 0.3s ease;
+}
+
+.hero-subtitle {
+  z-index: 2;
+  color: rgb(204, 204, 204);
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-initial-message {
+  z-index: 2;
+  color: rgb(224, 224, 224);
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: 25px;
+  max-width: 600px;
+  line-height: 1.5;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-button {
+  margin-top: 20px;
+  padding: 12px 28px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  background: rgba(3, 85, 168, 0.733);
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-button:hover {
+  background: rgb(99, 179, 255);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+#main-footer {
+  position: fixed;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3.5rem;
+    padding: 0 20px;
+  }
+
+  .side-menu {
+    width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .side-menu {
+    width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+}

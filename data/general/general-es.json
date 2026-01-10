@@ -1,0 +1,11 @@
+{
+  "menu": {
+    "home": "Inicio",
+    "roadMap": "Ruta de Aprendizaje",
+    "trainingArea": "Zona de Práctica",
+    "playAndLearn": "¡Juega y Aprende!"
+  },
+  "footer": {
+    "createdBy": "Creado por "
+  }
+}

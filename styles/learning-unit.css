@@ -1,0 +1,237 @@
+.unit-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  color: rgb(240, 240, 240);
+  text-align: left;
+  line-height: 1.7;
+  background: rgba(29, 31, 59, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 2rem 2rem;
+  backdrop-filter: blur(6px);
+}
+
+#unit-title {
+  font-size: 2.4rem;
+  color: rgb(255, 212, 59);
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+}
+
+#unit-description {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: rgb(204, 204, 204);
+  text-align: left;
+}
+
+.block {
+  margin-bottom: 1.8rem;
+  text-align: left;
+}
+
+.block.subtitle1 h2 {
+  font-size: 1.9rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  color: rgb(57, 189, 125);
+  font-weight: 600;
+}
+
+.block.subtitle2 h3 {
+  font-size: 1.35rem;
+  margin-top: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: rgb(100, 160, 255);
+  font-weight: 500;
+}
+
+.block.paragraph p {
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+  line-height: 1.8rem;
+  color: rgb(230, 230, 230);
+}
+
+.block.list ul {
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.block.list ul li {
+  margin-bottom: 0.4rem;
+  font-size: 1.12rem;
+}
+
+.block.code pre {
+  background: rgb(27, 27, 27);
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  overflow-x: auto;
+  margin-top: 0.8rem;
+  margin-bottom: 1.8rem;
+  border: 1px solid rgb(51, 51, 51);
+}
+
+.block.code pre code {
+  display: block;
+  padding-left: 0;
+  margin: 0;
+}
+
+.block.note {
+  background: rgb(29, 31, 59);
+  border-left: 5px solid rgb(255, 212, 59);
+  padding: 1rem 1.2rem;
+  border-radius: 6px;
+  margin: 1.3rem 0;
+  color: rgb(255, 255, 255);
+}
+
+.block.tip {
+  background: rgb(29, 31, 59);
+  border-left: 5px solid rgb(31, 163, 86);
+  padding: 1rem 1.2rem;
+  border-radius: 6px;
+  margin: 1.3rem 0;
+  color: rgb(255, 255, 255);
+}
+
+.block.image-block img {
+  width: 100%;
+  border-radius: 10px;
+  margin: 1.3rem 0;
+  border: 1px solid rgb(51, 51, 51);
+}
+
+.block.image-block .caption {
+  font-size: 0.95rem;
+  text-align: left;
+  color: rgb(170, 170, 170);
+  margin-top: -0.6rem;
+}
+
+hr {
+  margin: 2rem 0;
+  border: none;
+  border-top: 1px solid rgb(85, 85, 85);
+}
+
+code[class*="language-"] {
+  padding: 2px 4px;
+  border-radius: 4px;
+  background: rgb(45, 45, 45);
+}
+
+.back-btn {
+  display: inline-block;
+  background: rgb(29, 31, 29);
+  color: rgb(210, 207, 25);
+  border: 2px solid rgb(210, 207, 25);
+  padding: 0.4rem 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 900;
+  transition: all 0.25s ease;
+  margin-bottom: 1.5rem;
+}
+
+.back-btn:hover {
+  background: rgb(210, 207, 25);
+  color: rgb(13, 15, 13);
+  border-color: rgb(210, 207, 25);
+  transform: translateY(-2px);
+}
+
+.test-btn {
+  display: inline-block;
+  background: #1d1f1d;
+  color: #39bd7d;
+  border: 2px solid #39bd7d;
+  padding: 0.4rem 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-top: 0.8rem;
+  transition: 0.25s ease;
+}
+
+.test-btn:hover {
+  background: #39bd7d;
+  color: #0d0f0d;
+  transform: translateY(-2px);
+}
+
+.block.collapsible {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  overflow: hidden;
+  background: rgba(29, 31, 59, 0.4);
+}
+
+.collapsible-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  background: rgba(39, 41, 69, 0.6);
+  transition: background 0.2s ease;
+}
+
+.collapsible-header:hover {
+  background: rgba(39, 41, 69, 0.9);
+}
+
+.collapsible-header .arrow {
+  transition: transform 0.2s ease;
+  font-size: 1.2rem;
+}
+
+.collapsible-content {
+  padding: 0.8rem 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.unit-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background: rgba(255, 255, 255, 0.03);
+  color: #e6e6e6;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.unit-table thead {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.unit-table th,
+.unit-table td {
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  text-align: left;
+}
+
+.unit-table tr:last-child td {
+  border-bottom: none;
+}
+
+.unit-table tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.table-title {
+  font-size: 1.3rem;
+  color: rgb(57, 189, 125);
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+}

@@ -1,0 +1,509 @@
+{
+  "title": "Operadores lógicos y de comparación",
+  "description": "",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Los operadores de comparación y los operadores lógicos son esenciales para tomar decisiones en Python. Te permiten comparar valores, verificar condiciones y combinar múltiples evaluaciones dentro de un <code class=\"language-python\">if</code>. Con ellos puedes construir reglas más completas, como verificar si una edad está en un rango, si una contraseña coincide, o si una acción es válida solo bajo ciertas condiciones."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Operadores de comparación"
+    },
+    {
+      "type": "paragraph",
+      "text": "Estos operadores devuelven <code class=\"language-python\">True</code> o <code class=\"language-python\">False</code>, según la condición "
+    },
+    {
+      "type": "table",
+      "headers": ["Operador", "Significado", "Ejemplo"],
+      "rows": [
+        [
+          "<code class=\"language-python\">==</code>",
+          "Igual a",
+          "<code class=\"language-python\">5 == 5 → True</code>"
+        ],
+        [
+          "<code class=\"language-python\">!=</code>",
+          "Diferente de",
+          "<code class=\"language-python\">3 != 4 → True</code>"
+        ],
+        [
+          "<code class=\"language-python\"><</code>",
+          "Menor que",
+          "<code class=\"language-python\">2 < 10 → True</code>"
+        ],
+        [
+          "<code class=\"language-python\">></code>",
+          "Mayor que",
+          "<code class=\"language-python\">10 > 3 → True</code>"
+        ],
+        [
+          "<code class=\"language-python\"><=</code>",
+          "Menor o igual que",
+          "<code class=\"language-python\">5 <= 5 → True</code>"
+        ],
+        [
+          "<code class=\"language-python\">>=</code>",
+          "Mayor o igual que",
+          "<code class=\"language-python\">8 >= 2 → True</code>"
+        ]
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejemplo práctico"
+    },
+    {
+      "type": "code",
+      "text": "edad = 20\nif edad >= 18:\n\tprint(\"Eres mayor de edad\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Eres mayor de edad"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "edad = 20\nif edad >= 18:\n\tprint(\"Eres mayor de edad\")"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Operadores lógicos"
+    },
+    {
+      "type": "paragraph",
+      "text": "Te permiten combinar condiciones."
+    },
+    {
+      "type": "subtitle2",
+      "text": "<code class=\"language-python\">and</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Todas las condiciones debe ser verdaderas."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo:"
+    },
+    {
+      "type": "code",
+      "text": "edad = 24\nif edad >= 18 and edad < 65:\n\tprint(\"Adulto\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Adulto"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "edad = 24\nif edad >= 18 and edad < 65:\n\tprint(\"Adulto\")"
+    },
+    {
+      "type": "subtitle2",
+      "text": "<code class=\"language-python\">or</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Al menos una condición debe ser verdadera."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo:"
+    },
+    {
+      "type": "code",
+      "text": "code = \"rojo\"\nif color == \"rojo\" or color ==\"azul\":\n\tprint(\"Color permitido\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida"
+    },
+    {
+      "type": "code",
+      "text": "Color permitido"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "code = \"rojo\"\nif color == \"rojo\" or color ==\"azul\":\n\tprint(\"Color permitido\")"
+    },
+    {
+      "type": "subtitle2",
+      "text": "<code class=\"language-python\">not</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Invierte el valor lógico: Si era <code class=\"language-python\">True</code> pasa a ser <code class=\"language-python\">False</code>. Si era <code class=\"language-python\">False</code> pasa a ser <code class=\"language-python\">True</code>."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo:"
+    },
+    {
+      "type": "code",
+      "text": "conectado = False\nif not conectado:\n\tprint(\"No hay conexión\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "No hay conexión"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "conectado = False\nif not conectado:\n\tprint(\"No hay conexión\")"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejemplos adicionales"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Comparaciones frecuentes"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Verificar igualdad de cadenas → <code class=\"language-python\">\"hola\" == \"hola\"</code>",
+        "Revisar acceso por edad → <code class=\"language-python\">edad >= 18</code>",
+        "Validar rangos → <code class=\"language-python\">0 <= numero <= 100</code>",
+        "Comprovar si una variable NO tiene un valor → <code class=\"language-python\">variable != 0</code>"
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Combinaciones útiles"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Rango de notas válidas → <code class=\"language-python\">nota >= 0 and nota <= 5</code>",
+        "Usuario autorizado según rol → <code class=\"language-python\">rol == \"admin\" or rol == \"editoe\"</code>",
+        "Acción deshabilitado → <code class=\"language-python\">not disponible</code>"
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Comparación de varios valores"
+    },
+    {
+      "type": "code",
+      "text": "temp = 25\nif temp > 20 and temp < 30:\n\tprint(\"Temperatura ideal\")"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Tips"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br>Cuando combines varias condiciones, piensa en voz alta: \"¿Quiero que todas sean verdaderas o solo una?\""
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br>Escribe condiciones claras y cortas; evita usar muchas dentro de un mismo <code class=\"language-python\">if</code>"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br>Usa <code class=\"language-python\">not</code> cuando quieras simplificar reglas largas, por ejemplo:<br>En vez de <code class=\"language-python\">if conectado == False:</code> usa <code class=\"language-python\">if not conectado:</code>"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Notas"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Las comparaciones en Python no usan <code class=\"language-python\">=</code> sino <code class=\"language-python\">==</code>."
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Puedes encadenar comparaciones como en matemáticas: <code class=\"language-python\">18 <= edad < 60</code>."
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Python evalúa las condiciones de izquierda a derecha."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejemplos combinados"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Autenticación de usuario"
+    },
+    {
+      "type": "code",
+      "text": "usuario = \"python_learner\"\ncontrasena = \"password123\"\n\nif usuario == \"daniel\" and contrasena == \"password123\":\n\tprint(\"Acceso permitido\")\nelse:\n\tprint(\"Autenticación fallida\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Acceso permitido"
+    },
+    {
+      "type": "test-button",
+      "code": "usuario = \"python_learner\"\ncontrasena = \"password123\"\n\nif usuario == \"python_learner\" and contrasena == \"password123\":\n\tprint(\"Acceso permitido\")\nelse:\n\tprint(\"Autenticación fallida\")",
+      "text": "Probar >>"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Verificación de calificaciones"
+    },
+    {
+      "type": "code",
+      "text": "puntaje = 75\n\nif 60 <= puntaje <= 100:\n\tprint(\"Aprobado\")\nelif 0 <= puntaje < 60:\n\tprint(\"Desaprobado\")\nelse:\n\tprint(\"Puntaje inválido\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Aprobado"
+    },
+    {
+      "type": "test-button",
+      "code": "puntaje = 75\n\nif 60 <= puntaje <= 100:\n\tprint(\"Aprobado\")\nelif 0 <= puntaje < 60:\n\tprint(\"Desaprobado\")\nelse:\n\tprint(\"Puntaje inválido\")",
+      "text": "Probar >>"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Conectividad"
+    },
+    {
+      "type": "code",
+      "text": "modo =\"offline\"\nif not modo == \"online\":\n\tprint(\"Modo sin conexión activo\")\nelse:\n\tprint(\"Conexión establecida de forma exitosa\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Modo sin conexión activo"
+    },
+    {
+      "type": "test-button",
+      "code": "modo =\"offline\"\nif not modo == \"online\":\n\tprint(\"Modo sin conexión activo\")\nelse:\n\tprint(\"Conexión establecida de forma exitosa\")",
+      "text": "Probar >>"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejercicios para practicar"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 1: Verificar si una pesona puede votar"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea una variable llamada <code class=\"language-python\">edad</code> y asígnale un número entero. El programa debe verificar si la persona tiene 18 años o más. Si la condición se cumple, muestra el mensaje <code class=\"language-python\">Puede votar</code>. En caso contrario, muestra <code class=\"language-python\">No puede votar</code>"
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea una variable llamada edad y asígnale un número\n# entero. El programa debe verificar si la persona\n# tiene 18 años o más. Si la condición se cumple,\n# muestra el mensaje Puede votar. En caso contrario,\n# muestra No puede votar"
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "edad = 17\n\nif edad >= 18:\n\tprint(\"Puede votar\")\nelse:\n\tprint(\"No puede votar\")"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar solución >>",
+          "code": "edad = 17\n\nif edad >= 18:\n\tprint(\"Puede votar\")\nelse:\n\tprint(\"No puede votar\")"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 2: Número dentro de un rango"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea una variable llamada <code class=\"language-python\">numero</code>. El programa debe verificar si el valor de <code class=\"language-python\">numero</code> se encuentra entre 1 y 10, incluyendo ambos límites. Si el número está dentro del rango, muestra <code class=\"language-python\">Número válido</code>. Si no lo está, muestra <code class=\"language-python\">Número fuera de rango</code>."
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea una variable llamada numero. El programa debe\n# verificar si el valor de numero se encuentra entre 1\n# y 10, incluyendo ambos límites. Si el número está\n# dentro del rango, muestra Número válido. Si no lo\n# está, muestra Número fuera de rango."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "numero = 7\n\nif numero >= 1 and numero <= 10:\n\tprint(\"Número válido\")\nelse:\n\tprint(\"Número fuera de rango\")"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar solución >>",
+          "code": "numero = 7\n\nif numero >= 1 and numero <= 10:\n\tprint(\"Número válido\")\nelse:\n\tprint(\"Número fuera de rango\")"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 3: Verificar colores permitidos"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea una variable llamada <code class=\"language-python\">color</code>. El programa debe comprobar si el color es <code class=\"language-python\">azul</code> o <code class=\"language-python\">rojo</code>. Si coincide con alguno de esos colores, muestra <code class=\"language-python\">Color permitido</code>. En cualquier otro caso, muestra <code class=\"language-python\">Color no permitido</code>."
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea una variable llamada color. El programa debe\n# comprobar si el color es azul o rojo. Si coincide con\n# alguno de esos colores, muestra Color permitido. En\n# cualquier otro caso, muestra Color no permitido."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "color = \"azul\"\n\nif color == \"azul\" or color == \"rojo\":\n\tprint(\"Color permitido\")\nelse:\n\tprint(\"Color no permitido\")"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar solución >>",
+          "code": "color = \"azul\"\n\nif color == \"azul\" or color == \"rojo\":\n\tprint(\"Color permitido\")\nelse:\n\tprint(\"Color no permitido\")"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 4: Sistema de intentos"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea una variable llamada <code class=\"language-python\">intentos</code>. Si el valor de <code class=\"language-python\">intentos</code> es diferente de 0, muestra <code class=\"language-python\">Intentos disponibles</code>. Si el valor es <code class=\"language-python\">0</code>, muestra <code class=\"language-python\">Cuenta bloqueada</code>."
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea una variable llamada intentos. Si el valor de\n# intentos es diferente de 0, muestra Intentos\n# disponibles. Si el valor es 0, muestra Cuenta\n# bloqueada."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "intentos = 0\n\nif intentos != 0:\n\tprint(\"Intentos disponibles\")\nelse:\n\tprint(\"Cuenta bloqueada\")"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar solución >>",
+          "code": "intentos = 0\n\nif intentos != 0:\n\tprint(\"Intentos disponibles\")\nelse:\n\tprint(\"Cuenta bloqueada\")"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 5: Clasificación de números"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea una variable llamada <code class=\"language-python\">n</code>.\nEl programa debe determinar si el número es:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Positivo (mayor que 0).",
+        "Negativo (menor que 0).",
+        "o Cero (0)."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Muestra un mensaje distinto para cada caso."
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea una variable llamada n. El programa debe\n# determinar si el número es:\n# - Positivo (mayor que 0).\n# - Negativo (menor que 0).\n# - o Cero (0).\n# Muestra un mensaje distinto para cada caso."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "n = -3\n\nif n > 0:\n\tprint(\"El número es positivo\")\nelif n < 0:\n\tprint(\"El número es negativo\")\nelse:\n\tprint(\"El número es cero\")"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar solución >>",
+          "code": "n = -3\n\nif n > 0:\n\tprint(\"El número es positivo\")\nelif n < 0:\n\tprint(\"El número es negativo\")\nelse:\n\tprint(\"El número es cero\")"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 6: Acceso al sistema"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea dos variables:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "<code class=\"language-python\">edad</code>",
+        "<code class=\"language-python\">tiene_acceso</code> (True o False)"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "El programa debe mostrar <code class=\"language-python\">Acceso permitido</code> solo si la persona tiene 18 años o más y además <code class=\"language-python\">tiene_acceso</code> es <code class=\"language-python\">True</code>.\nEn cualquier otro caso, debe mostrar <code class=\"language-python\">Acceso denegado</code>"
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea dos variables:\n# - edad\n# - tiene_acceso (True o False)\n# El programa debe mostrar Acceso permitido solo si la\n# persona tiene 18 años o más y además tiene_acceso es\n# True. En cualquier otro caso, debe mostrar Acceso\n# denegado"
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "edad = 20\ntiene_acceso = True\n\nif edad >= 18 and tiene_acceso:\n\tprint(\"Acceso permitido\")\nelse:\n\tprint(\"Acceso denegado\")"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar solución >>",
+          "code": "edad = 20\ntiene_acceso = True\n\nif edad >= 18 and tiene_acceso:\n\tprint(\"Acceso permitido\")\nelse:\n\tprint(\"Acceso denegado\")"
+        }
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Conclusión de lo aprendido"
+    },
+    {
+      "type": "paragraph",
+      "text": "En esta unidad aprendiste a comparar valores y a combinar condiciones utilizando operadores de comparación y operadores lógicos. Ahora puedes construir reglas más precisas dentro de tus programas, evaluar rangos, verificar múltiples situaciones al mismo tiempo y controlar el flujo de decisiones con mayor exactitud. Dominar estos operadores te permitirá escribir código más inteligente y adaptable."
+    }
+  ]
+}

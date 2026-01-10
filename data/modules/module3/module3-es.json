@@ -1,0 +1,42 @@
+{
+  "title": "",
+  "description": "",
+  "steps": [
+    {
+      "name": "1. Listas: colecciones ordenadas",
+      "description": "Crear listas, acceder a elementos, modificarlos y recorrerlas.",
+      "color": "",
+      "unit": "learning-unit1"
+    },
+    {
+      "name": "2. Métodos útiles de listas",
+      "description": "Métodos como <code>append</code>, <code>remove</code>, <code>sort</code>, <code>reverse</code>, <code>count</code>",
+      "color": "",
+      "unit": "learning-unit2"
+    },
+    {
+      "name": "3. Tuplas: datos inmutables",
+      "description": "Qué son las tuplas y cuándo conviene usarlas.",
+      "color": "",
+      "unit": "learning-unit3"
+    },
+    {
+      "name": "4. Diccionarios: claves y valores",
+      "description": "Cómo crear y acceder a información estructurada tipo <code>clave: valor</code>",
+      "color": "",
+      "unit": "learning-unit4"
+    },
+    {
+      "name": "5. Conjuntos (sets)",
+      "description": "Conjuntos sin duplicados y operaciones de conjuntos.",
+      "color": "",
+      "unit": "learning-unit5"
+    },
+    {
+        "name": "6. Recorriendo estructuras de datos",
+        "description": "Bubles anidados, <code>enumerate()</code>, y la función <code>len()</code>",
+        "color": "",
+        "unit": "learning-unit6"
+    }
+  ]
+}

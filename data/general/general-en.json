@@ -1,0 +1,11 @@
+{
+  "menu": {
+    "home": "Home",
+    "roadMap": "Road Map",
+    "trainingArea": "Training area",
+    "playAndLearn": "Play and learn!"
+  },
+  "footer": {
+    "createdBy": "Created by "
+  }
+}

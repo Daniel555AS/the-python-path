@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game - TPP</title>
+
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/snake-game.css">
+</head>
+
+<body>
+    <!-- Main hero container with animated background -->
+    <div class="hero">
+        <canvas id="bubbles"></canvas>
+
+        <!-- Header with menu button and language selector -->
+        <header class="main-header">
+            <!-- Hamburger menu button -->
+            <div id="menu-btn" class="menu-btn">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+            <!-- Language selector dropdown -->
+            <div class="language-dropdown">
+                <button class="language-btn">
+                    <div class="flag us"></div>
+                    <span class="lang-text">English</span>
+                </button>
+
+                <!-- Available language options -->
+                <div class="language-options">
+                    <div class="language-option" data-lang="es">
+                        <div class="flag es"></div>
+                        <span>Español</span>
+                    </div>
+
+                    <div class="language-option" data-lang="de">
+                        <div class="flag de"></div>
+                        <span>Deutsch</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Side navigation menu -->
+        <nav id="side-menu" class="side-menu">
+            <ul>
+                <li><a href="../index.html" data-i18n="menu.home"></a></li>
+                <li><a href="../pages/roadmap.html" data-i18n="menu.roadMap"></a></li>
+                <li><a href="../pages/training-area.html" data-i18n="menu.trainingArea"></a></li>
+                <li><a href="../pages/snake-game.html" data-i18n="menu.playAndLearn"></a></li>
+            </ul>
+        </nav>
+
+        <!-- Game title -->
+        <div class="snake-title">
+            <h1 data-i18n="snake.title"></h1>
+        </div>
+        <!-- Score display -->
+        <div class="score-container">
+            <span data-i18n="snake.score"></span>:
+            <span id="score">0</span>
+        </div>
+        <!-- Main Snake game canvas -->
+        <canvas id="snake-canvas"></canvas>
+    </div>
+
+    <!-- Modal Game Over -->
+    <div id="game-over-modal">
+        <div class="game-over-box">
+            <h2 id="game-over-title"></h2>
+            <p id="final-score-text"></p>
+
+            <!-- Game over action buttons -->
+            <div class="game-over-buttons">
+                <button id="play-again-btn"></button>
+                <button id="go-home-btn"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Python question modal -->
+    <div id="python-question-modal">
+        <div class="modal-box">
+            <div id="question-content"></div>
+            <div id="question-options"></div>
+            <button id="close-question-btn">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- Answer result modal -->
+    <div id="answer-result-modal">
+        <div class="answer-box">
+            <h2 id="answer-result-title"></h2>
+            <p id="answer-result-correct-text"></p>
+            <button id="answer-result-btn">OK</button>
+        </div>
+    </div>
+
+    <footer id="main-footer">
+        <p><span data-i18n="footer.createdBy"></span>
+            <a href="https://github.com/Daniel555AS" target="_blank">Daniel555AS</a>
+        </p>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/snake-game.js"></script>
+</body>
+</html>

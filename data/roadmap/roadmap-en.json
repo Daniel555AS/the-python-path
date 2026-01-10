@@ -1,0 +1,48 @@
+{
+  "title": "Python Learning Roadmap",
+  "description": "Embark on the path to become a Python Pro 😎 from scratch.",
+  "steps": [
+    {
+      "name": "1.🧩Fundamentals of the Language",
+      "description": "In this module, you will learn what Python is and how to create your first programs. You will learn how to display text, use variables, work with numbers and strings, perform basic operations, and interact with the user through data input.",
+      "color": "#FFD43B",
+      "module": "module1"
+    },
+    {
+      "name": "2.🔁Flow Control",
+      "description": "In this module, you will learn how to control the flow of your program. You will use conditionals to make decisions, loops to repeat actions, and logical operators to combine conditions. You will also learn how to break or continue loops according to your program’s logic.",
+      "color": "#3776AB",
+      "module": "module2"
+    },
+    {
+      "name": "3.📦Data Structures",
+      "description": "In this module, you will learn how to work with different types of collections in Python. You will learn how to use lists, tuples, dictionaries, and sets to store and organize information, as well as how to iterate over and manipulate their elements.",
+      "color": "#1B983A",
+      "module" : "module3"
+    },
+    {
+      "name": "4.⚙️Functions and Code Reuse",
+      "description": "In this module, you will learn how to create and use functions to organize your code and avoid repetition. You will see how to pass and return values, use optional parameters, and understand variable scope. You will also learn about nested functions and lambda expressions.",
+      "color": "#6464FF",
+      "module": "module4"
+    },
+    {
+      "name": "5.📂Handling Text and Data",
+      "description": "In this module, you will learn how to work with text strings, modify them, and format them using different techniques. You will also learn how to convert text into lists and vice versa, and apply what you’ve learned in small practical projects such as a word counter or a password checker.",
+      "color": "#FFD43B",
+      "module": "module5"
+    },
+    {
+      "name": "6.🧱Logical Thinking and Advanced Functions",
+      "description": "In this module, you will develop your programming logic by learning more advanced techniques. You will see how to use recursive functions, list comprehensions, and Python’s built-in functions to solve problems more efficiently. You will also learn how to treat functions as objects to create more flexible code.",
+      "color": "#3776AB",
+      "module": "module6"
+    },
+    {
+      "name": "7.⚠️Error and Exception Handling",
+      "description": "In this module, you will learn how to identify the most common errors in Python and handle them using exceptions. You will use <code>try</code>, <code>except</code>, <code>finally</code>, and <code>else</code> blocks to safely manage failures and keep your programs running correctly.",
+      "color": "#1B983A",
+      "module": "module7"
+    }
+  ]
+}
