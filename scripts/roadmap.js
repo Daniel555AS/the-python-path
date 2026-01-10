@@ -68,7 +68,7 @@ function applyTranslations() {
 
         console.log("moduleID:", moduleID, "unitHash:", unitHash);
 
-        window.location.href = `/pages/learning-unit.html#${unitHash}`;
+        window.location.href = `../pages/learning-unit.html#${unitHash}`;
       });
     }
 

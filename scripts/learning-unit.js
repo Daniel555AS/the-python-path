@@ -113,7 +113,7 @@ function buildBlock(block) {
       el.innerHTML = `<button class="test-btn">${block.text}</button>`;
       el.querySelector(".test-btn").addEventListener("click", () => {
         const encoded = encodeURIComponent(block.code || "");
-        window.open(`/pages/training-area.html?code=${encoded}`, "_blank");
+        window.open(`../pages/training-area.html?code=${encoded}`, "_blank");
       });
       break;
 
@@ -210,7 +210,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const backBtn = document.getElementById("back-btn");
   if (backBtn) {
     backBtn.addEventListener("click", () => {
-      window.location.href = `/pages/roadmap.html#${currentModule}`;
+      window.location.href = `../pages/roadmap.html#${currentModule}`;
     });
   }
 
