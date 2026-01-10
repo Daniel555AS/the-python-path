@@ -1,10 +1,10 @@
 {
-  "title": "Your first program: <code class=\"language-python\">print()</code>",
+  "title": "Your First Program: <code class=\"language-python\">print()</code>",
   "description": "",
   "content": [
     {
       "type": "subtitle1",
-      "text": "What is a program in Python?"
+      "text": "What is a Program in Python?"
     },
     {
       "type": "paragraph",
@@ -16,7 +16,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "The <code class=\"language-python\">print()</code> function: your first tool"
+      "text": "The <code class=\"language-python\">print()</code> Function: Your First Tool"
     },
     {
       "type": "paragraph",
@@ -40,7 +40,7 @@
     },
     {
       "type": "test-button",
-      "text": "Try it >>",
+      "text": "Try >>",
       "code": "print(\"Hello, World\")"
     },
     {
@@ -49,11 +49,11 @@
     },
     {
       "type": "subtitle1",
-      "text": "What can I display with <code class=\"language-python\">print()</code>?"
+      "text": "What Can I Display With <code class=\"language-python\">print()</code>?"
     },
     {
       "type": "subtitle2",
-      "text": "Text (strings - <code class=\"language-python\">str</code>)"
+      "text": "Text (Strings - <code class=\"language-python\">str</code>)"
     },
     {
       "type": "code",
@@ -77,7 +77,7 @@
     },
     {
       "type": "test-button",
-      "text": "Try them all >>",
+      "text": "Try Them All >>",
       "code": "print(\"Learning Python is fun\")\n\nprint(2025)\n\nname = \"Python\"\nprint(name)"
     },
     {
@@ -94,7 +94,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Display multiple values at once"
+      "text": "Display Multiple Values At Once"
     },
     {
       "type": "paragraph",
@@ -114,7 +114,7 @@
     },
     {
       "type": "test-button",
-      "text": "Try it >>",
+      "text": "Try >>",
       "code": "print(\"Your age is:\", 22)"
     },
     {
@@ -123,7 +123,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "How <code class=\"language-python\">print()</code> works internally"
+      "text": "How <code class=\"language-python\">print()</code> Works Internally"
     },
     {
       "type": "paragraph",
@@ -136,13 +136,13 @@
     {
       "type": "list",
       "items": [
-        "<code class=\"language-python\">sep</code> → Defines the separator between elements",
-        "<code class=\"language-python\">end</code> → Defines what is printed at the end of the line"
+        "<code class=\"language-python\">sep</code> → Defines the separator between elements.",
+        "<code class=\"language-python\">end</code> → Defines what is printed at the end of the line."
       ]
     },
     {
       "type": "subtitle2",
-      "text": "Example using <code class=\"language-python\">sep</code>:"
+      "text": "Example Using <code class=\"language-python\">sep</code>:"
     },
     {
       "type": "code",
@@ -158,12 +158,12 @@
     },
     {
       "type": "test-button",
-      "text": "Try it >>",
+      "text": "Try >>",
       "code": "print(\"Python\", \"JavaScript\", \"Go\", sep=\" | \")"
     },
     {
       "type": "subtitle2",
-      "text": "Example using <code class=\"language-python\">end</code>:"
+      "text": "Example Using <code class=\"language-python\">end</code>:"
     },
     {
       "type": "code",
@@ -179,7 +179,7 @@
     },
     {
       "type": "test-button",
-      "text": "Try it >>",
+      "text": "Try >>",
       "code": "print(\"Hello\", end=\"...\")\nprint(\"World\")"
     },
     {
@@ -188,7 +188,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Spaces, newlines, and special characters"
+      "text": "Spaces, Newlines, and Special Characters"
     },
     {
       "type": "paragraph",
@@ -197,10 +197,10 @@
     {
       "type": "list",
       "items": [
-        "<code class=\"language-python\">\\n</code> → Newline",
-        "<code class=\"language-python\">\\t</code> → Tab",
-        "<code class=\"language-python\">\\\"</code> → Quotes Within Quotes",
-        "<code class=\"language-python\">\\\\</code> → Literal Backslash"
+        "<code class=\"language-python\">\\n</code> → Newline.",
+        "<code class=\"language-python\">\\t</code> → Tab.",
+        "<code class=\"language-python\">\\\"</code> → Quotes Within Quotes.",
+        "<code class=\"language-python\">\\\\</code> → Literal Backslash."
       ]
     },
     {
@@ -221,7 +221,7 @@
     },
     {
       "type": "test-button",
-      "text": "Try it >>",
+      "text": "Try >>",
       "code": "print(\"Line 1\\nLine 2\\nLine 3\")"
     },
     {
@@ -230,7 +230,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "A very common mistake when using <code class=\"language-python\">print()</code>"
+      "text": "A Very Common Mistake When Using <code class=\"language-python\">print()</code>"
     },
     {
       "type": "paragraph",
@@ -246,12 +246,12 @@
     },
     {
       "type": "test-button",
-      "text": "Try error >>",
+      "text": "Try Error >>",
       "code": "print(\"Hello)"
     },
     {
       "type": "subtitle1",
-      "text": "Minimal structure of a Python program"
+      "text": "Minimal Structure of a Python Program"
     },
     {
       "type": "code",
@@ -271,7 +271,7 @@
     },
     {
       "type": "test-button",
-      "text": "Try it >>",
+      "text": "Try >>",
       "code": "print(\"Hello from my first Python program\")"
     },
     {
@@ -296,12 +296,12 @@
     },
     {
       "type": "test-button",
-      "text": "Try it >>",
+      "text": "Try >>",
       "code": "print(\"First line\")\nprint(\"Second line\")"
     },
     {
       "type": "subtitle1",
-      "text": "Guided exercise: your first real script"
+      "text": "Guided Exercise: Your First Real Script"
     },
     {
       "type": "paragraph",
@@ -325,12 +325,12 @@
     },
     {
       "type": "test-button",
-      "text": "Try it >>",
+      "text": "Try >>",
       "code": "name = \"YOUR NAME\"\nprint(\"Welcome,\", name, \"to the world of Python!\")"
     },
     {
       "type": "subtitle1",
-      "text": "Conclusion of the topic"
+      "text": "Unit Conclusions"
     },
     {
       "type": "paragraph",
@@ -339,11 +339,11 @@
     {
       "type": "list",
       "items": [
-        "What a program in Python is",
-        "How <code class=\"language-python\">print()</code> works",
-        "How to use <code class=\"language-python\">sep</code> and <code class=\"language-python\">end</code>",
-        "How to control newlines and tabs",
-        "How to write a minimal valid program"
+        "What a program in Python is.",
+        "How <code class=\"language-python\">print()</code> works.",
+        "How to use <code class=\"language-python\">sep</code> and <code class=\"language-python\">end</code>.",
+        "How to control newlines and tabs.",
+        "How to write a minimal valid program."
       ]
     },
     {
