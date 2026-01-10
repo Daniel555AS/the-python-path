@@ -1,10 +1,10 @@
 {
-  "title": "Tu primer programa: <code class=\"language-python\">print()</code>",
+  "title": "Tu Primer Programa: <code class=\"language-python\">print()</code>",
   "description": "",
   "content": [
     {
       "type": "subtitle1",
-      "text": "¿Qué es un programa en Python?"
+      "text": "¿Qué es un Programa en Python?"
     },
     {
       "type": "paragraph",
@@ -16,7 +16,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "La función <code class=\"language-python\">print()</code>: tu primera herramienta"
+      "text": "La Función <code class=\"language-python\">print()</code>: Tu Primera Herramienta"
     },
     {
       "type": "paragraph",
@@ -49,11 +49,11 @@
     },
     {
       "type": "subtitle1",
-      "text": "¿Qué puedo mostrar con <code class=\"language-python\">print()</code>?"
+      "text": "¿Qué Puedo Mostrar Con <code class=\"language-python\">print()</code>?"
     },
     {
       "type": "subtitle2",
-      "text": "Texto (cadenas - <code class=\"language-python\">str</code>)"
+      "text": "Texto (Cadenas - <code class=\"language-python\">str</code>)"
     },
     {
       "type": "code",
@@ -77,7 +77,7 @@
     },
     {
       "type": "test-button",
-      "text": "Probar todos >>",
+      "text": "Probar Todos >>",
       "code": "print(\"Aprender Python es divertido\")\n\nprint(2025)\n\nname = \"Python\"\nprint(name)"
     },
     {
@@ -94,7 +94,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Mostrar varios valores a la vez"
+      "text": "Mostrar Varios Valores a la Vez"
     },
     {
       "type": "paragraph",
@@ -123,7 +123,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Cómo funciona <code class=\"language-python\">print()</code> internamente"
+      "text": "Cómo Funciona <code class=\"language-python\">print()</code> Internamente"
     },
     {
       "type": "paragraph",
@@ -136,13 +136,13 @@
     {
       "type": "list",
       "items": [
-        "<code class=\"language-python\">sep</code> → Define el separador entre elementos",
-        "<code class=\"language-python\">end</code> → Define lo que se imprime al final de la línea"
+        "<code class=\"language-python\">sep</code> → Define el separador entre elementos.",
+        "<code class=\"language-python\">end</code> → Define lo que se imprime al final de la línea."
       ]
     },
     {
       "type": "subtitle2",
-      "text": "Ejemplo usando <code class=\"language-python\">sep</code>:"
+      "text": "Ejemplo Usando <code class=\"language-python\">sep</code>:"
     },
     {
       "type": "code",
@@ -163,7 +163,7 @@
     },
     {
       "type": "subtitle2",
-      "text": "Ejemplo usando <code class=\"language-python\">end</code>:"
+      "text": "Ejemplo Usando <code class=\"language-python\">end</code>:"
     },
     {
       "type": "code",
@@ -188,7 +188,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Espacios, saltos de línea y caracteres especiales"
+      "text": "Espacios, Saltos de Línea y Caracteres Especiales"
     },
     {
       "type": "paragraph",
@@ -197,10 +197,10 @@
     {
       "type": "list",
       "items": [
-        "<code class=\"language-python\">\\n</code> → Salto de línea",
-        "<code class=\"language-python\">\\t</code> → Tabulación",
-        "<code class=\"language-python\">\\\"</code> → Comillas dentro de comillas",
-        "<code class=\"language-python\">\\\\</code> → Barra invertida literal"
+        "<code class=\"language-python\">\\n</code> → Salto de línea.",
+        "<code class=\"language-python\">\\t</code> → Tabulación.",
+        "<code class=\"language-python\">\\\"</code> → Comillas dentro de comillas.",
+        "<code class=\"language-python\">\\\\</code> → Barra invertida literal."
       ]
     },
     {
@@ -230,7 +230,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Un error muy común al usar <code class=\"language-python\">print()</code>"
+      "text": "Un Error Muy Común Al Usar <code class=\"language-python\">print()</code>"
     },
     {
       "type": "paragraph",
@@ -246,12 +246,12 @@
     },
     {
       "type": "test-button",
-      "text": "Probar error >>",
+      "text": "Probar Error >>",
       "code": "print(\"Hola)"
     },
     {
       "type": "subtitle1",
-      "text": "Estructura mínima de un programa en Python"
+      "text": "Estructura Mínima de un Programa en Python"
     },
     {
       "type": "code",
@@ -301,7 +301,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Ejercicio guiado: tu primer script real"
+      "text": "Ejercicio Guiado: Tu Primer Script Real"
     },
     {
       "type": "paragraph",
@@ -330,7 +330,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Conclusión del tema"
+      "text": "Conclusiones de la Unidad"
     },
     {
       "type": "paragraph",
@@ -339,11 +339,11 @@
     {
       "type": "list",
       "items": [
-        "Qué es un programa en Python",
-        "Cómo funciona <code class=\"language-python\">print()</code>",
-        "Cómo usar <code class=\"language-python\">sep</code> y <code class=\"language-python\">end</code>",
-        "Cómo controlar saltos de línea y tabulaciones",
-        "Cómo escribir un programa mínimo válido"
+        "Qué es un programa en Python.",
+        "Cómo funciona <code class=\"language-python\">print()</code>.",
+        "Cómo usar <code class=\"language-python\">sep</code> y <code class=\"language-python\">end</code>.",
+        "Cómo controlar saltos de línea y tabulaciones.",
+        "Cómo escribir un programa mínimo válido."
       ]
     },
     {
