@@ -3,37 +3,37 @@
   "description": "En este módulo aprenderás qué es Python y cómo crear tus primeros programas. Conocerás cómo mostrar texto, usar variables, trabajar con números y cadenas, realizar operaciones básicas e interactuar con el usuario mediante entradas de datos.",
   "steps": [
     {
-      "name": "1. Qué es Python y cómo funciona",
+      "name": "1. Qué es Python y Cómo Funciona",
       "description": "Introducción al lenguaje, sus características, sintaxis legible y para qué se usa.",
       "color": "#FFD43B",
       "unit": "learning-unit1"
     },
     {
-      "name": "2. Tu primer programa:<code>print()</code>",
+      "name": "2. Tu Primer Programa: <code>print()</code>",
       "description": "Cómo mostrar texto en pantalla y entender la estructura mínima de un programa.",
       "color": "#3776AB",
       "unit": "learning-unit2"
     },
     {
-      "name": "3. Comentarios y estilo básico de código",
+      "name": "3. Comentarios y Estilo Básico de Código",
       "description": "Usar <code>#</code> para documentar el código y mantenerlo legible.",
       "color": "#1B983A",
       "unit": "learning-unit3"
     },
     {
-      "name": "4. Variables y tipos de datos básicos",
-      "description": "Qué son las variables, cómo se crean y los tipos más comunes:<code>int</code>,<code>float</code>,<code>str</code>,<code>bool</code>.",
+      "name": "4. Variables y Tipos de Datos Básicos",
+      "description": "Qué son las variables, cómo se crean y los tipos más comunes: <code>int</code>, <code>float</code>, <code>str</code>, <code>bool</code>.",
       "color": "#6464FF",
       "unit": "learning-unit4"
     },
     {
-      "name": "5. Operaciones matemáticas y con texto",
-      "description": "Uso de operadores <code>+</code>,<code>-</code>,<code>*</code>,<code>/</code>, concatenación y repetición de cadenas.",
+      "name": "5. Operaciones Matemáticas y Con Texto",
+      "description": "Uso de operadores <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, concatenación y repetición de cadenas.",
       "color": "#FFD43B",
       "unit": "learning-unit5"
     },
     {
-      "name": "6. Entrada de datos con <code>input()</code>",
+      "name": "6. Entrada de Datos Con <code>input()</code>",
       "description": "Cómo recibir información del usuario y procesarla.",
       "color": "#3776AB",
       "unit": "learning-unit6"
