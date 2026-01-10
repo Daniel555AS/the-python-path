@@ -1,10 +1,10 @@
 {
-  "title": "Comments and basic code style",
+  "title": "Comments and Basic Code Style",
   "description": "",
   "content": [
     {
       "type": "subtitle1",
-      "text": "What is a comment in Python?"
+      "text": "What is a Comment in Python?"
     },
     {
       "type": "paragraph",
@@ -28,7 +28,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Single-line comments"
+      "text": "Single-line Comments"
     },
     {
       "type": "paragraph",
@@ -52,12 +52,12 @@
     },
     {
       "type": "test-button",
-      "text": "Try it >>",
+      "text": "Try >>",
       "code": "# This program shows a greeting\nprint(\"Hello\")  # Displays text on screen"
     },
     {
       "type": "tip",
-      "text": "⭐ <strong>Tip:</strong><br>Avoid writing obvious comments like:<br><code class=\"language-python\">x = x + 1   # I add 1 to x</code>"
+      "text": "⭐ <strong>Tip:</strong><br>Avoid writing obvious comments like:<br><code class=\"language-python\">x = x + 1   # Add 1 to x</code>"
     },
     {
       "type": "paragraph",
@@ -65,7 +65,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Multiline comments (explanatory text)"
+      "text": "Multiline Comments (Explanatory Text)"
     },
     {
       "type": "paragraph",
@@ -77,7 +77,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Example"
+      "text": "Example:"
     },
     {
       "type": "code",
@@ -89,7 +89,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "What are comments really for?"
+      "text": "What Are Comments Really For?"
     },
     {
       "type": "paragraph",
@@ -98,10 +98,10 @@
     {
       "type": "list",
       "items": [
-        "They explain the intention behind a solution",
-        "They clarify complicated parts of the code",
-        "They document important decisions",
-        "They help whoever reads the code (including you)"
+        "They explain the intention behind a solution.",
+        "They clarify complicated parts of the code.",
+        "They document important decisions.",
+        "They help whoever reads the code (including you)."
       ]
     },
     {
@@ -110,7 +110,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Basic code style: writing clean code"
+      "text": "Basic Code Style: Writing Clean Code"
     },
     {
       "type": "paragraph",
@@ -118,7 +118,7 @@
     },
     {
       "type": "subtitle2",
-      "text": "1. Use descriptive variable names"
+      "text": "1. Use Descriptive Variable Names"
     },
     {
       "type": "paragraph",
@@ -142,7 +142,7 @@
     },
     {
       "type": "subtitle2",
-      "text": "2. Spaces around operators"
+      "text": "2. Spaces Around Operators"
     },
     {
       "type": "paragraph",
@@ -166,7 +166,7 @@
     },
     {
       "type": "subtitle2",
-      "text": "3. One idea per line"
+      "text": "3. One Idea Per Line"
     },
     {
       "type": "paragraph",
@@ -194,12 +194,12 @@
     },
     {
       "type": "test-button",
-      "text": "Try it >>",
+      "text": "Try >>",
       "code": "a = 10\nb = 20\nprint(a + b)"
     },
     {
       "type": "subtitle2",
-      "text": "4. Keep lines short"
+      "text": "4. Keep Lines Short"
     },
     {
       "type": "paragraph",
@@ -211,7 +211,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Comments in real code"
+      "text": "Comments In Real Code"
     },
     {
       "type": "paragraph",
@@ -231,7 +231,7 @@
     },
     {
       "type": "test-button",
-      "text": "Try it >>",
+      "text": "Try >>",
       "code": "# Calculate the final price with discount\nprice = 100\ndiscount = 0.15\n\n# Apply discount\nfinal_price = price - (price * discount)\n\nprint(\"Final price:\", final_price)"
     },
     {
@@ -240,11 +240,11 @@
     },
     {
       "type": "subtitle1",
-      "text": "When should you NOT comment?"
+      "text": "When Should You NOT Comment?"
     },
     {
       "type": "tip",
-      "text": "⭐ <strong>Tip:</strong> Use this golden rule:<br><strong>\"Comment when the reader might get confused; don't comment on obvious things.\"</strong>"
+      "text": "⭐ <strong>Tip:</strong><br>Use this golden rule:<br><strong>\"Comment when the reader might get confused; don't comment on obvious things\"</strong>."
     },
     {
       "type": "paragraph",
@@ -264,7 +264,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Guided exercise"
+      "text": "Guided Exercise"
     },
     {
       "type": "paragraph",
@@ -291,20 +291,20 @@
     },
     {
       "type": "subtitle1",
-      "text": "Topic conclusion"
+      "text": "Unit Conclusions"
     },
     {
       "type": "paragraph",
-      "text": "In this topic you learned"
+      "text": "In this topic you learned:"
     },
     {
       "type": "list",
       "items": [
-        "How to write comments with <code class=\"language-python\">#</code>",
-        "How to create explanatory comments with triple quotes",
-        "Good practices for style and readability",
-        "What makes a comment useful",
-        "How to write clearer and more structured code"
+        "How to write comments with <code class=\"language-python\">#</code>.",
+        "How to create explanatory comments with triple quotes.",
+        "Good practices for style and readability.",
+        "What makes a comment useful.",
+        "How to write clearer and more structured code."
       ]
     },
     {
