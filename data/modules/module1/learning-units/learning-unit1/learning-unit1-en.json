@@ -1,5 +1,5 @@
 {
-  "title": "What is Python and how does it work?",
+  "title": "What is Python and How Does It Work?",
   "description": "",
   "content": [
     {
@@ -17,13 +17,13 @@
     {
       "type": "list",
       "items": [
-        "Web development",
-        "Artificial Intelligence and Machine Learning",
-        "Data analysis",
-        "Task automation",
-        "Video game development",
-        "Server scripting",
-        "Desktop applications"
+        "Web development.",
+        "Artificial Intelligence and Machine Learning.",
+        "Data analysis.",
+        "Task automation.",
+        "Video game development.",
+        "Server scripting.",
+        "Desktop applications."
       ]
     },
     {
@@ -36,7 +36,7 @@
     },
     {
       "type": "subtitle2",
-      "text": "✔ Simple syntax"
+      "text": "✔ Simple Syntax"
     },
     {
       "type": "paragraph",
@@ -56,7 +56,7 @@
     },
     {
       "type": "test-button",
-      "text": "Try it >>",
+      "text": "Try >>",
       "code": "print('Hello, World')"
     },
     {
@@ -74,9 +74,9 @@
     {
       "type": "list",
       "items": [
-        "Quickly testing ideas",
-        "Running code in interactive environments such as Pyodide (in the browser) or in a terminal",
-        "Detecting errors line by line"
+        "Quickly testing ideas.",
+        "Running code in interactive environments such as Pyodide (in the browser) or in a terminal.",
+        "Detecting errors line by line."
       ]
     },
     {
@@ -94,17 +94,17 @@
     {
       "type": "list",
       "items": [
-        "Windows",
-        "macOS",
-        "Linux",
-        "Web browsers (gracias a Pyodide)",
-        "Servers",
-        "Microcontrollers (MicroPython)"
+        "Windows.",
+        "macOS.",
+        "Linux.",
+        "Web browsers (gracias a Pyodide).",
+        "Servers.",
+        "Microcontrollers (MicroPython)."
       ]
     },
     {
       "type": "subtitle2",
-      "text": "✔ Dynamic typing"
+      "text": "✔ Dynamic Typing"
     },
     {
       "type": "paragraph",
@@ -120,7 +120,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "How does Python work internally?"
+      "text": "How Does Python Work Internally?"
     },
     {
       "type": "subtitle2",
@@ -137,9 +137,9 @@
     {
       "type": "list",
       "items": [
-        "You write <code class=\"language-python\">program.py</code>",
-        "Python converts it into bytecode (<code class=\"language-python\">.pyc</code>)",
-        "The bytecode is executed on the Python Virtual Machine (PVM)"
+        "You write <code class=\"language-python\">program.py</code>.",
+        "Python converts it into bytecode (<code class=\"language-python\">.pyc</code>).",
+        "The bytecode is executed on the Python Virtual Machine (PVM)."
       ]
     },
     {
@@ -148,7 +148,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "What is Python used for?"
+      "text": "What is Python Used For?"
     },
     {
       "type": "paragraph",
@@ -200,7 +200,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Output"
+      "text": "Output:"
     },
     {
       "type": "code",
@@ -208,12 +208,12 @@
     },
     {
       "type": "test-button",
-      "text": "Try it >>",
+      "text": "Try >>",
       "code": "name = input('What is your name?')\nprint('Hello', name)"
     },
     {
       "type": "subtitle1",
-      "text": "Conclusion of the Topic"
+      "text": "Unit Conclusions"
     },
     {
       "type": "paragraph",
