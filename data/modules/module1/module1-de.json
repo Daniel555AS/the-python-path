@@ -3,37 +3,37 @@
   "description": "In diesem Modul lernst du, was Python ist und wie du deine ersten Programme erstellst. Du erfährst, wie man Text ausgibt, Variablen verwendet, mit Zahlen und Zeichenketten arbeitet, einfache Operationen durchführt und mit Benutzereingaben interagiert.",
   "steps": [
     {
-      "name": "1. Was ist Python und wie funktioniert es?",
+      "name": "1. Was ist Python und Wie Funktioniert Es?",
       "description": "Einführung in die Programmiersprache, ihre Merkmale, lesbare Syntax und Verwendungszwecke.",
       "color": "#FFD43B",
       "unit": "learning-unit1"
     },
     {
-      "name": "2. Dein erstes Programm:<code>print()</code>",
+      "name": "2. Dein Erstes Programm: <code>print()</code>",
       "description": "Wie man Text auf dem Bildschirm anzeigt und die minimale Struktur eines Programms versteht.",
       "color": "#3776AB",
       "unit": "learning-unit2"
     },
     {
-      "name": "3. Kommentare und grundlegender Code-Stil",
+      "name": "3. Kommentare und Grundlegender Code-Stil",
       "description": "Verwende <code>#</code>, um den Code zu dokumentieren und ihn lesbar zu halten.",
       "color": "#1B983A",
       "unit": "learning-unit3"
     },
     {
-      "name": "4. Variablen und grundlegende Datentypen",
-      "description": "Was Variablen sind, wie sie erstellt werden und die gebräuchlichsten Typen:<code>int</code>,<code>float</code>,<code>str</code>,<code>bool.</code>",
+      "name": "4. Variablen und Grundlegende Datentypen",
+      "description": "Was Variablen sind, wie sie erstellt werden und die gebräuchlichsten Typen: <code>int</code>, <code>float</code>, <code>str</code>, <code>bool</code>.",
       "color": "#6464FF",
       "unit": "learning-unit4"
     },
     {
       "name": "5. Mathematische Operationen und Textoperationen",
-      "description": "Verwendung der Operatoren <code>+</code>,<code>-</code>,<code>*</code>,<code>/</code>, Verkettung und Wiederholung von Zeichenketten.",
+      "description": "Verwendung der Operatoren <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, Verkettung und Wiederholung von Zeichenketten.",
       "color": "#FFD43B",
       "unit": "learning-unit5"
     },
     {
-      "name": "6. Dateneingabe mit <code>input()</code>",
+      "name": "6. Dateneingabe Mit <code>input()</code>",
       "description": "Wie man Informationen vom Benutzer erhält und sie verarbeitet.",
       "color": "#3776AB",
       "unit": "learning-unit6"
