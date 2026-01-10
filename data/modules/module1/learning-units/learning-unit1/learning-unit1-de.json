@@ -1,5 +1,5 @@
 {
-  "title": "Was ist Python und wie funktioniert es?",
+  "title": "Was ist Python und Wie Funktioniert Es?",
   "description": "",
   "content": [
     {
@@ -17,13 +17,13 @@
     {
       "type": "list",
       "items": [
-        "Webentwicklung",
-        "Künstliche Intelligenz und Machine Learning",
-        "Datenanalyse",
-        "Automatisierung von Aufgaben“",
-        "Spieleentwicklung",
-        "Server-Scripting",
-        "Desktop-Anwendungen"
+        "Webentwicklung.",
+        "Künstliche Intelligenz und Machine Learning.",
+        "Datenanalyse.",
+        "Automatisierung von Aufgaben.",
+        "Spieleentwicklung.",
+        "Server-Scripting.",
+        "Desktop-Anwendungen."
       ]
     },
     {
@@ -61,7 +61,7 @@
     },
     {
       "type": "tip",
-      "text": "⭐ <strong>Tipp:</strong><br>Wenn eine Python-Zeile \"klingt\", wie das, was du erreichen willst, ist sie wahrscheinlich die richtige Art, es zu schreiben."
+      "text": "⭐ <strong>Tipp:</strong><br>Wenn eine Python-Zeile „klingt“, wie das, was du erreichen willst, ist sie wahrscheinlich die richtige Art, es zu schreiben."
     },
     {
       "type": "subtitle2",
@@ -74,9 +74,9 @@
     {
       "type": "list",
       "items": [
-        "Ideen schnell ausprobieren",
-        "Code in interaktiven Umgebungen wie Pyodide (im Browser) oder im Terminal ausführen",
-        "Fehler Zeile für Zeile erkennen"
+        "Ideen schnell ausprobieren.",
+        "Code in interaktiven Umgebungen wie Pyodide (im Browser) oder im Terminal ausführen.",
+        "Fehler Zeile für Zeile erkennen."
       ]
     },
     {
@@ -94,12 +94,12 @@
     {
       "type": "list",
       "items": [
-        "Windows",
-        "macOS",
-        "Linux",
-        "Webbrowser (dank Pyodide)",
-        "Server",
-        "Mikrocontroller (MicroPython)"
+        "Windows.",
+        "macOS.",
+        "Linux.",
+        "Webbrowser (dank Pyodide).",
+        "Server.",
+        "Mikrocontroller (MicroPython)."
       ]
     },
     {
@@ -120,7 +120,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Wie funktioniert Python intern?"
+      "text": "Wie Funktioniert Python Intern?"
     },
     {
       "type": "subtitle2",
@@ -137,9 +137,9 @@
     {
       "type": "list",
       "items": [
-        "Du schreibst <code class=\"language-python\">programm.py</code>",
-        "Python wandelt es in Bytecode um (<code class=\"language-python\">.pyc</code>)",
-        "Der Bytecode wird in der Python Virtual Machine (PVM) ausgeführt"
+        "Du schreibst <code class=\"language-python\">programm.py</code>.",
+        "Python wandelt es in Bytecode um (<code class=\"language-python\">.pyc</code>).",
+        "Der Bytecode wird in der Python Virtual Machine (PVM) ausgeführt."
       ]
     },
     {
@@ -148,7 +148,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Wofür wird Python verwendet?"
+      "text": "Wofür Wird Python Verwendet?"
     },
     {
       "type": "paragraph",
@@ -172,7 +172,7 @@
     },
     {
       "type": "note",
-      "text": "📌 <strong>Hinweis:</strong><br>Django ist \"batteries included\", Flask ist minimalistischer. Später kannst du je nach deinen Bedürfnissen wählen."
+      "text": "📌 <strong>Hinweis:</strong><br>Django ist „batteries included“, Flask ist minimalistischer. Später kannst du je nach deinen Bedürfnissen wählen."
     },
     {
       "type": "subtitle2",
@@ -213,7 +213,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Fazit des Themas"
+      "text": "Fazit der Einheit"
     },
     {
       "type": "paragraph",
