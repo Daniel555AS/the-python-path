@@ -1,10 +1,10 @@
 {
-  "title": "Comentarios y estilo básico de código",
+  "title": "Comentarios y Estilo Básico de Código",
   "description": "",
   "content": [
     {
       "type": "subtitle1",
-      "text": "¿Qué es un comentario en Python?"
+      "text": "¿Qué es un Comentario en Python?"
     },
     {
       "type": "paragraph",
@@ -24,11 +24,11 @@
     },
     {
       "type": "note",
-      "text": "📌 <strong>Note:</strong><br>Los comentarios son para humanos, no para el intérprete. Le dan claridad al código y ayudan a recordar lo que intentabas hacer cuando lo vuelves a leer tiempo después."
+      "text": "📌 <strong>Nota:</strong><br>Los comentarios son para humanos, no para el intérprete. Le dan claridad al código y ayudan a recordar lo que intentabas hacer cuando lo vuelves a leer tiempo después."
     },
     {
       "type": "subtitle1",
-      "text": "Comentarios de una sola línea"
+      "text": "Comentarios de Una Sola Línea"
     },
     {
       "type": "paragraph",
@@ -65,7 +65,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Comentarios de varias líneas (texto explicativo)"
+      "text": "Comentarios de Varias Líneas (Texto Explicativo)"
     },
     {
       "type": "paragraph",
@@ -77,7 +77,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Ejemplo"
+      "text": "Ejemplo:"
     },
     {
       "type": "code",
@@ -89,7 +89,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "¿Para qué sirven los comentarios realmente?"
+      "text": "¿Para Qué Sirven Los Comentarios Realmente?"
     },
     {
       "type": "paragraph",
@@ -98,19 +98,19 @@
     {
       "type": "list",
       "items": [
-        "Explican la intención detrás de una solución",
-        "Aclaran partes complicadas del código",
-        "Documentan decisiones importantes",
-        "Ayudan a quien lee el código (incluyéndote a ti)"
+        "Explican la intención detrás de una solución.",
+        "Aclaran partes complicadas del código.",
+        "Documentan decisiones importantes.",
+        "Ayudan a quien lee el código (incluyéndote a ti)."
       ]
     },
     {
       "type": "tip",
-      "text": "⭐ <strong>Nota:</strong><br>Si tienes que explicar demasiado, quizá el código es demasiado complejo. A veces lo mejor es simplificar el código, no escribir más comentarios."
+      "text": "⭐ <strong>Tip:</strong><br>Si tienes que explicar demasiado, quizá el código es demasiado complejo. A veces lo mejor es simplificar el código, no escribir más comentarios."
     },
     {
       "type": "subtitle1",
-      "text": "Estilo básico de código: escribir código limpio"
+      "text": "Estilo Básico de Código: Escribir Código Limpio"
     },
     {
       "type": "paragraph",
@@ -118,7 +118,7 @@
     },
     {
       "type": "subtitle2",
-      "text": "1. Usa nombres descriptivos para variables"
+      "text": "1. Usa Nombres Descriptivos Para Variables"
     },
     {
       "type": "paragraph",
@@ -142,7 +142,7 @@
     },
     {
       "type": "subtitle2",
-      "text": "2. Espacios alrededor de operadores"
+      "text": "2. Espacios Alrededor de Operadores"
     },
     {
       "type": "paragraph",
@@ -166,7 +166,7 @@
     },
     {
       "type": "subtitle2",
-      "text": "3. Una idea por línea"
+      "text": "3. Una Idea por Línea"
     },
     {
       "type": "paragraph",
@@ -199,7 +199,7 @@
     },
     {
       "type": "subtitle2",
-      "text": "4. Mantén las líneas cortas"
+      "text": "4. Mantén Las Líneas Cortas"
     },
     {
       "type": "paragraph",
@@ -211,7 +211,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Comentarios dentro del código real"
+      "text": "Comentarios Dentro del Código Real"
     },
     {
       "type": "paragraph",
@@ -240,7 +240,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "¿Cuándo NO debes comentar?"
+      "text": "¿Cuándo NO Debes Comentar?"
     },
     {
       "type": "tip",
@@ -264,7 +264,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Ejercicio guiado"
+      "text": "Ejercicio Guiado"
     },
     {
       "type": "paragraph",
@@ -291,20 +291,20 @@
     },
     {
       "type": "subtitle1",
-      "text": "Conclusión del tema"
+      "text": "Conclusiones de la Unidad"
     },
     {
       "type": "paragraph",
-      "text": "En esta tema aprendiste"
+      "text": "En esta tema aprendiste:"
     },
     {
       "type": "list",
       "items": [
-        "Cómo se escriben comentarios con <code class=\"language-python\">#</code>",
-        "Cómo crear comentarios explicativos con comillas triples",
-        "Buenas prácticas de estilo y legibilidad",
-        "Qué hace que un comentario sea útil",
-        "Cómo escribir código más claro y estructurado"
+        "Cómo se escriben comentarios con <code class=\"language-python\">#</code>.",
+        "Cómo crear comentarios explicativos con comillas triples.",
+        "Buenas prácticas de estilo y legibilidad.",
+        "Qué hace que un comentario sea útil.",
+        "Cómo escribir código más claro y estructurado."
       ]
     },
     {
