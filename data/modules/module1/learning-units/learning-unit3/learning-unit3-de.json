@@ -1,10 +1,10 @@
 {
-  "title": "Kommentare und grundlegender Code-Stil",
+  "title": "Kommentare und Grundlegender Code-Stil",
   "description": "",
   "content": [
     {
       "type": "subtitle1",
-      "text": "Was ist ein Kommentar in Python?"
+      "text": "Was Ist Ein Kommentar in Python?"
     },
     {
       "type": "paragraph",
@@ -65,7 +65,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Mehrzeilige Kommentare (erklärender Text)"
+      "text": "Mehrzeilige Kommentare (Erklärender Text)"
     },
     {
       "type": "paragraph",
@@ -77,7 +77,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Beispiel"
+      "text": "Beispiel:"
     },
     {
       "type": "code",
@@ -89,7 +89,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Wofür sind Kommentare wirklich?"
+      "text": "Wofür Sind Kommentare Wirklich?"
     },
     {
       "type": "paragraph",
@@ -98,10 +98,10 @@
     {
       "type": "list",
       "items": [
-        "Sie die Absicht hinter einer Lösung erklären",
-        "Sie komplizierte Teile des Codes verdeutlichen",
-        "Sie wichtige Entscheidungen dokumentieren",
-        "Sie den Leser des Codes unterstützen (auch dich selbst)"
+        "Sie die Absicht hinter einer Lösung erklären.",
+        "Sie komplizierte Teile des Codes verdeutlichen.",
+        "Sie wichtige Entscheidungen dokumentieren.",
+        "Sie den Leser des Codes unterstützen (auch dich selbst)."
       ]
     },
     {
@@ -110,7 +110,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Grundlegender Code-Stil: sauberen Code schreiben"
+      "text": "Grundlegender Code-Stil: Sauberen Code Schreiben"
     },
     {
       "type": "paragraph",
@@ -118,7 +118,7 @@
     },
     {
       "type": "subtitle2",
-      "text": "1. Verwende beschreibende Variablennamen"
+      "text": "1. Verwende Beschreibende Variablennamen"
     },
     {
       "type": "paragraph",
@@ -142,7 +142,7 @@
     },
     {
       "type": "subtitle2",
-      "text": "2. Leerzeichen um Operatoren"
+      "text": "2. Leerzeichen Um Operatoren"
     },
     {
       "type": "paragraph",
@@ -166,7 +166,7 @@
     },
     {
       "type": "subtitle2",
-      "text": "3. Eine Idee pro Zeile"
+      "text": "3. Eine Idee Pro Zeile"
     },
     {
       "type": "paragraph",
@@ -199,7 +199,7 @@
     },
     {
       "type": "subtitle2",
-      "text": "4. Halte Zeilen kurz"
+      "text": "4. Halte Zeilen Kurz"
     },
     {
       "type": "paragraph",
@@ -211,7 +211,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Kommentare im echten Code"
+      "text": "Kommentare Im Echten Code"
     },
     {
       "type": "paragraph",
@@ -240,11 +240,11 @@
     },
     {
       "type": "subtitle1",
-      "text": "Wann solltest du NICHT kommentieren?"
+      "text": "Wann Solltest Du NICHT Kommentieren?"
     },
     {
       "type": "tip",
-      "text": "⭐ <strong>Tipp:</strong> Merke dir diese goldene Regel:<br><strong>\"Kommentiere, wenn der Leser verwirrt sein könnte; kommentiere nicht das Offensichtliche.\"</strong>"
+      "text": "⭐ <strong>Tipp:</strong> Merke dir diese goldene Regel:<br><strong>\"Kommentiere, wenn der Leser verwirrt sein könnte; kommentiere nicht das Offensichtliche\".</strong>"
     },
     {
       "type": "paragraph",
@@ -291,20 +291,20 @@
     },
     {
       "type": "subtitle1",
-      "text": "Zusammenfassung des Themas"
+      "text": "Fazit der Einheit"
     },
     {
       "type": "paragraph",
-      "text": "In diesem Thema hast du gelernt"
+      "text": "In diesem Thema hast du gelernt:"
     },
     {
       "type": "list",
       "items": [
-        "Wie man Kommentare mit <code class=\"language-python\">#</code> schreibt",
-        "Wie man erklärende Kommentare mit dreifachen Anführungszeichen erstellt",
-        "Gute Praktiken für Stil und Lesbarkeit",
-        "Was einen Kommentar nützlich macht",
-        "Wie man klareren und besser strukturierten Code schreibt"
+        "Wie man Kommentare mit <code class=\"language-python\">#</code> schreibt.",
+        "Wie man erklärende Kommentare mit dreifachen Anführungszeichen erstellt.",
+        "Gute Praktiken für Stil und Lesbarkeit.",
+        "Was einen Kommentar nützlich macht.",
+        "Wie man klareren und besser strukturierten Code schreibt."
       ]
     },
     {
