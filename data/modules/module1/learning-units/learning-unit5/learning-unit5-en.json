@@ -97,7 +97,7 @@
     },
     {
       "type": "subtitle2",
-      "text": "Concatenation (joining text) → operator <code class=\"language-python\">+</code>"
+      "text": "Concatenation (Joining Text) → Operator <code class=\"language-python\">+</code>"
     },
     {
       "type": "code",
@@ -110,7 +110,7 @@
     },
     {
       "type": "subtitle2",
-      "text": "Text repetition → operator <code class=\"language-python\">*</code>"
+      "text": "Text Repetition → Operator <code class=\"language-python\">*</code>"
     },
     {
       "type": "code",
@@ -118,7 +118,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Output"
+      "text": "Output:"
     },
     {
       "type": "code",
@@ -174,14 +174,14 @@
     {
       "type": "list",
       "items": [
-        "Numeric operations only work with numbers",
-        "Text operations only work with text",
-        "If you mix numbers and text → you must convert one to the type of the other"
+        "Numeric operations only work with numbers.",
+        "Text operations only work with text.",
+        "If you mix numbers and text → you must convert one to the type of the other."
       ]
     },
     {
       "type": "paragraph",
-      "text": "Example"
+      "text": "Example:"
     },
     {
       "type": "code",
@@ -277,9 +277,9 @@
     {
       "type": "list",
       "items": [
-        "The sum of the three",
-        "The average",
-        "The result of <code class=\"language-python\">a * c</code>"
+        "The sum of the three.",
+        "The average.",
+        "The result of <code class=\"language-python\">a * c</code>."
       ]
     },
     {
@@ -297,7 +297,7 @@
         },
         {
           "type": "test-button",
-          "text": "Try solution >>",
+          "text": "Try Solution >>",
           "code": "a = 10\nb = 20\nc = 5\n\nsum_result = a + b + c\naverage = sum_result / 3\nproduct = a * c\n\nprint(\"Sum:\", sum_result)\nprint(\"Average:\", average)\nprint(\"Product:\", product)"
         }
       ]
@@ -317,7 +317,7 @@
     {
       "type": "test-button",
       "text": "Practice >>",
-      "code": "# Join the following parts to form a single sentence (Display it on screen):\n# part1 = \"Python \"\n# part2 = \"is \"\n# part3 = \"awesome\""
+      "code": "# Join the following parts to form a single\n# sentence (Display it on screen):\n# part1 = \"Python \"\n# part2 = \"is \"\n# part3 = \"awesome\""
     },
     {
       "type": "collapsible",
@@ -329,7 +329,7 @@
         },
         {
           "type": "test-button",
-          "text": "Try solution >>",
+          "text": "Try Solution >>",
           "code": "part1 = \"Python \"\npart2 = \"is \"\npart3 = \"awesome\"\n\nsentence = part1 + part2 + part3\nprint(sentence)"
         }
       ]
@@ -345,7 +345,7 @@
     {
       "type": "test-button",
       "text": "Practice >>",
-      "code": "# Create a variable that contains a symbol (e.g., \"*\")\n# and repeat it 20 times (Display it on screen)"
+      "code": "# Create a variable that contains a\n# symbol (e.g., \"*\") and repeat it 20 times\n# (Display it on screen)"
     },
     {
       "type": "collapsible",
@@ -357,7 +357,7 @@
         },
         {
           "type": "test-button",
-          "text": "Try solution >>",
+          "text": "Try Solution >>",
           "code": "symbol = \"*\"\nprint(symbol * 20)"
         }
       ]
@@ -381,7 +381,7 @@
     {
       "type": "test-button",
       "text": "Practice >>",
-      "code": "# You have a number stored as text:\n# number = \"40\"\n# Convert the number to an integer and add 7.\n# Finally, display the result on screen."
+      "code": "# You have a number stored as text:\n# number = \"40\"\n# Convert the number to an integer and add 7.\n# Finally, display the result on screen"
     },
     {
       "type": "collapsible",
@@ -393,7 +393,7 @@
         },
         {
           "type": "test-button",
-          "text": "Try solution >>",
+          "text": "Try Solution >>",
           "code": "number = \"40\"\nnumber = int(number)\nprint(number + 7)"
         }
       ]
@@ -437,14 +437,14 @@
         },
         {
           "type": "test-button",
-          "text": "Try solution >>",
+          "text": "Try Solution >>",
           "code": "name = \"Linus\"\nage = 55\n\nmessage = name + \" is \" + str(age) + \" years old\"\nprint(message)"
         }
       ]
     },
     {
       "type": "subtitle1",
-      "text": "Topic Conclusion"
+      "text": "Unit Conclusions"
     },
     {
       "type": "paragraph",
@@ -453,10 +453,10 @@
     {
       "type": "list",
       "items": [
-        "That Python can perform basic mathematical operations with <code class=\"language-python\">+</code>, <code class=\"language-python\">-</code>, <code class=\"language-python\">*</code>, <code class=\"language-python\">/</code>, <code class=\"language-python\">%</code>, <code class=\"language-python\">//</code>, and <code class=\"language-python\">**</code>",
-        "That text strings can be joined using <code class=\"language-python\">+</code> and repeated using <code class=\"language-python\">*</code>",
-        "That string operations follow their own rules (for example, adding texts = concatenation)",
-        "That it is important to understand data types to avoid errors and write clearer code"
+        "That Python can perform basic mathematical operations with <code class=\"language-python\">+</code>, <code class=\"language-python\">-</code>, <code class=\"language-python\">*</code>, <code class=\"language-python\">/</code>, <code class=\"language-python\">%</code>, <code class=\"language-python\">//</code>, and <code class=\"language-python\">**</code>.",
+        "That text strings can be joined using <code class=\"language-python\">+</code> and repeated using <code class=\"language-python\">*</code>.",
+        "That string operations follow their own rules (for example, adding texts = concatenation).",
+        "That it is important to understand data types to avoid errors and write clearer code."
       ]
     }
   ]
