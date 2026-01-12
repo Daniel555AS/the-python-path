@@ -1,0 +1,375 @@
+{
+  "title": "Data Input With <code class=\"language-python\">input()</code>",
+  "description": "",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "The <code class=\"language-python\">input()</code> function allows your program to receive information typed by the user. It is one of the first steps toward creating truly interactive programs."
+    },
+    {
+      "type": "subtitle1",
+      "text": "What is <code class=\"language-python\">input()</code>?"
+    },
+    {
+      "type": "paragraph",
+      "text": "<code class=\"language-python\">input()</code> is a function that:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Displays a message (if you provide one).",
+        "Waits for the user to type something.",
+        "Returns what was typed as a text string (<code class=\"language-python\">str</code>)."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Example:"
+    },
+    {
+      "type": "code",
+      "text": "name = input(\"Enter your name: \")\nprint(\"Hello,\", name)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "Enter your name: Linus\nHello, Linus"
+    },
+    {
+      "type": "test-button",
+      "text": "Try >>",
+      "code": "name = input(\"Enter your name: \")\nprint(\"Hello,\", name)"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Note:</strong><br>Everything that <code class=\"language-python\">input()</code> returns is text, even if the user types a number."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Converting What the User Enters"
+    },
+    {
+      "type": "paragraph",
+      "text": "If you need to work with numbers, you must convert the text that comes from <code class=\"language-python\">input()</code>."
+    },
+    {
+      "type": "paragraph",
+      "text": "Use:"
+    },
+    {
+      "type": "table",
+      "headers": ["Conversion", "Used to"],
+      "rows": [
+        [
+          "<code class=\"language-python\">int()</code>",
+          "Convert to an integer"
+        ],
+        [
+          "<code class=\"language-python\">float</code>",
+          "Convert to a decimal number"
+        ],
+        ["<code class=\"language-python\">str()</code>", "Convert to text"]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Example:"
+    },
+    {
+      "type": "code",
+      "text": "age = input(\"How old are you?\")\nage = int(age)    # necessary conversion\nprint(\"Next year you will be\", age + 1)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "How old are you? 55\nNext year you will be 56"
+    },
+    {
+      "type": "test-button",
+      "text": "Try >>",
+      "code": "age = input(\"How old are you?\")\nage = int(age)\nprint(\"Next year you will be\", age + 1)"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br>If you don’t convert it, a number cannot be added mathematically, only as text."
+    },
+    {
+      "type": "paragraph",
+      "text": "Common error example:"
+    },
+    {
+      "type": "code",
+      "text": "\"5\" + 1    # ERROR: you cannot mix str and int"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Processing Entered Data"
+    },
+    {
+      "type": "paragraph",
+      "text": "After receiving information, you can use it for calculations, making decisions, or displaying personalized messages."
+    },
+    {
+      "type": "code",
+      "text": "number = int(input(\"Enter a number: \"))\ndouble = number * 2\nprint(\"The double is:\", double)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "Enter a number: 7\nThe double is: 14"
+    },
+    {
+      "type": "test-button",
+      "text": "Try >>",
+      "code": "number = int(input(\"Enter a number: \"))\ndouble = number * 2\nprint(\"The double is:\", double)"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Common Errors with <code class=\"language-python\">input()</code>"
+    },
+    {
+      "type": "subtitle2",
+      "text": "1. Forgetting That It Returns Text"
+    },
+    {
+      "type": "code",
+      "text": "n = input(\"Number: \")\nprint(n + 10)    # ERROR"
+    },
+    {
+      "type": "test-button",
+      "text": "Test Error >>",
+      "code": "n = input(\"Number: \")\nprint(n + 10)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "2. Attempt to Convert Invalid Text"
+    },
+    {
+      "type": "code",
+      "text": "text = input(\"Input: \") # Input: hello\nint(text)    # ERROR"
+    },
+    {
+      "type": "test-button",
+      "text": "Test Error >>",
+      "code": "text = input(\"Input: \") # Input: hello\nint(text)    # ERROR"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Note:</strong><br>Later, you will learn to handle these errors with <code class=\"language-python\">try</code> and <code class=\"language-python\">except</code>."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Useful Examples"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Example 1: Personalized Greeting"
+    },
+    {
+      "type": "code",
+      "text": "name = input(\"What is your name? \")\nprint(\"Nice to meet you,\", name)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "What is your name? Python\nNice to meet you, Python"
+    },
+    {
+      "type": "test-button",
+      "text": "Try >>",
+      "code": "name = input(\"What is your name? \")\nprint(\"Nice to meet you,\", name)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Example 2: Interactive Addition"
+    },
+    {
+      "type": "code",
+      "text": "a = int(input(\"Enter a number: \"))\nb = int(input(\"Enter another number: \"))\nprint(\"The sum is:\", a + b)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "Enter a number: 7\nEnter another number: 3\nThe sum is: 10"
+    },
+    {
+      "type": "test-button",
+      "text": "Try >>",
+      "code": "a = int(input(\"Enter a number: \"))\nb = int(input(\"Enter another number: \"))\nprint(\"The sum is:\", a + b)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Example 3: Repeating Text"
+    },
+    {
+      "type": "code",
+      "text": "word = input(\"Enter a word: \")\nprint(word * 3)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "Enter a word: Python\nPythonPythonPython"
+    },
+    {
+      "type": "test-button",
+      "text": "Try >>",
+      "code": "word = input(\"Enter a word: \")\nprint(word * 3)"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br>When you repeat a string, spaces are not added automatically."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Exercises to Practice"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Exercise 1: Simple Greeting"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ask the user for their name and show them a greeting."
+    },
+    {
+      "type": "test-button",
+      "text": "Practice >>",
+      "code": "# Ask the user for their name and show\n# them a greeting"
+    },
+    {
+      "type": "collapsible",
+      "title": "View possible solution",
+      "content": [
+        {
+          "type": "code",
+          "text": "name = input(\"Enter your name: \")\nprint(\"Hello\", name)"
+        },
+        {
+          "type": "test-button",
+          "text": "Try Solution >>",
+          "code": "name = input(\"Enter your name: \")\nprint(\"Hello\", name)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Exercise 2: Age in the Future"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ask the user for their age and tell them how old they will be in 5 years."
+    },
+    {
+      "type": "test-button",
+      "text": "Practice >>",
+      "code": "# Ask the user for their age and tell them\n# how old they will be in 5 years"
+    },
+    {
+      "type": "collapsible",
+      "title": "View possible solution",
+      "content": [
+        {
+          "type": "code",
+          "text": "age = int(input(\"How old are you? \"))\nprint(\"In 5 years you will be\", age + 5)"
+        },
+        {
+          "type": "test-button",
+          "text": "Try Solution >>",
+          "code": "age = int(input(\"How old are you? \"))\nprint(\"In 5 years you will be\", age + 5)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Exercise 3: Word Multiplier"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ask the user for a word and a number. Display the word repeated that number of times."
+    },
+    {
+      "type": "test-button",
+      "text": "Practice >>",
+      "code": "# Ask the user for a word and a number. Display\n# the word repeated that number of times"
+    },
+    {
+      "type": "collapsible",
+      "title": "View possible solution",
+      "content": [
+        {
+          "type": "code",
+          "text": "word = input(\"Enter a word: \")\namount = int(input(\"How many times do you want to repeat it? \"))\nprint(word * amount)"
+        },
+        {
+          "type": "test-button",
+          "text": "Try Solution >>",
+          "code": "word = input(\"Enter a word: \")\namount = int(input(\"How many times do you want to repeat it? \"))\nprint(word * amount)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Exercise 4: Temperature Conversion"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ask the user for a temperature in Celsius and convert it to Fahrenheit (show it to the user)."
+    },
+    {
+      "type": "test-button",
+      "text": "Practice >>",
+      "code": "# Ask the user for a temperature in Celsius and\n# convert it to Fahrenheit (show it to the user)"
+    },
+    {
+      "type": "collapsible",
+      "title": "View possible solution",
+      "content": [
+        {
+          "type": "code",
+          "text": "c = float(input(\"Temperature in Celsius: \"))\nf = (c * 9 / 5) + 32\nprint(\"Equivalent to\", f, \"°F\")"
+        },
+        {
+          "type": "test-button",
+          "text": "Try Solution >>",
+          "code": "c = float(input(\"Temperature in Celsius: \"))\nf = (c * 9 / 5) + 32\nprint(\"Equivalent to\", f, \"°F\")"
+        }
+      ]
+    },
+    {
+        "type": "subtitle1",
+        "text": "Unit Conclusions"
+    },
+    {
+        "type": "paragraph",
+        "text": "In this unit you learned:"
+    },
+    {
+        "type": "list",
+        "items": [
+            "How to use <code class=\"language-python\">input()</code> to receive text from the keyboard.",
+            "That everything returned by <code class=\"language-python\">input()</code> is a string (<code class=\"language-python\">str</code>).",
+            "How to convert those texts into numbers using <code class=\"language-python\">int()</code> and <code class=\"language-python\">float()</code>.",
+            "How to process the entered information to perform calculations or personalize messages.",
+            "How to avoid common mistakes, such as mixing text and numbers."
+        ]
+    }
+  ]
+}
