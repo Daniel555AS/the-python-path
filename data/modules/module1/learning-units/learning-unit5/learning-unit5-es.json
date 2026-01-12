@@ -1,5 +1,5 @@
 {
-  "title": "Operaciones matemáticas y con texto",
+  "title": "Operaciones Matemáticas y Con Texto",
   "description": "",
   "content": [
     {
@@ -8,7 +8,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Operaciones matemáticas básicas"
+      "text": "Operaciones Matemáticas Básicas"
     },
     {
       "type": "paragraph",
@@ -89,7 +89,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Operaciones con texto (strings)"
+      "text": "Operaciones Con Texto (Strings)"
     },
     {
       "type": "paragraph",
@@ -97,7 +97,7 @@
     },
     {
       "type": "subtitle2",
-      "text": "Concatenación (unir texto) → operador <code class=\"language-python\">+</code>"
+      "text": "Concatenación (Unir Texto) → Operador <code class=\"language-python\">+</code>"
     },
     {
       "type": "code",
@@ -110,7 +110,7 @@
     },
     {
       "type": "subtitle2",
-      "text": "Repetición de texto → operador <code class=\"language-python\">*</code>"
+      "text": "Repetición de Texto → Operador <code class=\"language-python\">*</code>"
     },
     {
       "type": "code",
@@ -118,7 +118,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Salida"
+      "text": "Salida:"
     },
     {
       "type": "code",
@@ -135,7 +135,7 @@
     },
     {
       "type": "subtitle2",
-      "text": "Combinando texto y números"
+      "text": "Combinando Texto y Números"
     },
     {
       "type": "paragraph",
@@ -151,7 +151,7 @@
     },
     {
       "type": "test-button",
-      "text": "Probar error >>",
+      "text": "Probar Error >>",
       "code": "print(\"Edad: \" + 25)"
     },
     {
@@ -169,19 +169,19 @@
     },
     {
       "type": "subtitle1",
-      "text": "Reglas importantes"
+      "text": "Reglas Importantes"
     },
     {
       "type": "list",
       "items": [
-        "Las operaciones numéricas solo funcionan con números",
-        "Las operaciones de texto solo funcionan con texto",
-        "Si mezclas números y texto → debes convertir uno al tipo del otro"
+        "Las operaciones numéricas solo funcionan con números.",
+        "Las operaciones de texto solo funcionan con texto.",
+        "Si mezclas números y texto → debes convertir uno al tipo del otro."
       ]
     },
     {
       "type": "paragraph",
-      "text": "Ejemplo"
+      "text": "Ejemplo:"
     },
     {
       "type": "code",
@@ -194,7 +194,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Ejemplos combinados"
+      "text": "Ejemplos Combinados"
     },
     {
       "type": "paragraph",
@@ -219,7 +219,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Buenas prácticas"
+      "text": "Buenas Prácticas"
     },
     {
       "type": "paragraph",
@@ -260,11 +260,11 @@
     },
     {
       "type": "subtitle1",
-      "text": "Ejercicios para practicar"
+      "text": "Ejercicios Para Practicar"
     },
     {
       "type": "subtitle2",
-      "text": "Ejercicio 1: Calculadora básica"
+      "text": "Ejercicio 1: Calculadora Básica"
     },
     {
       "type": "paragraph",
@@ -277,9 +277,9 @@
     {
       "type": "list",
       "items": [
-        "La suma de los tres",
-        "El promedio",
-        "El resultado de <code class=\"language-python\">a * c</code>"
+        "La suma de los tres.",
+        "El promedio.",
+        "El resultado de <code class=\"language-python\">a * c</code>."
       ]
     },
     {
@@ -297,14 +297,14 @@
         },
         {
           "type": "test-button",
-          "text": "Probar solución >>",
+          "text": "Probar Solución >>",
           "code": "a = 10\nb = 20\nc = 5\n\nsuma = a + b + c\npromedio = suma / 3\nproducto = a * c\n\nprint(\"Suma:\", suma)\nprint(\"Promedio:\", promedio)\nprint(\"Producto:\", producto)"
         }
       ]
     },
     {
       "type": "subtitle2",
-      "text": "Ejercicio 2: Concatenación de texto"
+      "text": "Ejercicio 2: Concatenación de Texto"
     },
     {
       "type": "paragraph",
@@ -317,7 +317,7 @@
     {
       "type": "test-button",
       "text": "Practicar >>",
-      "code": "# Une las siguientes partes para formar una única frase (Muéstrala en pantalla):\n# parte1 = \"Python \"\n# parte2 = \"es \"\n# parte3 = \"genial\""
+      "code": "# Une las siguientes partes para formar una única\n# frase (Muéstrala en pantalla):\n# parte1 = \"Python \"\n# parte2 = \"es \"\n# parte3 = \"genial\""
     },
     {
       "type": "collapsible",
@@ -329,14 +329,14 @@
         },
         {
           "type": "test-button",
-          "text": "Probar solución >>",
+          "text": "Probar Solución >>",
           "code": "parte1 = \"Python \"\nparte2 = \"es \"\nparte3 = \"genial\"\n\nfrase = parte1 + parte2 + parte3\nprint(frase)"
         }
       ]
     },
     {
       "type": "subtitle2",
-      "text": "Ejercicio 3: Repetición de cadenas"
+      "text": "Ejercicio 3: Repetición de Cadenas"
     },
     {
       "type": "paragraph",
@@ -345,7 +345,7 @@
     {
       "type": "test-button",
       "text": "Practicar >>",
-      "code": "# Crea una variable que contenga un símbolo (por ejemplo \"*\")\n# y repítelo 20 veces (Muéstralo en pantalla)"
+      "code": "# Crea una variable que contenga un símbolo\n# (por ejemplo \"*\") y repítelo 20 veces\n# (Muéstralo en pantalla)"
     },
     {
       "type": "collapsible",
@@ -357,14 +357,14 @@
         },
         {
           "type": "test-button",
-          "text": "Probar solución >>",
+          "text": "Probar Solución >>",
           "code": "simbolo = \"*\"\nprint(simbolo * 20)"
         }
       ]
     },
     {
       "type": "subtitle2",
-      "text": "Ejercicio 4: Convertir antes de sumar"
+      "text": "Ejercicio 4: Convertir Antes de Sumar"
     },
     {
       "type": "paragraph",
@@ -381,7 +381,7 @@
     {
       "type": "test-button",
       "text": "Practicar >>",
-      "code": "# Tienes un número almacenado como texto:\n# numero = \"40\"\n# Convierte el número a entero y súmale 7.\n# Por último, muestra el resultado en pantalla."
+      "code": "# Tienes un número almacenado como texto:\n# numero = \"40\"\n# Convierte el número a entero y súmale 7.\n# Por último, muestra el resultado en pantalla"
     },
     {
       "type": "collapsible",
@@ -393,14 +393,14 @@
         },
         {
           "type": "test-button",
-          "text": "Probar solución >>",
+          "text": "Probar Solución >>",
           "code": "numero = \"40\"\nnumero = int(numero)\nprint(numero + 7)"
         }
       ]
     },
     {
       "type": "subtitle2",
-      "text": "Ejercicio 5: Mensaje final combinado"
+      "text": "Ejercicio 5: Mensaje Final Combinado"
     },
     {
       "type": "paragraph",
@@ -437,14 +437,14 @@
         },
         {
           "type": "test-button",
-          "text": "Probar solución >>",
+          "text": "Probar Solución >>",
           "code": "nombre = \"Linus\"\nedad = 55\n\nmensaje = nombre + \" tiene \" + str(edad) + \" años\"\nprint(mensaje)"
         }
       ]
     },
     {
       "type": "subtitle1",
-      "text": "Conclusión del tema"
+      "text": "Conclusiones de la Unidad"
     },
     {
       "type": "paragraph",
@@ -453,10 +453,10 @@
     {
       "type": "list",
       "items": [
-        "Que Python puede hacer operaciones matemáticas básicas con <code class=\"language-python\">+</code>, <code class=\"language-python\">-</code>, <code class=\"language-python\">*</code>, <code class=\"language-python\">/</code>, <code class=\"language-python\">%</code>, <code class=\"language-python\">//</code> y <code class=\"language-python\">**</code>",
-        "Que las cadenas de texto se pueden unir con <code class=\"language-python\">+</code> y repetir con <code class=\"language-python\">*</code>",
-        "Que las operaciones con cadenas siguen reglas propias (por ejemplo, sumar textos = concatenar)",
-        "Que es importante entender el tipo de dato para evitar errores y escribir código más claro"
+        "Que Python puede hacer operaciones matemáticas básicas con <code class=\"language-python\">+</code>, <code class=\"language-python\">-</code>, <code class=\"language-python\">*</code>, <code class=\"language-python\">/</code>, <code class=\"language-python\">%</code>, <code class=\"language-python\">//</code> y <code class=\"language-python\">**</code>.",
+        "Que las cadenas de texto se pueden unir con <code class=\"language-python\">+</code> y repetir con <code class=\"language-python\">*</code>.",
+        "Que las operaciones con cadenas siguen reglas propias (por ejemplo, sumar textos = concatenar).",
+        "Que es importante entender el tipo de dato para evitar errores y escribir código más claro."
       ]
     }
   ]
