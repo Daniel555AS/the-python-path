@@ -151,7 +151,7 @@
     },
     {
       "type": "test-button",
-      "text": "Try Error >>",
+      "text": "Test Error >>",
       "code": "print(\"Age: \" + 25)"
     },
     {

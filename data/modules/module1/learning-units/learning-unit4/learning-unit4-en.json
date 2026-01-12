@@ -352,7 +352,7 @@
     },
     {
       "type": "test-button",
-      "text": "Try Error >>",
+      "text": "Test Error >>",
       "code": "int(\"hello\")"
     },
     {
@@ -365,7 +365,7 @@
     },
     {
       "type": "test-button",
-      "text": "Try Error >>",
+      "text": "Test Error >>",
       "code": "print(\"Age: \" + 20)"
     },
     {
