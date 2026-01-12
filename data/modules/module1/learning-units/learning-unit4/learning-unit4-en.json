@@ -1,10 +1,10 @@
 {
-  "title": "Variables and basic data types",
+  "title": "Variables and Basic Data Types",
   "description": "",
   "content": [
     {
       "type": "subtitle1",
-      "text": "What is a variable?"
+      "text": "What Is a Variable?"
     },
     {
       "type": "paragraph",
@@ -25,8 +25,8 @@
     {
       "type": "list",
       "items": [
-        "The \"label\" is <code class=\"language-python\">name</code> or <code class=\"language-python\">age</code>",
-        "The content is <code class=\"language-python\">\"Python\"</code> and <code class=\"language-python\">33</code>"
+        "The \"label\" is <code class=\"language-python\">name</code> or <code class=\"language-python\">age</code>.",
+        "The content is <code class=\"language-python\">\"Python\"</code> and <code class=\"language-python\">33</code>."
       ]
     },
     {
@@ -35,7 +35,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Python and dynamic typing"
+      "text": "Python and Dynamic Typing"
     },
     {
       "type": "paragraph",
@@ -51,7 +51,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Rules for naming variables"
+      "text": "Rules For Naming Variables"
     },
     {
       "type": "paragraph",
@@ -60,10 +60,10 @@
     {
       "type": "list",
       "items": [
-        "You can only use letters, numbers and underscores",
-        "It cannot start with a number",
-        "Do not use spaces",
-        "Avoid reserved words (<code class=\"language-python\">for</code>, <code class=\"language-python\">if</code>, <code class=\"language-python\">print</code>, etc.)"
+        "You can only use letters, numbers and underscores.",
+        "It cannot start with a number.",
+        "Do not use spaces.",
+        "Avoid reserved words (<code class=\"language-python\">for</code>, <code class=\"language-python\">if</code>, <code class=\"language-python\">print</code>, etc.)."
       ]
     },
     {
@@ -88,7 +88,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Basic data types in Python"
+      "text": "Basic Data Types in Python"
     },
     {
       "type": "paragraph",
@@ -172,7 +172,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Check the type of a variable"
+      "text": "Check The Type Of a Variable"
     },
     {
       "type": "paragraph",
@@ -184,7 +184,7 @@
     },
     {
       "type": "test-button",
-      "text": "Try it >>",
+      "text": "Try >>",
       "code": "x = 10\nprint(type(x))"
     },
     {
@@ -193,7 +193,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Operations by data type"
+      "text": "Operations By Data Type"
     },
     {
       "type": "paragraph",
@@ -201,7 +201,7 @@
     },
     {
       "type": "subtitle2",
-      "text": "Integers and floats"
+      "text": "Integers and Floats"
     },
     {
       "type": "code",
@@ -229,7 +229,7 @@
     },
     {
       "type": "test-button",
-      "text": "Try it >>",
+      "text": "Try >>",
       "code": "greeting = \"Hello\" + \" \" + \"World\"\nprint(greeting)"
     },
     {
@@ -242,7 +242,7 @@
     },
     {
       "type": "test-button",
-      "text": "Try it >>",
+      "text": "Try >>",
       "code": "print(\"Hello\" * 3)"
     },
     {
@@ -255,12 +255,12 @@
     },
     {
       "type": "test-button",
-      "text": "Try it >>",
+      "text": "Try >>",
       "code": "true_val = True\nfalse_val = False\nprint(true_val and false_val)  # False"
     },
     {
       "type": "subtitle1",
-      "text": "Type conversion (casting)"
+      "text": "Type Conversion (Casting)"
     },
     {
       "type": "paragraph",
@@ -272,7 +272,7 @@
     },
     {
       "type": "test-button",
-      "text": "Try it >>",
+      "text": "Try >>",
       "code": "age = \"20\"\nage = int(age)\nprint(type(age))"
     },
     {
@@ -285,7 +285,7 @@
     },
     {
       "type": "test-button",
-      "text": "Try it >>",
+      "text": "Try >>",
       "code": "x = 10\ntext = str(x)\nprint(type(text))"
     },
     {
@@ -294,11 +294,11 @@
     },
     {
       "type": "subtitle1",
-      "text": "Complete examples"
+      "text": "Complete Examples"
     },
     {
       "type": "subtitle2",
-      "text": "Example 1: User information"
+      "text": "Example 1: User Information"
     },
     {
       "type": "code",
@@ -314,12 +314,12 @@
     },
     {
       "type": "test-button",
-      "text": "Try it >>",
+      "text": "Try >>",
       "code": "name = \"Python\"\nage = 33\nheight = 1.74\nis_adult = True\n\nprint(\"Name:\", name)\nprint(\"Age:\", age)\nprint(\"Height:\", height)\nprint(\"Adult:\", is_adult)"
     },
     {
       "type": "subtitle2",
-      "text": "Example 2: Type conversion"
+      "text": "Example 2: Type Conversion"
     },
     {
       "type": "code",
@@ -335,12 +335,12 @@
     },
     {
       "type": "test-button",
-      "text": "Try it >>",
+      "text": "Try >>",
       "code": "number = \"15\"\nnumber = int(number)\nprint(\"Sum:\", number + 5)"
     },
     {
       "type": "subtitle1",
-      "text": "Common errors"
+      "text": "Common Errors"
     },
     {
       "type": "paragraph",
@@ -352,7 +352,7 @@
     },
     {
       "type": "test-button",
-      "text": "Try error >>",
+      "text": "Try Error >>",
       "code": "int(\"hello\")"
     },
     {
@@ -365,7 +365,7 @@
     },
     {
       "type": "test-button",
-      "text": "Try error >>",
+      "text": "Try Error >>",
       "code": "print(\"Age: \" + 20)"
     },
     {
@@ -386,7 +386,7 @@
     },
     {
       "type": "test-button",
-      "text": "Try it >>",
+      "text": "Try >>",
       "code": "print(\"Age:\", 20)\n# or\nprint(\"Age: \" + str(20))"
     },
     {
@@ -395,11 +395,11 @@
     },
     {
       "type": "subtitle1",
-      "text": "Practice exercises"
+      "text": "Practice Exercises"
     },
     {
       "type": "subtitle2",
-      "text": "Exercise 1: Create basic variables"
+      "text": "Exercise 1: Create Basic Variables"
     },
     {
       "type": "paragraph",
@@ -408,11 +408,11 @@
     {
       "type": "list",
       "items": [
-        "Your name",
-        "Your age",
-        "Your city",
-        "Whether you are an adult (True/False)",
-        "Your height (float)"
+        "Your name.",
+        "Your age.",
+        "Your city.",
+        "Whether you are an adult (True/False).",
+        "Your height (float)."
       ]
     },
     {
@@ -434,14 +434,14 @@
         },
         {
           "type": "test-button",
-          "text": "Try solution >>",
+          "text": "Try Solution >>",
           "code": "name = \"YOUR NAME\"\nage = 22\ncity = \"YOUR CITY\"\nis_adult = True\nheight = 1.85\n\nprint(name, age, city, is_adult, height)"
         }
       ]
     },
     {
       "type": "subtitle2",
-      "text": "Exercise 2: Addition with conversion"
+      "text": "Exercise 2: Addition With Conversion"
     },
     {
       "type": "paragraph",
@@ -450,7 +450,7 @@
     {
       "type": "test-button",
       "text": "Practice >>",
-      "code": "# A variable contains a number stored as text (\"25\").\n# Convert that value to an integer and add 10. Then show the result."
+      "code": "# A variable contains a number stored as text (\"25\").\n# Convert that value to an integer and add 10.\n# Then show the result"
     },
     {
       "type": "collapsible",
@@ -462,14 +462,14 @@
         },
         {
           "type": "test-button",
-          "text": "Try solution >>",
+          "text": "Try Solution >>",
           "code": "number = \"25\"      # number comes as text\nnumber = int(number)   # convert to integer\nprint(number + 10)"
         }
       ]
     },
     {
       "type": "subtitle2",
-      "text": "Exercise 3: Mixed types"
+      "text": "Exercise 3: Mixed Types"
     },
     {
       "type": "paragraph",
@@ -486,9 +486,9 @@
     {
       "type": "list",
       "items": [
-        "The sum of <code class=\"language-python\">a</code> and <code class=\"language-python\">b</code>",
-        "The concatenation \"I like \" + <code class=\"language-python\">c</code>",
-        "The type of each variable using <code class=\"language-python\">type()</code>"
+        "The sum of <code class=\"language-python\">a</code> and <code class=\"language-python\">b</code>.",
+        "The concatenation \"I like \" + <code class=\"language-python\">c</code>.",
+        "The type of each variable using <code class=\"language-python\">type()</code>."
       ]
     },
     {
@@ -506,14 +506,14 @@
         },
         {
           "type": "test-button",
-          "text": "Try solution >>",
+          "text": "Try Solution >>",
           "code": "a = 10\nb = 3.5\nc = \"Python\"\n\nprint(a + b)\nprint(\"I like \" + c)\nprint(type(a), type(b), type(c))"
         }
       ]
     },
     {
       "type": "subtitle2",
-      "text": "Exercise 4: Build a message"
+      "text": "Exercise 4: Build a Message"
     },
     {
       "type": "paragraph",
@@ -550,14 +550,14 @@
         },
         {
           "type": "test-button",
-          "text": "Try solution >>",
+          "text": "Try Solution >>",
           "code": "name = \"Camilo\"\nage = 30\n\nprint(\"Hello \" + name + \", you are \" + str(age) + \" years old.\")\n# or using commas\nprint(\"Hello\", name + \", you are\", age, \"years old.\")"
         }
       ]
     },
     {
       "type": "subtitle1",
-      "text": "Conclusion"
+      "text": "Unit Conclusions"
     },
     {
       "type": "paragraph",
@@ -566,12 +566,12 @@
     {
       "type": "list",
       "items": [
-        "What a variable is",
-        "How it is created and assigned",
-        "The most common and basic data types: <code class=\"language-python\">int</code>, <code class=\"language-python\">float</code>, <code class=\"language-python\">str</code>, <code class=\"language-python\">bool</code>",
-        "How to convert types",
-        "Typical errors when working with values",
-        "Good practices for naming variables"
+        "What a variable is.",
+        "How it is created and assigned.",
+        "The most common and basic data types: <code class=\"language-python\">int</code>, <code class=\"language-python\">float</code>, <code class=\"language-python\">str</code>, <code class=\"language-python\">bool</code>.",
+        "How to convert types.",
+        "Typical errors when working with values.",
+        "Good practices for naming variables."
       ]
     },
     {
