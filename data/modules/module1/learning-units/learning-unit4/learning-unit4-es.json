@@ -1,10 +1,10 @@
 {
-  "title": "Variables y tipos de datos básicos",
+  "title": "Variables y Tipos de Datos Básicos",
   "description": "",
   "content": [
     {
       "type": "subtitle1",
-      "text": "¿Qué es una variable?"
+      "text": "¿Qué Es Una Variable?"
     },
     {
       "type": "paragraph",
@@ -25,8 +25,8 @@
     {
       "type": "list",
       "items": [
-        "La \"etiqueta\" es <code class=\"language-python\">nombre</code> o <code class=\"language-python\">edad</code>",
-        "El contenido es <code class=\"language-python\">\"Python\"</code> y <code class=\"language-python\">33</code>"
+        "La \"etiqueta\" es <code class=\"language-python\">nombre</code> o <code class=\"language-python\">edad</code>.",
+        "El contenido es <code class=\"language-python\">\"Python\"</code> y <code class=\"language-python\">33</code>."
       ]
     },
     {
@@ -35,7 +35,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Python y el tipado dinámico"
+      "text": "Python y el Tipado Dinámico"
     },
     {
       "type": "paragraph",
@@ -51,7 +51,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Reglas para nombrar variables"
+      "text": "Reglas Para Nombrar Variables"
     },
     {
       "type": "paragraph",
@@ -60,10 +60,10 @@
     {
       "type": "list",
       "items": [
-        "Solo puedes usar letras, números y guiones bajos",
-        "No puede comenzar con un número",
-        "No usar espacios",
-        "Evita usar palabras reservadas (<code class=\"language-python\">for</code>, <code class=\"language-python\">if</code>, <code class=\"language-python\">print</code>, etc.)"
+        "Solo puedes usar letras, números y guiones bajos.",
+        "No puede comenzar con un número.",
+        "No usar espacios.",
+        "Evita usar palabras reservadas (<code class=\"language-python\">for</code>, <code class=\"language-python\">if</code>, <code class=\"language-python\">print</code>, etc.)."
       ]
     },
     {
@@ -88,7 +88,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Tipos de datos básicos en Python"
+      "text": "Tipos de Datos Básicos En Python"
     },
     {
       "type": "paragraph",
@@ -119,8 +119,8 @@
       "text": "precio = 19.99\ntemperatura = 36.5"
     },
     {
-      "type": "tip",
-      "text": "⭐ <strong>Tip:</strong><br>Los floats pueden tener comportamientos curiosos por cómo se representan internamente:"
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Los floats pueden tener comportamientos curiosos por cómo se representan internamente."
     },
     {
       "type": "code",
@@ -132,7 +132,7 @@
     },
     {
       "type": "subtitle2",
-      "text": "3. Cadenas de texto - <code class=\"language-python\">str</code>"
+      "text": "3. Cadenas de Texto - <code class=\"language-python\">str</code>"
     },
     {
       "type": "paragraph",
@@ -172,7 +172,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Ver el tipo de una variable"
+      "text": "Ver El Tipo de Una Variable"
     },
     {
       "type": "paragraph",
@@ -193,7 +193,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Operaciones según el tipo de dato"
+      "text": "Operaciones Según El Tipo de Dato"
     },
     {
       "type": "paragraph",
@@ -201,7 +201,7 @@
     },
     {
       "type": "subtitle2",
-      "text": "Enteros y floats"
+      "text": "Enteros y Floats"
     },
     {
       "type": "code",
@@ -260,7 +260,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Conversión entre tipos (casting)"
+      "text": "Conversión Entre Tipos (Casting)"
     },
     {
       "type": "paragraph",
@@ -294,11 +294,11 @@
     },
     {
       "type": "subtitle1",
-      "text": "Ejemplos completos"
+      "text": "Ejemplos Completos"
     },
     {
       "type": "subtitle2",
-      "text": "Ejemplo 1: Información del usuario"
+      "text": "Ejemplo 1: Información del Usuario"
     },
     {
       "type": "code",
@@ -319,7 +319,7 @@
     },
     {
       "type": "subtitle2",
-      "text": "Ejemplo 2: Conversión de tipos"
+      "text": "Ejemplo 2: Conversión de Tipos"
     },
     {
       "type": "code",
@@ -340,7 +340,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Errores comunes"
+      "text": "Errores Comunes"
     },
     {
       "type": "paragraph",
@@ -352,7 +352,7 @@
     },
     {
       "type": "test-button",
-      "text": "Probar error >>",
+      "text": "Probar Error >>",
       "code": "int(\"hola\")"
     },
     {
@@ -365,7 +365,7 @@
     },
     {
       "type": "test-button",
-      "text": "Probar error >>",
+      "text": "Probar Error >>",
       "code": "print(\"Edad: \" + 20)"
     },
     {
@@ -395,11 +395,11 @@
     },
     {
       "type": "subtitle1",
-      "text": "Ejercicios prácticos"
+      "text": "Ejercicios Prácticos"
     },
     {
       "type": "subtitle2",
-      "text": "Ejercicio 1: Crear variables básicas"
+      "text": "Ejercicio 1: Crear Variables Básicas"
     },
     {
       "type": "paragraph",
@@ -408,11 +408,11 @@
     {
       "type": "list",
       "items": [
-        "Tu nombre",
-        "Tu edad",
-        "Tu ciudad",
-        "Si eres mayor de edad (True/False)",
-        "Tu altura (float)"
+        "Tu nombre.",
+        "Tu edad.",
+        "Tu ciudad.",
+        "Si eres mayor de edad (True/False).",
+        "Tu altura (float)."
       ]
     },
     {
@@ -434,14 +434,14 @@
         },
         {
           "type": "test-button",
-          "text": "Probar solución >>",
+          "text": "Probar Solución >>",
           "code": "nombre = \"TU NOMBRE\"\nedad = 22\nciudad = \"TU CIUDAD\"\nes_mayor = True\naltura = 1.85\n\nprint(nombre, edad, ciudad, es_mayor, altura)"
         }
       ]
     },
     {
       "type": "subtitle2",
-      "text": "Ejercicio 2: Suma con conversión"
+      "text": "Ejercicio 2: Suma Con Conversión"
     },
     {
       "type": "paragraph",
@@ -462,14 +462,14 @@
         },
         {
           "type": "test-button",
-          "text": "Probar solución >>",
+          "text": "Probar Solución >>",
           "code": "numero = \"25\"      # el número viene como texto\nnumero = int(numero)   # conversión a entero\nprint(numero + 10)"
         }
       ]
     },
     {
       "type": "subtitle2",
-      "text": "Ejercicio 3: Tipos mezclados"
+      "text": "Ejercicio 3: Tipos Mezclados"
     },
     {
       "type": "paragraph",
@@ -486,9 +486,9 @@
     {
       "type": "list",
       "items": [
-        "La suma entre <code class=\"language-python\">a</code> y <code class=\"language-python\">b</code>",
-        "La concatenación \"Me gusta \" + <code class=\"language-python\">c</code>",
-        "El tipo de cada variable usando <code class=\"language-python\">type()</code>"
+        "La suma entre <code class=\"language-python\">a</code> y <code class=\"language-python\">b</code>.",
+        "La concatenación \"Me gusta \" + <code class=\"language-python\">c</code>.",
+        "El tipo de cada variable usando <code class=\"language-python\">type()</code>."
       ]
     },
     {
@@ -506,14 +506,14 @@
         },
         {
           "type": "test-button",
-          "text": "Probar solución >>",
+          "text": "Probar Solución >>",
           "code": "a = 10\nb = 3.5\nc = \"Python\"\n\nprint(a + b)\nprint(\"Me gusta \" + c)\nprint(type(a), type(b), type(c))"
         }
       ]
     },
     {
       "type": "subtitle2",
-      "text": "Ejercicio 4: Formar un mensaje"
+      "text": "Ejercicio 4: Formar Un Mensaje"
     },
     {
       "type": "paragraph",
@@ -550,14 +550,14 @@
         },
         {
           "type": "test-button",
-          "text": "Probar solución >>",
+          "text": "Probar Solución >>",
           "code": "nombre = \"Camilo\"\nedad = 30\n\nprint(\"Hola \" + nombre + \", tienes \" + str(edad) + \" años.\")\n# o usando comas\nprint(\"Hola\", nombre + \", tienes\", edad, \"años.\")"
         }
       ]
     },
     {
       "type": "subtitle1",
-      "text": "Conclusión del tema"
+      "text": "Conclusiones de la Unidad"
     },
     {
       "type": "paragraph",
@@ -566,12 +566,12 @@
     {
       "type": "list",
       "items": [
-        "Qué es una variable",
-        "Cómo se crea y se asigna",
-        "Los tipos de datos más comunes y básicos: <code class=\"language-python\">int</code>, <code class=\"language-python\">float</code>, <code class=\"language-python\">str</code>, <code class=\"language-python\">bool</code>",
-        "Cómo convertir tipos",
-        "Errores típicos al trabajar con valores",
-        "Buenas prácticas para nombrar variables"
+        "Qué es una variable.",
+        "Cómo se crea y se asigna.",
+        "Los tipos de datos más comunes y básicos: <code class=\"language-python\">int</code>, <code class=\"language-python\">float</code>, <code class=\"language-python\">str</code>, <code class=\"language-python\">bool</code>.",
+        "Cómo convertir tipos.",
+        "Errores típicos al trabajar con valores.",
+        "Buenas prácticas para nombrar variables."
       ]
     },
     {
