@@ -1,0 +1,375 @@
+{
+  "title": "Dateneingabe Mit <code class=\"language-python\">input()</code>",
+  "description": "",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Die Funktion <code class=\"language-python\">input()</code> ermöglicht es deinem Programm, Informationen zu erhalten, die vom Benutzer eingegeben werden. Sie ist einer der ersten Schritte, um wirklich interaktive Programme zu erstellen."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Was ist <code class=\"language-python\">input()</code>?"
+    },
+    {
+      "type": "paragraph",
+      "text": "<code class=\"language-python\">input()</code> ist eine Funktion, die:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Eine Nachricht anzeigt (wenn du ihr eine gibst).",
+        "Darauf wartet, dass der Benutzer etwas eingibt.",
+        "Die Eingabe als Zeichenkette (<code class=\"language-python\">str</code>) zurückgibt."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Beispiel:"
+    },
+    {
+      "type": "code",
+      "text": "name = input(\"Gib deinen Namen ein: \")\nprint(\"Hallo,\", name)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgabe:"
+    },
+    {
+      "type": "code",
+      "text": "Gib deinen Namen ein: Linus\nHallo, Linus"
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "name = input(\"Gib deinen Namen ein: \")\nprint(\"Hallo,\", name)"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Hinweis:</strong><br>Alles, was <code class=\"language-python\">input()</code> zurückgibt, ist Text, selbst wenn der Benutzer eine Zahl eingibt."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Die Eingabe des Benutzers Umwandeln"
+    },
+    {
+      "type": "paragraph",
+      "text": "Wenn du mit Zahlen arbeiten musst, solltest du den Text, den <code class=\"language-python\">input()</code> liefert, umwandeln."
+    },
+    {
+      "type": "paragraph",
+      "text": "Verwende:"
+    },
+    {
+      "type": "table",
+      "headers": ["Umwandlung", "Verwendet für"],
+      "rows": [
+        [
+          "<code class=\"language-python\">int()</code>",
+          "In eine ganze Zahl umwandeln"
+        ],
+        [
+          "<code class=\"language-python\">float</code>",
+          "In eine Dezimalzahl umwandeln"
+        ],
+        ["<code class=\"language-python\">str()</code>", "In Text umwandeln"]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Beispiel:"
+    },
+    {
+      "type": "code",
+      "text": "alter = input(\"Wie alt bist du? \")\nalter = int(alter)    # notwendige Umwandlung\nprint(\"Nächstes Jahr wirst du\", alter + 1, \"Jahre alt sein.\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgabe:"
+    },
+    {
+      "type": "code",
+      "text": "Wie alt bist du? 55\nNächstes Jahr wirst du 56 Jahre alt sein."
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "alter = input(\"Wie alt bist du? \")\nalter = int(alter)    # notwendige Umwandlung\nprint(\"Nächstes Jahr wirst du\", alter + 1, \"Jahre alt sein.\")"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tipp:</strong><br>Wenn du die Eingabe nicht umwandelst, kann eine Zahl nicht mathematisch addiert werden, sondern nur als Text."
+    },
+    {
+      "type": "paragraph",
+      "text": "Beispiel für einen häufigen Fehler:"
+    },
+    {
+      "type": "code",
+      "text": "\"5\" + 1    # FEHLER: str und int können nicht gemischt werden"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Eingegebene Daten Verarbeiten"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nachdem du Informationen erhalten hast, kannst du sie für Berechnungen, Entscheidungen oder personalisierte Nachrichten verwenden."
+    },
+    {
+      "type": "code",
+      "text": "zahl = int(input(\"Gib eine Zahl ein: \"))\ndoppelt = zahl * 2\nprint(\"Das Doppelte ist:\", doppelt)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgabe:"
+    },
+    {
+      "type": "code",
+      "text": "Gib eine Zahl ein: 7\nDas Doppelte ist: 14"
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "zahl = int(input(\"Gib eine Zahl ein: \"))\ndoppelt = zahl * 2\nprint(\"Das Doppelte ist:\", doppelt)"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Häufige Fehler bei <code class=\"language-python\">input()</code>"
+    },
+    {
+      "type": "subtitle2",
+      "text": "1. Vergessen, dass <code class=\"language-python\">input()</code> Immer Text Zurückgibt"
+    },
+    {
+      "type": "code",
+      "text": "n = input(\"Zahl: \")\nprint(n + 10)    # FEHLER"
+    },
+    {
+      "type": "test-button",
+      "text": "Fehler Ausprobieren >>",
+      "code": "n = input(\"Zahl: \")\nprint(n + 10)    # FEHLER"
+    },
+    {
+      "type": "subtitle2",
+      "text": "2. Versuchen, Ungültigen Text Umzuwandeln"
+    },
+    {
+      "type": "code",
+      "text": "text = input(\"Eingabe: \")  # Eingabe: hallo\nint(text)    # FEHLER"
+    },
+    {
+      "type": "test-button",
+      "text": "Fehler Ausprobieren >>",
+      "code": "text = input(\"Eingabe: \")  # Eingabe: hallo\nint(text)    # FEHLER"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Hinweis:</strong><br>Später wirst du lernen, diese Fehler mit <code class=\"language-python\">try</code> und <code class=\"language-python\">except</code> zu behandeln."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Nützliche Beispiele"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Beispiel 1: Persönliche Begrüßung"
+    },
+    {
+      "type": "code",
+      "text": "name = input(\"Wie heißt du? \")\nprint(\"Freut mich,\", name)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgabe:"
+    },
+    {
+      "type": "code",
+      "text": "Wie heißt du? Python\nFreut mich, Python"
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "name = input(\"Wie heißt du? \")\nprint(\"Freut mich,\", name)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Beispiel 2: Interaktive Addition"
+    },
+    {
+      "type": "code",
+      "text": "a = int(input(\"Gib eine Zahl ein: \"))\nb = int(input(\"Gib noch eine Zahl ein: \"))\nprint(\"Die Summe ist:\", a + b)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgabe:"
+    },
+    {
+      "type": "code",
+      "text": "Gib eine Zahl ein: 7\nGib noch eine Zahl ein: 3\nDie Summe ist: 10"
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "a = int(input(\"Gib eine Zahl ein: \"))\nb = int(input(\"Gib noch eine Zahl ein: \"))\nprint(\"Die Summe ist:\", a + b)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Beispiel 3: Text Wiederholen"
+    },
+    {
+      "type": "code",
+      "text": "wort = input(\"Gib ein Wort ein: \")\nprint(wort * 3)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgabe:"
+    },
+    {
+      "type": "code",
+      "text": "Gib ein Wort ein: Python\nPythonPythonPython"
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "wort = input(\"Gib ein Wort ein: \")\nprint(wort * 3)"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tipp:</strong><br>Wenn du eine Zeichenkette wiederholst, werden nicht automatisch Leerzeichen eingefügt."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Übungsaufgaben zum Üben"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Übung 1: Einfache Begrüßung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Bitte den Benutzer um seinen Namen und zeige eine Begrüßung an."
+    },
+    {
+      "type": "test-button",
+      "text": "Üben >>",
+      "code": "# Bitte den Benutzer um seinen Namen und zeige eine\n# Begrüßung an"
+    },
+    {
+      "type": "collapsible",
+      "title": "Mögliche Lösung anzeigen",
+      "content": [
+        {
+          "type": "code",
+          "text": "name = input(\"Gib deinen Namen ein: \")\nprint(\"Hallo\", name)"
+        },
+        {
+          "type": "test-button",
+          "text": "Lösung Ausprobieren >>",
+          "code": "name = input(\"Gib deinen Namen ein: \")\nprint(\"Hallo\", name)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Übung 2: Alter in der Zukunft"
+    },
+    {
+      "type": "paragraph",
+      "text": "Bitte den Benutzer um sein Alter und sage ihm, wie alt er in 5 Jahren sein wird."
+    },
+    {
+      "type": "test-button",
+      "text": "Üben >>",
+      "code": "# Bitte den Benutzer um sein Alter und sage ihm, wie\n# alt er in 5 Jahren sein wird"
+    },
+    {
+      "type": "collapsible",
+      "title": "Mögliche Lösung anzeigen",
+      "content": [
+        {
+          "type": "code",
+          "text": "alter = int(input(\"Wie alt bist du? \"))\nprint(\"In 5 Jahren wirst du\", alter + 5, \"Jahre alt sein.\")"
+        },
+        {
+          "type": "test-button",
+          "text": "Lösung Ausprobieren >>",
+          "code": "alter = int(input(\"Wie alt bist du? \"))\nprint(\"In 5 Jahren wirst du\", alter + 5, \"Jahre alt sein.\")"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Übung 3: Wortmultiplikator"
+    },
+    {
+      "type": "paragraph",
+      "text": "Bitte den Benutzer um ein Wort und eine Zahl. Zeige das Wort so oft wiederholt an, wie die Zahl angibt."
+    },
+    {
+      "type": "test-button",
+      "text": "Üben >>",
+      "code": "# Bitte den Benutzer um ein Wort und eine Zahl. Zeige\n# das Wort so oft wiederholt an, wie die Zahl angibt"
+    },
+    {
+      "type": "collapsible",
+      "title": "Mögliche Lösung anzeigen",
+      "content": [
+        {
+          "type": "code",
+          "text": "wort = input(\"Gib ein Wort ein: \")\nanzahl = int(input(\"Wie oft soll es wiederholt werden? \"))\nprint(wort * anzahl)"
+        },
+        {
+          "type": "test-button",
+          "text": "Lösung Ausprobieren >>",
+          "code": "wort = input(\"Gib ein Wort ein: \")\nanzahl = int(input(\"Wie oft soll es wiederholt werden? \"))\nprint(wort * anzahl)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Übung 4: Temperaturumrechnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Bitte den Benutzer um eine Temperatur in Grad Celsius und wandle sie in Fahrenheit um."
+    },
+    {
+      "type": "test-button",
+      "text": "Üben >>",
+      "code": "# Bitte den Benutzer um eine Temperatur in Grad Celsius\n# und wandle sie in Fahrenheit um"
+    },
+    {
+      "type": "collapsible",
+      "title": "Mögliche Lösung anzeigen",
+      "content": [
+        {
+          "type": "code",
+          "text": "c = float(input(\"Temperatur in Celsius: \"))\nf = (c * 9 / 5) + 32\nprint(\"Das entspricht\", f, \"°F\")"
+        },
+        {
+          "type": "test-button",
+          "text": "Lösung Ausprobieren >>",
+          "code": "c = float(input(\"Temperatur in Celsius: \"))\nf = (c * 9 / 5) + 32\nprint(\"Das entspricht\", f, \"°F\")"
+        }
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Fazit der Einheit"
+    },
+    {
+      "type": "paragraph",
+      "text": "In dieser Einheit hast du gelernt:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "<code class=\"language-python\">input()</code> zu verwenden, um Text von der Tastatur zu erhalten.",
+        "Dass alles, was <code class=\"language-python\">input()</code> zurückgibt, eine Zeichenkette (<code class=\"language-python\">str</code>) ist.",
+        "Diese Texte mit <code class\"language-python\">int()</code> und <code class\"language-python\">float()</code> in Zahlen umzuwandeln.",
+        "Die eingegebenen Informationen zu verarbeiten, um Berechnungen durchzuführen oder personalisierte Nachrichten zu erstellen.",
+        "Häufige Fehler zu vermeiden, wie z. B. Text und Zahlen zu vermischen."
+      ]
+    }
+  ]
+}
