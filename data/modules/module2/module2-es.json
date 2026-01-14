@@ -9,7 +9,7 @@
             "unit": "learning-unit1"
         },
         {
-            "name": "2. Operadores lógicos y de comparación",
+            "name": "2. Operadores Lógicos y de Comparación",
             "description":"Aquí entenderás cómo funcionan operadores como <code>==</code>, <code>!=</code>, <code><</code>, <code>></code>, <code><=</code>, <code>>=</code>, y cómo combinarlos con <code>and</code>, <code>or</code> y <code>not</code> para construir condiciones más complejas. Esto te permitirá evaluar varias situaciones al mismo tiempo y crear decisiones más precisas dentro de tus estructuras condicionales.",
             "color": "#3776AB",
             "unit": "learning-unit2"
@@ -21,7 +21,7 @@
             "unit": "learning-unit3"
         },
         {
-            "name": "4 Control de flujo en bucles",
+            "name": "4 Control de Flujo en Bucles",
             "description": "Aquí descubrirás cómo modificar la ejecución interna de un bucle usando instrucciones especiales como <code>break</code> para detenerlo antes de tiempo, <code>continue</code> para saltar una repetición específica y <code>pass</code> para dejar un bloque vacío que completarás más adelante. Estas herramientas te permiten tener un control más preciso y flexible sobre el comportamiento de tus ciclos.",
             "color": "#6464FF",
             "unit": "learning-unit4"
