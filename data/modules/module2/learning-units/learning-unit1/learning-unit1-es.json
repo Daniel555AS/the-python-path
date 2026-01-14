@@ -8,7 +8,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "¿Qué es un condicional?"
+      "text": "¿Qué es un Condicional?"
     },
     {
       "type": "paragraph",
@@ -20,7 +20,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Estructura básica"
+      "text": "Estructura Básica"
     },
     {
       "type": "subtitle2",
@@ -103,7 +103,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Encadenamiento de condiciones"
+      "text": "Encadenamiento de Condiciones"
     },
     {
       "type": "paragraph",
@@ -136,7 +136,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "Condiciones más útiles"
+      "text": "Condiciones Más Útiles"
     },
     {
       "type": "paragraph",
@@ -145,9 +145,9 @@
     {
       "type": "list",
       "items": [
-        "<code class=\"language-python\">==</code> igual a",
-        "<code class=\"language-python\">!=</code> diferente de",
-        "<code class=\"language-python\"><</code>, <code class=\"language-python\">></code>, <code class=\"language-python\"><=</code>, <code class=\"language-python\">>=</code>"
+        "<code class=\"language-python\">==</code> (igual a).",
+        "<code class=\"language-python\">!=</code> (diferente de).",
+        "<code class=\"language-python\"><</code> (menor que), <code class=\"language-python\">></code> (mayor que), <code class=\"language-python\"><=</code> (menor o igual que), <code class=\"language-python\">>=</code> (mayor o igual que)."
       ]
     },
     {
@@ -157,8 +157,8 @@
     {
       "type": "list",
       "items": [
-        "<code class=\"language-python\">and</code> (y)",
-        "<code class=\"language-python\">or</code> (o)",
+        "<code class=\"language-python\">and</code> (y).",
+        "<code class=\"language-python\">or</code> (o).",
         "<code class=\"language-python\">not</code> (no)"
       ]
     },
@@ -189,11 +189,11 @@
     },
     {
       "type": "subtitle1",
-      "text": "Ejemplos prácticos"
+      "text": "Ejemplos Prácticos"
     },
     {
       "type": "subtitle2",
-      "text": "Ejemplo 1: Verificar si un número es par o impar"
+      "text": "Ejemplo 1: Verificar Si un Número es Par o Impar"
     },
     {
       "type": "code",
@@ -214,7 +214,7 @@
     },
     {
       "type": "subtitle2",
-      "text": "Ejemplo 2: Clasificar una edad"
+      "text": "Ejemplo 2: Clasificar Una Edad"
     },
     {
       "type": "code",
@@ -235,7 +235,7 @@
     },
     {
       "type": "subtitle2",
-      "text": "Ejemplo 3: Verificar si una contraseña es correcta"
+      "text": "Ejemplo 3: Verificar Si Una Contraseña es Correcta"
     },
     {
       "type": "code",
@@ -256,11 +256,11 @@
     },
     {
       "type": "subtitle1",
-      "text": "Ejercicios para practicar"
+      "text": "Ejercicios Para Practicar"
     },
     {
       "type": "subtitle2",
-      "text": "Ejercicio 1: Mayor o menor"
+      "text": "Ejercicio 1: Mayor o Menor"
     },
     {
       "type": "paragraph",
@@ -277,7 +277,7 @@
     {
       "type": "test-button",
       "text": "Practicar >>",
-      "code": "# Crea una variable con una edad (por ejemplo: edad = 17).\n# Si es mayor o igual a 18, muestra \"Mayor de edad\".\n# Si no, muestra \"Menor de edad\"."
+      "code": "# Crea una variable con una edad\n# (por ejemplo: edad = 17).\n# Si es mayor o igual a 18, muestra \"Mayor de edad\".\n# Si no, muestra \"Menor de edad\""
     },
     {
       "type": "collapsible",
@@ -289,14 +289,14 @@
         },
         {
           "type": "test-button",
-          "text": "Probar solución >>",
+          "text": "Probar Solución >>",
           "code": "edad = 17\n\nif edad >= 18:\n\tprint(\"Mayor de edad\")\nelse:\n\tprint(\"Menor de edad\")"
         }
       ]
     },
     {
       "type": "subtitle2",
-      "text": "Ejercicio 2: Clasificador de números"
+      "text": "Ejercicio 2: Clasificador de Números"
     },
     {
       "type": "paragraph",
@@ -309,7 +309,7 @@
     {
       "type": "test-button",
       "text": "Practicar >>",
-      "code": "# Crea una variable llamada n y asígnale un valor numérico.\n# Muestra si el número es positivo, negativo o cero."
+      "code": "# Crea una variable llamada n y asígnale\n# un valor numérico.\n# Muestra si el número es positivo, negativo o cero"
     },
     {
       "type": "collapsible",
@@ -321,14 +321,14 @@
         },
         {
           "type": "test-button",
-          "text": "Probar solución >>",
+          "text": "Probar Solución >>",
           "code": "n = -5\n\nif n > 0:\n\tprint(\"Positivo\")\nelif n < 0:\n\tprint(\"Negativo\")\nelse:\n\tprint(\"Cero\")"
         }
       ]
     },
     {
       "type": "subtitle2",
-      "text": "Ejercicio 3: Verificar acceso"
+      "text": "Ejercicio 3: Verificar Acceso"
     },
     {
       "type": "paragraph",
@@ -337,8 +337,8 @@
     {
       "type": "list",
       "items": [
-        "<code class=\"language-python\">edad</code>",
-        "<code class=\"language-python\">tiene_entrada</code> (<code class=\"language-python\">True</code> o <code class=\"language-python\">False</code>)"
+        "<code class=\"language-python\">edad</code>.",
+        "<code class=\"language-python\">tiene_entrada</code> (<code class=\"language-python\">True</code> o <code class=\"language-python\">False</code>)."
       ]
     },
     {
@@ -348,7 +348,7 @@
     {
       "type": "test-button",
       "text": "Practicar >>",
-      "code": "# Crea dos variables:\n# edad\n# tiene_entrada (True o False)\n# Si la persona tiene entrada y es mayor o igual a 16, muestra \"Bienvenido\".\n# En cualquier otro caso, muestra \"No puedes entrar\"."
+      "code": "# Crea dos variables:\n# edad\n# tiene_entrada (True o False)\n# Si la persona tiene entrada y es mayor o igual a 16, muestra \"Bienvenido\".\n# En cualquier otro caso, muestra \"No puedes entrar\""
     },
     {
       "type": "collapsible",
@@ -360,14 +360,14 @@
         },
         {
           "type": "test-button",
-          "text": "Probar solución >>",
+          "text": "Probar Solución >>",
           "code": "edad = 16\ntiene_entrada = True\n\nif edad >= 16 and tiene_entrada:\n\tprint(\"Bienvenido\")\nelse:\n\tprint(\"No puedes entrar\")"
         }
       ]
     },
     {
         "type": "subtitle1",
-        "text": "Conclusión de la unidad"
+        "text": "Conclusiones de la Unidad"
     },
     {
         "type": "paragraph",
