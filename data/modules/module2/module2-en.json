@@ -1,0 +1,30 @@
+{
+  "title": "2.🔁Control Flow",
+  "description": "In this module, you will learn how to control how your program runs. You will use conditionals to make decisions, loops to repeat actions, and logical operators to combine conditions. You will also see how to break or continue loops depending on your program’s logic.",
+  "steps": [
+    {
+      "name": "1. Conditionals: <code>if</code>, <code>elif</code>, <code>else</code>",
+      "description": "In this unit, you will learn how to allow your program to make decisions using <code class=\"language-python\">if</code>, <code class=\"language-python\">elif</code>, and <code class=\"language-python\">else</code>, so that the code can execute different actions depending on which conditions are met. You will see how the flow behaves when a condition is true, what happens when none match, and how to chain multiple options together.",
+      "color": "#FFD43B",
+      "unit": "learning-unit1"
+    },
+    {
+      "name": "2. Logical and Comparison Operators",
+      "description": "Here you will understand how operators such as <code>==</code>, <code>!=</code>, <code><</code>, <code>></code>, <code><=</code>, <code>>=</code> work, and how to combine them with <code>and</code>, <code>or</code> and <code>not</code> to build more complex conditions. This will allow you to evaluate multiple situations at the same time and create more precise decisions within your conditional structures.",
+      "color": "#3776AB",
+      "unit": "learning-unit2"
+    },
+    {
+      "name": "3. <code>while</code> and <code>for</code> Loops",
+      "description": "In this unit, you will learn how to repeat instructions using <code>while</code> and <code>for</code>, which allows you to perform tasks repeatedly without writing the same code many times. You will also learn how to iterate over a sequence of characters (<code>str</code>).",
+      "color": "#1B983A",
+      "unit": "learning-unit3"
+    },
+    {
+      "name": "4 Flow Control in Loops",
+      "description": "Here you will discover how to modify the internal execution of a loop using special statements like <code>break</code> to stop it early, <code>continue</code> to skip a specific iteration, and <code>pass</code> to leave an empty block to be completed later. These tools allow you to have more precise and flexible control over the behavior of your loops.",
+      "color": "#6464FF",
+      "unit": "learning-unit4"
+    }
+  ]
+}
