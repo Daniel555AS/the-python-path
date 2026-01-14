@@ -21,7 +21,7 @@
             "unit": "learning-unit3"
         },
         {
-            "name": "4 Control de Flujo en Bucles",
+            "name": "4. Control de Flujo en Bucles",
             "description": "Aquí descubrirás cómo modificar la ejecución interna de un bucle usando instrucciones especiales como <code>break</code> para detenerlo antes de tiempo, <code>continue</code> para saltar una repetición específica y <code>pass</code> para dejar un bloque vacío que completarás más adelante. Estas herramientas te permiten tener un control más preciso y flexible sobre el comportamiento de tus ciclos.",
             "color": "#6464FF",
             "unit": "learning-unit4"

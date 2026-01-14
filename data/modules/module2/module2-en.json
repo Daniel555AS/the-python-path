@@ -21,7 +21,7 @@
       "unit": "learning-unit3"
     },
     {
-      "name": "4 Flow Control in Loops",
+      "name": "4. Flow Control in Loops",
       "description": "Here you will discover how to modify the internal execution of a loop using special statements like <code>break</code> to stop it early, <code>continue</code> to skip a specific iteration, and <code>pass</code> to leave an empty block to be completed later. These tools allow you to have more precise and flexible control over the behavior of your loops.",
       "color": "#6464FF",
       "unit": "learning-unit4"
