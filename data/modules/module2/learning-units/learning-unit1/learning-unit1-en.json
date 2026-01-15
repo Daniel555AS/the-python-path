@@ -1,0 +1,391 @@
+{
+  "title": "Conditionals: <code class=\"language-python\">if</code>, <code class=\"language-python\">elif</code>, <code class=\"language-python\">else</code> ",
+  "description": "",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Conditionals are one of the most important tools in any programming language, as they allow a program to make decisions. Thanks to them, your code can execute one thing or another depending on the situation. In Python, the keywords <code class=\"language-python\">if</code>, <code class=\"language-python\">elif</code> and <code class=\"language-python\">else</code> are used to control this behavior."
+    },
+    {
+      "type": "subtitle1",
+      "text": "What is a Conditional?"
+    },
+    {
+      "type": "paragraph",
+      "text": "A conditional evaluates an expression that can be either true or false. If it is true, a block of code is executed; if it is false, other options are evaluated or an alternative block is executed."
+    },
+    {
+      "type": "paragraph",
+      "text": "Python uses indentation (tabs or spaces) to define which statements are part of the conditional."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Basic Structure"
+    },
+    {
+      "type": "subtitle2",
+      "text": "1. <code class=\"language-python\">if</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "It is executed only if the condition is true."
+    },
+    {
+      "type": "code",
+      "text": "age = 18\nif age >= 18:\n\tprint(\"You are an adult\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "You are an adult"
+    },
+    {
+      "type": "test-button",
+      "text": "Try >>",
+      "code": "age = 18\nif age >= 18:\n\tprint(\"You are an adult\")"
+    },
+    {
+      "type": "subtitle2",
+      "text": "2. <code class=\"language-python\">elif</code> (else if...)"
+    },
+    {
+      "type": "paragraph",
+      "text": "It is used to evaluate additional conditions when the <code class=\"language-python\">if</code> condition is not met."
+    },
+    {
+      "type": "code",
+      "text": "grade = 75\nif grade >= 90:\n\tprint(\"Excellent\")\nelif grade >= 70:\n\tprint(\"Passed\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "Passed"
+    },
+    {
+      "type": "test-button",
+      "text": "Try >>",
+      "code": "grade = 75\nif grade >= 90:\n\tprint(\"Excellent\")\nelif grade >= 70:\n\tprint(\"Passed\")"
+    },
+    {
+      "type": "subtitle2",
+      "text": "3. <code class=\"language-python\">else</code> (if nothing else happened...)"
+    },
+    {
+      "type": "paragraph",
+      "text": "It is executed only if all the previous conditions were false."
+    },
+    {
+      "type": "code",
+      "text": "temperature = 10\nif temperature > 25:\n\tprint(\"It's hot\")\nelse:\n\tprint(\"It's cold\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "It's cold"
+    },
+    {
+      "type": "test-button",
+      "text": "Try >>",
+      "code": "temperature = 10\nif temperature > 25:\n\tprint(\"It's hot\")\nelse:\n\tprint(\"It's cold\")"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Note:</strong><br>The <code class=\"language-python\">else</code> does not take a condition because it acts as the final option when none of the previous conditions apply."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Chaining Conditions"
+    },
+    {
+      "type": "paragraph",
+      "text": "You can combine <code class=\"language-python\">if</code>, multiple <code class=\"language-python\">elif</code>, and an <code class=\"language-python\">else</code> to create multiple paths:"
+    },
+    {
+      "type": "code",
+      "text": "x = 0\nif x > 0:\n\tprint(\"Positive\")\nelif x < 0:\n\tprint(\"Negative\")\nelse:\n\tprint(\"It is zero\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "It iz zero"
+    },
+    {
+      "type": "test-button",
+      "text": "Try >>",
+      "code": "x = 0\nif x > 0:\n\tprint(\"Positive\")\nelif x < 0:\n\tprint(\"Negative\")\nelse:\n\tprint(\"It is zero\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "This type of structure helps model real-world processes: evaluating grades, classifying ages, selecting options, and more."
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br>When you have many conditions, order them from the most specific to the most general to prevent a broad condition from blocking more precise ones."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Most Useful Conditions"
+    },
+    {
+      "type": "paragraph",
+      "text": "You can use comparison operators (we will go deeper into these in the next learning unit):"
+    },
+    {
+      "type": "list",
+      "items": [
+        "<code class=\"language-python\">==</code> (equal to).",
+        "<code class=\"language-python\">!=</code> (not equal to).",
+        "<code class=\"language-python\"><</code> (less than), <code class=\"language-python\">></code> (greater than), <code class=\"language-python\"><=</code> (less than or equal to), <code class=\"language-python\">>=</code> (greater than or equal to)."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "You can also use logical operators (we will go deeper into these in the next learning unit):"
+    },
+    {
+      "type": "list",
+      "items": [
+        "<code class=\"language-python\">and</code>.",
+        "<code class=\"language-python\">or</code>.",
+        "<code class=\"language-python\">not</code>."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Example:"
+    },
+    {
+      "type": "code",
+      "text": "age = 20\nhas_id = True\n\nif age >= 18 and has_id:\n\tprint(\"You can enter\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "You can enter"
+    },
+    {
+      "type": "test-button",
+      "text": "Try >>",
+      "code": "age = 20\nhas_id = True\n\nif age >= 18 and has_id:\n\tprint(\"You can enter\")"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Note:</strong><br>Conditions can be as simple or as complex as you need. However, it is good practice to keep them clear and readable."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Practical Examples"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Example 1: Check If a Number is Even or Odd"
+    },
+    {
+      "type": "code",
+      "text": "number = 8\n\nif number % 2 == 0:\n\tprint(\"It is even\")\nelse:\n\tprint(\"It is odd\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "It is even"
+    },
+    {
+      "type": "test-button",
+      "text": "Try >>",
+      "code": "number = 8\n\nif number % 2 == 0:\n\tprint(\"It is even\")\nelse:\n\tprint(\"It is odd\")"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Example 2: Classify an Age"
+    },
+    {
+      "type": "code",
+      "text": "age = 15\n\nif age < 13:\n\tprint(\"Child\")\nelif age < 18:\n\tprint(\"Teenager\")\nelse:\n\tprint(\"Adult\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "Teenager"
+    },
+    {
+      "type": "test-button",
+      "text": "Try >>",
+      "code": "age = 15\n\nif age < 13:\n\tprint(\"Child\")\nelif age < 18:\n\tprint(\"Teenager\")\nelse:\n\tprint(\"Adult\")"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Example 3: Check if a Password is Correct"
+    },
+    {
+      "type": "code",
+      "text": "password = \"python123%\"\n\nif password == \"python123%\":\n\tprint(\"Access granted\")\nelse:\n\tprint(\"Access denied\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "Access granted"
+    },
+    {
+      "type": "test-button",
+      "text": "Try >>",
+      "code": "password = \"python123%\"\n\nif password == \"python123%\":\n\tprint(\"Access granted\")\nelse:\n\tprint(\"Access denied\")"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Exercises to Practice"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Exercise 1: Adult or Minor"
+    },
+    {
+      "type": "paragraph",
+      "text": "Create a variable with an age (for example: <code class=\"language-python\">age = 17</code>)."
+    },
+    {
+      "type": "paragraph",
+      "text": "If the age is 18 or older, display \"Adult\"."
+    },
+    {
+      "type": "paragraph",
+      "text": "Otherwise, display \"Minor\"."
+    },
+    {
+      "type": "test-button",
+      "text": "Practice >>",
+      "code": "# Create a variable with an age\n# (for example: age = 17).\n# If the age is 18 or older, display \"Adult \".\n# Otherwise, display \"Minor\""
+    },
+    {
+      "type": "collapsible",
+      "title": "View possible solution",
+      "content": [
+        {
+          "type": "code",
+          "text": "age = 17\n\nif age >= 18:\n\tprint(\"Adult\")\nelse:\n\tprint(\"Minor\")"
+        },
+        {
+          "type": "test-button",
+          "text": "Try Solution >>",
+          "code": "age = 17\n\nif age >= 18:\n\tprint(\"Adult\")\nelse:\n\tprint(\"Minor\")"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Exercise 2: Number Classifier"
+    },
+    {
+      "type": "paragraph",
+      "text": "Create a variable called <code class=\"language-python\">n</code> and assign it a numeric value."
+    },
+    {
+      "type": "paragraph",
+      "text": "Display whether the number is positive, negative, or zero."
+    },
+    {
+      "type": "test-button",
+      "text": "Practice >>",
+      "code": "# Create a variable called n and assign it\n# a numeric value.\n# Display whether the number is positive,\n# negative, or zero"
+    },
+    {
+      "type": "collapsible",
+      "title": "View possible solution",
+      "content": [
+        {
+          "type": "code",
+          "text": "n = -5\n\nif n > 0:\n\tprint(\"Positive\")\nelif n < 0:\n\tprint(\"Negative\")\nelse:\n\tprint(\"Zero\")"
+        },
+        {
+          "type": "test-button",
+          "text": "Try Solution >>",
+          "code": "n = -5\n\nif n > 0:\n\tprint(\"Positive\")\nelif n < 0:\n\tprint(\"Negative\")\nelse:\n\tprint(\"Zero\")"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Exercise 3: Check Access"
+    },
+    {
+      "type": "paragraph",
+      "text": "Create two variables:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "<code class=\"language-python\">age</code>.",
+        "<code class=\"language-python\">has_ticket</code> (<code class=\"language-python\">True</code> or <code class=\"language-python\">False</code>)."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "If the person has a ticket and is 16 or older, display \"Welcome\". Otherwise, display \"You cannot enter\"."
+    },
+    {
+      "type": "test-button",
+      "text": "Practice >>",
+      "code": "# Create two variables:\n# age\n# has_ticket (True o False)\n# If the person has a ticket and is 16 or older,\n# display \"Welcome\".\n# Otherwise, display \"You cannot enter\""
+    },
+    {
+      "type": "collapsible",
+      "title": "View possible solution",
+      "content": [
+        {
+          "type": "code",
+          "text": "age = 16\nhas_ticket = True\n\nif age >= 16 and has_ticket:\n\tprint(\"Welcome\")\nelse:\n\tprint(\"You cannot enter\")"
+        },
+        {
+          "type": "test-button",
+          "text": "Try Solution >>",
+          "code": "age = 16\nhas_ticket = True\n\nif age >= 16 and has_ticket:\n\tprint(\"Welcome\")\nelse:\n\tprint(\"You cannot enter\")"
+        }
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Unit Conclusions"
+    },
+    {
+      "type": "paragraph",
+      "text": "In this unit, you learned that:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Conditionals allow a program to make decisions.",
+        "<code class=\"language-python\">if</code>, <code class=\"language-python\">elif</code> and <code class=\"language-python\">else</code> control different execution paths.",
+        "Conditions work by evaluating expressions that can be true or false.",
+        "You can use logical and comparison operators to create more complete conditions.",
+        "It is possible to chain multiple cases to solve more realistic and varied problems."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "When you master conditionals, your programs stop being linear and start reacting to different situations."
+    }
+  ]
+}
