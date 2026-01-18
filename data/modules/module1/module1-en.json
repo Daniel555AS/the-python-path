@@ -28,7 +28,7 @@
     },
     {
       "name": "5. Mathematical and Text Operations",
-      "description": "Using <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code> operators, string concatenation, and repetition",
+      "description": "Using <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code> operators, string concatenation, and repetition.",
       "color": "#FFD43B",
       "unit": "learning-unit5"
     },
