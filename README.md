@@ -10,3 +10,16 @@ Additionally, do you think you are capable of facing the challenge of the Python
 
 Because learning is an adventure!
 
+## Learning Roadmap – The Python Path
+
+- [Python Learning Roadmap](https://daniel555as.github.io/the-python-path/pages/roadmap.html#roadmap/)
+
+  - [1. Fundamentals of the Language](https://daniel555as.github.io/the-python-path/pages/roadmap.html#module1)
+
+    In this module, you will learn what Python is and how to create your first programs. You will learn how to display text, use variables, work with numbers and strings, perform basic operations, and interact with the user through data input.
+    
+    - [1.1. What is Python and How Does It Work?](https://daniel555as.github.io/the-python-path/pages/learning-unit.html#module1-learning-unit1)
+
+        Introduction to the language, its features, readable syntax, and its uses.
+  
+  - [2. Flow Control](https://daniel555as.github.io/the-python-path/pages/roadmap.html#module2)
