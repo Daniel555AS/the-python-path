@@ -52,3 +52,21 @@ Because learning is an adventure!
       How to receive information from the user and process it.
   
   - [2. Flow Control](https://daniel555as.github.io/the-python-path/pages/roadmap.html#module2)
+
+    In this module, you will learn how to control the flow of your program. You will use conditionals to make decisions, loops to repeat actions, and logical operators to combine conditions. You will also learn how to break or continue loops according to your program’s logic.
+
+    - [2.1. Conditionals: if, elif, else](https://daniel555as.github.io/the-python-path/pages/learning-unit.html#module2-learning-unit1)
+
+      In this unit, you will learn how to allow your program to make decisions using if, elif, and else, so that the code can execute different actions depending on which conditions are met. You will see how the flow behaves when a condition is true, what happens when none match, and how to chain multiple options together.
+    
+    - [2.2 Logical and Comparison Operators](https://daniel555as.github.io/the-python-path/pages/learning-unit.html#module2-learning-unit2)
+
+      Here you will understand how operators such as ==, !=, <, >, <=, >= work, and how to combine them with and, or and not to build more complex conditions. This will allow you to evaluate multiple situations at the same time and create more precise decisions within your conditional structures.
+    
+    - [2.3. while and for Loops](https://daniel555as.github.io/the-python-path/pages/learning-unit.html#module2-learning-unit3)
+
+      In this unit, you will learn how to repeat instructions using while and for, which allows you to perform tasks repeatedly without writing the same code many times. You will also learn how to iterate over a sequence of characters (str).
+    
+    - [2.4. Flow Control in Loops](https://daniel555as.github.io/the-python-path/pages/learning-unit.html#module2-learning-unit4)
+
+      Here you will discover how to modify the internal execution of a loop using special statements like break to stop it early, continue to skip a specific iteration, and pass to leave an empty block to be completed later. These tools allow you to have more precise and flexible control over the behavior of your loops.
