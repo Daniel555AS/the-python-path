@@ -20,6 +20,26 @@ Because learning is an adventure!
     
     - [1.1. What is Python and How Does It Work?](https://daniel555as.github.io/the-python-path/pages/learning-unit.html#module1-learning-unit1)
 
-        Introduction to the language, its features, readable syntax, and its uses.
+      Introduction to the language, its features, readable syntax, and its uses.
+
+    - [1.2. Your First Program: print()](https://daniel555as.github.io/the-python-path/pages/learning-unit.html#module1-learning-unit2)
+
+      How to display text on the screen and understand the basic structure of a program.
+    
+    - [1.3. Comments and Basic Code Style](https://daniel555as.github.io/the-python-path/pages/learning-unit.html#module1-learning-unit3)
+      
+      Using # to document code and keep it readable.
+
+    - [1.4. Variables and Basic Data Types](https://daniel555as.github.io/the-python-path/pages/learning-unit.html#module1-learning-unit4)
+      
+      What variables are, how to create them, and the most common types: int, float, str, bool.
+
+    - [1.5. Mathematical and Text Operations](https://daniel555as.github.io/the-python-path/pages/learning-unit.html#module1-learning-unit5)
+      
+      Using +, -, *, / operators, string concatenation, and repetition.
+
+    - [1.6. Data Input With input()](https://daniel555as.github.io/the-python-path/pages/learning-unit.html#module1-learning-unit6)
+
+      How to receive information from the user and process it.
   
   - [2. Flow Control](https://daniel555as.github.io/the-python-path/pages/roadmap.html#module2)
