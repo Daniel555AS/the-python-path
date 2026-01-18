@@ -10,6 +10,15 @@ Additionally, do you think you are capable of facing the challenge of the Python
 
 Because learning is an adventure!
 
+## Tech Stack
+
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/css-%23663399.svg?style=for-the-badge&logo=css&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+
+- **Pyodide:** Pyodide enables running full Python code directly in the web browser, allowing interactive coding and learning without installing Python or using a server.
+
 ## Learning Roadmap – The Python Path
 
 - [Python Learning Roadmap](https://daniel555as.github.io/the-python-path/pages/roadmap.html#roadmap/)
