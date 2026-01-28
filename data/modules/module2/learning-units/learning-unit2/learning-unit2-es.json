@@ -258,7 +258,7 @@
     },
     {
       "type": "code",
-      "text": "usuario = \"python_learner\"\ncontrasena = \"password123\"\n\nif usuario == \"daniel\" and contrasena == \"password123\":\n\tprint(\"Acceso permitido\")\nelse:\n\tprint(\"Autenticación fallida\")"
+      "text": "usuario = \"python_learner\"\ncontrasena = \"password123\"\n\nif usuario == \"python_learner\" and contrasena == \"password123\":\n\tprint(\"Acceso permitido\")\nelse:\n\tprint(\"Autenticación fallida\")"
     },
     {
       "type": "paragraph",
