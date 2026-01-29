@@ -483,7 +483,7 @@
       "type": "list",
       "items": [
         "<code class=\"language-python\">edad</code>.",
-        "<code class=\"language-python\">tiene_acceso</code> (True o False)."
+        "<code class=\"language-python\">tiene_acceso</code> (<code class=\"language-python\">True</code> o <code class=\"language-python\">False</code>)."
       ]
     },
     {
