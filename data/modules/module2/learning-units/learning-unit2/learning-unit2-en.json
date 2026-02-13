@@ -1,0 +1,522 @@
+{
+  "title": "Logical and Comparison Operators",
+  "description": "",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Comparison operators and logical operators are essential for making decisions in Python. They allow you to compare values, check conditions, and combine multiple evaluations within an <code class=\"language-python\">if</code> statement. With them, you can build more complete rules, such as checking whether an age is within a range, whether a password matches, or whether an action is valid only under certain conditions."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Comparison Operators"
+    },
+    {
+      "type": "paragraph",
+      "text": "These operators return <code class=\"language-python\">True</code> or <code class=\"language-python\">False</code>, depending on the condition."
+    },
+    {
+      "type": "table",
+      "headers": ["Operator", "Meaning", "Example"],
+      "rows": [
+        [
+          "<code class=\"language-python\">==</code>",
+          "Equal to",
+          "<code class=\"language-python\">5 == 5 → True</code>"
+        ],
+        [
+          "<code class=\"language-python\">!=</code>",
+          "Not Equal to",
+          "<code class=\"language-python\">3 != 4 → True</code>"
+        ],
+        [
+          "<code class=\"language-python\"><</code>",
+          "Less than",
+          "<code class=\"language-python\">2 < 10 → True</code>"
+        ],
+        [
+          "<code class=\"language-python\">></code>",
+          "Greater than",
+          "<code class=\"language-python\">10 > 3 → True</code>"
+        ],
+        [
+          "<code class=\"language-python\"><=</code>",
+          "Less than or equal to",
+          "<code class=\"language-python\">5 <= 5 → True</code>"
+        ],
+        [
+          "<code class=\"language-python\">>=</code>",
+          "Greater than or equal to",
+          "<code class=\"language-python\">8 >= 2 → True</code>"
+        ]
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Practical Example"
+    },
+    {
+      "type": "code",
+      "text": "age = 20\nif age >= 18:\n\tprint(\"You are an adult\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "You are an adult"
+    },
+    {
+      "type": "test-button",
+      "text": "Try >>",
+      "code": "age = 20\nif age >= 18:\n\tprint(\"You are an adult\")"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Logical Operators"
+    },
+    {
+      "type": "paragraph",
+      "text": "They allow you to combine conditions."
+    },
+    {
+      "type": "subtitle2",
+      "text": "<code class=\"language-python\">and</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "All conditions must be true."
+    },
+    {
+      "type": "paragraph",
+      "text": "Example:"
+    },
+    {
+      "type": "code",
+      "text": "age = 24\nif age >= 18 and age < 65:\n\tprint(\"Adult\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "Adult"
+    },
+    {
+      "type": "test-button",
+      "text": "Try >>",
+      "code": "age = 24\nif age >= 18 and age < 65:\n\tprint(\"Adult\")"
+    },
+    {
+      "type": "subtitle2",
+      "text": "<code class=\"language-python\">or</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "At least one condition must be true."
+    },
+    {
+      "type": "paragraph",
+      "text": "Example:"
+    },
+    {
+      "type": "code",
+      "text": "color = \"red\"\nif color == \"red\" or color ==\"blue\":\n\tprint(\"Allowed color\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "Allowed color"
+    },
+    {
+      "type": "test-button",
+      "text": "Try >>",
+      "code":  "color = \"red\"\nif color == \"red\" or color ==\"blue\":\n\tprint(\"Allowed color\")"
+    },
+    {
+      "type": "subtitle2",
+      "text": "<code class=\"language-python\">not</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Inverts the logical value: If it was <code class=\"language-python\">True</code> it becomes <code class=\"language-python\">False</code>, and if it was <code class=\"language-python\">False</code> it becomes <code class=\"language-python\">True</code>."
+    },
+    {
+      "type": "paragraph",
+      "text": "Example:"
+    },
+    {
+      "type": "code",
+      "text": "connected = False\nif not connected:\n\tprint(\"No connection\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "No connection"
+    },
+    {
+      "type": "test-button",
+      "text": "Try >>",
+      "code": "connected = False\nif not connected:\n\tprint(\"No connection\")"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Additional Examples"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Common Comparisonss"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Check string equality → <code class=\"language-python\">\"hello\" == \"hello\"</code>",
+        "Check age for access → <code class=\"language-python\">age >= 18</code>",
+        "Validate ranges → <code class=\"language-python\">0 <= number <= 100</code>",
+        "Check if a variable does NOT have a value → <code class=\"language-python\">variable != 0</code>"
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Useful Combinations"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Valid grade range → <code class=\"language-python\">grade >= 0 and grade <= 5</code>",
+        "Authorized user by role → <code class=\"language-python\">role == \"admin\" or role == \"editor\"</code>",
+        "Disabled action → <code class=\"language-python\">not available</code>"
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Comparison of Multiple Values"
+    },
+    {
+      "type": "code",
+      "text": "temp = 25\nif temp > 20 and temp < 30:\n\tprint(\"Ideal temperature\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "Ideal temperature"
+    },
+    {
+      "type": "test-button",
+      "text": "Try >>",
+      "code": "temp = 25\nif temp > 20 and temp < 30:\n\tprint(\"Ideal temperature\")"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Tips"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br>When combining multiple conditions, think: \"Do I want all of them to be true, or just one?\""
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br>Write clear and short conditions; avoid using too many within the same <code class=\"language-python\">if</code>."
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br>Use not when you want to simplify long rules. For example:<br>Instead of <code class=\"language-python\">if connected == False:</code>, use <code class=\"language-python\">if not connected:</code>."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Notes"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Note:</strong><br>Comparisons in Python use <code class=\"language-python\">==</code>, not <code class=\"language-python\">=</code>."
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Note:</strong><br>You can chain comparisons like in mathematics: <code class=\"language-python\">18 <= age < 60</code>."
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Note:</strong><br>Python evaluates conditions from left to right."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Combined Examples"
+    },
+    {
+      "type": "subtitle2",
+      "text": "User Authentication"
+    },
+    {
+      "type": "code",
+      "text": "user = \"python_learner\"\npassword = \"password123\"\n\nif user == \"python_learner\" and password == \"password123\":\n\tprint(\"Access granted\")\nelse:\n\tprint(\"Authentication failed\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "Access granted"
+    },
+    {
+      "type": "test-button",
+      "code": "user = \"python_learner\"\npassword = \"password123\"\n\nif user == \"python_learner\" and password == \"password123\":\n\tprint(\"Access granted\")\nelse:\n\tprint(\"Authentication failed\")",
+      "text": "Try >>"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Grade Verification"
+    },
+    {
+      "type": "code",
+      "text": "score = 75\n\nif 60 <= score <= 100:\n\tprint(\"Passed\")\nelif 0 <= score < 60:\n\tprint(\"Failed\")\nelse:\n\tprint(\"Invalid score\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "Passed"
+    },
+    {
+      "type": "test-button",
+      "code": "score = 75\n\nif 60 <= score <= 100:\n\tprint(\"Passed\")\nelif 0 <= score < 60:\n\tprint(\"Failed\")\nelse:\n\tprint(\"Invalid score\")",
+      "text": "Try >>"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Connectivity"
+    },
+    {
+      "type": "code",
+      "text": "mode =\"offline\"\nif not mode == \"online\":\n\tprint(\"Offline mode active\")\nelse:\n\tprint(\"Connection successfully established\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "Offline mode active"
+    },
+    {
+      "type": "test-button",
+      "code": "mode =\"offline\"\nif not mode == \"online\":\n\tprint(\"Offline mode active\")\nelse:\n\tprint(\"Connection successfully established\")",
+      "text": "Try >>"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Exercises to Practice"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Exercise 1: Check if a Person Can Vote"
+    },
+    {
+      "type": "paragraph",
+      "text": "Create a variable called <code class=\"language-python\">age</code> and assign it an integer value. The program must check whether the person is 18 years old or older. If the condition is met, display the message <code class=\"language-python\">Can vote</code>. Otherwise, display <code class=\"language-python\">Cannot vote</code>."
+    },
+    {
+      "type": "test-button",
+      "text": "Practice >>",
+      "code": "# Create a variable called age and assign it an integer\n# value. The program must check whether the person is\n# 18 years old or older. If the condition is met,\n# display the message \"Can vote\". Otherwise, display\n# \"Cannot vote\""
+    },
+    {
+      "type": "collapsible",
+      "title": "View possible solution",
+      "content": [
+        {
+          "type": "code",
+          "text": "age = 17\n\nif age >= 18:\n\tprint(\"Can vote\")\nelse:\n\tprint(\"Cannot vote\")"
+        },
+        {
+          "type": "test-button",
+          "text": "Try Solution >>",
+          "code": "age = 17\n\nif age >= 18:\n\tprint(\"Can vote\")\nelse:\n\tprint(\"Cannot vote\")"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Exercise 2: Number Within a Range"
+    },
+    {
+      "type": "paragraph",
+      "text": "Create a variable called <code class=\"language-python\">number</code>. The program must check whether the value of <code class=\"language-python\">number</code> is between 1 and 10, including both limits. If the number is within the range, display <code class=\"language-python\">Valid number</code>. If it is not, display <code class=\"language-python\">Number out of range</code>."
+    },
+    {
+      "type": "test-button",
+      "text": "Practice >>",
+      "code": "# Create a variable called number. The program must\n# check whether the value of number is between 1 and\n# 10, including both limits. If the number is within\n# the range, display \"Valid number\". If it is not,\n# display \"Number out of range\""
+    },
+    {
+      "type": "collapsible",
+      "title": "View possible solution",
+      "content": [
+        {
+          "type": "code",
+          "text": "number = 7\n\nif number >= 1 and number <= 10:\n\tprint(\"Valid number\")\nelse:\n\tprint(\"Number out of range\")"
+        },
+        {
+          "type": "test-button",
+          "text": "Try Solution >>",
+          "code": "number = 7\n\nif number >= 1 and number <= 10:\n\tprint(\"Valid number\")\nelse:\n\tprint(\"Number out of range\")"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Exercise 3: Check Allowed Colors"
+    },
+    {
+      "type": "paragraph",
+      "text": "Create a variable called <code class=\"language-python\">color</code>. The program must check whether the color is <code class=\"language-python\">blue</code> or <code class=\"language-python\">red</code>. If it matches one of those colors, display <code class=\"language-python\">Allowed color</code>. Otherwise, display <code class=\"language-python\">Color not allowed</code>."
+    },
+    {
+      "type": "test-button",
+      "text": "Practice >>",
+      "code": "# Create a variable called color. The program must\n# check whether the color is blue or red. If it matches\n# one of those colors, display \"Allowed color\".\n# Otherwise, display \"Color not allowed\""
+    },
+    {
+      "type": "collapsible",
+      "title": "View possible solution",
+      "content": [
+        {
+          "type": "code",
+          "text": "color = \"blue\"\n\nif color == \"blue\" or color == \"red\":\n\tprint(\"Allowed color\")\nelse:\n\tprint(\"Color not allowed\")"
+        },
+        {
+          "type": "test-button",
+          "text": "Try Solution >>",
+          "code": "color = \"blue\"\n\nif color == \"blue\" or color == \"red\":\n\tprint(\"Allowed color\")\nelse:\n\tprint(\"Color not allowed\")"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Exercise 4: Attempt System"
+    },
+    {
+      "type": "paragraph",
+      "text": "Create a variable called <code class=\"language-python\">attempts</code>. If the value of attempts is different from <code class=\"language-python\">0</code>, display <code class=\"language-python\">Attempts available</code>. If the value is <code class=\"language-python\">0</code>, display <code class=\"language-python\">Account locked</code>."
+    },
+    {
+      "type": "test-button",
+      "text": "Practice >>",
+      "code": "# Create a variable called attempts. If the value of\n# attempts is different from 0, display \"Attempts\n# available\". If the value is 0, display \"Account\n# locked\""
+    },
+    {
+      "type": "collapsible",
+      "title": "View possible solution",
+      "content": [
+        {
+          "type": "code",
+          "text": "attempts = 0\n\nif attempts != 0:\n\tprint(\"Attempts available\")\nelse:\n\tprint(\"Account locked\")"
+        },
+        {
+          "type": "test-button",
+          "text": "Try Solution >>",
+          "code": "attempts = 0\n\nif attempts != 0:\n\tprint(\"Attempts available\")\nelse:\n\tprint(\"Account locked\")"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Exercise 5: Number Classification"
+    },
+    {
+      "type": "paragraph",
+      "text": "Create a variable called <code class=\"language-python\">n</code>. The program must determine whether the number is:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Positive (greater than 0).",
+        "Negative (less than 0).",
+        "or Zero (0)."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Display a different message for each case."
+    },
+    {
+      "type": "test-button",
+      "text": "Practice >>",
+      "code": "# Create a variable called n. The program must\n# determine whether the number is:\n# - Positive (greater than 0).\n# - Negative (less than 0).\n# - or Zero (0).\n# Display a different message for each case"
+    },
+    {
+      "type": "collapsible",
+      "title": "View possible solution",
+      "content": [
+        {
+          "type": "code",
+          "text": "n = -3\n\nif n > 0:\n\tprint(\"The number is positive\")\nelif n < 0:\n\tprint(\"The number is negative\")\nelse:\n\tprint(\"The number is zero\")"
+        },
+        {
+          "type": "test-button",
+          "text": "Try Solution >>",
+          "code": "n = -3\n\nif n > 0:\n\tprint(\"The number is positive\")\nelif n < 0:\n\tprint(\"The number is negative\")\nelse:\n\tprint(\"The number is zero\")"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Exercise 6: System Access"
+    },
+    {
+      "type": "paragraph",
+      "text": "Create two variables:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "<code class=\"language-python\">age</code>.",
+        "<code class=\"language-python\">has_access</code> (<code class=\"language-python\">True</code> or <code class=\"language-python\">False</code>)."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "The program should display <code class=\"language-python\">Access granted</code> only if the person is 18 years old or older and <code class=\"language-python\">has_access</code> is <code class=\"language-python\">True</code>. In any other case, it should display <code class=\"language-python\">Access denied</code>."
+    },
+    {
+      "type": "test-button",
+      "text": "Practice >>",
+      "code": "# Create two variables:\n# - age.\n# - has_access (True or False).\n# The program should display \"Access granted\" only if\n# the person is 18 years old or older and has_access is\n# True. In any other case, it should display \"Access\n# denied\""
+    },
+    {
+      "type": "collapsible",
+      "title": "View possible solution",
+      "content": [
+        {
+          "type": "code",
+          "text": "age = 20\nhas_access = True\n\nif age >= 18 and has_access:\n\tprint(\"Access granted\")\nelse:\n\tprint(\"Access denied\")"
+        },
+        {
+          "type": "test-button",
+          "text": "Try Solution >>",
+          "code": "age = 20\nhas_access = True\n\nif age >= 18 and has_access:\n\tprint(\"Access granted\")\nelse:\n\tprint(\"Access denied\")"
+        }
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Unit Conclusions"
+    },
+    {
+      "type": "paragraph",
+      "text": "In this unit, you learned how to compare values and combine conditions using comparison operators and logical operators. Now you can build more precise rules within your programs, evaluate ranges, check multiple situations at the same time, and control the flow of decisions more accurately. Mastering these operators will allow you to write smarter and more adaptable code."
+    }
+  ]
+}
