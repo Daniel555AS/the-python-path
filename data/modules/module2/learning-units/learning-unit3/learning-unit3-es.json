@@ -321,17 +321,17 @@
       ]
     },
     {
-        "type": "subtitle2",
-        "text": "Ejercicio 4: Contar Letras"
+      "type": "subtitle2",
+      "text": "Ejercicio 4: Contar Letras"
     },
     {
-        "type": "paragraph",
-        "text": "Usa un bucle <code class=\"language-python\">for</code> para contar cuántas letras tiene la palabra <code class=\"language-python\">\"programacion\"</code>.<br>Utiliza una variable contadora."
+      "type": "paragraph",
+      "text": "Usa un bucle <code class=\"language-python\">for</code> para contar cuántas letras tiene la palabra <code class=\"language-python\">\"programacion\"</code>.<br>Utiliza una variable contadora."
     },
     {
-        "type": "test-button",
-        "text": "Practicar >>",
-        "code": "# Usa un bucle for para contar cuántas letras tiene la\n# palabra \"programacion\".\n# Utiliza una variable contadora"
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Usa un bucle for para contar cuántas letras tiene la\n# palabra \"programacion\".\n# Utiliza una variable contadora"
     },
     {
       "type": "collapsible",
@@ -349,19 +349,19 @@
       ]
     },
     {
-        "type": "subtitle2",
-        "text": "Ejercicio 5: Número Pares"
+      "type": "subtitle2",
+      "text": "Ejercicio 5: Número Pares"
     },
     {
-        "type": "paragraph",
-        "text": "Usa un bucle <code class=\"language-python\">for</code> y <code class=\"language-python\">range()</code> para mostrar los números pares del 0 al 10."
+      "type": "paragraph",
+      "text": "Usa un bucle <code class=\"language-python\">for</code> y <code class=\"language-python\">range()</code> para mostrar los números pares del 0 al 10."
     },
     {
-        "type": "test-button",
-        "text": "Practicar >>",
-        "code": "# Usa un bucle for y range() para mostrar los números\n# pares del 0 al 10"
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Usa un bucle for y range() para mostrar los números\n# pares del 0 al 10"
     },
-        {
+    {
       "type": "collapsible",
       "title": "Observar posible solución",
       "content": [
@@ -377,23 +377,23 @@
       ]
     },
     {
-        "type": "subtitle1",
-        "text": "Conclusiones de la Unidad"
+      "type": "subtitle1",
+      "text": "Conclusiones de la Unidad"
     },
     {
-        "type": "paragraph",
-        "text": "En esta unidad aprendiste que:"
+      "type": "paragraph",
+      "text": "En esta unidad aprendiste que:"
     },
     {
-        "type": "list",
-        "items": [
-            "Los bucles permiten repetir instrucciones sin duplicar código.",
-            "El bucle <code class=\"language-python\">while</code> repite acciones mientras una condición sea verdadera.",
-            "El bucle <code class=\"language-python\">for</code> sirve para recorrer secuencias, como cadenas de texto.",
-            "Un string es una secuencia de caracteres que puede recorrerse uno por uno.",
-            "<code class=\"language-python\">range()</code> facilita la repetición controlada con números.",
-            "Elegir el bucle correcto hace que el código sea más claro y eficiente."
-        ]
+      "type": "list",
+      "items": [
+        "Los bucles permiten repetir instrucciones sin duplicar código.",
+        "El bucle <code class=\"language-python\">while</code> repite acciones mientras una condición sea verdadera.",
+        "El bucle <code class=\"language-python\">for</code> sirve para recorrer secuencias, como cadenas de texto.",
+        "Un string es una secuencia de caracteres que puede recorrerse uno por uno.",
+        "<code class=\"language-python\">range()</code> facilita la repetición controlada con números.",
+        "Elegir el bucle correcto hace que el código sea más claro y eficiente."
+      ]
     }
   ]
 }
