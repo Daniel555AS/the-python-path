@@ -1,5 +1,5 @@
 {
-  "title": "Bucles while y for",
+  "title": "Bucles <code class=\"language-python\">while</code> y <code class=\"language-python\">for</code>",
   "description": "",
   "content": [
     {
@@ -8,7 +8,7 @@
     },
     {
       "type": "subtitle1",
-      "text": "¿Qué es un bucle?"
+      "text": "¿Qué es un Bucle?"
     },
     {
       "type": "paragraph",
@@ -24,7 +24,7 @@
     },
     {
       "type": "subtitle2",
-      "text": "¿Cómo funciona?"
+      "text": "¿Cómo Funciona?"
     },
     {
       "type": "paragraph",
@@ -57,7 +57,7 @@
     },
     {
       "type": "subtitle2",
-      "text": "Controlando el bucle <code class=\"language-python\">while</code>"
+      "text": "Controlando el Bucle <code class=\"language-python\">while</code>"
     },
     {
       "type": "paragraph",
@@ -119,7 +119,7 @@
     },
     {
       "type": "subtitle2",
-      "text": "¿Qué significa \"recorrer una secuencia\"?"
+      "text": "¿Qué Significa \"recorrer una secuencia\"?"
     },
     {
       "type": "paragraph",
@@ -163,11 +163,11 @@
     },
     {
       "type": "note",
-      "text": "📌 <strong>Nota:</strong><br><code class=\"language-python\">range(5)</code> genera los números del <code class=\"language-python\">0</code> al <code class=\"language-python\">4</code>"
+      "text": "📌 <strong>Nota:</strong><br><code class=\"language-python\">range(5)</code> genera los números del <code class=\"language-python\">0</code> al <code class=\"language-python\">4</code>."
     },
     {
       "type": "subtitle1",
-      "text": "Ejemplos prácticos"
+      "text": "Ejemplos Prácticos"
     },
     {
       "type": "subtitle2",
@@ -192,7 +192,7 @@
     },
     {
       "type": "subtitle2",
-      "text": "Ejemplo 2: Mostrar cada letra de una palabra"
+      "text": "Ejemplo 2: Mostrar Cada Letra de una Palabra"
     },
     {
       "type": "code",
@@ -213,7 +213,7 @@
     },
     {
       "type": "subtitle2",
-      "text": "Ejemplo 3: Repetir un mensaje varias veces"
+      "text": "Ejemplo 3: Repetir un Mensaje Varias Veces"
     },
     {
       "type": "code",
@@ -234,11 +234,11 @@
     },
     {
       "type": "subtitle1",
-      "text": "Ejercicios para practicar"
+      "text": "Ejercicios Para Practicar"
     },
     {
       "type": "subtitle2",
-      "text": "Ejercicio 1: Contador con while"
+      "text": "Ejercicio 1: Contador con <code class=\"language-python\">while</code>"
     },
     {
       "type": "paragraph",
@@ -247,7 +247,7 @@
     {
       "type": "test-button",
       "text": "Practicar >>",
-      "code": "# Crea una variable llamada contador que empiece en 1.\n# Usa un bucle while para mostrar los números del 1 al\n# 10, uno por uno."
+      "code": "# Crea una variable llamada contador que empiece en 1.\n# Usa un bucle while para mostrar los números del 1 al\n# 10, uno por uno"
     },
     {
       "type": "collapsible",
@@ -259,14 +259,14 @@
         },
         {
           "type": "test-button",
-          "text": "Probar solución >>",
+          "text": "Probar Solución >>",
           "code": "contador = 1\nwhile contador <= 10:\n\tprint(contador)\n\tcontador += 1"
         }
       ]
     },
     {
       "type": "subtitle2",
-      "text": "Ejercicio 2: Cuenta regresiva"
+      "text": "Ejercicio 2: Cuenta Regresiva"
     },
     {
       "type": "paragraph",
@@ -275,7 +275,7 @@
     {
       "type": "test-button",
       "text": "Practicar >>",
-      "code": "# Crea una variable llamada n con el valor 5.\n# Usa un bucle while para mostrar una cuenta regresiva\n# hasta llegar a 1."
+      "code": "# Crea una variable llamada n con el valor 5.\n# Usa un bucle while para mostrar una cuenta regresiva\n# hasta llegar a 1"
     },
     {
       "type": "collapsible",
@@ -287,14 +287,14 @@
         },
         {
           "type": "test-button",
-          "text": "Probar solución >>",
+          "text": "Probar Solución >>",
           "code": "n = 5\nwhile n >= 1:\n\tprint(n)\n\tn -= 1"
         }
       ]
     },
     {
       "type": "subtitle2",
-      "text": "Ejercicio 3: Recorrer un texto"
+      "text": "Ejercicio 3: Recorrer un Texto"
     },
     {
       "type": "paragraph",
@@ -303,7 +303,7 @@
     {
       "type": "test-button",
       "text": "Practicar >>",
-      "code": "# Crea una variable llamada palabra con cualquier\n# texto. Usa un bucle for para mostrar cada carácter de\n# la palabra en una línea distinta."
+      "code": "# Crea una variable llamada palabra con cualquier\n# texto. Usa un bucle for para mostrar cada carácter de\n# la palabra en una línea distinta"
     },
     {
       "type": "collapsible",
@@ -315,14 +315,14 @@
         },
         {
           "type": "test-button",
-          "text": "Probar solución >>",
+          "text": "Probar Solución >>",
           "code": "palabra = \"Python\"\nfor letra in palabra:\n\tprint(letra)"
         }
       ]
     },
     {
         "type": "subtitle2",
-        "text": "Ejercicio 4: Contar letras"
+        "text": "Ejercicio 4: Contar Letras"
     },
     {
         "type": "paragraph",
@@ -331,7 +331,7 @@
     {
         "type": "test-button",
         "text": "Practicar >>",
-        "code": "# Usa un bucle for para contar cuántas letras tiene la\n# palabra \"programacion\".\n# Utiliza una variable contadora."
+        "code": "# Usa un bucle for para contar cuántas letras tiene la\n# palabra \"programacion\".\n# Utiliza una variable contadora"
     },
     {
       "type": "collapsible",
@@ -343,14 +343,14 @@
         },
         {
           "type": "test-button",
-          "text": "Probar solución >>",
+          "text": "Probar Solución >>",
           "code": "contador = 0\nfor letra in \"programacion\":\n\tcontador += 1\n\nprint(contador)"
         }
       ]
     },
     {
         "type": "subtitle2",
-        "text": "Ejercicio 5: Número pares"
+        "text": "Ejercicio 5: Número Pares"
     },
     {
         "type": "paragraph",
@@ -359,7 +359,7 @@
     {
         "type": "test-button",
         "text": "Practicar >>",
-        "code": "# Usa un bucle for y range() para mostrar los números\n# pares del 0 al 10."
+        "code": "# Usa un bucle for y range() para mostrar los números\n# pares del 0 al 10"
     },
         {
       "type": "collapsible",
@@ -371,14 +371,14 @@
         },
         {
           "type": "test-button",
-          "text": "Probar solución >>",
+          "text": "Probar Solución >>",
           "code": "for i in range(0, 11, 2):\n\tprint(i)"
         }
       ]
     },
     {
         "type": "subtitle1",
-        "text": "Conclusión de la unidad"
+        "text": "Conclusiones de la Unidad"
     },
     {
         "type": "paragraph",
