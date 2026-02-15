@@ -135,7 +135,7 @@
     {
       "type": "test-button",
       "text": "Try >>",
-      "code":  "color = \"red\"\nif color == \"red\" or color ==\"blue\":\n\tprint(\"Allowed color\")"
+      "code": "color = \"red\"\nif color == \"red\" or color ==\"blue\":\n\tprint(\"Allowed color\")"
     },
     {
       "type": "subtitle2",
