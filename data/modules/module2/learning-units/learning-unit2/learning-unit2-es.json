@@ -386,7 +386,7 @@
     {
       "type": "test-button",
       "text": "Practicar >>",
-      "code": "# Crea una variable llamada color. El programa debe\n# comprobar si el color es azul o rojo. Si coincide con\n# alguno de esos colores, muestra \"Color permitido\". En\n# cualquier otro caso, muestra \"Color no permitido\""
+      "code": "# Crea una variable llamada color. El programa debe\n# comprobar si el color es \"azul\" o \"rojo\". Si coincide con\n# alguno de esos colores, muestra \"Color permitido\". En\n# cualquier otro caso, muestra \"Color no permitido\""
     },
     {
       "type": "collapsible",
