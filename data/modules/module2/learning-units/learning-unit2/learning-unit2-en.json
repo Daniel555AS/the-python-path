@@ -386,7 +386,7 @@
     {
       "type": "test-button",
       "text": "Practice >>",
-      "code": "# Create a variable called color. The program must\n# check whether the color is blue or red. If it matches\n# one of those colors, display \"Allowed color\".\n# Otherwise, display \"Color not allowed\""
+      "code": "# Create a variable called color. The program must\n# check whether the color is \"blue\" or \"red\". If it matches\n# one of those colors, display \"Allowed color\".\n# Otherwise, display \"Color not allowed\""
     },
     {
       "type": "collapsible",
