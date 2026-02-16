@@ -1,0 +1,399 @@
+{
+  "title": "<code class=\"language-python\">while</code> und <code class=\"language-python\">for</code> Schleifen",
+  "description": "",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "En der Programmierung erfordern viele Aufgaben das Wiederholen von Aktionen: Nachrichten mehrmals anzeigen, Zahlen zählen oder Text Zeichen für Zeichen verarbeiten. Schleifen ermöglichen es, denselben Codeblock mehrfach auszuführen, ohne ihn wiederholt schreiben zu müssen. In Python sind die beiden wichtigsten Schleifen <code class=\"language-python\">while</code> und <code class=\"language-python\">for</code>."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Was ist eine Schleife?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Eine Schleife ist eine Kontrollstruktur, die eine Reihe von Anweisungen wiederholt, solange eine Bedingung erfüllt ist oder solange es Elemente gibt, die durchlaufen werden können."
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Hinweis:</strong><br>Ohne Schleifen wären Programme lang, repetitiv und schwer zu warten."
+    },
+    {
+      "type": "subtitle1",
+      "text": "<code class=\"language-python\">while</code>-Schleife"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Wie Funktioniert Sie?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die <code class=\"language-python\">while</code>-Schleife wiederholt den Code, solange eine Bedingung wahr ist. Vor jeder Wiederholung überprüft Python die Bedingung."
+    },
+    {
+      "type": "code",
+      "text": "zaehler = 1\nwhile zaehler <= 5:\n\tprint(zaehler)\n\tzaehler = zaehler + 1"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgabe:"
+    },
+    {
+      "type": "code",
+      "text": "1\n2\n3\n4\n5"
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "zaehler = 1\nwhile zaehler <= 5:\n\tprint(zaehler)\n\tzaehler = zaehler + 1"
+    },
+    {
+      "type": "tip",
+      "text": "💡 <strong>Tipp:</strong><br>Die <code class=\"language-python\">while</code>-Schleife ist ideal, wenn du nicht weißt, wie oft sich die Schleife wiederholen wird, aber weißt, wann sie enden soll."
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Hinweis:</strong><br>Wenn die Bedingung niemals falsch wird, gerät das Programm in eine Endlosschleife."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Steuerung der <code=\"language-python\">while</code>-Schleife"
+    },
+    {
+      "type": "paragraph",
+      "text": "Normalerweise wird eine Kontrollvariable verwendet, die sich bei jeder Wiederholung ändert."
+    },
+    {
+      "type": "code",
+      "text": "x = 0\nwhile x < 3:\n\tprint(\"Hallo\")\n\tx += 1"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgabe:"
+    },
+    {
+      "type": "code",
+      "text": "Hallo\nHallo\nHallo"
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "x = 0\nwhile x < 3:\n\tprint(\"Hallo\")\n\tx += 1"
+    },
+    {
+      "type": "subtitle1",
+      "text": "<code class=\"language-python\">for</code>-Schleife"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Wie Funktioniert Sie?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die <code class=\"language-python\">for</code>-Schleife wird verwendet, um eine Sequenz zu durchlaufen. In dieser Einheit wird die Hauptsequenz ein String (<code class=\"language-python\">str</code>) sein, da eine Zeichenkette eine Sammlung geordneter Zeichen ist."
+    },
+    {
+      "type": "code",
+      "text": "for buchstabe in \"Python\":\n\tprint(buchstabe)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgabe:"
+    },
+    {
+      "type": "code",
+      "text": "P\ny\nt\nh\no\nn"
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "for buchstabe in \"Python\":\n\tprint(buchstabe)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Das bedeutet, dass die Schleife ein Zeichen nach dem anderen nimmt und es der Variablen <code class=\"language-python\">buchstabe</code> zuweist."
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Hinweis:</strong><br>Auch wenn Listen noch nicht behandelt wurden, ermöglichen Strings bereits, das Konzept des „Durchlaufens einer Sequenz“ zu verstehen."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Was Bedeutet „Eine Sequenz Durchlaufen“?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Eine Sequenz durchlaufen bedeutet, auf jedes Element einzeln und der Reihe nach zuzugreifen. Im Fall von Strings:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Jedes Zeichen ist ein Element.",
+        "Sie werden von links nach rechts durchlaufen."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "💡 <strong>Tipp:</strong><br>Die <code class=\"language-python\">for</code>-Schleife ist ideal, wenn du bereits weißt, was du durchlaufen wirst, wie z.B. einen Text oder einen Zahlenbereich."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Verwendung von <code class=\"language-python\">range()</code> mit <code class=\"language-python\">for</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "<code class=\"language-python\">range()</code> ermöglicht es, eine Sequenz von Zahlen zu erzeugen."
+    },
+    {
+      "type": "code",
+      "text": "for i in range(5):\n\tprint(i)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgabe:"
+    },
+    {
+      "type": "code",
+      "text": "0\n1\n2\n3\n4"
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "for i in range(5):\n\tprint(i)"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Hinweis:</strong><br><code class=\"language-python\">range(5)</code> erzeugt die Zahlen von <code class=\"language-python\">0</code> bis <code class=\"language-python\">4</code>."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Praktische Beispiele"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Beispiel 1: Von 1 bis 5 mit <code class=\"language-python\">while</code> Zählen"
+    },
+    {
+      "type": "code",
+      "text": "n = 1\nwhile n <= 5:\n\tprint(n)\n\tn += 1"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgabe:"
+    },
+    {
+      "type": "code",
+      "text": "1\n2\n3\n4\n5"
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "n = 1\nwhile n <= 5:\n\tprint(n)\n\tn += 1"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Beispiel 2: Jeden Buchstaben Eines Wortes Anzeigen"
+    },
+    {
+      "type": "code",
+      "text": "for c in \"Hallo\":\n\tprint(c)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgabe:"
+    },
+    {
+      "type": "code",
+      "text": "H\na\nl\nl\no"
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "for c in \"Hallo\":\n\tprint(c)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Beispiel 3: Eine Nachricht Mehrmals Wiederholen"
+    },
+    {
+      "type": "code",
+      "text": "for i in range(3):\n\tprint(\"Python Lernen\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgabe:"
+    },
+    {
+      "type": "code",
+      "text": "Python Lernen\nPython Lernen\nPython Lernen"
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "for i in range(3):\n\tprint(\"Python Lernen\")"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Übungen Zum Üben"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Übung 1: Zähler mit while"
+    },
+    {
+      "type": "paragraph",
+      "text": "Erstelle eine Variable namens <code class=\"language-python\">zaehler</code>, die bei 1 beginnt.<br>Verwende eine <code class=\"language-python\">while</code>-Schleife, um die Zahlen von 1 bis 10 einzeln anzuzeigen."
+    },
+    {
+      "type": "test-button",
+      "text": "Üben >>",
+      "code": "# Erstelle eine Variable namens zaehler, die bei 1\n# beginnt.\n# Verwende eine while-Schleife, um die Zahlen von 1 bis\n# 10 einzeln anzuzeigen"
+    },
+    {
+      "type": "collapsible",
+      "title": "Mögliche Lösung anzeigen",
+      "content": [
+        {
+          "type": "code",
+          "text": "zaehler = 1\nwhile zaehler <= 10:\n\tprint(zaehler)\n\tzaehler += 1"
+        },
+        {
+          "type": "test-button",
+          "text": "Lösung Ausprobieren >>",
+          "code": "zaehler = 1\nwhile zaehler <= 10:\n\tprint(zaehler)\n\tzaehler += 1"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Übung 2: Countdown"
+    },
+    {
+      "type": "paragraph",
+      "text": "Erstelle eine Variable namens <code class=\"language-python\">n</code> mit dem Wert 5.<br>Verwende eine <code class=\"language-python\">while</code>-Schleife, um einen Countdown bis 1 anzuzeigen."
+    },
+    {
+      "type": "test-button",
+      "text": "Üben >>",
+      "code": "# Erstelle eine Variable namens n mit dem Wert 5.\n# Verwende eine while-Schleife, um einen Countdown bis\n# 1 anzuzeigen"
+    },
+    {
+      "type": "collapsible",
+      "title": "Mögliche Lösung anzeigen",
+      "content": [
+        {
+          "type": "code",
+          "text": "n = 5\nwhile n >= 1:\n\tprint(n)\n\tn -= 1"
+        },
+        {
+          "type": "test-button",
+          "text": "Lösung Ausprobieren >>",
+          "code": "n = 5\nwhile n >= 1:\n\tprint(n)\n\tn -= 1"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Übung 3: Einen Text Durchlaufen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Erstelle eine Variable namens <code class=\"language-python\">wort</code> mit einem beliebigen Text.<br>Verwende eine <code class=\"language-python\">for</code>-Schleife, um jedes Zeichen des Wortes in einer eigenen Zeile anzuzeigen."
+    },
+    {
+      "type": "test-button",
+      "text": "Üben >>",
+      "code": "# Erstelle eine Variable namens wort mit einem\n# beliebigen Text.\n# Verwende eine for-Schleife, um jedes Zeichen des\n# Wortes in einer eigenen Zeile anzuzeigen"
+    },
+    {
+      "type": "collapsible",
+      "title": "Mögliche Lösung anzeigen",
+      "content": [
+        {
+          "type": "code",
+          "text": "wort = \"Python\"\nfor buchstabe in wort:\n\tprint(buchstabe)"
+        },
+        {
+          "type": "test-button",
+          "text": "Lösung Ausprobieren >>",
+          "code": "wort = \"Python\"\nfor buchstabe in wort:\n\tprint(buchstabe)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Übung 4: Buchstaben Zählen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Verwende eine <code class=\"language-python\">for</code>-Schleife, um zu zählen, wie viele Buchstaben das Wort <code class=\"language-python\">\"programmierung\"</code> hat. Benutze eine Zählvariable."
+    },
+    {
+      "type": "test-button",
+      "text": "Üben >>",
+      "code": "# Verwende eine for-Schleife, um zu zählen, wie viele\n# Buchstaben das Wort \"programmierung\" hat. Benutze\n# eine Zählvariable"
+    },
+    {
+      "type": "collapsible",
+      "title": "Mögliche Lösung anzeigen",
+      "content": [
+        {
+          "type": "code",
+          "text": "zaehler = 0\nfor buchstabe in \"programmierung\":\n\tzaehler += 1\n\nprint(zaehler)"
+        },
+        {
+          "type": "test-button",
+          "text": "Lösung Ausprobieren >>",
+          "code": "zaehler = 0\nfor buchstabe in \"programmierung\":\n\tzaehler += 1\n\nprint(zaehler)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Übung 5: Gerade Zahlen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Verwende eine <code class=\"language-python\">for</code>-Schleife und <code class=\"language-python\">range()</code>, um die geraden Zahlen von 0 bis 10 anzuzeigen."
+    },
+    {
+      "type": "test-button",
+      "text": "Üben >>",
+      "code": "# Verwende eine for-Schleife und range(), um die\n# geraden Zahlen von 0 bis 10 anzuzeigen"
+    },
+    {
+      "type": "collapsible",
+      "title": "Mögliche Lösung anzeigen",
+      "content": [
+        {
+          "type": "code",
+          "text": "for i in range(0, 11, 2):\n\tprint(i)"
+        },
+        {
+          "type": "test-button",
+          "text": "Lösung Ausprobieren >>",
+          "code": "for i in range(0, 11, 2):\n\tprint(i)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Fazit der Einheit"
+    },
+    {
+      "type": "paragraph",
+      "text": "In dieser Einheit hast du gelernt, dass:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Schleifen es ermöglichen, Anweisungen zu wiederholen, ohne Code zu duplizieren.",
+        "Die <code class=\"language-python\">while</code>-Schleife Aktionen wiederholt, solange eine Bedingung wahr ist.",
+        "Die <code class=\"language-python\">for</code>-Schleife verwendet wird, um Sequenzen wie Zeichenketten zu durchlaufen.",
+        "Ein String eine Sequenz von Zeichen ist, die man Zeichen für Zeichen durchlaufen kann.",
+        "<code class=\"language-python\">range()</code> die kontrollierte Wiederholung mit Zahlen erleichtert.",
+        "Die Wahl der richtigen Schleife den Code klarer und effizienter macht."
+      ]
+    }
+  ]
+}
