@@ -1,0 +1,399 @@
+{
+  "title": "<code class=\"language-python\">while</code> and <code class=\"language-python\">for</code> Loops",
+  "description": "",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "In programming, many tasks require repeating actions: displaying messages multiple times, counting numbers, or processing text character by character. Loops allow you to execute the same block of code multiple times without having to write it repeatedly. In Python, the two main loops are <code class=\"language-python\">while</code> and <code class=\"language-python\">for</code>."
+    },
+    {
+      "type": "subtitle1",
+      "text": "What Is a Loop?"
+    },
+    {
+      "type": "paragraph",
+      "text": "A loop is a control structure that repeats a set of instructions while a condition is met or while there are elements to iterate over."
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Note:</strong><br>Without loops, programs would be long, repetitive, and difficult to maintain."
+    },
+    {
+      "type": "subtitle1",
+      "text": "<code class=\"language-python\">while</code> Loop"
+    },
+    {
+      "type": "subtitle2",
+      "text": "How Does It Work?"
+    },
+    {
+      "type": "paragraph",
+      "text": "The <code class=\"language-python\">while</code> loop repeats a block of code as long as a condition is true. Before each iteration, Python evaluates the condition."
+    },
+    {
+      "type": "code",
+      "text": "counter = 1\nwhile counter <= 5:\n\tprint(counter)\n\tcounter = counter + 1"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "1\n2\n3\n4\n5"
+    },
+    {
+      "type": "test-button",
+      "text": "Try >>",
+      "code": "counter = 1\nwhile counter <= 5:\n\tprint(counter)\n\tcounter = counter + 1"
+    },
+    {
+      "type": "tip",
+      "text": "💡 <strong>Tip:</strong><br>The <code class=\"language-python\">while</code> loop is ideal when you don’t know how many times the loop will repeat, but you do know when it should stop."
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Note:</strong><br>If the condition never becomes false, the program will enter an infinite loop."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Controlling the <code class=\"language-python\">while</code> Loop"
+    },
+    {
+      "type": "paragraph",
+      "text": "A control variable is usually used, which changes with each iteration."
+    },
+    {
+      "type": "code",
+      "text": "x = 0\nwhile x < 3:\n\tprint(\"Hello\")\n\tx += 1"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "Hello\nHello\nHello"
+    },
+    {
+      "type": "test-button",
+      "text": "Try >>",
+      "code": "x = 0\nwhile x < 3:\n\tprint(\"Hello\")\n\tx += 1"
+    },
+    {
+      "type": "subtitle1",
+      "text": "<code class=\"language-python\">for</code> Loop"
+    },
+    {
+      "type": "subtitle2",
+      "text": "How Does It Work?"
+    },
+    {
+      "type": "paragraph",
+      "text": "The <code class=\"language-python\">for</code> loop is used to iterate over a sequence. In this unit, the main sequence will be a string (<code class=\"language-python\">str</code>), since a string is a collection of ordered characters."
+    },
+    {
+      "type": "code",
+      "text": "for letter in \"Python\":\n\tprint(letter)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "P\ny\nt\nh\no\nn"
+    },
+    {
+      "type": "test-button",
+      "text": "Try >>",
+      "code": "for letter in \"Python\":\n\tprint(letter)"
+    },
+    {
+      "type": "paragraph",
+      "text": "This means that the loop takes one character at a time and assigns it to the variable <code class=\"language-python\">letter</code>."
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Note:</strong><br>Even though lists haven’t been covered yet, strings already allow you to understand the concept of \"iterating over a sequence\"."
+    },
+    {
+      "type": "subtitle2",
+      "text": "What Does \"Iterating Over a Sequence\" Mean?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Iterating over a sequence means accessing each element one by one, in order. In the case of strings:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Each character is an element.",
+        "They are iterated from left to right."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "💡 <strong>Tip:</strong><br>The <code class=\"language-python\">for</code> loop is ideal when you already know what you are going to iterate over, such as a text or a range of numbers."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Using <code class=\"language-python\">range()</code> with <code class=\"language-python\">for</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "The <code class=\"language-python\">range()</code> function allows you to generate a sequence of numbers."
+    },
+    {
+      "type": "code",
+      "text": "for i in range(5):\n\tprint(i)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "0\n1\n2\n3\n4"
+    },
+    {
+      "type": "test-button",
+      "text": "Try >>",
+      "code": "for i in range(5):\n\tprint(i)"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Note:</strong><br><code class=\"language-python\">range(5)</code> generates the numbers from <code class=\"language-python\">0</code> to <code class=\"language-python\">4</code>."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Practical Examples"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Example 1: Counting from 1 to 5 with <code class=\"language-python\">while</code>"
+    },
+    {
+      "type": "code",
+      "text": "n = 1\nwhile n <= 5:\n\tprint(n)\n\tn += 1"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "1\n2\n3\n4\n5"
+    },
+    {
+      "type": "test-button",
+      "text": "Try >>",
+      "code": "n = 1\nwhile n <= 5:\n\tprint(n)\n\tn += 1"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Example 2: Displaying Each Letter of a Word"
+    },
+    {
+      "type": "code",
+      "text": "for c in \"Hello\":\n\tprint(c)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "H\ne\nl\nl\no"
+    },
+    {
+      "type": "test-button",
+      "text": "Try >>",
+      "code": "for c in \"Hello\":\n\tprint(c)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Example 3: Repeating a Message Multiple Times"
+    },
+    {
+      "type": "code",
+      "text": "for i in range(3):\n\tprint(\"Learning Python\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "Learning Python\nLearning Python\nLearning Python"
+    },
+    {
+      "type": "test-button",
+      "text": "Try >>",
+      "code": "for i in range(3):\n\tprint(\"Learning Python\")"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Practice Exercises"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Exercise 1: Counter with <code class=\"language-python\">while</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Create a variable called <code class=\"language-python\">counter</code> that starts at 1.<br>Use a <code class=\"language-python\">while</code> loop to display the numbers from 1 to 10, one by one."
+    },
+    {
+      "type": "test-button",
+      "text": "Practice >>",
+      "code": "# Create a variable called counter that starts at 1.\n# Use a while loop to display the numbers from 1 to 10,\n# one by one"
+    },
+    {
+      "type": "collapsible",
+      "title": "View possible solution",
+      "content": [
+        {
+          "type": "code",
+          "text": "counter = 1\nwhile counter <= 10:\n\tprint(counter)\n\tcounter += 1"
+        },
+        {
+          "type": "test-button",
+          "text": "Try Solution >>",
+          "code": "counter = 1\nwhile counter <= 10:\n\tprint(counter)\n\tcounter += 1"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Exercise 2: Countdown"
+    },
+    {
+      "type": "paragraph",
+      "text": "Create a variable called <code class=\"language-python\">n</code> with the value 5.<br>Use a <code class=\"language-python\">while</code> loop to display a countdown until it reaches 1."
+    },
+    {
+      "type": "test-button",
+      "text": "Practice >>",
+      "code": "# Create a variable called n with the value 5.\n# Use a while loop to display a countdown until it\n# reaches 1"
+    },
+    {
+      "type": "collapsible",
+      "title": "View possible solution",
+      "content": [
+        {
+          "type": "code",
+          "text": "n = 5\nwhile n >= 1:\n\tprint(n)\n\tn -= 1"
+        },
+        {
+          "type": "test-button",
+          "text": "Try Solution >>",
+          "code": "n = 5\nwhile n >= 1:\n\tprint(n)\n\tn -= 1"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Exercise 3: Iterating Over a Text"
+    },
+    {
+      "type": "paragraph",
+      "text": "Create a variable called <code class=\"language-python\">word</code> with any text.<br>Use a <code class=\"language-python\">for</code> loop to display each character of the word on a separate line."
+    },
+    {
+      "type": "test-button",
+      "text": "Practice >>",
+      "code": "# Create a variable called word with any text.\n# Use a for loop to display each character of the word\n# on a separate line"
+    },
+    {
+      "type": "collapsible",
+      "title": "View possible solution",
+      "content": [
+        {
+          "type": "code",
+          "text": "word = \"Python\"\nfor letter in word:\n\tprint(letter)"
+        },
+        {
+          "type": "test-button",
+          "text": "Try Solution >>",
+          "code": "word = \"Python\"\nfor letter in word:\n\tprint(letter)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Exercise 4: Counting Letters"
+    },
+    {
+      "type": "paragraph",
+      "text": "Use a for loop to count how many letters the word <code class=\"language-python\">\"programming\"</code> has.<br>Use a counter variable."
+    },
+    {
+      "type": "test-button",
+      "text": "Practice >>",
+      "code": "# Use a for loop to count how many letters the word\n# \"programming\" has.\n# Use a counter variable"
+    },
+    {
+      "type": "collapsible",
+      "title": "View possible solution",
+      "content": [
+        {
+          "type": "code",
+          "text": "counter = 0\nfor letter in \"programming\":\n\tcounter += 1\n\nprint(counter)"
+        },
+        {
+          "type": "test-button",
+          "text": "Try Solution >>",
+          "code": "counter = 0\nfor letter in \"programming\":\n\tcounter += 1\n\nprint(counter)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Exercise 5: Even Numbers"
+    },
+    {
+      "type": "paragraph",
+      "text": "Use a <code class=\"language-python\">for</code> loop and <code class=\"language-python\">range()</code> to display the even numbers from 0 to 10."
+    },
+    {
+      "type": "test-button",
+      "text": "Practice >>",
+      "code": "# Use a for loop and range() to display the even\n# numbers from 0 to 10"
+    },
+    {
+      "type": "collapsible",
+      "title": "View possible solution",
+      "content": [
+        {
+          "type": "code",
+          "text": "for i in range(0, 11, 2):\n\tprint(i)"
+        },
+        {
+          "type": "test-button",
+          "text": "Try Solution >>",
+          "code": "for i in range(0, 11, 2):\n\tprint(i)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Unit Conclusions"
+    },
+    {
+      "type": "paragraph",
+      "text": "In this unit, you learned that:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Loops allow you to repeat instructions without duplicating code.",
+        "The <code class=\"language-python\">while</code> loop repeats actions while a condition is true.",
+        "The <code class=\"language-python\">for</code> loop is used to iterate over sequences, such as text strings.",
+        "A string is a sequence of characters that can be iterated one by one.",
+        "<code class=\"language-python\">range()</code> makes controlled repetition with numbers easier.",
+        "Choosing the right loop makes your code clearer and more efficient."
+      ]
+    }
+  ]
+}
