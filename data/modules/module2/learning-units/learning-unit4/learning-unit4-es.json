@@ -180,7 +180,7 @@
     },
     {
       "type": "test-button",
-      "text": "Probar",
+      "text": "Probar >>",
       "code": "if True:\n\tpass"
     },
     {
