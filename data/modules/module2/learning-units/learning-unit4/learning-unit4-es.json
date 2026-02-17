@@ -1,0 +1,393 @@
+{
+  "title": "Control de Flujo en Bucles",
+  "description": "",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "En la unidad anterior aprendiste a usar <code class=\"language-python\">while</code> y <code class=\"language-python\">for</code> para repetir instrucciones. Ahora aprenderás cómo modificar el comportamiento interno de un bucle mientras está en ejecución."
+    },
+    {
+      "type": "paragraph",
+      "text": "Python ofrece tres instrucciones especiales:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "<code class=\"language-python\">break</code>",
+        "<code class=\"language-python\">continue</code>",
+        "<code class=\"language-python\">pass</code>"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Estas permiten tener un control más preciso sobre cómo y cuándo se ejecutan las repeticiones."
+    },
+    {
+      "type": "subtitle1",
+      "text": "<code class=\"language-python\">break</code> — Detener el Bucle"
+    },
+    {
+      "type": "paragraph",
+      "text": "La instrucción <code class=\"language-python\">break</code> se utiliza para terminar inmediatamente un bucle, sin importar si la condición todavía es verdadera."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cuando Python encuentra un <code class=\"language-python\">break</code>, sale del ciclo y continúa con el código que está después del bucle."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejemplo con <code class=\"language-python\">while</code>"
+    },
+    {
+      "type": "code",
+      "text": "contador = 1\n\nwhile contador <= 10:\n\tif contador == 5:\n\t\tbreak\n\tprint(contador)\n\tcontador += 1"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "1\n2\n3\n4"
+    },
+    {
+      "type": "paragraph",
+      "text": "En este caso, el bucle se detiene cuando el contador llega a 5."
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "contador = 1\n\nwhile contador <= 10:\n\tif contador == 5:\n\t\tbreak\n\tprint(contador)\n\tcontador += 1"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejemplo con <code class=\"language-python\">for</code>"
+    },
+    {
+      "type": "code",
+      "text": "for letra in \"Python\":\n\tif letra == \"h\":\n\t\tbreak\n\tprint(letra)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "P\ny\nt"
+    },
+    {
+      "type": "paragraph",
+      "text": "El ciclo se interrumpe cuando encuentra la letra <code class=\"language-python\">\"h\"</code>."
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "for letra in \"Python\":\n\tif letra == \"h\":\n\t\tbreak\n\tprint(letra)"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br><code class=\"language-python\">break</code> detiene completamente el ciclo, no solo una repetición."
+    },
+    {
+      "type": "tip",
+      "text": "💡 <strong>Tip:</strong><br>Usa <code class=\"language-python\">break</code> cuando encuentres lo que estás buscando y no necesites seguir recorriendo."
+    },
+    {
+      "type": "subtitle1",
+      "text": "<code class=\"language-python\">continue</code> — Saltar una Repetición"
+    },
+    {
+      "type": "paragraph",
+      "text": "La instrucción <code class=\"language-python\">continue</code> no detiene el bucle, sino que salta el resto del código en la repetición actual y pasa directamente a la siguiente iteración."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo:"
+    },
+    {
+      "type": "code",
+      "text": "for numero in range(1, 6):\n\tif numero == 3:\n\t\tcontinue\n\tprint(numero)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "1\n2\n4\n5"
+    },
+    {
+      "type": "paragraph",
+      "text": "Aquí el número 3 no se imprime, pero el bucle continúa con el resto."
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "for numero in range(1, 6):\n\tif numero == 3:\n\t\tcontinue\n\tprint(numero)"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br><code class=\"language-python\">continue</code> no termina el ciclo, solo omite una vuelta específica."
+    },
+    {
+      "type": "tip",
+      "text": "💡 <code class=\"language-python\">Tip:</code><br>Úsalo cuando quieras ignorar ciertos casos dentro del bucle sin detenerlo por completo."
+    },
+    {
+      "type": "subtitle1",
+      "text": "<code class=\"language-python\">pass</code> — Instrucción Vacía"
+    },
+    {
+      "type": "paragraph",
+      "text": "La instrucción <code class=\"language-python\">pass</code> no hace nada. Se utiliza cuando necesitas que la estructura esté completa, pero aún no quieres implementar lógica."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo:"
+    },
+    {
+      "type": "code",
+      "text": "for i in range(5):\n\tpass"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": ""
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "for i in range(5):\n\tpass"
+    },
+    {
+      "type": "paragraph",
+      "text": "También se usa mucho con condicionales:"
+    },
+    {
+      "type": "code",
+      "text": "if True:\n\tpass"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": ""
+    },
+    {
+      "type": "test-button",
+      "text": "Probar",
+      "code": "if True:\n\tpass"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br><code class=\"language-python\">pass</code> evita errores de sintaxis cuando un bloque está vacío."
+    },
+    {
+      "type": "tip",
+      "text": "💡 <strong>Tip:</strong><br>Es útil cuando estás planificando tu programa y aún no has decidido qué código irá allí."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Comparación de las Tres Instrucciones"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Instrucción",
+        "¿Detiene el bucle?",
+        "¿Salta una repetición?",
+        "¿Hace algo visible?"
+      ],
+      "rows": [
+        ["<code class=\"language-python\">break</code>", "Sí", "No", "Sí"],
+        ["<code class=\"language-python\">continue</code>", "No", "Sí", "Sí"],
+        ["<code class=\"language-python\">pass</code>", "No", "No", "No"]
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejemplos Combinados"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejemplo 1: Buscar Una Letra Específica"
+    },
+    {
+      "type": "code",
+      "text": "for letra in \"Programacion\":\n\tif letra == \"g\":\n\t\tprint(\"Letra encontrada\")\n\t\tbreak"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Letra encontrada"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "for letra in \"Programacion\":\n\tif letra == \"g\":\n\t\tprint(\"Letra encontrada\")\n\t\tbreak"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejemplo 2: Mostrar Solo Números Impares"
+    },
+    {
+      "type": "code",
+      "text": "for numero in range(1, 10):\n\tif numero % 2 == 0:\n\t\tcontinue\n\tprint(numero)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "1\n3\n5\n7\n9"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "for numero in range(1, 10):\n\tif numero % 2 == 0:\n\t\tcontinue\n\tprint(numero)"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejercicios Para Practicar"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 1: Detener al Encontrar Un Número"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea un bucle <code class=\"language-pythin\">for</code> que recorra los números del 1 al 10.<br>Cuando el número sea 7, el programa debe detener completamente el ciclo usando <code class=\"language-python\">break</code>.<br>Imprime cada número antes de que el ciclo se detenga."
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea un bucle for que recorra los números del 1 al\n# 10.\n# Cuando el número sea 7, el programa debe detener\n# completamente el ciclo usando break.\n# Imprime cada número antes de que el ciclo se detenga"
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "for numero in range(1, 11):\n\tif numero == 7:\n\t\tbreak\n\tprint(numero)"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "for numero in range(1, 11):\n\tif numero == 7:\n\t\tbreak\n\tprint(numero)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 2: Omitir Una Letra Específica"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea una variable llamada <code class=\"language-python\">palabra</code> con el valor <code class=\"language-python\">\"computadora\"</code>.<br>Usa un bucle <code class=\"language-python\">for</code> para mostrar cada letra, excepto la letra <code class=\"language-python\">\"o\"</code>.<br>Utiliza <code class=\"language-python\">continue</code>."
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea una variable llamada palabra con el valor\n# \"computadora\".\n# Usa un bucle for para mostrar cada letra, excepto la\n# letra \"o\".\n# Utiliza continue"
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "palabra = \"computadora\"\n\nfor letra in palabra:\n\tif letra == \"o\":\n\t\tcontinue\n\tprint(letra)"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "palabra = \"computadora\"\n\nfor letra in palabra:\n\tif letra == \"o\":\n\t\tcontinue\n\tprint(letra)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 3: Detectar Número Negativo"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea una lista simulada usando <code class=\"language-python\">range()</code> del -3 al 3.<br>Recorre los valores con un bucle <code class=\"language-python\">for</code>.<br>Si encuentras un número negativo, imprime <code class=\"language-python\">\"Número negativo detectado\"</code> y detén el bucle con <code class=\"language-python\">break</code>."
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea una lista simulada usando range() del -3 al 3.\n# Recorre los valores con un bucle for.\n# Si encuentras un número negativo, imprime \"Número\n# negativo detectado\" y detén el bucle con break"
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "for numero in range(-3, 4):\n\tif numero < 0:\n\t\tprint(\"Número negativo detectado\")\n\t\tbreak"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "for numero in range(-3, 4):\n\tif numero < 0:\n\t\tprint(\"Número negativo detectado\")\n\t\tbreak"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 4: Estructura Incompleta Con <code class=\"language-python\">pass</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea un bucle <code class=\"language-python\">for</code> que recorra los números del 1 al 5.<br>Dentro del bucle, coloca una condición <code class=\"language-python\">if</code> que verifique si el número es mayor que 3.<br>Por ahora, no hagas nada dentro de esa condición; usa <code class=\"language-python\">pass</code>."
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea un bucle for que recorra los números del 1 al 5.\n# Dentro del bucle, coloca una condición if que\n# verifique si el número es mayor que 3.\n# Por ahora, no hagas nada dentro de esa condición; usa\n# pass"
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "for numero in range(1, 6):\n\tif numero > 3:\n\t\tpass\n\tprint(numero)"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "for numero in range(1, 6):\n\tif numero > 3:\n\t\tpass\n\tprint(numero)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Conclusiones de la Unidad"
+    },
+    {
+      "type": "paragraph",
+      "text": "En esta unidad aprendiste que:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "<code class=\"language-python\">break</code> permite detener un bucle inmediatamente.",
+        "<code class=\"language-python\">continue</code> salta una repetición específica sin finalizar el ciclo.",
+        "<code class=\"language-python\">pass</code> actúa como una instrucción vacía para mantener estructuras válidas.",
+        "Estas herramientas ofrecen mayor control y flexibilidad dentro de los bucles.",
+        "Saber cuándo usar cada una mejora la claridad y eficiencia del programa."
+      ]
+    }
+  ]
+}
