@@ -131,7 +131,7 @@
     },
     {
       "type": "tip",
-      "text": "💡 <code class=\"language-python\">Tip:</code><br>Úsalo cuando quieras ignorar ciertos casos dentro del bucle sin detenerlo por completo."
+      "text": "💡 <strong>Tip:</strong><br>Úsalo cuando quieras ignorar ciertos casos dentro del bucle sin detenerlo por completo."
     },
     {
       "type": "subtitle1",
