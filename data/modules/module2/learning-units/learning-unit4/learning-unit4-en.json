@@ -1,0 +1,393 @@
+{
+  "title": "Flow Control in Loops",
+  "description": "",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "In the previous unit, you learned how to use <code class=\"language-python\">while</code> and <code class=\"language-python\">for</code> to repeat instructions. Now you will learn how to modify the internal behavior of a loop while it is running."
+    },
+    {
+      "type": "paragraph",
+      "text": "Python offers three special statements:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "<code class=\"language-python\">break</code>",
+        "<code class=\"language-python\">continue</code>",
+        "<code class=\"language-python\">pass</code>"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "These allow you to have more precise control over how and when repetitions are executed."
+    },
+    {
+      "type": "subtitle1",
+      "text": "<code class=\"language-python\">break</code> — Stop the Loop"
+    },
+    {
+      "type": "paragraph",
+      "text": "The <code class=\"language-python\">break</code> statement is used to immediately terminate a loop, regardless of whether the condition is still true."
+    },
+    {
+      "type": "paragraph",
+      "text": "When Python encounters a <code class=\"language-python\">break</code>, it exits the loop and continues with the code that comes after the loop."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Example with <code class=\"language-python\">while</code>"
+    },
+    {
+      "type": "code",
+      "text": "counter = 1\n\nwhile counter <= 10:\n\tif counter == 5:\n\t\tbreak\n\tprint(counter)\n\tcounter += 1"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "1\n2\n3\n4"
+    },
+    {
+      "type": "paragraph",
+      "text": "In this case, the loop stops when the counter reaches 5."
+    },
+    {
+      "type": "test-button",
+      "text": "Try >>",
+      "code": "counter = 1\n\nwhile counter <= 10:\n\tif counter == 5:\n\t\tbreak\n\tprint(counter)\n\tcounter += 1"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Example with <code class=\"language-python\">for</code>"
+    },
+    {
+      "type": "code",
+      "text": "for letter in \"Python\":\n\tif letter == \"h\":\n\t\tbreak\n\tprint(letter)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "P\ny\nt"
+    },
+    {
+      "type": "paragraph",
+      "text": "The loop is interrupted when it finds the letter <code class=\"language-python\">\"h\"</code>."
+    },
+    {
+      "type": "test-button",
+      "text": "Try >>",
+      "code": "for letter in \"Python\":\n\tif letter == \"h\":\n\t\tbreak\n\tprint(letter)"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Note:</strong><br><code class=\"language-python\">break</code> completely stops the loop, not just a single iteration."
+    },
+    {
+      "type": "tip",
+      "text": "💡 <strong>Tip:</strong><br>Use <code class=\"language-python\">break</code> when you find what you are looking for and don’t need to continue iterating."
+    },
+    {
+      "type": "subtitle1",
+      "text": "<code class=\"language-python\">continue</code> — Skip an Iteration"
+    },
+    {
+      "type": "paragraph",
+      "text": "The <code class=\"language-python\">continue</code> statement does not stop the loop; instead, it skips the rest of the code in the current iteration and moves directly to the next iteration."
+    },
+    {
+      "type": "paragraph",
+      "text": "Example:"
+    },
+    {
+      "type": "code",
+      "text": "for number in range(1, 6):\n\tif number == 3:\n\t\tcontinue\n\tprint(number)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "1\n2\n4\n5"
+    },
+    {
+      "type": "paragraph",
+      "text": "Here, the number 3 is not printed, but the loop continues with the remaining numbers."
+    },
+    {
+      "type": "test-button",
+      "text": "Try >>",
+      "code": "for number in range(1, 6):\n\tif number == 3:\n\t\tcontinue\n\tprint(number)"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Note:</strong><br><code class=\"language-python\">continue</code> does not end the loop; it only skips a specific iteration."
+    },
+    {
+      "type": "tip",
+      "text": "💡 <strong>Tip:</strong><br>Use it when you want to skip certain cases within the loop without stopping it completely."
+    },
+    {
+      "type": "subtitle1",
+      "text": "<code class=\"language-python\">pass</code> — Empty Statement"
+    },
+    {
+      "type": "paragraph",
+      "text": "The <code class=\"language-python\">pass</code> statement does nothing. It is used when you need the structure to be complete but don’t want to implement any logic yet."
+    },
+    {
+      "type": "paragraph",
+      "text": "Example:"
+    },
+    {
+      "type": "code",
+      "text": "for i in range(5):\n\tpass"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": ""
+    },
+    {
+      "type": "test-button",
+      "text": "Try >>",
+      "code": "for i in range(5):\n\tpass"
+    },
+    {
+      "type": "paragraph",
+      "text": "It is also often used with conditional statements:"
+    },
+    {
+      "type": "code",
+      "text": "if True:\n\tpass"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": ""
+    },
+    {
+      "type": "test-button",
+      "text": "Try >>",
+      "code": "if True:\n\tpass"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Note:</strong><br><code class=\"language-python\">pass</code> prevents syntax errors when a block is empty."
+    },
+    {
+      "type": "tip",
+      "text": "💡 <strong>Tip:</strong><br>It is useful when you are planning your program and haven’t decided yet what code will go there."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Comparison of the Three Statements"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Instrucción",
+        "Stops the Loop?",
+        "Skips an Iteration?",
+        "Does Something Visible?"
+      ],
+      "rows": [
+        ["<code class=\"language-python\">break</code>", "Yes", "No", "Yes"],
+        ["<code class=\"language-python\">continue</code>", "No", "Yes", "Yes"],
+        ["<code class=\"language-python\">pass</code>", "No", "No", "No"]
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Combined Examples"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Example 1: Searching for a Specific Letter"
+    },
+    {
+      "type": "code",
+      "text": "for letter in \"Programming\":\n\tif letter == \"g\":\n\t\tprint(\"Letter found\")\n\t\tbreak"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "Letter found"
+    },
+    {
+      "type": "test-button",
+      "text": "Try >>",
+      "code": "for letter in \"Programming\":\n\tif letter == \"g\":\n\t\tprint(\"Letter found\")\n\t\tbreak"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Example 2: Display Only Odd Numbers"
+    },
+    {
+      "type": "code",
+      "text": "for number in range(1, 10):\n\tif number % 2 == 0:\n\t\tcontinue\n\tprint(number)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output:"
+    },
+    {
+      "type": "code",
+      "text": "1\n3\n5\n7\n9"
+    },
+    {
+      "type": "test-button",
+      "text": "Try >>",
+      "code": "for number in range(1, 10):\n\tif number % 2 == 0:\n\t\tcontinue\n\tprint(number)"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Practice Exercises"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Exercise 1: Stop When a Number Is Found"
+    },
+    {
+      "type": "paragraph",
+      "text": "Create bucle <code class=\"language-pythin\">for</code> loop that goes through the numbers from 1 to 10.<br>When the number is 7, the program should completely stop the loop using <code class=\"language-python\">break</code>.<br>Print each number before the loop stops."
+    },
+    {
+      "type": "test-button",
+      "text": "Practice >>",
+      "code": "# Create bucle for loop that goes through the numbers\n# from 1 to 10.\n# When the number is 7, the program should completely\n# stop the loop using break.\n# Print each number before the loop stops"
+    },
+    {
+      "type": "collapsible",
+      "title": "View possible solution",
+      "content": [
+        {
+          "type": "code",
+          "text": "for number in range(1, 11):\n\tif number == 7:\n\t\tbreak\n\tprint(number)"
+        },
+        {
+          "type": "test-button",
+          "text": "Try Solution >>",
+          "code": "for number in range(1, 11):\n\tif number == 7:\n\t\tbreak\n\tprint(number)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Exercise 2: Skip a Specific Letter"
+    },
+    {
+      "type": "paragraph",
+      "text": "Create a variable called <code class=\"language-python\">word</code> with the value <code class=\"language-python\">\"computer\"</code>.<br>Use a <code class=\"language-python\">for</code> loop to display each letter, except the letter <code class=\"language-python\">\"o\"</code>.<br>Use <code class=\"language-python\">continue</code>."
+    },
+    {
+      "type": "test-button",
+      "text": "Practice >>",
+      "code": "# Create a variable called word with the value\n# \"computer\".\n# Use a for loop to display each letter, except the\n# letter \"o\".\n# Use continue"
+    },
+    {
+      "type": "collapsible",
+      "title": "View possible solution",
+      "content": [
+        {
+          "type": "code",
+          "text": "word = \"computer\"\n\nfor letter in word:\n\tif letter == \"o\":\n\t\tcontinue\n\tprint(letter)"
+        },
+        {
+          "type": "test-button",
+          "text": "Try Solution >>",
+          "code": "word = \"computer\"\n\nfor letter in word:\n\tif letter == \"o\":\n\t\tcontinue\n\tprint(letter)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Exercise 3: Detect Negative Number"
+    },
+    {
+      "type": "paragraph",
+      "text": "Create a simulated list using <code class=\"language-python\">range()</code> from -3 to 3.<br>Loop through the values using a <code class=\"language-python\">for</code> loop.<br>If you find a negative number, print <code class=\"language-python\">\"Negative number detected\"</code> and stop the loop using <code class=\"language-python\">break</code>."
+    },
+    {
+      "type": "test-button",
+      "text": "Practice >>",
+      "code": "# Create a simulated list using range() from -3 to 3.\n# Loop through the values using a for loop.\n# If you find a negative number, print \"Negative number\n# detected\" and stop the loop using break"
+    },
+    {
+      "type": "collapsible",
+      "title": "View possible solution",
+      "content": [
+        {
+          "type": "code",
+          "text": "for number in range(-3, 4):\n\tif number < 0:\n\t\tprint(\"Negative number detected\")\n\t\tbreak"
+        },
+        {
+          "type": "test-button",
+          "text": "Try Solution >>",
+          "code": "for number in range(-3, 4):\n\tif number < 0:\n\t\tprint(\"Negative number detected\")\n\t\tbreak"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Exercise 4: Incomplete Structure With <code class=\"language-python\">pass</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Create <code class=\"language-python\">for</code> loop that iterates through the numbers from 1 to 5.<br>Inside the loop, add an <code class=\"language-python\">if</code> condition that checks whether the number is greater than 3.<br>For now, do not perform any action inside that condition; use <code class=\"language-python\">pass</code>."
+    },
+    {
+      "type": "test-button",
+      "text": "Practice >>",
+      "code": "# Create for loop that iterates through the numbers\n# from 1 to 5.\n# Inside the loop, add an if condition that checks\n# whether the number is greater than 3.\n# For now, do not perform any action inside that\n# condition; use pass"
+    },
+    {
+      "type": "collapsible",
+      "title": "View possible solution",
+      "content": [
+        {
+          "type": "code",
+          "text": "for number in range(1, 6):\n\tif number > 3:\n\t\tpass\n\tprint(number)"
+        },
+        {
+          "type": "test-button",
+          "text": "Try Solution >>",
+          "code": "for number in range(1, 6):\n\tif number > 3:\n\t\tpass\n\tprint(number)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Unit Conclusions"
+    },
+    {
+      "type": "paragraph",
+      "text": "In this unit, you learned that:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "<code class=\"language-python\">break</code> allows you to stop a loop immediately.",
+        "<code class=\"language-python\">continue</code> skips a specific iteration without ending the loop.",
+        "<code class=\"language-python\">pass</code> acts as an empty statement to keep structures syntactically valid.",
+        "These tools provide greater control and flexibility within loops.",
+        "Knowing when to use each one improves the clarity and efficiency of your program."
+      ]
+    }
+  ]
+}
