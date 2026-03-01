@@ -1,41 +1,41 @@
 {
-  "title": "",
-  "description": "",
+  "title": "3.📦Estructuras de Datos",
+  "description": "En este módulo aprenderás a manejar distintos tipos de colecciones en Python. Conocerás cómo usar listas, tuplas, diccionarios y conjuntos para almacenar y organizar información, además de recorrer y manipular sus elementos.",
   "steps": [
     {
-      "name": "1. Listas: colecciones ordenadas",
-      "description": "Crear listas, acceder a elementos, modificarlos y recorrerlas.",
-      "color": "",
+      "name": "1. Listas: Colecciones Ordenadas",
+      "description": "Las listas son estructuras de datos que permiten almacenar múltiples elementos en una misma variable manteniendo un orden específico. En esta unidad el estudiante aprenderá a crear listas utilizando distintos tipos de datos, acceder a sus elementos mediante índices positivos y negativos, modificar valores existentes, agregar o eliminar elementos y recorrer la lista utilizando estructuras repetitivas. Además, se comprenderá cómo las listas permiten representar colecciones dinámicas de información que pueden cambiar durante la ejecución del programa.",
+      "color": "#FFD43B",
       "unit": "learning-unit1"
     },
     {
-      "name": "2. Métodos útiles de listas",
-      "description": "Métodos como <code>append</code>, <code>remove</code>, <code>sort</code>, <code>reverse</code>, <code>count</code>",
-      "color": "",
+      "name": "2. Métodos Útiles de Listas",
+      "description": "En esta unidad se estudian los métodos incorporados de Python que facilitan la manipulación eficiente de listas. El estudiante aprenderá a utilizar funciones como <code>append()</code> para agregar elementos, <code>remove()</code> para eliminar valores específicos, <code>sort()</code> para ordenar datos, <code>reverse()</code> para invertir el orden y <code>count()</code> para contar ocurrencias dentro de la lista. Se enfatiza cómo estos métodos permiten escribir código más limpio, reducir operaciones manuales y mejorar la organización y el procesamiento de colecciones de datos.",
+      "color": "#3776AB",
       "unit": "learning-unit2"
     },
     {
-      "name": "3. Tuplas: datos inmutables",
-      "description": "Qué son las tuplas y cuándo conviene usarlas.",
-      "color": "",
+      "name": "3. Tuplas: Datos Inmutables",
+      "description": "Las tuplas son estructuras similares a las listas, pero con la característica principal de ser inmutables, es decir, sus elementos no pueden modificarse después de su creación. En esta unidad se aprenderá qué son las tuplas, cómo se definen y cómo acceder a sus valores, así como los escenarios en los que resulta conveniente utilizarlas, especialmente cuando se desea proteger datos constantes o representar información fija. También se analizarán las diferencias prácticas entre listas y tuplas en términos de seguridad, rendimiento y uso en programas reales.",
+      "color": "#1B983A",
       "unit": "learning-unit3"
     },
     {
-      "name": "4. Diccionarios: claves y valores",
-      "description": "Cómo crear y acceder a información estructurada tipo <code>clave: valor</code>",
-      "color": "",
+      "name": "4. Diccionarios: Claves y Valores",
+      "description": "Los diccionarios permiten almacenar información mediante pares clave–valor, facilitando la representación de datos estructurados y relacionados entre sí. En esta unidad el estudiante aprenderá a crear diccionarios, acceder a valores mediante sus claves, modificar información existente, agregar nuevos elementos y recorrer el diccionario utilizando bucles. Se abordará cómo esta estructura resulta ideal para modelar objetos del mundo real, como usuarios, productos o configuraciones, donde cada dato posee un identificador único.",
+      "color": "#6464FF",
       "unit": "learning-unit4"
     },
     {
       "name": "5. Conjuntos (sets)",
-      "description": "Conjuntos sin duplicados y operaciones de conjuntos.",
-      "color": "",
+      "description": "Los conjuntos o sets son estructuras de datos que almacenan elementos únicos sin mantener un orden específico, evitando automáticamente valores duplicados. En esta unidad se aprenderá cómo crear conjuntos, agregar y eliminar elementos y aplicar operaciones matemáticas entre conjuntos como unión, intersección y diferencia. Además, se analizarán casos prácticos donde los conjuntos permiten simplificar problemas relacionados con comparación de datos, filtrado de duplicados y análisis de coincidencias entre colecciones.",
+      "color": "#FFD43B",
       "unit": "learning-unit5"
     },
     {
-        "name": "6. Recorriendo estructuras de datos",
-        "description": "Bubles anidados, <code>enumerate()</code>, y la función <code>len()</code>",
-        "color": "",
+        "name": "6. Recorriendo Estructuras de Datos",
+        "description": "Esta unidad se centra en las diferentes formas de recorrer estructuras de datos utilizando bucles en Python. El estudiante aprenderá a utilizar ciclos for simples y anidados, la función <code>len()</code> para obtener el tamaño de colecciones y la función <code>enumerate()</code> para acceder simultáneamente al índice y al valor de los elementos. Se busca desarrollar la capacidad de procesar información almacenada en listas, tuplas, diccionarios y conjuntos de manera eficiente, preparando al estudiante para trabajar con estructuras de datos más complejas.",
+        "color": "#3776AB",
         "unit": "learning-unit6"
     }
   ]
