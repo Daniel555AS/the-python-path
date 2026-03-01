@@ -1,0 +1,393 @@
+{
+  "title": "Ablaufsteuerung in Schleifen",
+  "description": "",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "In der vorherigen Einheit hast du gelernt, wie man <code class=\"language-python\">while</code> und <code class=\"language-python\">for</code> verwendet, um Anweisungen zu wiederholen. Jetzt wirst du lernen, wie man das interne Verhalten einer Schleife während ihrer Ausführung verändert."
+    },
+    {
+      "type": "paragraph",
+      "text": "Python bietet drei spezielle Anweisungen:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "<code class=\"language-python\">break</code>",
+        "<code class=\"language-python\">continue</code>",
+        "<code class=\"language-python\">pass</code>"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Diese ermöglichen eine genauere Kontrolle darüber, wie und wann Wiederholungen ausgeführt werden."
+    },
+    {
+      "type": "subtitle1",
+      "text": "<code class=\"language-python\">break</code> — Die Schleife Beenden"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Anweisung <code class=\"language-python\">break</code> wird verwendet, um eine Schleife sofort zu beenden, unabhängig davon, ob die Bedingung noch wahr ist."
+    },
+    {
+      "type": "paragraph",
+      "text": "Wenn Python auf ein <code class=\"language-python\">break</code> trifft, verlässt es die Schleife und fährt mit dem Code fort, der nach der Schleife steht."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Beispiel mit <code class=\"language-python\">while</code>"
+    },
+    {
+      "type": "code",
+      "text": "zaehler = 1\n\nwhile zaehler <= 10:\n\tif zaehler == 5:\n\t\tbreak\n\tprint(zaehler)\n\tzaehler += 1"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgabe:"
+    },
+    {
+      "type": "code",
+      "text": "1\n2\n3\n4"
+    },
+    {
+      "type": "paragraph",
+      "text": "In diesem Fall wird die Schleife gestoppt, sobald der Zähler 5 erreicht."
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "zaehler = 1\n\nwhile zaehler <= 10:\n\tif zaehler == 5:\n\t\tbreak\n\tprint(zaehler)\n\tzaehler += 1"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Beispiel mit <code class=\"language-python\">for</code>"
+    },
+    {
+      "type": "code",
+      "text": "for buchstabe in \"Python\":\n\tif buchstabe == \"h\":\n\t\tbreak\n\tprint(buchstabe)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgabe:"
+    },
+    {
+      "type": "code",
+      "text": "P\ny\nt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Schleife wird unterbrochen, sobald der Buchstabe <code class=\"language-python\">\"h\"</code> gefunden wird."
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "for buchstabe in \"Python\":\n\tif buchstabe == \"h\":\n\t\tbreak\n\tprint(buchstabe)"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Hinweis:</strong><br><code class=\"language-python\">break</code> beendet die gesamte Schleife, nicht nur eine einzelne Wiederholung."
+    },
+    {
+      "type": "tip",
+      "text": "💡 <strong>Tipp:</strong><br>Verwende <code class=\"language-python\">break</code>, wenn du gefunden hast, wonach du suchst, und nicht weiter durchlaufen musst."
+    },
+    {
+      "type": "subtitle1",
+      "text": "<code class=\"language-python\">continue</code> — Eine Wiederholung Überspringen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Anweisung <code class=\"language-python\">continue</code> beendet die Schleife nicht, sondern überspringt den restlichen Code der aktuellen Wiederholung und fährt direkt mit der nächsten Iteration fort."
+    },
+    {
+      "type": "paragraph",
+      "text": "Beispiel:"
+    },
+    {
+      "type": "code",
+      "text": "for zahl in range(1, 6):\n\tif zahl == 3:\n\t\tcontinue\n\tprint(zahl)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgabe:"
+    },
+    {
+      "type": "code",
+      "text": "1\n2\n4\n5"
+    },
+    {
+      "type": "paragraph",
+      "text": "Hier wird die Zahl 3 nicht ausgegeben, aber die Schleife läuft mit den übrigen Zahlen weiter."
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "for zahl in range(1, 6):\n\tif zahl == 3:\n\t\tcontinue\n\tprint(zahl)"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Hinweis:</strong><br><code class=\"language-python\">continue</code> beendet die Schleife nicht, sondern überspringt nur eine bestimmte Iteration."
+    },
+    {
+      "type": "tip",
+      "text": "💡 <strong>Tipp:</strong><br>Verwende es, wenn du bestimmte Fälle innerhalb der Schleife ignorieren möchtest, ohne sie vollständig zu beenden."
+    },
+    {
+      "type": "subtitle1",
+      "text": "<code class=\"language-python\">pass</code> — Leere Anweisung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Anweisung <code class=\"language-python\">pass</code> macht nichts. Sie wird verwendet, wenn die Struktur vollständig sein muss, du aber noch keine Logik implementieren möchtest."
+    },
+    {
+      "type": "paragraph",
+      "text": "Beispiel:"
+    },
+    {
+      "type": "code",
+      "text": "for i in range(5):\n\tpass"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgabe:"
+    },
+    {
+      "type": "code",
+      "text": ""
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "for i in range(5):\n\tpass"
+    },
+    {
+      "type": "paragraph",
+      "text": "Sie wird auch häufig bei bedingten Anweisungen verwendet:"
+    },
+    {
+      "type": "code",
+      "text": "if True:\n\tpass"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgabe:"
+    },
+    {
+      "type": "code",
+      "text": ""
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "if True:\n\tpass"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Hinweis:</strong><br><code class=\"language-python\">pass</code> verhindert Syntaxfehler, wenn ein Block leer ist."
+    },
+    {
+      "type": "tip",
+      "text": "💡 <strong>Tipp:</strong><br>Es ist nützlich, wenn du dein Programm planst und noch nicht entschieden hast, welcher Code dort eingefügt werden soll."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Vergleich der Drei Anweisungen"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Anweisung",
+        "Beendet die Schleife?",
+        "Überspringt eine Wiederholung?",
+        "Macht Etwas Sichtbares?"
+      ],
+      "rows": [
+        ["<code class=\"language-python\">break</code>", "Ja", "Nein", "Ja"],
+        ["<code class=\"language-python\">continue</code>", "Nein", "Ja", "Ja"],
+        ["<code class=\"language-python\">pass</code>", "Nein", "Nein", "Nein"]
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Kombinierte Beispiele"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Beispiel 1: Nach einem Bestimmten Buchstaben Suchen"
+    },
+    {
+      "type": "code",
+      "text": "for buchstabe in \"Programmierung\":\n\tif buchstabe == \"g\":\n\t\tprint(\"Buchstabe gefunden\")\n\t\tbreak"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgabe:"
+    },
+    {
+      "type": "code",
+      "text": "Buchstabe gefunden"
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "for buchstabe in \"Programmierung\":\n\tif buchstabe == \"g\":\n\t\tprint(\"Buchstabe gefunden\")\n\t\tbreak"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Beispiel 2: Nur Ungerade Zahlen Anzeigen"
+    },
+    {
+      "type": "code",
+      "text": "for zahl in range(1, 10):\n\tif zahl % 2 == 0:\n\t\tcontinue\n\tprint(zahl)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgabe:"
+    },
+    {
+      "type": "code",
+      "text": "1\n3\n5\n7\n9"
+    },
+    {
+      "type": "test-button",
+      "text": "Ausprobieren >>",
+      "code": "for zahl in range(1, 10):\n\tif zahl % 2 == 0:\n\t\tcontinue\n\tprint(zahl)"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Übungen Zum Üben"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Übung 1: Beim Finden einer Zahl Stoppen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Erstelle eine <code class=\"language-python\">for</code>-Schleife, die die Zahlen von 1 bis 10 durchläuft.<br>Wenn die Zahl 7 erreicht wird, soll das Programm die Schleife mit <code class=\"language-python\">break</code> vollständig beenden.<br>Gib jede Zahl aus, bevor die Schleife gestoppt wird."
+    },
+    {
+      "type": "test-button",
+      "text": "Üben >>",
+      "code": "# Erstelle eine for-Schleife, die die Zahlen von 1 bis\n# 10 durchläuft.\n# Wenn die Zahl 7 erreicht wird, soll das Programm die\n# Schleife mit break vollständig beenden.\n# Gib jede Zahl aus, bevor die Schleife gestoppt wird"
+    },
+    {
+      "type": "collapsible",
+      "title": "Mögliche Lösung anzeigen",
+      "content": [
+        {
+          "type": "code",
+          "text": "for nummer in range(1, 11):\n\tif nummer == 7:\n\t\tbreak\n\tprint(nummer)"
+        },
+        {
+          "type": "test-button",
+          "text": "Lösung Ausprobieren >>",
+          "code": "for nummer in range(1, 11):\n\tif nummer == 7:\n\t\tbreak\n\tprint(nummer)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Übung 2: Einen Bestimmten Buchstaben Überspringen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Erstelle eine Variable <code class=\"language-python\">wort</code> mit dem Wert <code class=\"language-python\">\"Computer\"</code>.<br>Verwende eine <code class=\"language-python\">for</code>-Schleife, um jeden Buchstaben anzuzeigen, außer dem Buchstaben <code class=\"language-python\">\"o\"</code>.<br>Verwende <code class=\"language-python\">continue</code>."
+    },
+    {
+      "type": "test-button",
+      "text": "Üben >>",
+      "code": "# Erstelle eine Variable wort mit dem Wert \"Computer\".\n# Verwende eine for-Schleife, um jeden Buchstaben\n# anzuzeigen, außer dem Buchstaben \"o\".\n# Verwende continue"
+    },
+    {
+      "type": "collapsible",
+      "title": "Mögliche Lösung anzeigen",
+      "content": [
+        {
+          "type": "code",
+          "text": "wort = \"Computer\"\n\nfor buchstabe in wort:\n\tif buchstabe == \"o\":\n\t\tcontinue\n\tprint(buchstabe)"
+        },
+        {
+          "type": "test-button",
+          "text": "Lösung Ausprobieren >>",
+          "code": "wort = \"Computer\"\n\nfor buchstabe in wort:\n\tif buchstabe == \"o\":\n\t\tcontinue\n\tprint(buchstabe)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Übung 3: Eine Negative Zahl Erkennen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Erstelle eine simulierte Liste mit <code class=\"language-python\">range()</code> von -3 bis 3.<br>Durchlaufe die Werte mit einer <code class=\"language-python\">for</code>-Schleife.<br>Wenn du eine negative Zahl findest, gib <code class=\"language-python\">\"Negative Zahl erkannt\"</code> aus und beende die Schleife mit <code class=\"language-python\">break</code>."
+    },
+    {
+      "type": "test-button",
+      "text": "Üben >>",
+      "code": "# Erstelle eine simulierte Liste mit range()\n# von -3 bis 3.\n# Durchlaufe die Werte mit einer for-Schleife.\n# Wenn du eine negative Zahl findest, gib \"Negative\n# Zahl erkannt\" aus und beende die Schleife mit break"
+    },
+    {
+      "type": "collapsible",
+      "title": "Mögliche Lösung anzeigen",
+      "content": [
+        {
+          "type": "code",
+          "text": "for nummer in range(-3, 4):\n\tif nummer < 0:\n\t\tprint(\"Negative Zahl erkannt\")\n\t\tbreak"
+        },
+        {
+          "type": "test-button",
+          "text": "Lösung Ausprobieren >>",
+          "code": "for nummer in range(-3, 4):\n\tif nummer < 0:\n\t\tprint(\"Negative Zahl erkannt\")\n\t\tbreak"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Übung 4: Unvollständige Struktur mit <code class=\"language-python\">pass</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Erstelle eine <code class=\"language-python\">for</code>-Schleife, die die Zahlen von 1 bis 5 durchläuft.<br>Innerhalb der Schleife füge eine <code class=\"language-python\">if</code>-Bedingung ein, die überprüft, ob die Zahl größer als 3 ist.<br>Vorerst soll innerhalb dieser Bedingung nichts ausgeführt werden; verwende <code class=\"language-python\">pass</code>."
+    },
+    {
+      "type": "test-button",
+      "text": "Üben >>",
+      "code": "# Erstelle eine for-Schleife, die die Zahlen von 1 bis\n# 5 durchläuft.\n# Innerhalb der Schleife füge eine if-Bedingung ein,\n# die überprüft, ob die Zahl größer als 3 ist.\n# Vorerst soll innerhalb dieser Bedingung nichts\n# ausgeführt werden; verwende pass"
+    },
+    {
+      "type": "collapsible",
+      "title": "Mögliche Lösung anzeigen",
+      "content": [
+        {
+          "type": "code",
+          "text": "for nummer in range(1, 6):\n\tif nummer > 3:\n\t\tpass\n\tprint(nummer)"
+        },
+        {
+          "type": "test-button",
+          "text": "Lösung Ausprobieren >>",
+          "code": "for nummer in range(1, 6):\n\tif nummer > 3:\n\t\tpass\n\tprint(nummer)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Fazit der Einheit"
+    },
+    {
+      "type": "paragraph",
+      "text": "In dieser Einheit hast du gelernt, dass:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "<code class=\"language-python\">break</code> eine Schleife sofort beendet.",
+        "<code class=\"language-python\">continue</code> eine bestimmte Wiederholung überspringt, ohne die Schleife zu beenden.",
+        "<code class=\"language-python\">pass</code> als leere Anweisung dient, um Strukturen syntaktisch gültig zu halten.",
+        "Diese Werkzeuge bieten mehr Kontrolle und Flexibilität innerhalb von Schleifen.",
+        "Zu wissen, wann man welche Anweisung verwendet, verbessert die Klarheit und Effizienz des Programms."
+      ]
+    }
+  ]
+}
