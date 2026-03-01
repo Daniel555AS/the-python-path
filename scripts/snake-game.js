@@ -238,7 +238,7 @@ function gameOver() {
   homeBtn.textContent = snakeTranslations.goHome;
 
   playBtn.onclick = () => location.reload();
-  homeBtn.onclick = () => (window.location.href = "/index.html");
+  homeBtn.onclick = () => (window.location.href = "../index.html");
 }
 
 // Loads quiz configuration file
