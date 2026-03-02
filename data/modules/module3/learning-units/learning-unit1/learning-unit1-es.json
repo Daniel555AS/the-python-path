@@ -1,0 +1,384 @@
+{
+  "title": "Listas: Colecciones Ordenadas",
+  "description": "",
+  "content": [
+    {
+      "type": "subtitle1",
+      "text": "¿Qué son las Listas?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Las listas son una de las estructuras de datos más importantes en Python, ya que permiten almacenar múltiples valores dentro de una sola variable manteniendo un orden específico. Cada elemento ocupa una posición llamada índice, lo que permite acceder fácilmente a la información almacenada. Las listas son además mutables, lo que significa que sus elementos pueden modificarse durante la ejecución del programa, convirtiéndolas en una herramienta ideal para trabajar con datos dinámicos como nombres de usuarios, productos, notas académicas o resultados de cálculos."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Creación de Listas"
+    },
+    {
+      "type": "paragraph",
+      "text": "Una lista se crea utilizando corchetes <code class=\"language-python\">[]</code> y separando los elementos con comas."
+    },
+    {
+      "type": "code",
+      "text": "numeros = [10, 20, 30, 40]\nnombres = [\"Ana\", \"Luis\", \"Carlos\"]\nmixta = [\"Python\", 3.11, True]"
+    },
+    {
+      "type": "paragraph",
+      "text": "Una lista puede contener:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Números.",
+        "Texto.",
+        "Valores booleanos",
+        "Incluso otros objetos o listas."
+      ]
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Python permite listas con distintos tipos de datos, aunque en programas reales suele mantenerse un mismo tipo para mayor claridad."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Acceso a Elementos Mediante Índices"
+    },
+    {
+      "type": "paragraph",
+      "text": "Cada elemento tiene una posición que inicia desde 0."
+    },
+    {
+      "type": "code",
+      "text": "frutas = [\"manzana\", \"pera\", \"uva\"]\n\nprint(frutas[0])   # manzana\nprint(frutas[2])   # uva"
+    },
+    {
+      "type": "paragraph",
+      "text": "También existen índices negativos, que empiezan desde el final:"
+    },
+    {
+      "type": "code",
+      "text": "print(frutas[-1])  # uva"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "frutas = [\"manzana\", \"pera\", \"uva\"]\n\nprint(frutas[0])\nprint(frutas[2])\nprint(frutas[-1])"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Tabla de Índices"
+    },
+    {
+      "type": "table",
+      "headers": ["Elemento", "Índice Positivo", "Índice Negativo"],
+      "rows": [
+        [
+          "<code class=\"language-python\">\"manzana\"</code>",
+          "<code class=\"language-python\">0</code>",
+          "<code class=\"language-python\">-3</code>"
+        ],
+        [
+          "<code class=\"language-python\">\"pera\"</code>",
+          "<code class=\"language-python\">1</code>",
+          "<code class=\"language-python\">-2</code>"
+        ],
+        [
+          "<code class=\"language-python\">\"uva\"</code>",
+          "<code class=\"language-python\">2</code>",
+          "<code class=\"language-python\">-1</code>"
+        ]
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Modificar Elementos"
+    },
+    {
+      "type": "paragraph",
+      "text": "Las listas permiten cambiar valores existentes fácilmente."
+    },
+    {
+      "type": "code",
+      "text": "colores = [\"rojo\", \"azul\", \"verde\"]\ncolores[1] = \"amarillo\"\n\nprint(colores)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "['rojo', 'amarillo', 'verde']"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "colores = [\"rojo\", \"azul\", \"verde\"]\nprint(colores)\n\ncolores[1] = \"amarillo\"\nprint(colores)"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Agregar Elementos"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Método <code class=\"language-python\">append()</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Agrega un elemento al final."
+    },
+    {
+      "type": "code",
+      "text": "numeros = [1, 2, 3]\nnumeros.append(4)"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "numeros = [1, 2, 3]\nprint(numeros)\n\nnumeros.append(4)\nprint(numeros)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Método <code class=\"language-python\">insert()</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Inserta un elemento en una posición específica."
+    },
+    {
+      "type": "code",
+      "text": "numeros.insert(1, 10)"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "numeros = [1, 2, 3]\nprint(numeros)\n\nnumeros.insert(1, 10)\nprint(numeros)"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Eliminar Elementos"
+    },
+    {
+      "type": "code",
+      "text": "numeros.pop()        # elimina el último\nnumeros.remove(10)   # elimina por valor\ndel numeros[0]       # elimina por índice"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "numeros = [1, 10, 2, 3]\nprint(numeros)\n\nnumeros.pop()\nprint(numeros)\n\nnumeros.remove(10)\nprint(numeros)\n\ndel numeros[0]\nprint(numeros)"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br><code class=\"language-python\">pop()</code> devuelve el elemento eliminado.<br><code class=\"language-python\">remove()</code> falla si el valor no existe."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Recorrer Listas"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Usando <code class=\"language-python\">for</code>"
+    },
+    {
+      "type": "code",
+      "text": "animales = [\"perro\", \"gato\", \"pez\"]\n\nfor animal in animales:\n\tprint(animal)"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "animales = [\"perro\", \"gato\", \"pez\"]\n\nfor animal in animales:\n\tprint(animal)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Usando Índices"
+    },
+    {
+      "type": "code",
+      "text": "animales = [\"perro\", \"gato\", \"pez\"]\n\nfor i in range(len(animales)):\n\tprint(animales[i])"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "animales = [\"perro\", \"gato\", \"pez\"]\n\nfor i in range(len(animales)):\n\tprint(animales[i])"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br>Usa el primer método cuando solo necesitas el valor; usa índices cuando necesitas la posición."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Operaciones Comunes con Listas"
+    },
+    {
+      "type": "table",
+      "headers": ["Operación", "Ejemplo", "Resultado"],
+      "rows": [
+        [
+          "Longitud",
+          "<code class=\"language-python\">len(lista)</code>",
+          "Cantidad de elementos"
+        ],
+        [
+          "Concatenar",
+          "<code class=\"language-python\">a + b</code>",
+          "Une listas"
+        ],
+        [
+          "Repetir",
+          "<code class=\"language-python\">lista * 2</code>",
+          "Duplica contenido"
+        ],
+        [
+          "Verificar",
+          "<code class=\"language-python\">\"Ana\" in lista</code>",
+          "<code class=\"language-python\">True</code>/<code class=\"language-python\">False</code>"
+        ]
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejemplo Completo"
+    },
+    {
+      "type": "code",
+      "text": "estudiantes = [\"Ana\", \"Luis\", \"Pedro\"]\nprint(estudiantes)\n\nestudiantes.append(\"Sofía\")\nprint(estudiantes)\nestudiantes[0] = \"Ana María\"\nprint(estudiantes)\n\nfor estudiante in estudiantes:\n\tprint(estudiante)"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "estudiantes = [\"Ana\", \"Luis\", \"Pedro\"]\nprint(estudiantes)\n\nestudiantes.append(\"Sofía\")\nprint(estudiantes)\nestudiantes[0] = \"Ana María\"\nprint(estudiantes)\n\nfor estudiante in estudiantes:\n\tprint(estudiante)"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejercicios Prácticos"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 1: Gestión de Notas"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea un programa que permita gestionar las notas de un estudiante siguiendo estos pasos:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Crear una lista llamada <code class=\"language-python\">notas</code> con 5 calificaciones numéricas decimales.",
+        "Mostrar la primera y la última nota usando índices.",
+        "Cambiar la tercera nota por un nuevo valor.",
+        "Agregar una nueva nota al final.",
+        "Mostrar todas las notas usando un bucle.",
+        "Mostrar cuántas notas hay en total."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea un programa que permita gestionar las notas de\n# un estudiante siguiendo estos pasos:\n# 1. Crear una lista llamada notas con 5 calificaciones\n# numéricas decimales.\n# 2. Mostrar la primera y la última nota usando índices.\n# 3. Cambiar la tercera nota por un nuevo valor.\n# 4. Agregar una nueva nota al final.\n# 5. Mostrar todas las notas usando un bucle.\n# 6. Mostrar cuántas notas hay en total"
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# 1. Crear una lista llamada notas con 5 calificaciones numéricas decimales\nnotas = [3.5, 4.0, 2.8, 4.5, 3.9]\n\n# 2. Mostrar la primera y la última nota usando índices\nprint(notas[0])\nprint(notas[-1])\n\n# 3. Cambiar la tercera nota por un nuevo valor\nnotas[2] = 3.2\n\n# 4. Agregar una nueva nota al final\nnotas.append(4.8)\n\n# 5. Mostrar todas las notas usando un bucle\nfor nota in notas:\n\tprint(nota)\n\n# 6. Mostrar cuántas notas hay en total\nprint(len(notas))"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# 1. Crear una lista llamada notas con 5 calificaciones numéricas decimales\nnotas = [3.5, 4.0, 2.8, 4.5, 3.9]\n\n# 2. Mostrar la primera y la última nota usando índices\nprint(notas[0])\nprint(notas[-1])\n\n# 3. Cambiar la tercera nota por un nuevo valor\nnotas[2] = 3.2\n\n# 4. Agregar una nueva nota al final\nnotas.append(4.8)\n\n# 5. Mostrar todas las notas usando un bucle\nfor nota in notas:\n\tprint(nota)\n\n# 6. Mostrar cuántas notas hay en total\nprint(len(notas))"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 2: Lista de Compras"
+    },
+    {
+      "type": "paragraph",
+      "text": "Desarrolla un programa que simule una lista de compras:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Crear una lista con al menos 4 productos.",
+        "Agregar un nuevo producto usando <code class=\"language-python\">append()</code>.",
+        "Eliminar un producto específico usando <code class=\"language-python\">remove()</code>.",
+        "Mostrar la lista completa.",
+        "Mostrar cada producto junto con su posición usando índices."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Desarrolla un programa que simule una lista de\n# compras:\n# 1. Crear una lista con al menos 4 productos.\n# 2. Agregar un nuevo producto usando append().\n# 3. Eliminar un producto específico usando remove().\n# 4. Mostrar la lista completa.\n# 5. Mostrar cada producto junto con su posición usando\n# índices"
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# 1. Crear una lista con al menos 4 productos\ncompras = [\"pan\", \"leche\", \"huevos\", \"arroz\"]\n\n# 2. Agregar un nuevo producto usando append()\ncompras.append(\"queso\")\n\n# 3. Eliminar un producto específico usando remove()\ncompras.remove(\"leche\")\n\n# 4. Mostrar la lista completa\nprint(compras)\n\n#5. Mostrar cada producto junto con su posición usando índices\nfor i in range(len(compras)):\n\tprint(i, compras[i])"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# 1. Crear una lista con al menos 4 productos\ncompras = [\"pan\", \"leche\", \"huevos\", \"arroz\"]\n\n# 2. Agregar un nuevo producto usando append()\ncompras.append(\"queso\")\n\n# 3. Eliminar un producto específico usando remove()\ncompras.remove(\"leche\")\n\n# 4. Mostrar la lista completa\nprint(compras)\n\n#5. Mostrar cada producto junto con su posición usando\n# índices\nfor i in range(len(compras)):\n\tprint(i, compras[i])"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 3: Filtrado de Números"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea un programa que:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Cree una lista con 10 números.",
+        "Recorra la lista.",
+        "Muestre únicamente los números mayores que 5.",
+        "Cuente cuántos cumplen la condición."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea un programa que:\n# 1. Cree una lista con 10 números.\n# 2. Recorra la lista.\n# 3. Muestre únicamente los números mayores que 5.\n# 4. Cuente cuántos cumplen la condición"
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# 1. Cree una lista con 10 números\nnumeros = [1, 7, 3, 9, 2, 8, 6, 4, 10, 5]\n\n# 2. Recorra la lista\ncontador = 0\n\nfor numero in numeros:\n\t# 3. Muestre únicamente los números mayores que 5\n\tif numero > 5:\n\t\tprint(numero)\n\t\t# 4. Cuente cuántos cumplen la condición\n\t\tcontador += 1\n\nprint(\"Cantidad:\", contador)"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# 1. Cree una lista con 10 números\nnumeros = [1, 7, 3, 9, 2, 8, 6, 4, 10, 5]\n\n# 2. Recorra la lista\ncontador = 0\n\nfor numero in numeros:\n\t# 3. Muestre únicamente los números mayores que 5\n\tif numero > 5:\n\t\tprint(numero)\n\t\t# 4. Cuente cuántos cumplen la condición\n\t\tcontador += 1\n\nprint(\"Cantidad:\", contador)"
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Notas:</strong><br><strong>1.</strong> Las listas son mutables.<br><strong>2.</strong> Los índices comienzan en 0.<br><strong>3.</strong> Permiten almacenar colecciones dinámicas.<br><strong>4.</strong> Son fundamentales para casi cualquier programa en Python."
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tips de Aprendizaje:</strong><br><strong>1.</strong> Usa nombres descriptivos para tus listas (<code class=\"language-python\">estudiantes</code>, <code class=\"language-python\">productos</code>).<br><strong>2.</strong> Practica modificar listas mientras el programa se ejecuta.<br><strong>3.</strong> Combina listas con bucles para automatizar tareas repetitivas."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Conclusiones de la Unidad"
+    },
+    {
+      "type": "paragraph",
+      "text": "En esta unidad aprendiste que las listas son estructuras de datos ordenadas y mutables que permiten almacenar múltiples valores dentro de una sola variable. Comprendiste cómo crearlas, acceder a sus elementos mediante índices positivos y negativos, modificarlas, agregar y eliminar información y recorrerlas utilizando bucles. Estas habilidades constituyen una base esencial para el manejo de datos en Python, ya que las listas permiten representar información dinámica y facilitan la automatización de procesos, preparando el camino para trabajar con estructuras de datos más avanzadas y programas de mayor complejidad."
+    }
+  ]
+}
