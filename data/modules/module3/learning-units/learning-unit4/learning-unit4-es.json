@@ -1,0 +1,437 @@
+{
+  "title": "Diccionarios: Claves y Valores",
+  "description": "",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Los diccionarios son estructuras de datos que permiten almacenar información utilizando pares <strong>clave–valor</strong>, lo que facilita organizar datos relacionados de forma clara y estructurada. A diferencia de listas o tuplas, donde se accede mediante posiciones numéricas, en los diccionarios cada dato se identifica mediante una <strong>clave única</strong>. En esta unidad aprenderás a crear diccionarios, acceder a sus valores, modificar información, agregar nuevos elementos y recorrerlos usando bucles. También comprenderás cómo los diccionarios permiten modelar situaciones reales como usuarios, productos o configuraciones dentro de un programa."
+    },
+    {
+      "type": "subtitle1",
+      "text": "¿Qué es un diccionario?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Un diccionario es una colección de datos donde cada elemento tiene:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Una <strong>clave (key)</strong> → identificador.",
+        "Un <strong>valor (value)</strong> → información asociada."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Se define usando llaves <code class=\"language-python\">{}</code>."
+    },
+    {
+      "type": "code",
+      "text": "persona = {\n\t\"nombre\": \"Ana\",\n\t\"edad\": 25,\n\t\"pais\": \"Colombia\"\n}"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Las claves deben ser únicas dentro del diccionario."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Acceder a Valores"
+    },
+    {
+      "type": "paragraph",
+      "text": "Se accede usando la clave en lugar de un índice."
+    },
+    {
+      "type": "code",
+      "text": "persona = {\n\t\"nombre\": \"Ana\",\n\t\"edad\": 25,\n\t\"pais\": \"Colombia\"\n}\n\nprint(persona[\"nombre\"])\nprint(persona[\"edad\"])"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Ana\n25"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "persona = {\n\t\"nombre\": \"Ana\",\n\t\"edad\": 25,\n\t\"pais\": \"Colombia\"\n}\n\nprint(persona[\"nombre\"])\nprint(persona[\"edad\"])"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br>Piensa en el diccionario como una agenda: buscas información usando el nombre del contacto, no su posición."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Modificar Valores"
+    },
+    {
+      "type": "paragraph",
+      "text": "Puedes cambiar información existente fácilmente:"
+    },
+    {
+      "type": "code",
+      "text": "persona[\"edad\"] = 26\nprint(persona)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "{'nombre': 'Ana', 'edad': 26, 'pais': 'Colombia'}"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "persona = {\n\t\"nombre\": \"Ana\",\n\t\"edad\": 25,\n\t\"pais\": \"Colombia\"\n}\n\npersona[\"edad\"] = 26\nprint(persona)"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Agregar Nuevos Elementos"
+    },
+    {
+      "type": "paragraph",
+      "text": "Si la clave no existe, Python la crea automáticamente."
+    },
+    {
+      "type": "code",
+      "text": "persona[\"profesion\"] = \"Ingeniera\"\nprint(persona)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "{'nombre': 'Ana', 'edad': 26, 'pais': 'Colombia', 'profesion': 'Ingeniera'}"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "persona = {\n\t\"nombre\": \"Ana\",\n\t\"edad\": 25,\n\t\"pais\": \"Colombia\"\n}\n\npersona[\"edad\"] = 26\npersona[\"profesion\"] = \"Ingeniera\"\nprint(persona)"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>No necesitas un método especial para agregar datos; basta con asignar un valor a una nueva clave."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Eliminar Elementos"
+    },
+    {
+      "type": "code",
+      "text": "del persona[\"pais\"]\nprint(persona)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "{'nombre': 'Ana', 'edad': 26, 'profesion': 'Ingeniera'}"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "persona = {\n\t\"nombre\": \"Ana\",\n\t\"edad\": 25,\n\t\"pais\": \"Colombia\"\n}\n\npersona[\"edad\"] = 26\npersona[\"profesion\"] = \"Ingeniera\"\n\ndel persona[\"pais\"]\n\nprint(persona)"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Recorrer un Diccionario"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Recorrer Claves"
+    },
+    {
+      "type": "code",
+      "text": "persona = {\n\t\"nombre\": \"Ana\",\n\t\"edad\": 25,\n\t\"pais\": \"Colombia\"\n}\n\nfor clave in persona:\n\tprint(clave)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "nombre\nedad\npais"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "persona = {\n\t\"nombre\": \"Ana\",\n\t\"edad\": 25,\n\t\"pais\": \"Colombia\"\n}\n\nfor clave in persona:\n\tprint(clave)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Recorrer Valores"
+    },
+    {
+      "type": "code",
+      "text": "persona = {\n\t\"nombre\": \"Ana\",\n\t\"edad\": 25,\n\t\"pais\": \"Colombia\"\n}\n\nfor valor in persona.values():\n\tprint(valor)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Ana\n25\nColombia"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "persona = {\n\t\"nombre\": \"Ana\",\n\t\"edad\": 25,\n\t\"pais\": \"Colombia\"\n}\n\nfor valor in persona.values():\n\tprint(valor)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Recorrer Claves y Valores"
+    },
+    {
+      "type": "code",
+      "text": "persona = {\n\t\"nombre\": \"Ana\",\n\t\"edad\": 25,\n\t\"pais\": \"Colombia\"\n}\n\nfor clave, valor in persona.items():\n\tprint(clave, valor)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "nombre Ana\nedad 25\npais Colombia"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "persona = {\n\t\"nombre\": \"Ana\",\n\t\"edad\": 25,\n\t\"pais\": \"Colombia\"\n}\n\nfor clave, valor in persona.items():\n\tprint(clave, valor)"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br><code class=\"language-python\">items()</code> es la forma más completa de recorrer un diccionario."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Métodos Útiles de Diccionarios"
+    },
+    {
+      "type": "table",
+      "headers": ["Método", "Propósito"],
+      "rows": [
+        ["<code class=\"language-python\">keys()</code>", "Obtiene claves"],
+        ["<code class=\"language-python\">values()</code>", "Obtiene valores"],
+        ["<code class=\"language-python\">items()</code>", "Claves y valores"],
+        ["<code class=\"language-python\">get()</code>", "Acceso seguro"]
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Uso de <code class=\"language-python\">get()</code> (Acceso Seguro)"
+    },
+    {
+      "type": "code",
+      "text": "print(persona.get(\"telefono\"))"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "None"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "persona = {\n\t\"nombre\": \"Ana\",\n\t\"edad\": 25,\n\t\"pais\": \"Colombia\"\n}\n\nprint(persona.get(\"telefono\"))"
+    },
+    {
+      "type": "paragraph",
+      "text": "Si la clave no existe, devuelve <code class=\"language-python\">None</code> en lugar de error."
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Usar <code class=\"language-python\">get()</code> evita que el programa se detenga cuando una clave no está presente."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejemplo del Mundo Real"
+    },
+    {
+      "type": "code",
+      "text": "producto = {\n\t\"nombre\": \"Laptop\",\n\t\"precio\": 1200,\n\t\"stock\": 5\n}\n\nprint(producto[\"nombre\"])"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Laptop"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "producto = {\n\t\"nombre\": \"Laptop\",\n\t\"precio\": 1200,\n\t\"stock\": 5\n}\n\nprint(producto[\"nombre\"])"
+    },
+    {
+      "type": "paragraph",
+      "text": "Los diccionarios permiten representar objetos reales fácilmente."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejemplo Integrador"
+    },
+    {
+      "type": "code",
+      "text": "usuario = {\n\t\"username\": \"daniel\",\n\t\"activo\": True,\n\t\"edad\": 20\n}\n\nusuario[\"edad\"] = 22\nusuario[\"email\"] = \"correo@email.com\"\n\nfor clave, valor in usuario.items():\n\tprint(clave, \":\", valor)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "username : daniel\nactivo : True\nedad : 22\nemail : correo@email.com"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "usuario = {\n\t\"username\": \"daniel\",\n\t\"activo\": True,\n\t\"edad\": 20\n}\n\nusuario[\"edad\"] = 22\nusuario[\"email\"] = \"correo@email.com\"\n\nfor clave, valor in usuario.items():\n\tprint(clave, \":\", valor)"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejercicios Prácticos"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 1: Perfil de Usuario"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea un programa que realice lo siguiente:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Crea un diccionario llamado <code class=\"language-python\">usuario</code> con: nombre, edad y país.",
+        "Mostrar el nombre del usuario.",
+        "Cambiar la edad por un nuevo valor.",
+        "Agregar una nueva clave llamada <code class=\"language-python\">\"email\"</code>.",
+        "Recorrer el diccionario mostrando clave y valor.",
+        "Eliminar el país del diccionario.",
+        "Mostrar el diccionario final."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea un programa que realice lo siguiente:\n# 1. Crea un diccionario llamado usuario con: nombre,\n# edad y país.\n# 2. Mostrar el nombre del usuario.\n# 3. Cambiar la edad por un nuevo valor.\n# 4. Agregar una nueva clave llamada \"email\".\n# 5. Recorrer el diccionario mostrando clave y valor.\n# 6. Eliminar el país del diccionario.\n# 7. Mostrar el diccionario final"
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# 1. Crea un diccionario llamado usuario con: nombre,\n# edad y país\nusuario = {\n\t\"nombre\": \"Carlos\",\n\t\"edad\": 28,\n\t\"pais\": \"México\"\n}\n\n# 2. Mostrar el nombre del usuario\nprint(usuario[\"nombre\"])\n\n# 3. Cambiar la edad por un nuevo valor\nusuario[\"edad\"] = 29\n# 4. Agregar una nueva clave llamada \"email\"\nusuario[\"email\"] = \"carlos@email.com\"\n\n# 5. Recorrer el diccionario mostrando clave y valor\nfor clave, valor in usuario.items():\n\tprint(clave, valor)\n\n# 6. Eliminar el país del diccionario\ndel usuario[\"pais\"]\n\n# 7. Mostrar el diccionario final\nprint(usuario)"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# 1. Crea un diccionario llamado usuario con: nombre,\n# edad y país\nusuario = {\n\t\"nombre\": \"Carlos\",\n\t\"edad\": 28,\n\t\"pais\": \"México\"\n}\n\n# 2. Mostrar el nombre del usuario\nprint(usuario[\"nombre\"])\n\n# 3. Cambiar la edad por un nuevo valor\nusuario[\"edad\"] = 29\n# 4. Agregar una nueva clave llamada \"email\"\nusuario[\"email\"] = \"carlos@email.com\"\n\n# 5. Recorrer el diccionario mostrando clave y valor\nfor clave, valor in usuario.items():\n\tprint(clave, valor)\n\n# 6. Eliminar el país del diccionario\ndel usuario[\"pais\"]\n\n# 7. Mostrar el diccionario final\nprint(usuario)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 2: Inventario de Producto"
+    },
+    {
+      "type": "paragraph",
+      "text": "Desarrolla un programa que:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Cree un diccionario llamado <code class=\"language-python\">producto</code>.",
+        "Incluya: nombre, precio y cantidad.",
+        "Aumente la cantidad disponible.",
+        "Muestre solo los valores del diccionario.",
+        "Use <code class=\"language-python\">get()</code> para intentar acceder a una clave inexistente llamada <code class=\"language-python\">\"categoria\"</code>."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Desarrolla un programa que:\n# 1. Cree un diccionario llamado producto.\n# 2. Incluya: nombre, precio y cantidad.\n# 3. Aumente la cantidad disponible.\n# 4. Muestre solo los valores del diccionario.\n# 5. Use get() para intentar acceder a una clave\n# inexistente llamada \"categoria\""
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# 1. Cree un diccionario llamado producto\n# 2. Incluya: nombre, precio y cantidad\nproducto = {\n\t\"nombre\": \"Mouse\",\n\t\"precio\": 25,\n\t\"cantidad\": 10\n}\n\n# 3. Aumente la cantidad disponible\nproducto[\"cantidad\"] = 15\n\n# 4. Muestre solo los valores del diccionario\nfor valor in producto.values():\n\tprint(valor)\n\n# 5. Use get() para intentar acceder a una clave\n# inexistente llamada \"categoria\"\nprint(producto.get(\"categoria\"))"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# 1. Cree un diccionario llamado producto\n# 2. Incluya: nombre, precio y cantidad\nproducto = {\n\t\"nombre\": \"Mouse\",\n\t\"precio\": 25,\n\t\"cantidad\": 10\n}\n\n# 3. Aumente la cantidad disponible\nproducto[\"cantidad\"] = 15\n\n# 4. Muestre solo los valores del diccionario\nfor valor in producto.values():\n\tprint(valor)\n\n# 5. Use get() para intentar acceder a una clave\n# inexistente llamada \"categoria\"\nprint(producto.get(\"categoria\"))"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 3: Registro de Estudiantes"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea un programa que:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Defina un diccionario donde las claves sean nombres de estudiantes y los valores sus notas (Números decimales).",
+        "Agregue un nuevo estudiante.",
+        "Modifique la nota de uno existente.",
+        "Muestre todos los estudiantes y sus notas.",
+        "Calcule cuántos estudiantes hay usando <code class=\"language-python\">len()</code>."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea un programa que:\n# 1. Defina un diccionario donde las claves sean\n# nombres de estudiantes y los valores sus notas\n# (Números decimales).\n# 2. Agregue un nuevo estudiante.\n# 3. Modifique la nota de uno existente.\n# 4. Muestre todos los estudiantes y sus notas.\n# 5. Calcule cuántos estudiantes hay usando len()"
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# 1. Defina un diccionario donde las claves sean\n# nombres de estudiantes y los valores sus notas\n# (Números decimales)\nnotas = {\n\t\"Ana\": 4.5,\n\t\"Luis\": 3.8,\n\t\"Sofía\": 4.9\n}\n\n# 2. Agregue un nuevo estudiante\nnotas[\"Carlos\"] = 4.2\n# 3. Modifique la nota de uno existente\nnotas[\"Luis\"] = 4.0\n\n# 4. Muestre todos los estudiantes y sus notas\nfor nombre, nota in notas.items():\n\tprint(nombre, nota)\n\n# 5. Calcule cuántos estudiantes hay usando len()\nprint(len(notas))"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# 1. Defina un diccionario donde las claves sean\n# nombres de estudiantes y los valores sus notas\n# (Números decimales)\nnotas = {\n\t\"Ana\": 4.5,\n\t\"Luis\": 3.8,\n\t\"Sofía\": 4.9\n}\n\n# 2. Agregue un nuevo estudiante\nnotas[\"Carlos\"] = 4.2\n# 3. Modifique la nota de uno existente\nnotas[\"Luis\"] = 4.0\n\n# 4. Muestre todos los estudiantes y sus notas\nfor nombre, nota in notas.items():\n\tprint(nombre, nota)\n\n# 5. Calcule cuántos estudiantes hay usando len()\nprint(len(notas))"
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Notas:</strong><br><strong>1.</strong> Los diccionarios usan claves en lugar de índices.<br><strong>2.</strong> Cada clave debe ser única.<br><strong>3.</strong> Permiten representar información estructurada.<br><strong>4.</strong> Son fundamentales en aplicaciones reales."
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tips:</strong><br><strong>1.</strong> Usa nombres claros para las claves.<br><strong>2.</strong> Piensa en los diccionarios como objetos del mundo real.<br><strong>3.</strong> Practica recorriéndolos con <code class=\"language-python\">items()</code> para entender su estructura."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Conclusiones de la Unidad"
+    },
+    {
+      "type": "paragraph",
+      "text": "En esta unidad aprendiste a trabajar con diccionarios como estructuras basadas en pares clave–valor, comprendiendo cómo crear, acceder, modificar y recorrer información estructurada. Descubriste cómo modelar datos reales mediante identificadores únicos y cómo herramientas como <code class=\"language-python\">items()</code>, <code class=\"language-python\">values()</code> y <code class=\"language-python\">get()</code> facilitan la manipulación segura de la información. Los diccionarios representan una de las estructuras más importantes de Python y serán esenciales para desarrollar programas más complejos y organizados."
+    }
+  ]
+}
