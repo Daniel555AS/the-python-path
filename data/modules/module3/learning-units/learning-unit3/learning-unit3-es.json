@@ -1,0 +1,384 @@
+{
+  "title": "Tuplas: Datos Inmutables",
+  "description": "",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Las tuplas son estructuras de datos muy parecidas a las listas, ya que permiten almacenar múltiples valores dentro de una sola variable. Sin embargo, su característica más importante es que son inmutables, lo que significa que sus elementos no pueden modificarse después de haber sido creados. En esta unidad aprenderás cómo crear tuplas, acceder a sus valores y comprender cuándo es conveniente utilizarlas, especialmente en situaciones donde los datos deben permanecer constantes o protegidos contra cambios accidentales. También analizarás las diferencias prácticas entre listas y tuplas y cómo influyen en el rendimiento y la seguridad del programa."
+    },
+    {
+      "type": "subtitle1",
+      "text": "¿Qué es una Tupla?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Una tupla es una colección ordenada de elementos definida usando paréntesis <code class=\"language-python\">()</code>."
+    },
+    {
+      "type": "code",
+      "text": "coordenadas = (10, 20)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Puede almacenar distintos tipos de datos:"
+    },
+    {
+      "type": "code",
+      "text": "datos = (\"Ana\", 25, True)"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Las tuplas mantienen el orden de los elementos, igual que las listas."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Crear Tuplas"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Tupla Básica"
+    },
+    {
+      "type": "code",
+      "text": "numeros = (1, 2, 3, 4)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Tupla con un Solo Elemento"
+    },
+    {
+      "type": "code",
+      "text": "valor = (5,)"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>La coma es obligatoria; sin ella Python no reconoce una tupla."
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br>Si olvidas la coma, Python interpretará el valor como un número normal y no como una tupla."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Acceso a Elementos"
+    },
+    {
+      "type": "paragraph",
+      "text": "Las tuplas usan índices igual que las listas."
+    },
+    {
+      "type": "code",
+      "text": "frutas = (\"manzana\", \"pera\", \"uva\")\n\nprint(frutas[0])\nprint(frutas[-1])"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "manzana\nuva"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Recorrer una Tupla"
+    },
+    {
+      "type": "code",
+      "text": "for fruta in frutas:\n\tprint(fruta)"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Aunque no puedas modificar la tupla, sí puedes leer sus valores y recorrerlos."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Inmutabilidad: La Característica Principal"
+    },
+    {
+      "type": "paragraph",
+      "text": "Una vez creada, una tupla no puede cambiar."
+    },
+    {
+      "type": "code",
+      "text": "numeros = (1, 2, 3)\nnumeros[0] = 10   # Error"
+    },
+    {
+      "type": "paragraph",
+      "text": "Python generará un error porque intenta modificar un valor existente."
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tips:</strong><br>La inmutabilidad ayuda a evitar errores accidentales cuando los datos no deben cambiar."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Diferencias Entre Listas y Tuplas"
+    },
+    {
+      "type": "table",
+      "headers": ["Característica", "Lista", "Tupla"],
+      "rows": [
+        [
+          "Sintaxis",
+          "<code class=\"language-python\">[]</code>",
+          "<code class=\"language-python\">()</code>"
+        ],
+        ["Modificable", "Sí", "No"],
+        ["Rendimiento", "Normal", "Más rápido"],
+        ["Seguridad de datos", "Menor", "Mayor"],
+        ["Uso típico", "Datos cambiantes", "Datos constantes"]
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "¿Cuándo Usar Tuplas?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Las tuplas son ideales cuando:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Los datos no deben modificarse.",
+        "Representas valores fijos.",
+        "Quieres mayor seguridad en la información.",
+        "Necesitas estructuras ligeras y rápidas."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplos reales:"
+    },
+    {
+      "type": "code",
+      "text": "dias_semana = (\"Lunes\", \"Martes\", \"Miércoles\", \"Jueves\", \"Viernes\", \"Sábado\", \"Domingo\")\ncoordenada = (40.4168, -3.7038)\ncolor_rgb = (255, 0, 0)"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Desempaquetado de Tuplas (Tuple Unpacking)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Python permite asignar valores automáticamente:"
+    },
+    {
+      "type": "code",
+      "text": "punto = (5, 8)\n\nx, y = punto\n\nprint(x)\nprint(y)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "5\n8"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "punto = (5, 8)\n\nx, y = punto\n\nprint(x)\nprint(y)"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br>El número de variables debe coincidir con la cantidad de elementos."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Métodos Disponibles en Tuplas"
+    },
+    {
+      "type": "paragraph",
+      "text": "Las tuplas tienen pocos métodos porque no cambian."
+    },
+    {
+      "type": "table",
+      "headers": ["Método", "Propósito"],
+      "rows": [
+        [
+          "<code class=\"language-python\">count()</code>",
+          "Cuenta ocurrencias"
+        ],
+        ["<code class=\"language-python\">index()</code>", "Busca posición"]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo:"
+    },
+    {
+      "type": "code",
+      "text": "numeros = (1, 2, 2, 3)\n\nprint(numeros.count(2))\nprint(numeros.index(3))"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "2\n3"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "numeros = (1, 2, 2, 3)\n\nprint(numeros.count(2))\nprint(numeros.index(3))"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejemplo Integrador"
+    },
+    {
+      "type": "code",
+      "text": "persona = (\"Carlos\", 30, \"Colombia\")\n\nnombre, edad, pais = persona\n\nprint(nombre)\nprint(edad)\nprint(pais)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Carlos\n30\nColombia"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "persona = (\"Carlos\", 30, \"Colombia\")\n\nnombre, edad, pais = persona\n\nprint(nombre)\nprint(edad)\nprint(pais)"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Las tuplas funcionan muy bien para representar registros pequeños donde cada posición tiene un significado fijo."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejercicios Prácticos"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 1: Información Personal Fija"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea un programa que:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Defina una tupla llamada <code class=\"language-python\">persona</code> con: nombre, edad y país.",
+        "Muestre cada dato usando índices.",
+        "Recorra la tupla con un bucle <code class=\"language-python\">for</code>.",
+        "Intente modificar un valor (observa el error).",
+        "Explica en un comentario por qué ocurre ese error."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea un programa que:\n# 1. Defina una tupla llamada persona con: nombre, edad\n# y país.\n# 2. Muestre cada dato usando índices.\n# 3. Recorra la tupla con un bucle for.\n# 4. Intente modificar un valor (observa el error).\n# 5. Explica en un comentario por qué ocurre ese error"
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# 1. Defina una tupla llamada persona con: nombre, edad\n# y país\npersona = (\"Ana\", 22, \"Colombia\")\n\n# 2. Muestre cada dato usando índices\nprint(persona[0])\nprint(persona[1])\nprint(persona[2])\n\n# 3. Recorra la tupla con un bucle for\nfor dato in persona:\n\tprint(dato)\n\n# 4. Intente modificar un valor (observa el error)\n# 5. Explica en un comentario por qué ocurre ese error\n# persona[1] = 30  # Error: las tuplas son inmutables"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# 1. Defina una tupla llamada persona con: nombre, edad\n# y país\npersona = (\"Ana\", 22, \"Colombia\")\n\n# 2. Muestre cada dato usando índices\nprint(persona[0])\nprint(persona[1])\nprint(persona[2])\n\n# 3. Recorra la tupla con un bucle for\nfor dato in persona:\n\tprint(dato)\n\n# 4. Intente modificar un valor (observa el error)\n# 5. Explica en un comentario por qué ocurre ese error\n# persona[1] = 30  # Error: las tuplas son inmutables"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 2: Coordenadas en un Plano"
+    },
+    {
+      "type": "paragraph",
+      "text": "Realiza un programa que:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Cree una tupla llamada <code class=\"language-python\">coordenada</code> con dos números.",
+        "Desempaquete la tupla en variables <code class=\"language-python\">x</code> y <code class=\"language-python\">y</code>.",
+        "Imprima ambas variables.",
+        "Calcule la suma de las coordenadas."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Realiza un programa que:\n# 1. Cree una tupla llamada coordenada con dos números.\n# 2. Desempaquete la tupla en variables x y y.\n# 3. Imprima ambas variables.\n# 4. Calcule la suma de las coordenadas"
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# 1. Cree una tupla llamada coordenada con dos números\ncoordenada = (4, 7)\n\n# 2. Desempaquete la tupla en variables x y y\nx, y = coordenada\n\n# 3. Imprima ambas variables\nprint(x)\nprint(y)\n\n# 4. Calcule la suma de las coordenadas\nprint(x + y)"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# 1. Cree una tupla llamada coordenada con dos números\ncoordenada = (4, 7)\n\n# 2. Desempaquete la tupla en variables x y y\nx, y = coordenada\n\n# 3. Imprima ambas variables\nprint(x)\nprint(y)\n\n# 4. Calcule la suma de las coordenadas\nprint(x + y)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 3: Conteo Dentro de una Tupla"
+    },
+    {
+      "type": "paragraph",
+      "text": "Desarrolla un programa que:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Cree una tupla con varios números repetidos.",
+        "Cuente cuántas veces aparece un número específico usando <code class=\"language-python\">count()</code>.",
+        "Encuentre la posición de un valor usando <code class=\"language-python\">index()</code>.",
+        "Muestre los resultados en pantalla."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Desarrolla un programa que:\n# 1. Cree una tupla con varios números repetidos.\n# 2. Cuente cuántas veces aparece un número específico\n# usando count().\n# 3. Encuentre la posición de un valor usando index().\n# 4. Muestre los resultados en pantalla"
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# 1. Cree una tupla con varios números repetidos\nnumeros = (1, 3, 5, 3, 7, 3)\n\n# 4. Muestre los resultados en pantalla\n\n# 2. Cuente cuántas veces aparece un número específico usando count()\nprint(numeros.count(3))\n# 3. Encuentre la posición de un valor usando index()\nprint(numeros.index(5))"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# 1. Cree una tupla con varios números repetidos\nnumeros = (1, 3, 5, 3, 7, 3)\n\n# 4. Muestre los resultados en pantalla\n\n# 2. Cuente cuántas veces aparece un número específico usando count()\nprint(numeros.count(3))\n# 3. Encuentre la posición de un valor usando index()\nprint(numeros.index(5))"
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Notas:</strong><br><strong>1.</strong> Las tuplas mantienen el orden de los datos.<br><strong>2.</strong> No permiten modificaciones después de crearse.<br><strong>3.</strong> Son más seguras para datos constantes.<br><strong>4.</strong> Consumen menos recursos que las listas."
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tips:</strong><br><strong>1.</strong> Usa tuplas para datos que nunca cambian.<br><strong>2.</strong> Piensa en ellas como \"registros protegidos\".<br><strong>3.</strong> Son muy comunes para coordenadas, configuraciones y resultados múltiples."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Conclusiones de la Unidad"
+    },
+    {
+      "type": "paragraph",
+      "text": "En esta unidad aprendiste qué son las tuplas y cómo funcionan como estructuras de datos inmutables en Python. Comprendiste cómo crearlas, acceder a sus elementos, recorrerlas y utilizar métodos básicos como <code class=\"language-python\">count()</code> e <code class=\"language-python\">index()</code>. También analizaste sus diferencias frente a las listas y descubriste cuándo resulta más conveniente utilizarlas para proteger información constante, mejorar el rendimiento y representar datos fijos dentro de un programa."
+    }
+  ]
+}
