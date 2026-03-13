@@ -1,36 +1,36 @@
 {
-    "title": "",
-    "description": "",
-    "steps": [
-        {
-            "name": "1. Definir funciones con <code>def</code>",
-            "description": "Qué son las funciones, cómo se crean y por qué ayudam a organizar el código.",
-            "color": "",
-            "unit": "learning-unit1"
-        },
-        {
-            "name": "2. Parámetros y valores de retorno",
-            "description": "Cómo enviar y recibir información dentro de una función.",
-            "color": "",
-            "unit": "learning-unit2"
-        },
-        {
-            "name": "3. Funciones con argumentos por defecto",
-            "description": "Parámetros opcionales y uso de argumentos nombrados.",
-            "color": "",
-            "unit": "learning-unit3"
-        },
-        {
-            "name": "4. Alcance de las variables",
-            "description": "Diferencia entre variables locales y globales.",
-            "color": "",
-            "unit": "learning-unit4"
-        },
-        {
-            "name": "5. Funciones anidadas y lambdas (básico)",
-            "description":  "Introducción a funciones dentro de funciones y funciones cortas con <code>lambda</code>.",
-            "color": "",
-            "unit": "learning-unit5"
-        }
-    ]
+  "title": "4.⚙️Funciones y Reutilización de Código",
+  "description": "En este módulo aprenderás a crear y usar funciones para organizar tu código y evitar repeticiones. Verás cómo pasar y devolver valores, usar parámetros opcionales y entender el alcance de las variables. También conocerás las funciones anidadas y las expresiones lambda.",
+  "steps": [
+    {
+      "name": "1. Definir Funciones con <code>def</code>",
+      "description": "Las funciones son bloques de código reutilizables que permiten agrupar instrucciones para realizar una tarea específica dentro de un programa. En esta unidad aprenderás qué es una función, cómo se define utilizando la palabra clave <code>def</code> y cómo se ejecuta al ser llamada desde distintas partes del programa. También se analizará cómo el uso de funciones ayuda a organizar mejor el código, dividir problemas en partes más pequeñas y evitar la repetición innecesaria de instrucciones.",
+      "color": "#FFD43B",
+      "unit": "learning-unit1"
+    },
+    {
+      "name": "2. Parámetros y Valores de Retorno",
+      "description": "En esta unidad aprenderás cómo las funciones pueden recibir información mediante parámetros y devolver resultados utilizando la instrucción <code>return</code>. Se estudiará cómo enviar datos a una función al momento de llamarla, cómo esos valores se utilizan dentro de la función y cómo el resultado puede devolverse para ser utilizado en otras partes del programa. Esto permitirá construir funciones más dinámicas y útiles para resolver distintos tipos de problemas.",
+      "color": "#3776AB",
+      "unit": "learning-unit2"
+    },
+    {
+      "name": "3. Funciones con Argumentos por Defecto",
+      "description": "En esta unidad se explorará cómo definir funciones con argumentos por defecto, permitiendo que algunos parámetros tengan valores predeterminados cuando no se proporcionan al llamar la función. También se introducirá el uso de argumentos nombrados, que permiten especificar explícitamente qué valor corresponde a cada parámetro. Estas herramientas ayudan a crear funciones más flexibles, fáciles de utilizar y adaptables a diferentes situaciones.",
+      "color": "#1B983A",
+      "unit": "learning-unit3"
+    },
+    {
+      "name": "4. Scope o Alcance de las Variables",
+      "description": "Esta unidad aborda el concepto de scope o alcance de las variables, explicando la diferencia entre variables locales, que existen únicamente dentro de una función, y variables globales, que pueden utilizarse en distintas partes del programa. Comprenderás cómo el alcance de las variables influye en el comportamiento del código y por qué es importante manejar correctamente los datos dentro de funciones para evitar errores o conflictos.",
+      "color": "#6464FF",
+      "unit": "learning-unit4"
+    },
+    {
+      "name": "5. Funciones Anidadas y Lambdas (Básico)",
+      "description": "En esta unidad se presenta una introducción a las funciones anidadas, que permiten definir una función dentro de otra para organizar mejor ciertas tareas, y a las funciones lambda, que permiten crear funciones pequeñas en una sola línea de código. El objetivo es comprender cómo estas herramientas pueden utilizarse para escribir código más compacto y flexible en situaciones donde se requieren operaciones simples o temporales.",
+      "color": "#FFD43B",
+      "unit": "learning-unit5"
+    }
+  ]
 }
