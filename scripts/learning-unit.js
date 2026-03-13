@@ -84,6 +84,10 @@ function buildBlock(block) {
       el.innerHTML = `<h3>${block.text}</h3>`;
       break;
 
+    case "subtitle3":
+      el.innerHTML = `<h4>${block.text}</h4>`;
+      break;
+
     case "paragraph":
       el.innerHTML = `<p>${block.text}</p>`;
       break;

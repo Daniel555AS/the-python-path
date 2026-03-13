@@ -47,6 +47,14 @@
   font-weight: 500;
 }
 
+.block.subtitle3 h4 {
+  font-size: 1.1rem;
+  margin-top: 0.9rem;
+  margin-bottom: 0.45rem;
+  color: rgb(201, 184, 0);
+  font-weight: 500;
+}
+
 .block.paragraph p {
   font-size: 1.15rem;
   margin-bottom: 1rem;
