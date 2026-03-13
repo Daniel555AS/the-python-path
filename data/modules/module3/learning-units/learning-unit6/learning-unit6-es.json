@@ -1,0 +1,459 @@
+{
+  "title": "Recorriendo Estructuras de Datos",
+  "description": "",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Recorrer estructuras de datos es una de las habilidades más importantes en programación, ya que permite analizar, procesar y transformar información almacenada en colecciones como listas, tuplas, diccionarios y conjuntos. En esta unidad aprenderás a utilizar bucles <code class=\"language-python\">for</code> para recorrer distintos tipos de estructuras, emplear la función <code class=\"language-python\">len()</code> para conocer el tamaño de una colección y usar <code class=\"language-python\">enumerate()</code> para obtener simultáneamente el índice y el valor de cada elemento. Además, se estudiarán bucles anidados, los cuales permiten trabajar con estructuras más complejas como listas dentro de listas o colecciones múltiples. Estas herramientas son fundamentales para desarrollar programas capaces de procesar datos de manera eficiente."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Recorrer Estructuras con <code class=\"language-python\">for</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "El bucle <code class=\"language-python\">for</code> permite recorrer automáticamente todos los elementos de una colección."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejemplo con una Lista"
+    },
+    {
+      "type": "code",
+      "text": "frutas = [\"manzana\", \"pera\", \"uva\"]\n\nfor fruta in frutas:\n\tprint(fruta)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "manzana\npera\nuva"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "frutas = [\"manzana\", \"pera\", \"uva\"]\n\nfor fruta in frutas:\n\tprint(fruta)"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>El bucle <code class=\"language-python\">for</code> es la forma más común y segura de recorrer colecciones en Python."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Usar <code class=\"language-python\">len()</code> para Conocer el Tamaño"
+    },
+    {
+      "type": "paragraph",
+      "text": "La función <code class=\"language-python\">len()</code> devuelve la cantidad de elementos de una estructura de datos."
+    },
+    {
+      "type": "code",
+      "text": "numeros = [10, 20, 30, 40]\n\nprint(len(numeros))"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "4"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "numeros = [10, 20, 30, 40]\n\nprint(len(numeros))"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Recorrer Usando Índices"
+    },
+    {
+      "type": "paragraph",
+      "text": "Cuando necesitamos conocer la posición de cada elemento, podemos combinar <code class=\"language-python\">len()</code> con <code class=\"language-python\">range()</code>."
+    },
+    {
+      "type": "code",
+      "text": "nombres = [\"Ana\", \"Luis\", \"Carlos\"]\n\nfor i in range(len(nombres)):\n\tprint(i, nombres[i])"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "0 Ana\n1 Luis\n2 Carlos"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "nombres = [\"Ana\", \"Luis\", \"Carlos\"]\n\nfor i in range(len(nombres)):\n\tprint(i, nombres[i])"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br>Este método es útil cuando necesitas modificar elementos por posición."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Usar <code class=\"language-python\">enumerate()</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "La función <code class=\"language-python\">enumerate()</code> permite obtener el índice y el valor al mismo tiempo."
+    },
+    {
+      "type": "code",
+      "text": "estudiantes = [\"Ana\", \"Luis\", \"Pedro\"]\n\nfor indice, estudiante in enumerate(estudiantes):\n\tprint(indice, estudiante)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "0 Ana\n1 Luis\n2 Pedro"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "estudiantes = [\"Ana\", \"Luis\", \"Pedro\"]\n\nfor indice, estudiante in enumerate(estudiantes):\n\tprint(indice, estudiante)"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Comparación de Métodos"
+    },
+    {
+      "type": "table",
+      "headers": ["Método", "Qué Permite"],
+      "rows": [
+        [
+          "<code class=\"language-python\">for elemento in lista</code>",
+          "Obtener solo valores"
+        ],
+        [
+          "<code class=\"language-python\">range(len(lista))</code>",
+          "Obtener índices"
+        ],
+        [
+          "<code class=\"language-python\">enumerate(lista)</code>",
+          "Obtener índice y valor"
+        ]
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Recorrer Diferentes Estructuras de Datos"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Recorrer Tuplas"
+    },
+    {
+      "type": "code",
+      "text": "coordenadas = (10, 20, 30)\n\nfor valor in coordenadas:\n\tprint(valor)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "10\n20\n30"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "coordenadas = (10, 20, 30)\n\nfor valor in coordenadas:\n\tprint(valor)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Recorrer Conjuntos"
+    },
+    {
+      "type": "code",
+      "text": "numeros = {1, 2, 3}\n\nfor n in numeros:\n\tprint(n)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "1\n2\n3"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "numeros = {1, 2, 3}\n\nfor n in numeros:\n\tprint(n)"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>El orden puede variar."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Recorrer Diccionarios"
+    },
+    {
+      "type": "subtitle3",
+      "text": "Recorrer Claves"
+    },
+    {
+      "type": "code",
+      "text": "persona = {\"nombre\": \"Ana\", \"edad\": 25}\n\nfor clave in persona:\n\tprint(clave)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "nombre\nedad"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "persona = {\"nombre\": \"Ana\", \"edad\": 25}\n\nfor clave in persona:\n\tprint(clave)"
+    },
+    {
+      "type": "subtitle3",
+      "text": "Recorrer Valores"
+    },
+    {
+      "type": "code",
+      "text": "persona = {\"nombre\": \"Ana\", \"edad\": 25}\n\nfor valor in persona.values():\n\tprint(valor)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Ana\n25"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "persona = {\"nombre\": \"Ana\", \"edad\": 25}\n\nfor valor in persona.values():\n\tprint(valor)"
+    },
+    {
+      "type": "subtitle3",
+      "text": "Recorrer Claves y Valores"
+    },
+    {
+      "type": "code",
+      "text": "persona = {\"nombre\": \"Ana\", \"edad\": 25}\n\nfor clave, valor in persona.items():\n\tprint(clave, valor)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "nombre Ana\nedad 25"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "persona = {\"nombre\": \"Ana\", \"edad\": 25}\n\nfor clave, valor in persona.items():\n\tprint(clave, valor)"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br><code class=\"language-python\">items()</code> es la forma más completa de recorrer diccionarios."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Bucles Anidados"
+    },
+    {
+      "type": "paragraph",
+      "text": "Un bucle anidado es un bucle dentro de otro."
+    },
+    {
+      "type": "paragraph",
+      "text": "Se utiliza para trabajar con estructuras más complejas."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejemplo: Lista Dentro de Lista"
+    },
+    {
+      "type": "code",
+      "text": "matriz = [\n\t[1, 2, 3],\n\t[4, 5, 6],\n\t[7, 8, 9]\n]\n\nfor fila in matriz:\n\tfor numero in fila:\n\t\tprint(numero)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "1\n2\n3\n4\n5\n6\n7\n8\n9"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "matriz = [\n\t[1, 2, 3],\n\t[4, 5, 6],\n\t[7, 8, 9]\n]\n\nfor fila in matriz:\n\tfor numero in fila:\n\t\tprint(numero)"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Los bucles anidados permiten recorrer estructuras multidimensionales."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejemplo Integrador"
+    },
+    {
+      "type": "code",
+      "text": "productos = [\"Laptop\", \"Mouse\", \"Teclado\"]\n\nfor indice, producto in enumerate(productos):\n\tprint(\"Producto\", indice, \":\", producto)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Producto 0 : Laptop\nProducto 1 : Mouse\nProducto 2 : Teclado"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "productos = [\"Laptop\", \"Mouse\", \"Teclado\"]\n\nfor indice, producto in enumerate(productos):\n\tprint(\"Producto\", indice, \":\", producto)"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejercicios Prácticos"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 1. Recorrer una Lista de Estudiantes"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea un programa que:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Defina una lista llamada <code class=\"language-python\">estudiantes</code> con al menos 5 nombres.",
+        "Recorra la lista usando un bucle <code class=\"language-python\">for</code>.",
+        "Imprima cada nombre.",
+        "Después, use <code class=\"language-python\">enumerate()</code> para mostrar el número de posición y el nombre del estudiante.",
+        "Finalmente, muestre cuántos estudiantes hay en la lista utilizando <code class=\"language-python\">len()</code>."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea un programa que:\n# 1. Defina una lista llamada estudiantes con al menos\n# 5 nombres.\n# 2. Recorra la lista usando un bucle for.\n# 3. Imprima cada nombre.\n# 4. Después, use enumerate() para mostrar el número de\n# posición y el nombre del estudiante.\n# 5. Finalmente, muestre cuántos estudiantes hay en la\n# lista utilizando len()"
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# 1. Defina una lista llamada estudiantes con al menos\n# 5 nombres\nestudiantes = [\"Ana\", \"Luis\", \"Carlos\", \"Sofía\", \"Pedro\"]\n\n# 2. Recorra la lista usando un bucle for\n# 3. Imprima cada nombre\nfor estudiante in estudiantes:\n\tprint(estudiante)\n\n# 4. Después, use enumerate() para mostrar el número de\n# posición y el nombre del estudiante\nfor indice, estudiante in enumerate(estudiantes):\n\tprint(indice, estudiante)\n\n# 5. Finalmente, muestre cuántos estudiantes hay en la\n# lista utilizando len()\nprint(\"Total:\", len(estudiantes))"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# 1. Defina una lista llamada estudiantes con al menos\n# 5 nombres\nestudiantes = [\"Ana\", \"Luis\", \"Carlos\", \"Sofía\", \"Pedro\"]\n\n# 2. Recorra la lista usando un bucle for\n# 3. Imprima cada nombre\nfor estudiante in estudiantes:\n\tprint(estudiante)\n\n# 4. Después, use enumerate() para mostrar el número de\n# posición y el nombre del estudiante\nfor indice, estudiante in enumerate(estudiantes):\n\tprint(indice, estudiante)\n\n# 5. Finalmente, muestre cuántos estudiantes hay en la\n# lista utilizando len()\nprint(\"Total:\", len(estudiantes))"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 2: Recorrer un Diccionario"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea un programa que:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Defina un diccionario llamado producto con: nombre, precio y stock.",
+        "Recorra el diccionario mostrando solo las claves.",
+        "Luego muestre únicamente los valores.",
+        "Finalmente recorra el diccionario mostrando clave y valor juntos."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea un programa que:\n# 1. Defina un diccionario llamado producto con:\n# nombre, precio y stock.\n# 2. Recorra el diccionario mostrando solo las claves.\n# 3. Luego muestre únicamente los valores.\n# 4. Finalmente recorra el diccionario mostrando clave\n# y valor juntos"
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# 1. Defina un diccionario llamado producto con:\n# nombre, precio y stock\nproducto = {\n\t\"nombre\": \"Laptop\",\n\t\"precio\": 1200,\n\t\"stock\": 5\n}\n\n# 2. Recorra el diccionario mostrando solo las claves\nfor clave in producto:\n\tprint(clave)\n\n# 3. Luego muestre únicamente los valores\nfor valor in producto.values():\n\tprint(valor)\n\n# 4. Finalmente recorra el diccionario mostrando clave\n# y valor juntos\nfor clave, valor in producto.items():\n\tprint(clave, valor)"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# 1. Defina un diccionario llamado producto con:\n# nombre, precio y stock\nproducto = {\n\t\"nombre\": \"Laptop\",\n\t\"precio\": 1200,\n\t\"stock\": 5\n}\n\n# 2. Recorra el diccionario mostrando solo las claves\nfor clave in producto:\n\tprint(clave)\n\n# 3. Luego muestre únicamente los valores\nfor valor in producto.values():\n\tprint(valor)\n\n# 4. Finalmente recorra el diccionario mostrando clave\n# y valor juntos\nfor clave, valor in producto.items():\n\tprint(clave, valor)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 3: Matriz de Números"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea un programa que:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Defina una lista que contenga tres listas internas con números.",
+        "Utilice bucles anidados para recorrer todos los números.",
+        "Imprima cada número.",
+        "Calcule la suma total de todos los valores."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea un programa que:\n# 1. Defina una lista que contenga tres listas internas\n# con números.\n# 2. Utilice bucles anidados para recorrer todos los\n# números.\n# 3. Imprima cada número.\n# 4. Calcule la suma total de todos los valores"
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# 1. Defina una lista que contenga tres listas internas\n# con números\nmatriz = [\n\t[1, 2, 3],\n\t[4, 5, 6],\n\t[7, 8, 9]\n]\n\nsuma = 0\n\n# 2. Utilice bucles anidados para recorrer todos los\n# números\nfor fila in matriz:\n\tfor numero in fila:\n\t\t# 3. Imprima cada número\n\t\tprint(numero)\n\t\tsuma += numero\n\n# 4. Calcule la suma total de todos los valores\nprint(\"Suma total:\", suma)"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# 1. Defina una lista que contenga tres listas internas\n# con números\nmatriz = [\n\t[1, 2, 3],\n\t[4, 5, 6],\n\t[7, 8, 9]\n]\n\nsuma = 0\n\n# 2. Utilice bucles anidados para recorrer todos los\n# números\nfor fila in matriz:\n\tfor numero in fila:\n\t\t# 3. Imprima cada número\n\t\tprint(numero)\n\t\tsuma += numero\n\n# 4. Calcule la suma total de todos los valores\nprint(\"Suma total:\", suma)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Notas Importantes"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Notas Importantes:</strong><br><strong>1.</strong> El bucle <code class=\"language-python\">for</code> es la herramienta principal para recorrer estructuras.<br><strong>2.</strong> <code class=\"language-python\">len()</code> permite conocer el tamaño de las colecciones.<br><strong>3.</strong> <code class=\"language-python\">enumerate()</code> facilita trabajar con índice y valor al mismo tiempo.<br><strong>4.</strong> Los bucles anidados permiten procesar estructuras complejas."
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tips de Aprendizaje:</strong><br><strong>1.</strong> Practica recorriendo distintos tipos de estructuras.<br><strong>2.</strong> Usa <code class=\"language-python\">enumerate()</code> para escribir código más limpio.<br><strong>3.</strong> Combina bucles con estructuras de datos para resolver problemas reales."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Conclusiones de la Unidad"
+    },
+    {
+      "type": "paragraph",
+      "text": "En esta unidad aprendiste diferentes formas de recorrer estructuras de datos en Python utilizando bucles <code class=\"language-python\">for</code>, la función <code class=\"language-python\">len()</code> para conocer el tamaño de las colecciones y <code class=\"language-python\">enumerate()</code> para acceder simultáneamente al índice y al valor de los elementos. También exploraste cómo recorrer listas, tuplas, diccionarios y conjuntos, así como el uso de bucles anidados para trabajar con estructuras más complejas. Estas habilidades son fundamentales para procesar información almacenada en colecciones y constituyen una base esencial para desarrollar programas más avanzados y eficientes."
+    }
+  ]
+}
