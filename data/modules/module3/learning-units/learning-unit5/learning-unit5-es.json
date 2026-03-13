@@ -1,0 +1,524 @@
+{
+  "title": "Conjuntos (sets)",
+  "description": "",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Los conjuntos o sets son estructuras de datos que permiten almacenar colecciones de elementos únicos, es decir, sin valores duplicados, y sin mantener un orden específico. Esto los convierte en una herramienta muy útil cuando se necesita eliminar repeticiones automáticamente o comparar grupos de datos. En esta unidad aprenderás a crear conjuntos, agregar y eliminar elementos y realizar operaciones matemáticas como unión, intersección y diferencia. También descubrirás cómo los conjuntos simplifican problemas comunes relacionados con coincidencias entre datos y filtrado de información repetida."
+    },
+    {
+      "type": "subtitle1",
+      "text": "¿Qué es un Set?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Un set es una colección:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Sin elementos duplicados.",
+        "Sin orden definido.",
+        "Modificable (puede cambiar)."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Se define usando llaves <code class=\"language-python\">{}</code>."
+    },
+    {
+      "type": "code",
+      "text": "numeros = {1, 2, 3, 4}"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Aunque usan <code class=\"language-python\">{}</code>, los sets no son diccionarios porque no tienen claves ni valores."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Eliminación Automática de Duplicados"
+    },
+    {
+      "type": "code",
+      "text": "datos = {1, 2, 2, 3, 3, 3}\nprint(datos)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "{1, 2, 3}"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "datos = {1, 2, 2, 3, 3, 3}\nprint(datos)"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br>Los sets son la forma más sencilla de eliminar duplicados de una colección."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Crear Conjuntos"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Desde Valores Directos"
+    },
+    {
+      "type": "code",
+      "text": "frutas = {\"manzana\", \"pera\", \"uva\"}\nprint(frutas)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "{'manzana', 'uva', 'pera'}"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "frutas = {\"manzana\", \"pera\", \"uva\"}\nprint(frutas)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Desde una Lista"
+    },
+    {
+      "type": "code",
+      "text": "numeros = set([1, 2, 2, 3])\nprint(numeros)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "{1, 2, 3}"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "numeros = set([1, 2, 2, 3])\nprint(numeros)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Set Vacío"
+    },
+    {
+      "type": "paragraph",
+      "text": "Un set vacío se crea con:"
+    },
+    {
+      "type": "code",
+      "text": "conjunto = set()"
+    },
+    {
+      "type": "paragraph",
+      "text": "No con <code class=\"language-python\">{}</code>, porque eso crea un diccionario vacío."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Agregar Elementos"
+    },
+    {
+      "type": "paragraph",
+      "text": "Se utiliza el método <code class=\"language-python\">add()</code>:"
+    },
+    {
+      "type": "code",
+      "text": "colores = {\"rojo\", \"azul\"}\ncolores.add(\"verde\")\n\nprint(colores)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "{'verde', 'azul', 'rojo'}"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "colores = {\"rojo\", \"azul\"}\ncolores.add(\"verde\")\n\nprint(colores)"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Eliminar Elementos"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Con <code class=\"language-python\">remove()</code>"
+    },
+    {
+      "type": "code",
+      "text": "colores.remove(\"azul\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "{'rojo', 'verde'}"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "colores = {\"rojo\", \"azul\"}\ncolores.add(\"verde\")\n\ncolores.remove(\"azul\")\n\nprint(colores)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Genera error si el elemento no existe."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Con <code class=\"language-python\">discard()</code> (Más Seguro)"
+    },
+    {
+      "type": "code",
+      "text": "colores = {\"rojo\", \"azul\"}\n\ncolores.discard(\"amarillo\")\n\nprint(colores)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "{'azul', 'rojo'}"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "colores = {\"rojo\", \"azul\"}\n\ncolores.discard(\"amarillo\")\n\nprint(colores)"
+    },
+    {
+      "type": "paragraph",
+      "text": "No produce error si no está presente."
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br>Usa <code class=\"language-python\">discard()</code> cuando no estés seguro de que el elemento exista."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Recorrer un Conjunto"
+    },
+    {
+      "type": "code",
+      "text": "numeros = {1, 2, 3}\n\nfor numero in numeros:\n\tprint(numero)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "1\n2\n3"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "numeros = {1, 2, 3}\n\nfor numero in numeros:\n\tprint(numero)"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>El orden puede cambiar cada vez que ejecutes el programa."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Operaciones Matemáticas Entre Conjuntos"
+    },
+    {
+      "type": "paragraph",
+      "text": "Los sets permiten aplicar operaciones similares a la teoría de conjuntos en matemáticas."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Unión (<code class=\"language-python\">|</code>)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Combina todos los elementos sin repetir."
+    },
+    {
+      "type": "code",
+      "text": "a = {1, 2, 3}\nb = {3, 4, 5}\n\nprint(a | b)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "{1, 2, 3, 4, 5}"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "a = {1, 2, 3}\nb = {3, 4, 5}\n\nprint(a | b)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Intersección (<code class=\"language-python\">&</code>)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Elementos en común."
+    },
+    {
+      "type": "code",
+      "text": "a = {1, 2, 3}\nb = {3, 4, 5}\n\nprint(a & b)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "{3}"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "a = {1, 2, 3}\nb = {3, 4, 5}\n\nprint(a & b)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Diferencia (<code class=\"language-python\">-</code>)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Elementos que están en un conjunto pero no en otro."
+    },
+    {
+      "type": "code",
+      "text": "a = {1, 2, 3}\nb = {3, 4, 5}\n\nprint(a - b)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "{1, 2}"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "a = {1, 2, 3}\nb = {3, 4, 5}\n\nprint(a - b)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Resumen de Operaciones"
+    },
+    {
+      "type": "table",
+      "headers": ["Operación", "Símbolo", "Resultado"],
+      "rows": [
+        [
+          "Unión",
+          "<code class=\"language-python\">|</code>",
+          "Combina todos los elementos sin repetir"
+        ],
+        [
+          "Intersección",
+          "<code class=\"language-python\">&</code>",
+          "Coincidencias"
+        ],
+        [
+          "Diferencia",
+          "<code class=\"language-python\">-</code>",
+          "Elementos únicos"
+        ]
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejemplo"
+    },
+    {
+      "type": "paragraph",
+      "text": "Comparar estudiantes inscritos en dos cursos:"
+    },
+    {
+      "type": "code",
+      "text": "python = {\"Ana\", \"Luis\", \"Carlos\"}\njava = {\"Carlos\", \"Sofía\", \"Ana\"}\n\nprint(python & java)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "{'Carlos', 'Ana'}"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "python = {\"Ana\", \"Luis\", \"Carlos\"}\njava = {\"Carlos\", \"Sofía\", \"Ana\"}\n\nprint(python & java)"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br>Los sets son ideales para análisis de coincidencias y filtros rápidos."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejemplo Integrador"
+    },
+    {
+      "type": "code",
+      "text": "clientes_dia1 = {\"Ana\", \"Luis\", \"Pedro\"}\nclientes_dia2 = {\"Luis\", \"Pedro\", \"Sofía\"}\n\nprint(\"Todos:\", clientes_dia1 | clientes_dia2)\nprint(\"Repetidos:\", clientes_dia1 & clientes_dia2)\nprint(\"Solo día 1:\", clientes_dia1 - clientes_dia2)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Todos: {'Pedro', 'Luis', 'Sofía', 'Ana'}\nRepetidos: {'Pedro', 'Luis'}\nSolo día 1: {'Ana'}"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "clientes_dia1 = {\"Ana\", \"Luis\", \"Pedro\"}\nclientes_dia2 = {\"Luis\", \"Pedro\", \"Sofía\"}\n\nprint(\"Todos:\", clientes_dia1 | clientes_dia2)\nprint(\"Repetidos:\", clientes_dia1 & clientes_dia2)\nprint(\"Solo día 1:\", clientes_dia1 - clientes_dia2)"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejercicios Prácticos"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 1: Eliminación de Duplicados"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea un programa que:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Defina una lista con números repetidos.",
+        "Convierta la lista en un set.",
+        "Muestre el resultado sin duplicados.",
+        "Recorra el set mostrando cada elemento."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea un programa que:\n# 1. Defina una lista con números repetidos.\n# 2. Convierta la lista en un set.\n# 3. Muestre el resultado sin duplicados.\n# 4. Recorra el set mostrando cada elemento"
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# 1. Defina una lista con números repetidos\nnumeros = [1, 2, 2, 3, 4, 4, 5]\n\n# 2. Convierta la lista en un set\nconjunto = set(numeros)\n\n# 3. Muestre el resultado sin duplicados\nprint(conjunto)\n\n# 4. Recorra el set mostrando cada elemento\nfor n in conjunto:\n\tprint(n)"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# 1. Defina una lista con números repetidos\nnumeros = [1, 2, 2, 3, 4, 4, 5]\n\n# 2. Convierta la lista en un set\nconjunto = set(numeros)\n\n# 3. Muestre el resultado sin duplicados\nprint(conjunto)\n\n# 4. Recorra el set mostrando cada elemento\nfor n in conjunto:\n\tprint(n)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 2: Comparación de Grupos"
+    },
+    {
+      "type": "paragraph",
+      "text": "Desarrolla un programa que:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Cree dos sets con nombres de estudiantes.",
+        "Muestre todos los estudiantes (unión).",
+        "Muestre estudiantes en ambos grupos (intersección).",
+        "Estudiantes solo del primer grupo (diferencia).",
+        "Imprima cada resultado con un mensaje descriptivo."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Desarrolla un programa que:\n# 1. Cree dos sets con nombres de estudiantes.\n# 2. Muestre todos los estudiantes (unión).\n# 3. Muestre estudiantes en ambos grupos (intersección).\n# 4. Estudiantes solo del primer grupo (diferencia).\n# 5. Imprima cada resultado con un mensaje descriptivo"
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# 1. Cree dos sets con nombres de estudiantes\ngrupo_a = {\"Ana\", \"Luis\", \"Pedro\"}\ngrupo_b = {\"Pedro\", \"Sofía\", \"Ana\"}\n\n# 5. Imprima cada resultado con un mensaje descriptivo\n\n# 2. Muestre todos los estudiantes (unión)\nprint(\"Unión:\", grupo_a | grupo_b)\n# 3. Muestre estudiantes en ambos grupos (intersección)\nprint(\"Intersección:\", grupo_a & grupo_b)\n# 4. Estudiantes solo del primer grupo (diferencia)\nprint(\"Solo A:\", grupo_a - grupo_b)"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# 1. Cree dos sets con nombres de estudiantes\ngrupo_a = {\"Ana\", \"Luis\", \"Pedro\"}\ngrupo_b = {\"Pedro\", \"Sofía\", \"Ana\"}\n\n# 5. Imprima cada resultado con un mensaje descriptivo\n\n# 2. Muestre todos los estudiantes (unión)\nprint(\"Unión:\", grupo_a | grupo_b)\n# 3. Muestre estudiantes en ambos grupos (intersección)\nprint(\"Intersección:\", grupo_a & grupo_b)\n# 4. Estudiantes solo del primer grupo (diferencia)\nprint(\"Solo A:\", grupo_a - grupo_b)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 3: Control de Acceso"
+    },
+    {
+      "type": "paragraph",
+      "text": "Simula un sistema simple donde:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Existe un set llamado <code class=\"language-python\">usuarios_autorizados</code>.",
+        "Agrega un nuevo usuario.",
+        "Elimina un usuario existente.",
+        "Recorre el set mostrando los usuarios actuales.",
+        "Comprueba si un usuario específico pertenece al conjunto usando <code class=\"language-python\">in</code>."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Simula un sistema simple donde:\n# 1. Existe un set llamado usuarios_autorizados.\n# 2. Agrega un nuevo usuario.\n# 3. Elimina un usuario existente.\n# 4. Recorre el set mostrando los usuarios actuales.\n# 5. Comprueba si un usuario específico pertenece al\n# conjunto usando in"
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# 1. Existe un set llamado usuarios_autorizados\nusuarios_autorizados = {\"ana\", \"luis\", \"carlos\"}\n\n# 2. Agrega un nuevo usuario\nusuarios_autorizados.add(\"sofia\")\n# 3. Elimina un usuario existente\nusuarios_autorizados.remove(\"luis\")\n\n# 4. Recorre el set mostrando los usuarios actuales\nfor usuario in usuarios_autorizados:\n\tprint(usuario)\n\n# 5. Comprueba si un usuario específico pertenece al\n# conjunto usando in\nprint(\"ana\" in usuarios_autorizados)"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# 1. Existe un set llamado usuarios_autorizados\nusuarios_autorizados = {\"ana\", \"luis\", \"carlos\"}\n\n# 2. Agrega un nuevo usuario\nusuarios_autorizados.add(\"sofia\")\n# 3. Elimina un usuario existente\nusuarios_autorizados.remove(\"luis\")\n\n# 4. Recorre el set mostrando los usuarios actuales\nfor usuario in usuarios_autorizados:\n\tprint(usuario)\n\n# 5. Comprueba si un usuario específico pertenece al\n# conjunto usando in\nprint(\"ana\" in usuarios_autorizados)"
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Notas:</strong><br><strong>1.</strong> Los sets no permiten duplicados.<br><strong>2.</strong> No mantienen orden.<br><strong>3.</strong> Son ideales para comparaciones rápidas.<br><strong>4.</strong> Permiten operaciones matemáticas entre colecciones."
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tips:</strong><br><strong>1.</strong> Usa sets cuando solo importe la existencia de un elemento.<br><strong>2.</strong> Son más eficientes que listas para buscar coincidencias.<br><strong>3.</strong> Perfectos para limpiar datos repetidos."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Conclusiones de la Unidad"
+    },
+    {
+      "type": "paragraph",
+      "text": "En esta unidad aprendiste a trabajar con conjuntos o sets como estructuras diseñadas para almacenar elementos únicos sin orden específico. Comprendiste cómo crearlos, agregar y eliminar elementos, recorrerlos y aplicar operaciones matemáticas como unión, intersección y diferencia. También descubriste cómo los sets simplifican problemas comunes relacionados con comparación de datos y eliminación de duplicados, convirtiéndose en una herramienta poderosa para el análisis y procesamiento eficiente de información."
+    }
+  ]
+}
