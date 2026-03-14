@@ -1,0 +1,416 @@
+{
+  "title": "Definir Funciones con <code class=\"language-python\">def</code>",
+  "description": "",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Las funciones son bloques de código reutilizables que permiten agrupar instrucciones para realizar una tarea específica dentro de un programa. En Python, las funciones se definen utilizando la palabra clave <code class=\"language-python\">def</code>, lo que permite encapsular una serie de instrucciones bajo un nombre que puede ejecutarse cuando sea necesario. En esta unidad aprenderás qué son las funciones, cómo se crean y cómo se utilizan dentro de un programa. Además, comprenderás cómo las funciones ayudan a organizar el código, dividir problemas grandes en partes más pequeñas y evitar repetir instrucciones múltiples veces, lo que facilita el mantenimiento y la comprensión del programa."
+    },
+    {
+      "type": "subtitle1",
+      "text": "¿Qué es una Función?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Una función es un conjunto de instrucciones agrupadas que realizan una tarea específica."
+    },
+    {
+      "type": "paragraph",
+      "text": "En lugar de escribir el mismo código varias veces, se puede definir una función una sola vez y ejecutarla cuando sea necesario."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejemplo Cotidiano"
+    },
+    {
+      "type": "paragraph",
+      "text": "Piensa en una función como una receta de cocina:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "La receta → es la función.",
+        "Los pasos → son las instrucciones.",
+        "Cocinar → es ejecutar la función."
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Sintaxis Básica de una Función"
+    },
+    {
+      "type": "paragraph",
+      "text": "La estructura básica de una función en Python es:"
+    },
+    {
+      "type": "code",
+      "text": "def nombre_funcion():\n\tinstrucciones"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo:"
+    },
+    {
+      "type": "code",
+      "text": "def saludar():\n\tprint(\"Hola, bienvenido al programa\")"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejecutar la Función"
+    },
+    {
+      "type": "paragraph",
+      "text": "Para ejecutar la función se utiliza su nombre:"
+    },
+    {
+      "type": "code",
+      "text": "saludar()"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Hola, bienvenido al programa"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "def saludar():\n\tprint(\"Hola, bienvenido al programa\")\n\nsaludar()"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Definir una función no ejecuta el código automáticamente. Es necesario llamar la función para que se ejecute."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejemplo Completo"
+    },
+    {
+      "type": "code",
+      "text": "def mostrar_mensaje():\n\tprint(\"Aprendiendo funciones en Python\")\n\nmostrar_mensaje()\nmostrar_mensaje()"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Aprendiendo funciones en Python\nAprendiendo funciones en Python"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "def mostrar_mensaje():\n\tprint(\"Aprendiendo funciones en Python\")\n\nmostrar_mensaje()\nmostrar_mensaje()"
+    },
+    {
+      "type": "paragraph",
+      "text": "Esto demuestra cómo una función permite reutilizar código fácilmente."
+    },
+    {
+      "type": "subtitle1",
+      "text": "¿Por qué Usar Funciones?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Las funciones ayudan a:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Organizar el código.",
+        "Evitar repeticiones.",
+        "Facilitar el mantenimiento.",
+        "Dividir problemas grandes en partes pequeñas."
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Comparación"
+    },
+    {
+      "type": "table",
+      "headers": ["Sin Funciones", "Con Funciones"],
+      "rows": [
+        ["Código repetido", "Código reutilizable"],
+        ["Difícil de mantener", "Más organizado"],
+        ["Programas largos", "Programas modulares"]
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Llamar Funciones Varias Veces"
+    },
+    {
+      "type": "paragraph",
+      "text": "Una función puede ejecutarse muchas veces dentro de un programa."
+    },
+    {
+      "type": "code",
+      "text": "def bienvenida():\n\tprint(\"Bienvenido al sistema\")\n\nbienvenida()\nbienvenida()\nbienvenida()"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Bienvenido al sistema\nBienvenido al sistema\nBienvenido al sistema"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "def bienvenida():\n\tprint(\"Bienvenido al sistema\")\n\nbienvenida()\nbienvenida()\nbienvenida()"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br>Si ves el mismo bloque de código repetido varias veces, probablemente debería convertirse en una función."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Funciones para Organizar Programas"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo de un programa organizado con funciones:"
+    },
+    {
+      "type": "code",
+      "text": "def mostrar_titulo():\n\tprint(\"Sistema de Registro\")\n\ndef mostrar_menu():\n\tprint(\"1. Registrar usuario\")\n\tprint(\"2. Ver usuarios\")\n\nmostrar_titulo()\nmostrar_menu()"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Sistema de Registro\n1. Registrar usuario\n2. Ver usuarios"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "def mostrar_titulo():\n\tprint(\"Sistema de Registro\")\n\ndef mostrar_menu():\n\tprint(\"1. Registrar usuario\")\n\tprint(\"2. Ver usuarios\")\n\nmostrar_titulo()\nmostrar_menu()"
+    },
+    {
+      "type": "paragraph",
+      "text": "Esto hace que el programa sea más claro y estructurado."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Buenas Prácticas al Crear Funciones"
+    },
+    {
+      "type": "table",
+      "headers": ["Recomendación", "Explicación"],
+      "rows": [
+        [
+          "Usar nombres claros",
+          "Ejemplo: <code class=\"language-python\">calcular_total()</code>"
+        ],
+        ["Mantener funciones pequeñas", "Una tarea por función"],
+        ["Evitar código repetido", "Reutilizar funciones"]
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Nota Importante"
+    },
+    {
+      "type": "paragraph",
+      "text": "En Python, la indentación es obligatoria dentro de una función."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo correcto:"
+    },
+    {
+      "type": "code",
+      "text": "def ejemplo():\n\tprint(\"Dentro de la función\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo incorrecto:"
+    },
+    {
+      "type": "code",
+      "text": "def ejemplo():\nprint(\"Error\")"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejemplo Integrador"
+    },
+    {
+      "type": "code",
+      "text": "def mostrar_bienvenida():\n\tprint(\"Bienvenido al programa\")\n\ndef mostrar_despedida():\n\tprint(\"Gracias por usar el programa\")\n\nmostrar_bienvenida()\nmostrar_despedida()"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Bienvenido al programa\nGracias por usar el programa"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "def mostrar_bienvenida():\n\tprint(\"Bienvenido al programa\")\n\ndef mostrar_despedida():\n\tprint(\"Gracias por usar el programa\")\n\nmostrar_bienvenida()\nmostrar_despedida()"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejercicios Prácticos"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 1: Crear una Función de Saludo"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea un programa que realice lo siguiente:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Definir una función llamada <code class=\"language-python\">saludo</code>.",
+        "Dentro de la función imprimir el mensaje: <code class=\"language-python\">\"Hola, este es mi primer programa con funciones\"</code>.",
+        "Ejecutar la función desde el programa principal.",
+        "Llamar la función tres veces para observar cómo se reutiliza el código."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea un programa que realice lo siguiente:\n# 1. Definir una función llamada saludo.\n# 2. Dentro de la función imprimir el mensaje: \"Hola,\n# este es mi primer programa con funciones\".\n# 3. Ejecutar la función desde el programa principal.\n# 4. Llamar la función tres veces para observar cómo se\n# reutiliza el código"
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# 1. Definir una función llamada saludo\ndef saludo():\n\t# 2. Dentro de la función imprimir el mensaje: \"Hola,\n\t# este es mi primer programa con funciones\"\n\tprint(\"Hola, este es mi primer programa con funciones\")\n\n# 3. Ejecutar la función desde el programa principal\n# 4. Llamar la función tres veces para observar cómo se\n# reutiliza el código\nsaludo()\nsaludo()\nsaludo()"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# 1. Definir una función llamada saludo\ndef saludo():\n\t# 2. Dentro de la función imprimir el mensaje: \"Hola,\n\t# este es mi primer programa con funciones\"\n\tprint(\"Hola, este es mi primer programa con funciones\")\n\n# 3. Ejecutar la función desde el programa principal\n# 4. Llamar la función tres veces para observar cómo se\n# reutiliza el código\nsaludo()\nsaludo()\nsaludo()"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 2: Función para Mostrar un Menú"
+    },
+    {
+      "type": "paragraph",
+      "text": "Desarrolla un programa que simule un menú simple:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Crear una función llamada <code class=\"language-python\">mostrar_menu</code>.",
+        "Dentro de la función mostrar las siguientes opciones:"
+      ]
+    },
+    {
+      "type": "code",
+      "text": "1. Ver productos\n2. Comprar producto\n3. Salir"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Llamar la función desde el programa principal.",
+        "Ejecutarla dos veces para verificar que funciona correctamente."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Desarrolla un programa que simule un menú simple:\n# 1. Crear una función llamada mostrar_menu.\n# 2. Dentro de la función mostrar las siguientes\n# opciones:\n#\t1. Ver productos\n#\t2. Comprar producto\n#\t3. Salir\n# 3. Llamar la función desde el programa principal.\n# 4. Ejecutarla dos veces para verificar que funciona\n# correctamente"
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# 1. Crear una función llamada mostrar_menu\ndef mostrar_menu():\n# 2. Dentro de la función mostrar las siguientes\n# opciones:\n\t# 1. Ver productos\n\tprint(\"1. Ver productos\")\n\t# 2. Comprar producto\n\tprint(\"2. Comprar producto\")\n\t# 3. Salir\n\tprint(\"3. Salir\")\n\n# 3. Llamar la función desde el programa principal\n# 4. Ejecutarla dos veces para verificar que funciona\n# correctamente\nmostrar_menu()\nmostrar_menu()"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# 1. Crear una función llamada mostrar_menu\ndef mostrar_menu():\n# 2. Dentro de la función mostrar las siguientes\n# opciones:\n\t# 1. Ver productos\n\tprint(\"1. Ver productos\")\n\t# 2. Comprar producto\n\tprint(\"2. Comprar producto\")\n\t# 3. Salir\n\tprint(\"3. Salir\")\n\n# 3. Llamar la función desde el programa principal\n# 4. Ejecutarla dos veces para verificar que funciona\n# correctamente\nmostrar_menu()\nmostrar_menu()"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 3: Organizar un Programa con Funciones"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea un programa que tenga dos funciones diferentes:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Una función llamada <code class=\"language-python\">titulo</code> que imprima:"
+      ]
+    },
+    {
+      "type": "code",
+      "text": "Sistema de Gestión de Estudiantes"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Una función llamada <code class=\"language-python\">mensaje_inicio</code> que imprima:"
+      ]
+    },
+    {
+      "type": "code",
+      "text": "El programa ha iniciado correctamente"
+    },
+    {
+      "type": "list",
+      "items": ["Ejecutar ambas funciones desde el programa principal."]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea un programa que tenga dos funciones diferentes:\n# 1. Una función llamada titulo que imprima: \"Sistema\n# de Gestión de Estudiantes\"\n# 2. Una función llamada mensaje_inicio que imprima:\n# \"El programa ha iniciado correctamente\"\n# 3. Ejecutar ambas funciones desde el programa\n# principal"
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# 1. Una función llamada titulo que imprima: \"Sistema\n# de Gestión de Estudiantes\"\ndef titulo():\n\tprint(\"Sistema de Gestión de Estudiantes\")\n\n# 2. Una función llamada mensaje_inicio que imprima:\n# \"El programa ha iniciado correctamente\"\ndef mensaje_inicio():\n\tprint(\"El programa ha iniciado correctamente\")\n\n# 3. Ejecutar ambas funciones desde el programa\n# principal\ntitulo()\nmensaje_inicio()"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# 1. Una función llamada titulo que imprima: \"Sistema\n# de Gestión de Estudiantes\"\ndef titulo():\n\tprint(\"Sistema de Gestión de Estudiantes\")\n\n# 2. Una función llamada mensaje_inicio que imprima:\n# \"El programa ha iniciado correctamente\"\ndef mensaje_inicio():\n\tprint(\"El programa ha iniciado correctamente\")\n\n# 3. Ejecutar ambas funciones desde el programa\n# principal\ntitulo()\nmensaje_inicio()"
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Notas Importantes:</strong><br><strong>1.</strong> Las funciones agrupan instrucciones reutilizables.<br><strong>2.</strong> Se definen usando <code class=\"language-python\">def</code>.<br><strong>3.</strong> Deben ser llamadas para ejecutarse.<br><strong>4.</strong> Permiten organizar mejor los programas."
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tips de Aprendizaje:</strong><br><strong>1.</strong> Usa funciones para evitar repetir código.<br><strong>2.</strong> Nombra las funciones según la tarea que realizan.<br><strong>3.</strong> Divide programas grandes en varias funciones pequeñas."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Conclusiones de la Unidad"
+    },
+    {
+      "type": "paragraph",
+      "text": "En esta unidad aprendiste qué son las funciones y cómo definirlas en Python utilizando la palabra clave <code class=\"language-python\">def</code>. Comprendiste cómo agrupar instrucciones dentro de un bloque reutilizable y cómo ejecutar esas funciones desde diferentes partes del programa. También observaste cómo las funciones ayudan a organizar el código, evitar repeticiones y dividir problemas complejos en tareas más pequeñas y manejables. Estas habilidades constituyen una base fundamental para escribir programas más estructurados, claros y fáciles de mantener."
+    }
+  ]
+}
