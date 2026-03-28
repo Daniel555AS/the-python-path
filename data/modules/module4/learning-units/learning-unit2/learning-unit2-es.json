@@ -1,0 +1,406 @@
+{
+  "title": "Parámetros y Valores de Retorno",
+  "description": "",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "En programación, las funciones no solo ejecutan instrucciones, también pueden recibir información para trabajar con ella y devolver resultados que pueden utilizarse en otras partes del programa. En esta unidad aprenderás cómo las funciones reciben datos mediante parámetros y cómo pueden devolver resultados utilizando la instrucción <code class=\"language-python\">return</code>. Comprenderás cómo enviar valores al momento de llamar una función, cómo estos valores se utilizan dentro de ella y cómo el resultado puede devolverse para continuar el procesamiento del programa. Esto permitirá construir funciones más dinámicas, reutilizables y capaces de resolver problemas más complejos."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Parámetros en las Funciones"
+    },
+    {
+      "type": "paragraph",
+      "text": "Los parámetros son variables que se definen dentro de la función para recibir información cuando la función es llamada."
+    },
+    {
+      "type": "paragraph",
+      "text": "Esto permite que la función trabaje con distintos datos cada vez que se ejecuta."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Sintaxis Básica"
+    },
+    {
+      "type": "code",
+      "text": "def nombre_funcion(parametro):\n\tinstrucciones"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo:"
+    },
+    {
+      "type": "code",
+      "text": "def saludar(nombre):\n\tprint(\"Hola\", nombre)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Llamando la función:"
+    },
+    {
+      "type": "code",
+      "text": "saludar(\"Carlos\")\nsaludar(\"Ana\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Hola Carlos\nHola Ana"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "def saludar(nombre):\n\tprint(\"Hola\", nombre)\n\nsaludar(\"Carlos\")\nsaludar(\"Ana\")"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Los valores que se envían a una función cuando se llama se conocen como argumentos.<br>&nbsp;&nbsp;&nbsp;&nbsp;<strong>•</strong> Parámetro → variable definida en la función.<br>&nbsp;&nbsp;&nbsp;&nbsp;<strong>•</strong> Argumento → valor enviado al llamar la función."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Funciones con Varios Parámetros"
+    },
+    {
+      "type": "paragraph",
+      "text": " Una función puede recibir más de un parámetro."
+    },
+    {
+      "type": "code",
+      "text": "def presentar(nombre, edad):\n\tprint(\"Nombre:\", nombre)\n\tprint(\"Edad:\", edad)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Llamando la función:"
+    },
+    {
+      "type": "code",
+      "text": "presentar(\"Laura\", 22)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Nombre: Laura\nEdad: 22"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "def presentar(nombre, edad):\n\tprint(\"Nombre:\", nombre)\n\tprint(\"Edad:\", edad)\n\npresentar(\"Laura\", 22)"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Valores de Retorno"
+    },
+    {
+      "type": "paragraph",
+      "text": "Las funciones también pueden devolver resultados usando la palabra clave <code class=\"language-python\">return</code>."
+    },
+    {
+      "type": "paragraph",
+      "text": "Esto permite que el resultado de la función sea utilizado en otras partes del programa."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo:"
+    },
+    {
+      "type": "code",
+      "text": "def sumar(a, b):\n\tresultado = a + b\n\treturn resultado"
+    },
+    {
+      "type": "paragraph",
+      "text": "Uso de la función:"
+    },
+    {
+      "type": "code",
+      "text": "total = sumar(5, 3)\nprint(total)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "8"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "def sumar(a, b):\n\tresultado = a + b\n\treturn resultado\n\ntotal = sumar(5, 3)\nprint(total)"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br>Usa <code class=\"language-python\">return</code> cuando necesites obtener un resultado de la función para usarlo después."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Diferencia Entre <code class=\"language-python\">print()</code> y <code class=\"language-python\">return</code>"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Característica",
+        "<code class=\"language-python\">print()</code>",
+        "<code class=\"language-python\">return</code>"
+      ],
+      "rows": [
+        ["Muestra información", "Sí", "No necesariamente"],
+        ["Devuelve un valor", "No", "Sí"],
+        ["Se puede usar en otras operaciones", "No", "Sí"]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo:"
+    },
+    {
+      "type": "code",
+      "text": "def suma_print(a, b):\n\tprint(a + b)"
+    },
+    {
+      "type": "code",
+      "text": "def suma_return(a, b):\n\treturn a + b"
+    },
+    {
+      "type": "paragraph",
+      "text": "Uso:"
+    },
+    {
+      "type": "code",
+      "text": "resultado = suma_return(4, 6)\nprint(resultado * 2)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "20"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "def suma_print(a, b):\n\tprint(a + b)\n\ndef suma_return(a, b):\n\treturn a + b\n\nresultado = suma_return(4, 6)\nprint(resultado * 2)"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Flujo de una Función con Parámetros y Retorno"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>1.</strong> Se llama la función.<br><strong>2.</strong> Se envían argumentos.<br><strong>3.</strong> Los argumentos se asignan a parámetros.<br><strong>4.</strong> La función ejecuta sus instrucciones.<br><strong>5.</strong> Se devuelve el resultado con <code class=\"language-python\">return</code>."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejemplo Completo"
+    },
+    {
+      "type": "code",
+      "text": "def calcular_area(base, altura):\n\tarea = base * altura\n\treturn area\n\nresultado = calcular_area(5, 4)\nprint(\"El área es:\", resultado)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "El área es: 20"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "def calcular_area(base, altura):\n\tarea = base * altura\n\treturn area\n\nresultado = calcular_area(5, 4)\nprint(\"El área es:\", resultado)"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Nota Importante"
+    },
+    {
+      "type": "paragraph",
+      "text": "Cuando Python ejecuta <code class=\"language-python\">return</code>, la función termina inmediatamente."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo:"
+    },
+    {
+      "type": "code",
+      "text": "def ejemplo():\n\treturn 10\n\tprint(\"Esto no se ejecuta\")"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br>Las funciones con <code class=\"language-python\">return</code> permiten construir programas más flexibles, porque el resultado puede utilizarse en cálculos posteriores."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Resumen de Conceptos"
+    },
+    {
+      "type": "table",
+      "headers": ["Concepto", "Descripción"],
+      "rows": [
+        ["Parámetro", "Variable que recibe información"],
+        ["Argumento", "Valor enviado a la función"],
+        ["return", "Devuelve un resultado"],
+        ["Función dinámica", "Función que trabaja con diferentes datos"]
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejercicios Prácticos"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 1: Función para Sumar Números"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea un programa que permita calcular la suma de dos números utilizando una función."
+    },
+    {
+      "type": "paragraph",
+      "text": "El programa debe cumplir con lo siguiente:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Definir una función llamada <code class=\"language-python\">sumar</code>.",
+        "La función debe recibir dos parámetros.",
+        "Dentro de la función se debe calcular la suma de los dos valores.",
+        "La función debe devolver el resultado utilizando <code class=\"language-python\">return</code>.",
+        "En el programa principal se debe llamar la función enviando los números 10 y 5.",
+        "Guardar el resultado en una variable.",
+        "Mostrar el resultado en pantalla."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea un programa que permita calcular la suma de dos\n# números utilizando una función.\n# El programa debe cumplir con lo siguiente:\n# 1. Definir una función llamada sumar.\n# 2. La función debe recibir dos parámetros.\n# 3. Dentro de la función se debe calcular la suma de\n# los dos valores.\n# 4. La función debe devolver el resultado utilizando\n# return.\n# 5. En el programa principal se debe llamar la función\n# enviando los números 10 y 5.\n# 6. Guardar el resultado en una variable.\n# 7. Mostrar el resultado en pantalla."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# 1. Definir una función llamada sumar\n# 2. La función debe recibir dos parámetros\ndef sumar(a, b):\n\t# 3. Dentro de la función se debe calcular la suma de\n\t# los dos valores\n\tresultado = a + b\n\t# 4. La función debe devolver el resultado utilizando\n\t# return\n\treturn resultado\n\n# 5. En el programa principal se debe llamar la función\n# enviando los números 10 y 5\n# 6. Guardar el resultado en una variable\ntotal = sumar(10, 5)\n# 7. Mostrar el resultado en pantalla\nprint(\"La suma es:\", total)"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# 1. Definir una función llamada sumar\n# 2. La función debe recibir dos parámetros\ndef sumar(a, b):\n\t# 3. Dentro de la función se debe calcular la suma de\n\t# los dos valores\n\tresultado = a + b\n\t# 4. La función debe devolver el resultado utilizando\n\t# return\n\treturn resultado\n\n# 5. En el programa principal se debe llamar la función\n# enviando los números 10 y 5\n# 6. Guardar el resultado en una variable\ntotal = sumar(10, 5)\n# 7. Mostrar el resultado en pantalla\nprint(\"La suma es:\", total)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 2: Función para Calcular el Área de un Rectángulo"
+    },
+    {
+      "type": "paragraph",
+      "text": "Desarrolla un programa que calcule el área de un rectángulo utilizando funciones."
+    },
+    {
+      "type": "paragraph",
+      "text": "El programa debe realizar lo siguiente:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Crear una función llamada <code class=\"language-python\">calcular_area</code>.",
+        "La función debe recibir dos parámetros: <code class=\"language-python\">base</code> y <code class=\"language-python\">altura</code>.",
+        "Dentro de la función calcular el área usando la fórmula: <code class=\"language-python\">area = base * altura</code>.",
+        "Utilizar <code class=\"language-python\">return</code> para devolver el resultado.",
+        "En el programa principal llamar la función con los valores <code class=\"language-python\">8</code> y <code class=\"language-python\">3</code>.",
+        "Guardar el resultado en una variable.",
+        "Mostrar el resultado en pantalla."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Desarrolla un programa que calcule el área de un\n# rectángulo utilizando funciones.\n# El programa debe realizar lo siguiente:\n# 1.Crear una función llamada calcular_area.\n# 2. La función debe recibir dos parámetros: base y\n# altura.\n# 3. Dentro de la función calcular el área usando la\n# fórmula: area = base * altura.\n# 4. Utilizar return para devolver el resultado.\n# 5. En el programa principal llamar la función con los\n# valores 8 y 3.\n# 6. Guardar el resultado en una variable.\n# 7. Mostrar el resultado en pantalla."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# 1.Crear una función llamada calcular_area\n# 2. La función debe recibir dos parámetros: base y\n# altura\ndef calcular_area(base, altura):\n\t# 3. Dentro de la función calcular el área usando la\n\t# fórmula: area = base * altura\n\tarea = base * altura\n\t# 4. Utilizar return para devolver el resultado\n\treturn area\n\n# 5. En el programa principal llamar la función con los\n# valores 8 y 3\n# 6. Guardar el resultado en una variable\nresultado = calcular_area(8, 3)\n\n# 7. Mostrar el resultado en pantalla\nprint(\"El área del rectángulo es:\", resultado)"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# 1.Crear una función llamada calcular_area\n# 2. La función debe recibir dos parámetros: base y\n# altura\ndef calcular_area(base, altura):\n\t# 3. Dentro de la función calcular el área usando la\n\t# fórmula: area = base * altura\n\tarea = base * altura\n\t# 4. Utilizar return para devolver el resultado\n\treturn area\n\n# 5. En el programa principal llamar la función con los\n# valores 8 y 3\n# 6. Guardar el resultado en una variable\nresultado = calcular_area(8, 3)\n\n# 7. Mostrar el resultado en pantalla\nprint(\"El área del rectángulo es:\", resultado)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 3: Función Para Calcular el Promedio"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea un programa que calcule el promedio de tres notas utilizando una función."
+    },
+    {
+      "type": "paragraph",
+      "text": "El programa debe cumplir con lo siguiente:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Crea una función llamada <code class=\"language-python\">calcular_promedio</code>.",
+        "La función debe recibir tres parámetros que representen tres notas.",
+        "Dentro de la función calcular el promedio utilizando la fórmula: <code class=\"language-python\">promedio = (nota1 + nota2 + nota3) / 3</code>.",
+        "La función debe devolver el resultado usando <code class=\"language-python\">return</code>.",
+        "En el programa principal llamar la función con las notas <code class=\"language-python\">4.0</code>, <code class=\"language-python\">3.5</code> y <code class=\"language-python\">4.5</code>.",
+        "Guardar el resultado en una variable.",
+        "Mostrar el promedio final."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea un programa que calcule el promedio de tres\n# notas utilizando una función.\n# El programa debe cumplir con lo siguiente:\n# 1. Crea una función llamada calcular_promedio.\n# 2. La función debe recibir tres parámetros que\n# representen tres notas.\n# 3. Dentro de la función calcular el promedio\n# utilizando la fórmula: promedio = (nota1 + nota2 +\n# nota3) / 3.\n# 4. La función debe devolver el resultado usando\n# return.\n# 5. En el programa principal llamar la función con las\n# notas 4.0, 3.5 y 4.5.\n# 6. Guardar el resultado en una variable.\n# 7. Mostrar el promedio final."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# 1. Crea una función llamada calcular_promedio\n# 2. La función debe recibir tres parámetros que\n# representen tres notas\ndef calcular_promedio(nota1, nota2, nota3):\n\t# 3. Dentro de la función calcular el promedio\n\t# utilizando la fórmula: promedio = (nota1 + nota2 +\n\t# nota3) / 3\n\tpromedio = (nota1 + nota2 + nota3) / 3\n\t# 4. La función debe devolver el resultado usando\n\t# return\n\treturn promedio\n\n# 5. En el programa principal llamar la función con las\n# notas 4.0, 3.5 y 4.5\n# 6. Guardar el resultado en una variable\nresultado = calcular_promedio(4.0, 3.5, 4.5)\n\n# 7. Mostrar el promedio final\nprint(\"El promedio es:\", resultado)"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# 1. Crea una función llamada calcular_promedio\n# 2. La función debe recibir tres parámetros que\n# representen tres notas\ndef calcular_promedio(nota1, nota2, nota3):\n\t# 3. Dentro de la función calcular el promedio\n\t# utilizando la fórmula: promedio = (nota1 + nota2 +\n\t# nota3) / 3\n\tpromedio = (nota1 + nota2 + nota3) / 3\n\t# 4. La función debe devolver el resultado usando\n\t# return\n\treturn promedio\n\n# 5. En el programa principal llamar la función con las\n# notas 4.0, 3.5 y 4.5\n# 6. Guardar el resultado en una variable\nresultado = calcular_promedio(4.0, 3.5, 4.5)\n\n# 7. Mostrar el promedio final\nprint(\"El promedio es:\", resultado)"
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Notas Importantes:</strong><br><strong>1.</strong> Los parámetros permiten que una función trabaje con diferentes datos.<br><strong>2.</strong> <code class=\"language-python\">return</code> permite devolver resultados al programa.<br><strong>3.</strong> Las funciones con retorno son más flexibles y reutilizables."
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tips de Programación:</strong><br><strong>1.</strong> Usa <code class=\"language-python\">return</code> cuando necesites reutilizar el resultado de la función.<br><strong>2.</strong> Utiliza nombres claros para los parámetros.<br><strong>3.</strong> Mantén las funciones simples y enfocadas en una tarea específica."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Conclusiones de la Unidad"
+    },
+    {
+      "type": "paragraph",
+      "text": "En esta unidad aprendiste cómo las funciones pueden recibir información mediante parámetros y devolver resultados utilizando la instrucción <code class=\"language-python\">return</code>. Comprendiste la diferencia entre parámetros y argumentos, cómo enviar datos al llamar una función y cómo utilizar el resultado devuelto para continuar el procesamiento del programa. Estas herramientas permiten crear funciones más dinámicas, reutilizables y flexibles, lo que facilita la construcción de programas más organizados. El uso adecuado de parámetros y valores de retorno es una habilidad fundamental para desarrollar programas más estructurados y escalables en Python."
+    }
+  ]
+}
