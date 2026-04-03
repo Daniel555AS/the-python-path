@@ -1,0 +1,358 @@
+{
+  "title": "Funciones con Argumentos por Defecto",
+  "description": "",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "En muchas ocasiones, una función puede necesitar valores que no siempre cambian. Para estos casos, Python permite definir argumentos por defecto, es decir, parámetros que ya tienen un valor asignado si el usuario no proporciona uno al llamar la función. En esta unidad aprenderás cómo definir estos parámetros, cómo funcionan cuando se envían o no argumentos, y cómo utilizar argumentos nombrados, que permiten indicar explícitamente qué valor corresponde a cada parámetro. Estas herramientas permiten crear funciones más flexibles, fáciles de usar y adaptables a diferentes situaciones sin necesidad de modificar su definición."
+    },
+    {
+      "type": "subtitle1",
+      "text": "¿Qué son los Argumentos por Defecto?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Un argumento por defecto es un parámetro que tiene un valor asignado desde la definición de la función."
+    },
+    {
+      "type": "paragraph",
+      "text": "Si al llamar la función no se proporciona ese valor, Python utiliza el valor predeterminado."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Sintaxis"
+    },
+    {
+      "type": "code",
+      "text": "def nombre_funcion(parametro=valor):\n\tinstrucciones"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejemplo Básico"
+    },
+    {
+      "type": "code",
+      "text": "def saludar(nombre=\"Usuario\"):\n\tprint(\"Hola\", nombre)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Uso:"
+    },
+    {
+      "type": "code",
+      "text": "saludar()\nsaludar(\"Carlos\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Resultado:"
+    },
+    {
+      "type": "code",
+      "text": "Hola Usuario\nHola Carlos"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "def saludar(nombre=\"Usuario\"):\n\tprint(\"Hola\", nombre)\n\nsaludar()\nsaludar(\"Carlos\")"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Los argumentos por defecto hacen que los parámetros sean opcionales."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Múltiples Argumentos por Defecto"
+    },
+    {
+      "type": "paragraph",
+      "text": "Una función puede tener varios parámetros con valores por defecto."
+    },
+    {
+      "type": "code",
+      "text": "def mostrar_datos(nombre=\"Desconocido\", edad=0):\n\tprint(\"Nombre:\", nombre)\n\tprint(\"Edad:\", edad)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Uso:"
+    },
+    {
+      "type": "code",
+      "text": "mostrar_datos()\nmostrar_datos(\"Ana\", 25)"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "def mostrar_datos(nombre=\"Desconocido\", edad=0):\n\tprint(\"Nombre:\", nombre)\n\tprint(\"Edad:\", edad)\n\nmostrar_datos()\nmostrar_datos(\"Ana\", 25)"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Orden de los Parámetros"
+    },
+    {
+      "type": "paragraph",
+      "text": "Los parámetros con valores por defecto deben ir después de los parámetros obligatorios."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Incorrecto"
+    },
+    {
+      "type": "code",
+      "text": "def ejemplo(a=10, b):\n\tpass"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Correcto"
+    },
+    {
+      "type": "code",
+      "text": "def ejemplo(b, a=10):\n\tpass"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br>Primero define los parámetros obligatorios y luego los opcionales."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Argumentos Nombrados"
+    },
+    {
+      "type": "paragraph",
+      "text": "Los argumentos nombrados permiten especificar el nombre del parámetro al llamar la función."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo:"
+    },
+    {
+      "type": "code",
+      "text": "def registrar(nombre, edad):\n\tprint(nombre, edad)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Llamada:"
+    },
+    {
+      "type": "code",
+      "text": "registrar(edad=25, nombre=\"Carlos\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Resultado:"
+    },
+    {
+      "type": "code",
+      "text": "Carlos 25"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "def registrar(nombre, edad):\n\tprint(nombre, edad)\n\nregistrar(edad=25, nombre=\"Carlos\")"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>El orden de los argumentos no importa cuando se usan argumentos nombrados."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Combinar Argumentos por Defecto y Nombrados"
+    },
+    {
+      "type": "code",
+      "text": "def crear_usuario(nombre, rol=\"usuario\"):\n\tprint(\"Nombre:\", nombre)\n\tprint(\"Rol:\", rol)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Uso:"
+    },
+    {
+      "type": "code",
+      "text": "crear_usuario(\"Ana\")\ncrear_usuario(\"Luis\", rol=\"admin\")"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "def crear_usuario(nombre, rol=\"usuario\"):\n\tprint(\"Nombre:\", nombre)\n\tprint(\"Rol:\", rol)\n\ncrear_usuario(\"Ana\")\ncrear_usuario(\"Luis\", rol=\"admin\")"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br>Los argumentos nombrados mejoran la legibilidad del código, especialmente cuando hay muchos parámetros."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Resumen de Conceptos"
+    },
+    {
+      "type": "table",
+      "headers": ["Concepto", "Descripción"],
+      "rows": [
+        ["Argumento por defecto", "Parámetro con valor inicial"],
+        ["Argumento obligatorio", "Debe ser enviado"],
+        ["Argumento nombrado", "Se especifica por nombre"],
+        ["Parámetro opcional", "Puede omitirse"]
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejemplo Integrador"
+    },
+    {
+      "type": "code",
+      "text": "def calcular_descuento(precio, descuento=10):\n\ttotal = precio - (precio * descuento / 100)\n\treturn total\n\nprint(calcular_descuento(100))\nprint(calcular_descuento(100, 20))"
+    },
+    {
+      "type": "paragraph",
+      "text": "Resultado:"
+    },
+    {
+      "type": "code",
+      "text": "90.0\n80.0"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "def calcular_descuento(precio, descuento=10):\n\ttotal = precio - (precio * descuento / 100)\n\treturn total\n\nprint(calcular_descuento(100))\nprint(calcular_descuento(100, 20))"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Los valores por defecto se asignan una sola vez al definir la función, no cada vez que se ejecuta."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejercicios Prácticos"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 1: Función con Valor por Defecto"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea un programa que realice lo siguiente:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Definir una función llamada <code class=\"language-python\">saludo</code>.",
+        "La función debe tener un parámetro llamado <code class=\"language-python\">nombre</code> con valor por defecto <code class=\"language-python\">\"Invitado\"</code>.",
+        "Dentro de la función imprimir el mensaje: <code class=\"language-python\">Hola, &lt;nombre&gt;</code>.",
+        "Llamar la función sin argumentos.",
+        "Llamar la función enviando el nombre <code class=\"language-python\">\"Carlos\"</code>."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea un programa que realice lo siguiente:\n# 1. Definir una función llamada saludo.\n# 2. La función debe tener un parámetro llamado nombre\n# con valor por defecto \"Invitado\".\n# 3. Dentro de la función imprimir el mensaje: \"Hola,\n# <nombre>\".\n# 4. Llamar la función sin argumentos.\n# 5. Llamar la función enviando el nombre \"Carlos\"."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# 1. Definir una función llamada saludo\n# 2. La función debe tener un parámetro llamado nombre\n# con valor por defecto \"Invitado\"\ndef saludo(nombre=\"Invitado\"):\n\t# 3. Dentro de la función imprimir el mensaje: \"Hola,\n\t# &lt;nombre&gt;\"\n\tprint(\"Hola,\", nombre)\n\n# 4. Llamar la función sin argumentos\nsaludo()\n# 5. Llamar la función enviando el nombre \"Carlos\"\nsaludo(\"Carlos\")"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# 1. Definir una función llamada saludo\n# 2. La función debe tener un parámetro llamado nombre\n# con valor por defecto \"Invitado\"\ndef saludo(nombre=\"Invitado\"):\n\t# 3. Dentro de la función imprimir el mensaje: \"Hola,\n\t# <nombre>\"\n\tprint(\"Hola,\", nombre)\n\n# 4. Llamar la función sin argumentos\nsaludo()\n# 5. Llamar la función enviando el nombre \"Carlos\"\nsaludo(\"Carlos\")"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 2: Calculadora de Precio Final"
+    },
+    {
+      "type": "paragraph",
+      "text": "Desarrolla un programa que:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Cree una función llamada <code class=\"language-python\">precio_final</code>.",
+        "La función debe recibir: <code class=\"language-python\">precio</code> (obligatorio) e <code class=\"language-python\">impuesto</code> (por defecto 15).",
+        "Calcular el precio final con la fórmula: <code class=\"language-python\">precio_total = precio + (precio * impuesto / 100)</code>.",
+        "Devolver el resultado usando <code class=\"language-python\">return</code>.",
+        "Llamar la función una vez usando solo el <code class=\"language-python\">precio</code>.",
+        "Llamar la función otra vez usando el <code class=\"language-python\">precio</code> e <code class=\"language-python\">impuesto</code> personalizado (por ejemplo 20).",
+        "Mostrar ambos resultados."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Desarrolla un programa que:\n# 1. Cree una función llamada precio_final.\n# 2. La función debe recibir: precio (obligatorio) e\n# impuesto (por defecto 15).\n# 3. Calcular el precio final con la fórmula: \n# precio_total = precio + (precio * impuesto / 100).\n# 4. Devolver el resultado usando return.\n# 5. Llamar la función una vez usando solo el precio.\n# 6. Llamar la función otra vez usando el precio e\n# impuesto personalizado (por ejemplo 20).\n# 7. Mostrar ambos resultados."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# 1. Cree una función llamada precio_final\n# 2. La función debe recibir: precio (obligatorio) e\n# impuesto (por defecto 15)\ndef precio_final(precio, impuesto=15):\n\t# 3. Calcular el precio final con la fórmula:\n\t# precio_total = precio + (precio * impuesto / 100)\n\ttotal = precio + (precio * impuesto / 100)\n\t# 4. Devolver el resultado usando return\n\treturn total\n\n# 5. Llamar la función una vez usando solo el precio\nprint(precio_final(100))\n# 6. Llamar la función otra vez usando solo el precio e\n# impuesto personalizado (por ejemplo 20)\nprint(precio_final(100, 20))\n# 7. Mostrar ambos resultados\n# Ya se mostraron los respectivos resultados, usando la función print()"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# 1. Cree una función llamada precio_final\n# 2. La función debe recibir: precio (obligatorio) e\n# impuesto (por defecto 15)\ndef precio_final(precio, impuesto=15):\n\t# 3. Calcular el precio final con la fórmula:\n\t# precio_total = precio + (precio * impuesto / 100)\n\ttotal = precio + (precio * impuesto / 100)\n\t# 4. Devolver el resultado usando return\n\treturn total\n\n# 5. Llamar la función una vez usando solo el precio\nprint(precio_final(100))\n# 6. Llamar la función otra vez usando solo el precio e\n# impuesto personalizado (por ejemplo 20)\nprint(precio_final(100, 20))\n# 7. Mostrar ambos resultados\n# Ya se mostraron los respectivos resultados, usando la función print()"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 3: Uso de Argumentos Nombrados"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea un programa que:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Defina una función llamada <code class=\"language-python\">crear_producto</code>.",
+        "La función debe recibir: <code class=\"language-python\">nombre</code>, <code class=\"language-python\">precio</code> y <code class=\"language-python\">cantidad</code> (por defecto 1).",
+        "Imprimir los datos del producto.",
+        "Llamar la función utilizando argumentos nombrados.",
+        "Llamar la función cambiando el orden de los argumentos.",
+        "Llamar la función sin especificar la cantidad."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea un programa que:\n# 1. Defina una función llamada crear_producto.\n# 2. La función debe recibir: nombre, precio y cantidad\n# (por defecto 1).\n# 3. Imprimir los datos del producto.\n# 4. Llamar la función utilizando argumentos nombrados.\n# 5. Llamar la función cambiando el orden de los\n# argumentos.\n# 6. Llamar la función sin especificar la cantidad."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# 1. Defina una función llamada crear_producto\n# 2. La función debe recibir: nombre, precio y cantidad\n# (por defecto 1)\ndef crear_producto(nombre, precio, cantidad=1):\n\t# 3. Imprimir los datos del producto\n\tprint(\"Nombre:\", nombre)\n\tprint(\"Precio:\", precio)\n\tprint(\"Cantidad:\", cantidad)\n\n# 4. Llamar la función utilizando argumentos nombrados\ncrear_producto(nombre=\"Laptop\", precio=1000, cantidad=2)\n# 5. Llamar la función cambiando el orden de los\n# argumentos\n# 6. Llamar la función sin especificar la cantidad\ncrear_producto(precio=500, nombre=\"Mouse\")"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# 1. Defina una función llamada crear_producto\n# 2. La función debe recibir: nombre, precio y cantidad\n# (por defecto 1)\ndef crear_producto(nombre, precio, cantidad=1):\n\t# 3. Imprimir los datos del producto\n\tprint(\"Nombre:\", nombre)\n\tprint(\"Precio:\", precio)\n\tprint(\"Cantidad:\", cantidad)\n\n# 4. Llamar la función utilizando argumentos nombrados\ncrear_producto(nombre=\"Laptop\", precio=1000, cantidad=2)\n# 5. Llamar la función cambiando el orden de los\n# argumentos\n# 6. Llamar la función sin especificar la cantidad\ncrear_producto(precio=500, nombre=\"Mouse\")"
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Notas Importantes:</strong><br><strong>1.</strong> Los argumentos por defecto hacen los parámetros opcionales.<br><strong>2.</strong> Los argumentos nombrados permiten mayor claridad.<br><strong>3.</strong> El orden de los parámetros es importante en la definición."
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tips de Programación:</strong><br><strong>1.</strong> Usa valores por defecto para simplificar el uso de funciones.<br><strong>2.</strong> Usa argumentos nombrados cuando haya muchos parámetros.<br><strong>3.</strong> Diseña funciones flexibles y fáciles de reutilizar."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Conclusiones de la Unidad"
+    },
+    {
+      "type": "paragraph",
+      "text": "En esta unidad aprendiste cómo definir funciones con argumentos por defecto, permitiendo que algunos parámetros tengan valores predeterminados cuando no se proporcionan al llamar la función. También comprendiste el uso de argumentos nombrados, que permiten especificar explícitamente los valores de cada parámetro, mejorando la claridad y flexibilidad del código. Estas herramientas te permiten diseñar funciones más adaptables, reutilizables y fáciles de utilizar en diferentes contextos, lo que es fundamental para desarrollar programas más organizados en Python."
+    }
+  ]
+}
