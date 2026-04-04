@@ -1,0 +1,339 @@
+{
+  "title": "Scope o Alcance de las Variables",
+  "description": "",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "El scope o alcance de las variables determina en qué partes de un programa una variable puede ser utilizada o modificada. En Python, este concepto es fundamental para entender cómo funcionan las funciones y cómo se manejan los datos dentro de ellas. En esta unidad aprenderás la diferencia entre variables locales, que solo existen dentro de una función, y variables globales, que pueden ser utilizadas en diferentes partes del programa. También comprenderás cómo el alcance influye directamente en el comportamiento del código y por qué es importante manejar correctamente las variables para evitar errores, conflictos o resultados inesperados."
+    },
+    {
+      "type": "subtitle1",
+      "text": "¿Qué es el Scope?"
+    },
+    {
+      "type": "paragraph",
+      "text": "El scope define el \"lugar\" donde una variable es accesible."
+    },
+    {
+      "type": "paragraph",
+      "text": "Dependiendo de dónde se declare una variable, su alcance será diferente."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Variables Locales"
+    },
+    {
+      "type": "paragraph",
+      "text": "Una variable local es aquella que se define dentro de una función y solo puede utilizarse dentro de ella."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo:"
+    },
+    {
+      "type": "code",
+      "text": "def mostrar_nombre():\n\tnombre = \"Ana\"\n\tprint(nombre)\n\nmostrar_nombre()"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Ana"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "def mostrar_nombre():\n\tnombre = \"Ana\"\n\tprint(nombre)\n\nmostrar_nombre()"
+    },
+    {
+      "type": "paragraph",
+      "text": "Error fuera de la función:"
+    },
+    {
+      "type": "code",
+      "text": "def mostrar_nombre():\n\tnombre = \"Ana\"\n\tprint(nombre)\n\nprint(nombre) # Error: no existe fuera de la función"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "NameError: name 'nombre' is not defined"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "def mostrar_nombre():\n\tnombre = \"Ana\"\n\tprint(nombre)\n\nprint(nombre) # Error: no existe fuera de la función"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Las variables locales desaparecen cuando la función termina su ejecución."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Variables Globales"
+    },
+    {
+      "type": "paragraph",
+      "text": "Una variable global es aquella que se define fuera de cualquier función y puede utilizarse en todo el programa."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo:"
+    },
+    {
+      "type": "code",
+      "text": "mensaje = \"Hola mundo\"\n\ndef mostrar_mensaje():\n\tprint(mensaje)\n\nmostrar_mensaje()"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Hola mundo"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "mensaje = \"Hola mundo\"\n\ndef mostrar_mensaje():\n\tprint(mensaje)\n\nmostrar_mensaje()"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br>Las variables globales pueden ser leídas dentro de funciones sin problema."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Modificar Variables Globales"
+    },
+    {
+      "type": "paragraph",
+      "text": "Si quieres modificar una variable global dentro de una función, debes usar la palabra clave <code class=\"language-python\">global</code>."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo:"
+    },
+    {
+      "type": "code",
+      "text": "contador = 0\n\ndef incrementar():\n\tglobal contador\n\tcontador = contador + 1\n\nincrementar()\nprint(contador)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "1"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "contador = 0\n\ndef incrementar():\n\tglobal contador\n\tcontador = contador + 1\n\nincrementar()\nprint(contador)"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Sin <code class=\"language-python\">global</code>, Python crea una variable local nueva, no modifica la global."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo de confusión común:"
+    },
+    {
+      "type": "code",
+      "text": "x = 10\n\ndef cambiar():\n\tx = 5\n\tprint(x)\n\ncambiar()\nprint(x)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "5\n10"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "x = 10\n\ndef cambiar():\n\tx = 5\n\tprint(x)\n\ncambiar()\nprint(x)"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Esto ocurre porque <code class=\"language-python\">x</code> dentro de la función es local, no afecta la variable global."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Comparación: Variables Locales VS Globales"
+    },
+    {
+      "type": "table",
+      "headers": ["Característica", "Local", "Global"],
+      "rows": [
+        ["Lugar donde se define", "Dentro de función", "Fuera de función"],
+        ["Alcance", "Solo dentro de la función", "Todo el programa"],
+        ["Duración", "Temporal", "Permanente"],
+        ["Acceso", "Limitado", "Amplio"]
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tips (Buenas prácticas)</strong><br><strong>1.</strong> Evitar el uso excesivo de variables globales.<br><strong>2.</strong> Usar parámetros y <code class=\"language-python\">return</code> en su lugar.<br><strong>3.</strong> Mantener variables dentro de funciones cuando sea posible.<br><strong>4.</strong> Un buen programa usa funciones con parámetros, no depende de varibles globlales."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejemplo Integrador"
+    },
+    {
+      "type": "code",
+      "text": "contador = 0\n\ndef sumar():\n\tglobal contador\n\tcontador += 1\n\ndef mostrar():\n\tprint(\"Valor:\", contador)\n\nsumar()\nsumar()\nmostrar()"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Valor: 2"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "contador = 0\n\ndef sumar():\n\tglobal contador\n\tcontador += 1\n\ndef mostrar():\n\tprint(\"Valor:\", contador)\n\nsumar()\nsumar()\nmostrar()"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejercicios Prácticos"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 1: Variable Local"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea un programa que:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Defina una función llamada <code class=\"language-python\">saludo</code>.",
+        "Dentro de la función cree una variable llamada mensaje con el valor <code class=\"language-python\">\"Hola desde la función\"</code>.",
+        "Imprima el valor dentro de la función.",
+        "Intente imprimir la variable fuera de la función (observa el error).",
+        "Explica en un comentario por qué ocurre el error."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea un programa que:\n# 1. Defina una función llamada saludo.\n# 2. Dentro de la función cree una variable llamada\n# mensaje con el valor \"Hola desde la función\".\n# 3. Imprima el valor dentro de la función.\n# 4. Intente imprimir la variable fuera de la función\n# (observa el error).\n# 5. Explica en un comentario por qué ocurre el error."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# 1. Defina una función llamada saludo\ndef saludo():\n\t# 2. Dentro de la función cree una variable llamada\n\t# mensaje con el valor \"Hola desde la función\"\n\tmensaje = \"Hola desde la función\"\n\t# 3. Imprima el valor dentro de la función\n\tprint(mensaje)\n\n# 4. Intente imprimir la variable fuera de la función\n# (observa el error)\nsaludo()\n\n# 5. Explica en un comentario por qué ocurre el error\n# print(mensaje)  # Error: variable local"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# 1. Defina una función llamada saludo\ndef saludo():\n\t# 2. Dentro de la función cree una variable llamada\n\t# mensaje con el valor \"Hola desde la función\"\n\tmensaje = \"Hola desde la función\"\n\t# 3. Imprima el valor dentro de la función\n\tprint(mensaje)\n\n# 4. Intente imprimir la variable fuera de la función\n# (observa el error)\nsaludo()\n\n# 5. Explica en un comentario por qué ocurre el error\n# print(mensaje)  # Error: variable local"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 2: Variable Global"
+    },
+    {
+      "type": "paragraph",
+      "text": "Desarrolla un programa que:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Cree una variable global llamada <code class=\"language-python\">nombre</code> con tu nombre.",
+        "Defina una función llamada <code class=\"language-python\">mostrar_nombre</code>.",
+        "Dentro de la función imprima la variable global.",
+        "Llama la función y verifica que funciona correctamente."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Desarrolla un programa que:\n# 1. Cree una variable global llamada nombre con tu\n# nombre.\n# 2. Defina una función llamada mostrar_nombre.\n# 3. Dentro de la función imprima la variable global.\n# 4. Llama la función y verifica que funciona\n# correctamente."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# 1. Cree una variable global llamada nombre con tu\n# nombre\nnombre = \"Daniel\"\n\n# 2. Defina una función llamada mostrar_nombre\ndef mostrar_nombre():\n\t# 3. Dentro de la función imprima la variable global\n\tprint(nombre)\n\n# 4. Llama la función y verifica que funciona\n# correctamente\nmostrar_nombre()"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# 1. Cree una variable global llamada nombre con tu\n# nombre\nnombre = \"Daniel\"\n\n# 2. Defina una función llamada mostrar_nombre\ndef mostrar_nombre():\n\t# 3. Dentro de la función imprima la variable global\n\tprint(nombre)\n\n# 4. Llama la función y verifica que funciona\n# correctamente\nmostrar_nombre()"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 3: Modificar Variable Global"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea un programa que:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Defina una variable global llamada <code class=\"language-python\">contador</code> con valor inicial 0.",
+        "Cree una función llamada <code class=\"language-python\">incrementar</code>.",
+        "Dentro de la función: Usa la palabra clave <code class=\"language-python\">global</code> y aumenta el valor del contador en 1.",
+        "Llama la función tres veces.",
+        "Imprime el valor final del contador."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea un programa que:\n# 1. Defina una variable global llamada contador con\n# valor inicial 0.\n# 2. Cree una función llamada incrementar.\n# 3. Dentro de la función: Usa la palabra clave global\n# y aumenta el valor del contador en 1.\n# 4. Llama la función tres veces.\n# 5. Imprime el valor final del contador."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# 1. Defina una variable global llamada contador con\n# valor inicial 0\ncontador = 0\n\n# 2. Cree una función llamada incrementar\ndef incrementar():\n\t# 3. Dentro de la función: Usa la palabra clave global\n\t# y aumenta el valor del contador en 1\n\tglobal contador\n\tcontador += 1\n\n# 4. Llama la función tres veces\nincrementar()\nincrementar()\nincrementar()\n\n# 5. Imprime el valor final del contador\nprint(contador)"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# 1. Defina una variable global llamada contador con\n# valor inicial 0\ncontador = 0\n\n# 2. Cree una función llamada incrementar\ndef incrementar():\n\t# 3. Dentro de la función: Usa la palabra clave global\n\t# y aumenta el valor del contador en 1\n\tglobal contador\n\tcontador += 1\n\n# 4. Llama la función tres veces\nincrementar()\nincrementar()\nincrementar()\n\n# 5. Imprime el valor final del contador\nprint(contador)"
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Notas Importantes:</strong><br><strong>1.</strong> Las variables locales solo existen dentro de la función.<br><strong>2.</strong> Las variables globales pueden usarse en todo el programa.<br><strong>3.</strong> Para modificar una variable global se usa <code class=\"language-python\">global</code>."
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tips de Programación:</strong><br><strong>1.</strong> Evita depender demasiado de variables globales.<br><strong>2.</strong> Usa funciones con parámetros y <code class=\"language-python\">return</code>.<br><strong>3.</strong> Mantén el control del flujo de datos dentro de funciones."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Conclusiones de la Unidad"
+    },
+    {
+      "type": "paragraph",
+      "text": "En esta unidad aprendiste el concepto de scope o alcance de las variables, comprendiendo la diferencia entre variables locales y globales, así como su impacto en el comportamiento del programa. Entendiste cómo las variables locales están limitadas a la función donde se definen, mientras que las globales pueden ser accedidas desde distintas partes del código, y cómo utilizar la palabra clave <code class=\"language-python\">global</code> para modificarlas cuando es necesario. Dominar el alcance de las variables es fundamental para evitar errores, mejorar la organización del código y desarrollar programas más claros, seguros y fáciles de mantener."
+    }
+  ]
+}
