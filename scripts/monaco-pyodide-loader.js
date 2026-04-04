@@ -7,11 +7,10 @@ require.config({
 
 // Monaco + Pyodide centralized module
 const MonacoPyodide = (function () {
-  let pyodide = null; // Pyodide instace
-  let pyodideReady = false; // Indicates when Pyodide is fully loaded
-  let editor = null; // Monaco editor instance
+  let pyodide = null;
+  let pyodideReady = false;
+  let editor = null;
 
-  // Initialize Monaco Editor and Pyodide
   async function initializeMonacoAndPyodide(options = {}) {
     const {
       editorId = "editor",
@@ -24,7 +23,7 @@ const MonacoPyodide = (function () {
     const output = document.getElementById(outputId);
     const runBtn = document.getElementById(runButtonId);
 
-    // Load MONACO Editor
+    // Load MONACO
     await new Promise((resolve) => {
       require(["vs/editor/editor.main"], function () {
         editor = monaco.editor.create(document.getElementById(editorId), {
@@ -51,23 +50,25 @@ const MonacoPyodide = (function () {
       pyodide.setStdout({ batched: (msg) => appendOutput(msg, output) });
       pyodide.setStderr({ batched: (msg) => appendOutput(msg, output, true) });
 
-      // Expose custom input handler to the global scope
+      // Expose JS input
       window.pyinput = pyinput;
-      // Redefine Python input() as async to work with JS
+      pyodide.globals.set("__BRIDGE_input", pyinput);
+
+      // input async
       await pyodide.runPythonAsync(`
 import asyncio
 
 async def input(prompt=''):
     return await __BRIDGE_input(prompt)
 `);
-      pyodide.globals.set("__BRIDGE_input", pyinput);
+
       pyodideReady = true;
       output.textContent += "[✔] Pyodide loaded successfully.\n";
     } catch (err) {
       output.textContent += "\n[X] Error loading Pyodide: " + err + "\n";
     }
 
-    // Run button logic
+    // Run Button
     if (runBtn) {
       runBtn.addEventListener("click", async () => {
         if (!pyodideReady) {
@@ -75,34 +76,41 @@ async def input(prompt=''):
           return;
         }
 
-        // Get code from the editor
         let code = editor.getValue();
         output.textContent = "";
-        // Replace input() calls with await input()
-        code = code.replace(/\binput\(/g, "await input(");
-        // Split code into lines
-        let userLines = code.split("\n");
-        // Check if the code is empty or only contains comments
-        const onlyCommentsOrEmpty = userLines.every(
-          (line) => line.trim() === "" || line.trim().startsWith("#")
-        );
 
-        // If empty, insert a 'pass' statement
+        // For empty code
+        const onlyCommentsOrEmpty = code
+          .split("\n")
+          .every((line) => line.trim() === "" || line.trim().startsWith("#"));
+
         if (onlyCommentsOrEmpty) {
-          userLines = ["pass"];
+          code = "pass";
         }
 
-        const indented = userLines.map((line) => "    " + line).join("\n");
-        const wrappedCode = `
+        // Detect if the code uses input()
+        const usesInput = /\binput\s*\(/.test(code);
+
+        try {
+          if (usesInput) {
+            const transformedCode = code.replace(/\binput\s*\(/g, "await input(");
+            const wrappedCode = `
 import asyncio
 
-async def __user_code():
-${indented}
+async def __runner__():
+${transformedCode.split("\n").map(line => "    " + line).join("\n")}
 
-await __user_code()
+await __runner__()
 `;
-        try {
-          await pyodide.runPythonAsync(wrappedCode);
+            await pyodide.runPythonAsync(wrappedCode);
+          } else {
+            // Run directly globally without async
+            await pyodide.runPythonAsync(`
+exec("""
+${code.replace(/\\/g, "\\\\").replace(/"/g, '\\"')}
+""", globals())
+`);
+          }
         } catch (err) {
           appendOutput("[X] Error:\n" + err + "\n", output, true);
         }
@@ -110,7 +118,6 @@ await __user_code()
     }
   }
 
-  // Helper function to append output text
   function appendOutput(msg, output, isError = false) {
     const span = document.createElement("span");
     span.textContent = msg;
@@ -120,25 +127,26 @@ await __user_code()
     output.scrollTop = output.scrollHeight;
   }
 
-  // Emulate Python's input()
   async function pyinput(prompt) {
     return new Promise((resolve) => {
       const output = document.getElementById("output");
+
       const line = document.createElement("div");
       line.style.display = "flex";
       line.style.gap = "5px";
-      // Show prompt text
+
       const promptSpan = document.createElement("span");
       promptSpan.textContent = prompt;
       line.appendChild(promptSpan);
-      // Input field for user response
+
       const inputBox = document.createElement("input");
       inputBox.type = "text";
       inputBox.placeholder = "Type...";
       line.appendChild(inputBox);
+
       output.appendChild(line);
       output.scrollTop = output.scrollHeight;
-      // Resolve promise when Enter is pressed
+
       inputBox.addEventListener("keypress", (event) => {
         if (event.key === "Enter") {
           const valueSpan = document.createElement("span");
@@ -147,6 +155,7 @@ await __user_code()
           resolve(inputBox.value);
         }
       });
+
       inputBox.focus();
     });
   }
