@@ -70,3 +70,33 @@ Because learning is an adventure!
     - [2.4. Flow Control in Loops](https://daniel555as.github.io/the-python-path/pages/learning-unit.html#module2-learning-unit4)
 
       Here you will discover how to modify the internal execution of a loop using special statements like break to stop it early, continue to skip a specific iteration, and pass to leave an empty block to be completed later. These tools allow you to have more precise and flexible control over the behavior of your loops.
+  
+  - [3. Data Structures](https://daniel555as.github.io/the-python-path/pages/roadmap.html#module3)
+
+    In this module, you will learn to work with different types of collections in Python. You will understand how to use lists, tuples, dictionaries, and sets to store and organize information, as well as how to iterate over and manipulate their elements.
+
+      - [3.1. Lists: Ordered Collections](https://daniel555as.github.io/the-python-path/pages/learning-unit.html#module3-learning-unit1)
+
+        Lists are data structures that allow storing multiple elements in a single variable while maintaining a specific order. In this unit, you will learn how to create lists using different data types, access their elements using positive and negative indices, modify existing values, add or remove elements, and iterate through the list using looping structures. Additionally, you will understand how lists can represent dynamic collections of information that can change during the execution of a program.
+
+      - [3.2. Useful List Methods](https://daniel555as.github.io/the-python-path/pages/learning-unit.html#module3-learning-unit2)
+
+        In this unit, you will study Python’s built-in methods that facilitate list manipulation. You will learn to use functions such as append() to add elements, remove() to delete specific values, sort() to organize data, reverse() to invert the order, and count() to count occurrences within the list. Emphasis is placed on how these methods help write cleaner code, reduce manual operations, and improve the organization and processing of data collections.
+
+      - [3.3. Tuples: Immutable Data](https://daniel555as.github.io/the-python-path/pages/learning-unit.html#module3-learning-unit3)
+
+        Tuples are structures similar to lists, but with the main characteristic of being immutable, meaning their elements cannot be modified after creation. In this unit, you will learn what tuples are, how they are defined, and how to access their values, as well as the scenarios in which it is appropriate to use them, especially when you want to protect constant data or represent fixed information. You will also explore the practical differences between lists and tuples in terms of security, performance, and usage in real-world programs.
+
+      - [3.4. Dictionaries: Keys and Values](https://daniel555as.github.io/the-python-path/pages/learning-unit.html#module3-learning-unit4)
+
+        Dictionaries allow storing information using key-value pairs, making it easier to represent structured and related data. In this unit, you will learn how to create dictionaries, access values through their keys, modify existing information, add new elements, and iterate through the dictionary using loops. You will also explore how this structure is ideal for modeling real-world objects, such as users, products, or configurations, where each piece of data has a unique identifier.
+
+      - [3.5. Sets](https://daniel555as.github.io/the-python-path/pages/learning-unit.html#module3-learning-unit5)
+
+        Sets are data structures that store unique elements without maintaining a specific order, automatically preventing duplicate values. In this unit, you will learn how to create sets, add and remove elements, and apply mathematical operations between sets such as union, intersection, and difference. Additionally, practical use cases will be explored where sets help simplify problems related to data comparison, duplicate filtering, and analyzing matches between collections.
+
+      - [3.6. Iterating Through Data Structures](https://daniel555as.github.io/the-python-path/pages/learning-unit.html#module3-learning-unit6)
+
+        This unit focuses on the different ways to iterate through data structures using loops in Python. You will learn how to use simple and nested for loops, the len() function to obtain the size of collections, and the enumerate() function to access both the index and the value of elements simultaneously. The goal is to develop the ability to process information stored in lists, tuples, dictionaries, and sets in order to work with more complex data structures.        
+
+
