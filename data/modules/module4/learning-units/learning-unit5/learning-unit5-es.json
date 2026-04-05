@@ -1,0 +1,390 @@
+{
+  "title": "Funciones Anidadas y Lambdas (Básico)",
+  "description": "",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "En esta unidad aprenderás dos conceptos que permiten escribir código más organizado y compacto: las funciones anidadas y las funciones lambda. Las funciones anidadas permiten definir una función dentro de otra, lo cual es útil para estructurar mejor tareas internas y limitar el uso de ciertas funciones a un contexto específico. Por otro lado, las funciones lambda permiten crear funciones pequeñas en una sola línea, ideales para operaciones simples o temporales. Comprender estas herramientas te ayudará a escribir código más claro, flexible y eficiente en situaciones donde no es necesario definir funciones completas con <code class=\"language-python\">def</code>."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Funciones Anidadas"
+    },
+    {
+      "type": "paragraph",
+      "text": "Una función anidada es una función definida dentro de otra función."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Estructura Básica"
+    },
+    {
+      "type": "code",
+      "text": "def funcion_externa():\n\n\tdef funcion_interna():\n\t\tprint(\"Soy una función interna\")\n\n\tfuncion_interna()"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo:"
+    },
+    {
+      "type": "code",
+      "text": "def saludar():\n\n\tdef mensaje():\n\t\tprint(\"Hola desde la función interna\")\n\n\tmensaje()\n\nsaludar()"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Hola desde la función interna"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "def saludar():\n\n\tdef mensaje():\n\t\tprint(\"Hola desde la función interna\")\n\n\tmensaje()\n\nsaludar()"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>La función interna solo existe dentro de la función externa y no puede ser llamada desde fuera."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Error al Intentar Usarla Fuera"
+    },
+    {
+      "type": "code",
+      "text": "mensaje()  # Error: no existe fuera"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "NameError: name 'mensaje' is not defined"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "def saludar():\n\n\tdef mensaje():\n\t\tprint(\"Hola desde la función interna\")\n\n\tmensaje()\n\nmensaje()"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br>Usa funciones anidadas cuando una función solo tiene sentido dentro de otra."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Uso Práctico de Funciones Anidadas"
+    },
+    {
+      "type": "code",
+      "text": "def operacion():\n\n\tdef sumar(a, b):\n\t\treturn a + b\n\n\tresultado = sumar(5, 3)\n\tprint(resultado)\n\noperacion()"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "8"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "def operacion():\n\n\tdef sumar(a, b):\n\t\treturn a + b\n\n\tresultado = sumar(5, 3)\n\tprint(resultado)\n\noperacion()"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Esto ayuda a organizar mejor el código y evitar que funciones internas se usen en otros contextos por error."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Funciones Lambda"
+    },
+    {
+      "type": "paragraph",
+      "text": "Una función lambda es una función pequeña y anónima que se define en una sola línea."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Sintaxis"
+    },
+    {
+      "type": "code",
+      "text": "lambda parametros: expresion"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo básico:"
+    },
+    {
+      "type": "code",
+      "text": "sumar = lambda a, b: a + b\n\nprint(sumar(4, 6))"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "10"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "sumar = lambda a, b: a + b\n\nprint(sumar(4, 6))"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Las funciones lambda no usan <code class=\"language-python\">def</code> ni <code class=\"language-python\">return</code>, el resultado se devuelve automáticamente."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Cuándo Usar Lambda"
+    },
+    {
+      "type": "paragraph",
+      "text": "Se utilizan cuando:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "La función es muy simple.",
+        "Se usa una sola vez.",
+        "No necesitas definir una función completa."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo:"
+    },
+    {
+      "type": "code",
+      "text": "cuadrado = lambda x: x * x\n\nprint(cuadrado(5))"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "25"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "cuadrado = lambda x: x * x\n\nprint(cuadrado(5))"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip</strong><br>Si la función es compleja o tiene varias líneas, es mejor usar <code class=\"language-python\">def</code>."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Comparación: Función Normal VS Lambda"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Característica",
+        "Función con <code class=\"language-python\">def</code>",
+        "Función Lambda"
+      ],
+      "rows": [
+        ["Nombre", "Sí", "Opcional"],
+        ["Múltiples líneas", "Sí", "No"],
+        ["Sintaxis", "Más extensa", "Más corta"],
+        ["Uso", "General", "Simple y rápido"]
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Uso de Lambda en Funciones Integradas"
+    },
+    {
+      "type": "paragraph",
+      "text": "Las funciones lambda se usan frecuentemente con funciones como <code class=\"language-python\">map()</code>."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo con <code class=\"language-python\">map</code>:"
+    },
+    {
+      "type": "code",
+      "text": "numeros = [1, 2, 3, 4]\n\nresultado = list(map(lambda x: x * 2, numeros))\n\nprint(resultado)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "[2, 4, 6, 8]"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "numeros = [1, 2, 3, 4]\n\nresultado = list(map(lambda x: x * 2, numeros))\n\nprint(resultado)"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br><code class=\"language-python\">map()</code> aplica una función a cada elemento de una colección."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejemplo Integrador"
+    },
+    {
+      "type": "code",
+      "text": "def calcular():\n\n\tdef multiplicar(a, b):\n\t\treturn a * b\n\n\tresultado = multiplicar(3, 4)\n\n\tdoble = lambda x: x * 2\n\n\tprint(\"Multiplicación:\", resultado)\n\tprint(\"Doble:\", doble(resultado))\n\ncalcular()"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Multiplicación: 12\nDoble: 24"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "def calcular():\n\n\tdef multiplicar(a, b):\n\t\treturn a * b\n\n\tresultado = multiplicar(3, 4)\n\n\tdoble = lambda x: x * 2\n\n\tprint(\"Multiplicación:\", resultado)\n\tprint(\"Doble:\", doble(resultado))\n\ncalcular()"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejercicios Prácticos"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 1: Función Anidada Básica"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea un programa que:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Defina una función llamada <code class=\"language-python\">principal</code>.",
+        "Dentro de esa función define otra función llamada <code class=\"language-python\">mensaje</code>.",
+        "La función interna debe imprimir: <code class=\"language-python\">\"Hola desde la función interna\"</code>.",
+        "Llama la función interna desde la función principal.",
+        "Ejecuta la función principal.",
+        "Intenta llamar la función interna fuera de la función principal (observar el error)."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea un programa que:\n# 1. Defina una función llamada principal.\n# 2. Dentro de esa función define otra función llamada\n# mensaje.\n# 3. La función interna debe imprimir: \"Hola desde la\n# función interna\".\n# 4. Llama la función interna desde la función\n# principal.\n# 5. Ejecuta la función principal.\n# 6. Intenta llamar la función interna fuera de la\n# función principal (observar el error)."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# 1. Defina una función llamada principal\ndef principal():\n\n\t# 2. Dentro de esa función define otra función llamada\n\t# mensaje\n\tdef mensaje():\n\t\t# 3. La función interna debe imprimir: \"Hola desde la\n\t\t# función interna\"\n\t\tprint(\"Hola desde la función interna\")\n\n\t# 4. Llama la función interna desde la función\n\t# principal\n\tmensaje()\n\n# 5. Ejecuta la función principal\nprincipal()\n\n# 6. Intenta llamar la función interna fuera de la\n# función principal (observar el error)\n# mensaje()  # Error: función interna\n# NameError: name 'mensaje' is not defined"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# 1. Defina una función llamada principal\ndef principal():\n\n\t# 2. Dentro de esa función define otra función llamada\n\t# mensaje\n\tdef mensaje():\n\t\t# 3. La función interna debe imprimir: \"Hola desde la\n\t\t# función interna\"\n\t\tprint(\"Hola desde la función interna\")\n\n\t# 4. Llama la función interna desde la función\n\t# principal\n\tmensaje()\n\n# 5. Ejecuta la función principal\nprincipal()\n\n# 6. Intenta llamar la función interna fuera de la\n# función principal (observar el error)\n# mensaje()  # Error: función interna\n# NameError: name 'mensaje' is not defined"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 2: Uso de Lambda"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea un programa que:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Defina una función lambda que reciba un número.",
+        "La función debe devolver el triple del número.",
+        "Guarda la función en una variable.",
+        "Llama la función con el valor <code class=\"language-python\">5</code>.",
+        "Muestra el resultado en pantalla."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea un programa que:\n# 1. Defina una función lambda que reciba un número.\n# 2. La función debe devolver el triple del número.\n# 3. Guarda la función en una variable.\n# 4. Llama la función con el valor 5.\n# 5. Muestra el resultado en pantalla."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# 1. Defina una función lambda que reciba un número\n# 2. La función debe devolver el triple del número\n# 3. Guarda la función en una variable\ntriple = lambda x: x * 3\n# 4. Llama la función con el valor 5\n# 5. Muestra el resultado en pantalla\nprint(triple(5))"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# 1. Defina una función lambda que reciba un número\n# 2. La función debe devolver el triple del número\n# 3. Guarda la función en una variable\ntriple = lambda x: x * 3\n# 4. Llama la función con el valor 5\n# 5. Muestra el resultado en pantalla\nprint(triple(5))"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 3: Lambda con Lista"
+    },
+    {
+      "type": "paragraph",
+      "text": "Desarrolla un programa que:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Cree una lista con los números: <code class=\"language-python\">[2, 4, 6, 8]</code>.",
+        "Use la función <code class=\"language-python\">map()</code> junto con una función lambda.",
+        "La función lambda debe multiplicar cada número por <code class=\"language-python\">2</code>.",
+        "Convierta el resultado a lista.",
+        "Muestra el resultado final."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Desarrolla un programa que:\n# 1. Cree una lista con los números: [2, 4, 6, 8].\n# 2. Use la función map() junto con una función lambda.\n# 3. La función lambda debe multiplicar cada número por\n# 2.\n# 4. Convierta el resultado a lista.\n# 5. Muestra el resultado final."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# 1. Cree una lista con los números: [2, 4, 6, 8]\nnumeros = [2, 4, 6, 8]\n\n# 2. Use la función map() junto con una función lambda\n# 3. La función lambda debe multiplicar cada número por\n# 2\n# 4. Convierta el resultado a lista\nresultado = list(map(lambda x: x * 2, numeros))\n\n# 5. Muestra el resultado final\nprint(resultado)"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# 1. Cree una lista con los números: [2, 4, 6, 8]\nnumeros = [2, 4, 6, 8]\n\n# 2. Use la función map() junto con una función lambda\n# 3. La función lambda debe multiplicar cada número por\n# 2\n# 4. Convierta el resultado a lista\nresultado = list(map(lambda x: x * 2, numeros))\n\n# 5. Muestra el resultado final\nprint(resultado)"
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Notas Importantes:</strong><br><strong>1.</strong> Las funciones anidadas solo existen dentro de otra función.<br><strong>2.</strong> Las funciones lambda son funciones pequeñas de una sola línea.<br><strong>3.</strong> Lambda devuelve el resultado automáticamente."
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tips de Programación:</strong><br><strong>1.</strong> Usa funciones anidadas para organizar mejor el código interno.<br><strong>2.</strong> Usa lambda para operaciones simples y rápidas.<br><strong>3.</strong> No abuses de lambda en funciones complejas."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Conclusiones de la Unidad"
+    },
+    {
+      "type": "paragraph",
+      "text": "En esta unidad aprendiste a utilizar funciones anidadas para organizar mejor el código y limitar el uso de funciones a contextos específicos, así como a crear funciones lambda, que permiten definir funciones pequeñas y rápidas en una sola línea. Comprendiste cuándo es adecuado usar cada una de estas herramientas y cómo contribuyen a escribir código más compacto, flexible y legible. Estas técnicas son especialmente útiles para simplificar tareas simples y mejorar la estructura general de tus programas en Python."
+    }
+  ]
+}
