@@ -1,0 +1,30 @@
+{
+  "title": "5.📂Manejo de Texto y Datos",
+  "description": "En este módulo aprenderás a trabajar con cadenas de texto, modificarlas y formatearlas usando distintas técnicas. También verás cómo convertir texto en listas y viceversa, y aplicarás lo aprendido en pequeños proyectos prácticos como un contador de palabras o un verificador de contraseñas.",
+  "steps": [
+    {
+      "name": "1. Operaciones con Cadenas (<code>str</code>)",
+      "description": "En esta unidad aprenderás a trabajar con cadenas de texto en Python, comprendiendo cómo acceder a caracteres individuales mediante indexación, extraer partes de un texto utilizando slicing y aplicar métodos comunes para transformar cadenas, como convertir a mayúsculas o minúsculas y reemplazar fragmentos de texto. También se explorará cómo manipular y analizar información textual, entendiendo que las cadenas son una de las estructuras más utilizadas en programación para representar y procesar datos.",
+      "color": "#FFD43B",
+      "unit": "learning-unit1"
+    },
+    {
+      "name": "2. Formatos de Texto y f-strings",
+      "description": "En esta unidad se estudiará cómo combinar texto con valores de variables para generar salidas más claras y dinámicas, utilizando diferentes formas de formateo en Python, especialmente las f-strings, que permiten insertar expresiones directamente dentro de cadenas. Aprenderás a construir mensajes más legibles, mostrar resultados de manera organizada y mejorar la presentación de la información, lo cual es fundamental en aplicaciones que interactúan con usuarios o muestran resultados en pantalla.",
+      "color": "#3776AB",
+      "unit": "learning-unit2"
+    },
+    {
+      "name": "3. Listas y Cadenas: Conversión entre Tipos",
+      "description": "En esta unidad se estudiará cómo combinar texto con valores de variables para generar salidas más claras y dinámicas, utilizando diferentes formas de formateo en Python, especialmente las f-strings, que permiten insertar expresiones directamente dentro de cadenas. El estudiante aprenderá a construir mensajes más legibles, mostrar resultados de manera organizada y mejorar la presentación de la información, lo cual es fundamental en aplicaciones que interactúan con usuarios o muestran resultados en pantalla.",
+      "color": "#1B983A",
+      "unit": "learning-unit3"
+    },
+    {
+      "name": "4. Mini Proyectos con Texto",
+      "description": "En esta unidad se aplicarán los conocimientos adquiridos en el manejo de cadenas y listas mediante el desarrollo de pequeños proyectos prácticos, como un contador de palabras, un verificador de contraseñas y un inversor de texto. El objetivo es que consolides tu comprensión a través de la resolución de problemas, combinando diferentes conceptos aprendidos y desarrollando la capacidad de analizar, procesar y transformar información textual de forma lógica y estructurada.",
+      "color": "#6464FF",
+      "unit": "learning-unit4"
+    }
+  ]
+}
