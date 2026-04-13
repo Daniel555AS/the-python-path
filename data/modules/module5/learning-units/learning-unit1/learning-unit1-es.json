@@ -1,0 +1,442 @@
+{
+  "title": "Operaciones con Cadenas (<code class=\"language-python\">str</code>)",
+  "description": "",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Las cadenas de texto (<code class=\"language-python\">str</code>) son fundamentales en Python, ya que permiten representar y manipular información textual. En esta unidad aprenderás a acceder a caracteres mediante indexación, extraer partes del texto con slicing y utilizar métodos para transformar y analizar cadenas, como convertir a mayúsculas, minúsculas o reemplazar contenido. Estas habilidades son clave para trabajar con datos reales, como entradas de usuario, archivos o procesamiento de texto."
+    },
+    {
+      "type": "subtitle1",
+      "text": "¿Qué es una Cadena?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Una cadena es una secuencia de caracteres definida entre comillas:"
+    },
+    {
+      "type": "code",
+      "text": "texto = \"Hola mundo\""
+    },
+    {
+      "type": "subtitle2",
+      "text": "Indexación de Cadenas"
+    },
+    {
+      "type": "paragraph",
+      "text": "Permite acceder a caracteres individuales dentro de la cadena."
+    },
+    {
+      "type": "code",
+      "text": "texto = \"Python\"\n\nprint(texto[0])  # P\nprint(texto[2])  # t"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "P\nt"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "texto = \"Python\"\n\nprint(texto[0])  # P\nprint(texto[2])  # t"
+    },
+    {
+      "type": "subtitle2",
+      "text": "índices Positivos y Negativos"
+    },
+    {
+      "type": "code",
+      "text": "texto = \"Python\"\n\nprint(texto[0])   # P\nprint(texto[-1])  # n"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "P\nn"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "texto = \"Python\"\n\nprint(texto[0])   # P\nprint(texto[-1])  # n"
+    },
+    {
+      "type": "table",
+      "headers": ["Tipo", "Ejemplo", "Resultado"],
+      "rows": [
+        [
+          "Positivo",
+          "<code class=\"language-python\">texto[0]</code>",
+          "Primer carácter"
+        ],
+        [
+          "Negativo",
+          "<code class=\"language-python\">texto[-1]</code>",
+          "Último carácter"
+        ]
+      ]
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Las cadenas son inmutables, no se pueden modificar directamente:"
+    },
+    {
+      "type": "code",
+      "text": "texto = \"Hola\"\n# texto[0] = \"h\"   ERROR   "
+    },
+    {
+      "type": "subtitle2",
+      "text": "Slicing (Cortes de Texto)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Permite extraer partes de una cadena."
+    },
+    {
+      "type": "code",
+      "text": "texto = \"Python\"\n\nprint(texto[0:3])\nprint(texto[2:])\nprint(texto[:4])"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Pyt\nthon\nPyth"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "texto = \"Python\"\n\nprint(texto[0:3])\nprint(texto[2:])\nprint(texto[:4])"
+    },
+    {
+      "type": "subtitle3",
+      "text": "Sintaxis"
+    },
+    {
+      "type": "code",
+      "text": "cadena[inicio:fin]"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>El índice final no se incluye en el resultado."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Slicing Avanzado"
+    },
+    {
+      "type": "code",
+      "text": "texto = \"Python\"\n\nprint(texto[::2])\nprint(texto[::-1])"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Pto\nnohtyP"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "texto = \"Python\"\n\nprint(texto[::2])\nprint(texto[::-1])"
+    },
+    {
+      "type": "note",
+      "text": "⭐ <strong>Tip:</strong><br>El uso de <code class=\"language-python\">[::-1]</code> es una forma rápida de invertir una cadena."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Métodos de Cadenas"
+    },
+    {
+      "type": "paragraph",
+      "text": "Las cadenas tienen métodos integrados para transformarlas."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Métodos Comunes"
+    },
+    {
+      "type": "table",
+      "headers": ["Método", "Descripción", "Ejemplo"],
+      "rows": [
+        [
+          "<code class=\"language-python\">upper()</code>",
+          "Convierte a mayúsculas",
+          "<code class=\"language-python\">\"hola\".upper()</code>"
+        ],
+        [
+          "<code class=\"language-python\">lower()</code>",
+          "Convierte a minúsculas",
+          "<code class=\"language-python\">\"HOLA\".lower()</code>"
+        ],
+        [
+          "<code class=\"language-python\">replace()</code>",
+          "Reemplaza texto",
+          "<code class=\"language-python\">\"hola\".replace(\"h\",\"H\")</code>"
+        ],
+        [
+          "<code class=\"language-python\">strip()</code>",
+          "Elimina espacios",
+          "<code class=\"language-python\">\" hola \".strip()</code>"
+        ],
+        [
+          "<code class=\"language-python\">count()</code>",
+          "Cuenta ocurrencias",
+          "<code class=\"language-python\">\"hola\".count(\"o\")</code>"
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo Práctico:"
+    },
+    {
+      "type": "code",
+      "text": "texto = \"  hola mundo  \"\n\nprint(texto.strip())\nprint(texto.upper())\nprint(texto.replace(\"mundo\", \"Python\"))"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "hola mundo\n  HOLA MUNDO  \n  hola Python  "
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "texto = \"  hola mundo  \"\n\nprint(texto.strip())\nprint(texto.upper())\nprint(texto.replace(\"mundo\", \"Python\"))"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br>Encadenar métodos permite hacer varias operaciones en una sola línea."
+    },
+    {
+      "type": "code",
+      "text": "texto = \"  hola mundo  \"\nprint(texto.strip().upper())"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "HOLA MUNDO"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "texto = \"  hola mundo  \"\nprint(texto.strip().upper())"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Búsqueda en Cadenas"
+    },
+    {
+      "type": "code",
+      "text": "texto = \"Hola mundo\"\n\nprint(\"Hola\" in texto)\nprint(\"Python\" in texto)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "True\nFalse"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "texto = \"Hola mundo\"\n\nprint(\"Hola\" in texto)\nprint(\"Python\" in texto)"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong></strong>br>El operador <code class=\"language-python\">in</code> permite verificar si un texto está contenido en otro."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Longitud de una Cadena"
+    },
+    {
+      "type": "code",
+      "text": "texto = \"Python\"\n\nprint(len(texto))"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "6"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "texto = \"Python\"\n\nprint(len(texto))"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejemplo Integrador"
+    },
+    {
+      "type": "code",
+      "text": "texto = \"  Aprendiendo Python  \"\n\ntexto = texto.strip()\ntexto = texto.replace(\"Python\", \"programación\")\n\nprint(texto.upper())"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "APRENDIENDO PROGRAMACIÓN"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "texto = \"  Aprendiendo Python  \"\n\ntexto = texto.strip()\ntexto = texto.replace(\"Python\", \"programación\")\n\nprint(texto.upper())"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejercicios Prácticos"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 1: Analizador de Texto"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea un programa que:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Defina una variable con el texto: <code class=\"language-python\">\" Python es un lenguaje poderoso y Python es fácil de aprender \"</code>.",
+        "Elimine los espacios al inicio y final.",
+        "Convierta todo el texto a minúsculas.",
+        "Cuente cuántas veces aparece la palabra <code class=\"language-python\">\"python\"</code>.",
+        "Reemplace <code class=\"language-python\">\"python\"</code> por <code class=\"language-python\">\"Java\"</code>.",
+        "Muestre: Texto limpio, número de repeticiones y texto modificado."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea un programa que:\n# 1. Defina una variable con el texto: \" Python es un\n# lenguaje poderoso y Python es fácil de aprender \".\n# 2. Elimine los espacios al inicio y final.\n# 3. Convierta todo el texto a minúsculas.\n# 4. Cuente cuántas veces aparece la palabra \"python\".\n# 5. Reemplace \"python\" por \"Java\".\n# 6. Muestre: Texto limpio, número de repeticiones y\n# texto modificado."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# 1. Defina una variable con el texto: \" Python es un\n# lenguaje poderoso y Python es fácil de aprender \"\ntexto = \" Python es un lenguaje poderoso y Python es fácil de aprender \"\n\n# 2. Elimine los espacios al inicio y final\n# 3. Convierta todo el texto a minúsculas\ntexto = texto.strip().lower()\n\n# 4. Cuente cuántas veces aparece la palabra \"python\"\ncantidad = texto.count(\"python\")\n\n# 5. Reemplace \"python\" por \"Java\"\ntexto_modificado = texto.replace(\"python\", \"Java\")\n\n# 6. Muestre: Texto limpio, número de repeticiones y\n# texto modificado\nprint(\"Texto limpio:\", texto)\nprint(\"Cantidad de 'python':\", cantidad)\nprint(\"Texto modificado:\", texto_modificado)"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# 1. Defina una variable con el texto: \" Python es un\n# lenguaje poderoso y Python es fácil de aprender \"\ntexto = \" Python es un lenguaje poderoso y Python es fácil de aprender \"\n\n# 2. Elimine los espacios al inicio y final\n# 3. Convierta todo el texto a minúsculas\ntexto = texto.strip().lower()\n\n# 4. Cuente cuántas veces aparece la palabra \"python\"\ncantidad = texto.count(\"python\")\n\n# 5. Reemplace \"python\" por \"Java\"\ntexto_modificado = texto.replace(\"python\", \"Java\")\n\n# 6. Muestre: Texto limpio, número de repeticiones y\n# texto modificado\nprint(\"Texto limpio:\", texto)\nprint(\"Cantidad de 'python':\", cantidad)\nprint(\"Texto modificado:\", texto_modificado)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 2: Inversor y Verificador de Palíndromo"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea un programa que:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Defina una palabra (por ejemplo <code class=\"language-python\">\"reconocer\"</code>).",
+        "Invierta la palabra usando slicing.",
+        "Compare la palabra original con la invertida.",
+        "Indique si es un palíndromo (se lee igual al derecho y al revés)."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea un programa que:\n# 1. Defina una palabra (por ejemplo \"reconocer\").\n# 2. Invierta la palabra usando slicing.\n# 3. Compare la palabra original con la invertida.\n# 4. Indique si es un palíndromo (se lee igual al\n# derecho y al revés)."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# 1. Defina una palabra (por ejemplo \"reconocer\")\npalabra = \"reconocer\"\n\n# 2. Invierta la palabra usando slicing\ninvertida = palabra[::-1]\n\n# 3. Compare la palabra original con la invertida\n# 4. Indique si es un palíndromo (se lee igual al\n# derecho y al revés)\nif palabra == invertida:\n\tprint(\"Es un palíndromo\")\nelse:\n\tprint(\"No es un palíndromo\")"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# 1. Defina una palabra (por ejemplo \"reconocer\")\npalabra = \"reconocer\"\n\n# 2. Invierta la palabra usando slicing\ninvertida = palabra[::-1]\n\n# 3. Compare la palabra original con la invertida\n# 4. Indique si es un palíndromo (se lee igual al\n# derecho y al revés)\nif palabra == invertida:\n\tprint(\"Es un palíndromo\")\nelse:\n\tprint(\"No es un palíndromo\")"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 3: Procesador de Texto Avanzado"
+    },
+    {
+      "type": "paragraph",
+      "text": "Desarrolla un programa que:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Defina una cadena con el siguiente texto: <code class=\"language-python\">\"Python, Java, Python, C++, Python, JavaScript\"</code>.",
+        "Convierta todo el texto a minúsculas.",
+        "Reemplace <code class=\"language-python\">\"c++\"</code> por <code class=\"language-python\">\"c plus plus\"</code>.",
+        "Cuente cuántas veces aparece <code class=\"language-python\">\"python\"</code>.",
+        "Extraiga los primeros 20 caracteres del texto.",
+        "Invierta todo el texto.",
+        "Muestre cada resultado por separado."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Desarrolla un programa que:\n# 1. Defina una cadena con el siguiente texto: \"Python,\n# Java, Python, C++, Python, JavaScript\".\n# 2. Convierta todo el texto a minúsculas.\n# 3. Reemplace \"c++\" por \"c plus plus\".\n# 4. Cuente cuántas veces aparece \"python\".\n# 5. Extraiga los primeros 20 caracteres del texto.\n# 6. Invierta todo el texto.\n# 7. Muestre cada resultado por separado."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# 1. Defina una cadena con el siguiente texto: \"Python,\n# Java, Python, C++, Python, JavaScript\"\ntexto = \"Python, Java, Python, C++, Python, JavaScript\"\n\n# 2. Convierta todo el texto a minúsculas\ntexto = texto.lower()\n\n# 3. Reemplace \"c++\" por \"c plus plus\"\ntexto = texto.replace(\"c++\", \"c plus plus\")\n\n# 4. Cuente cuántas veces aparece \"python\"\nconteo = texto.count(\"python\")\n\n# 5. Extraiga los primeros 20 caracteres del texto\nprimeros = texto[:20]\n\n# 6. Invierta todo el texto\ninvertido = texto[::-1]\n\n# 7. Muestre cada resultado por separado\nprint(\"Texto:\", texto)\nprint(\"Cantidad de 'python':\", conteo)\nprint(\"Primeros 20 caracteres:\", primeros)\nprint(\"Texto invertido:\", invertido)"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# 1. Defina una cadena con el siguiente texto: \"Python,\n# Java, Python, C++, Python, JavaScript\"\ntexto = \"Python, Java, Python, C++, Python, JavaScript\"\n\n# 2. Convierta todo el texto a minúsculas\ntexto = texto.lower()\n\n# 3. Reemplace \"c++\" por \"c plus plus\"\ntexto = texto.replace(\"c++\", \"c plus plus\")\n\n# 4. Cuente cuántas veces aparece \"python\"\nconteo = texto.count(\"python\")\n\n# 5. Extraiga los primeros 20 caracteres del texto\nprimeros = texto[:20]\n\n# 6. Invierta todo el texto\ninvertido = texto[::-1]\n\n# 7. Muestre cada resultado por separado\nprint(\"Texto:\", texto)\nprint(\"Cantidad de 'python':\", conteo)\nprint(\"Primeros 20 caracteres:\", primeros)\nprint(\"Texto invertido:\", invertido)"
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Notas Importantes:</strong><br><strong>1.</strong> Las cadenas son inmutables.<br><strong>2.</strong> Se pueden recorrer y manipular facilmente.<br><strong>3.</strong> Existen múltiples métodos integrados para trabajar con texto."
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tips de Programación:</strong><br><strong>1.</strong> Usa slicing para manipular texto rápidamente.<br><strong>2.</strong> Usa métodos como <code class=\"language-python\">strip()</code> y <code class=\"language-python\">lower()</code> para limpiar datos.<br><strong>3.</strong> Combina operaiones para hacer el código más eficiente."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Conclusiones de la Unidad"
+    },
+    {
+      "type": "paragraph",
+      "text": "En esta unidad aprendiste a trabajar con cadenas de texto utilizando indexación, slicing y métodos integrados para transformar y analizar información. Comprendiste cómo acceder a caracteres individuales, extraer partes de un texto, modificar contenido y realizar búsquedas dentro de cadenas. Estas habilidades son esenciales para procesar datos reales y construir programas capaces de manejar información textual de forma clara y estructurada."
+    }
+  ]
+}
