@@ -1,0 +1,419 @@
+{
+  "title": "Formatos de Texto y f-strings",
+  "description": "",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "En muchos programas es necesario combinar texto con valores almacenados en variables para mostrar resultados claros al usuario. En esta unidad aprenderás diferentes formas de formatear texto en Python, especialmente el uso de las f-strings, una forma sencilla y poderosa de insertar valores directamente dentro de cadenas. Esto te permitirá construir mensajes más legibles, organizar mejor la salida de tus programas y mejorar la presentación de la información."
+    },
+    {
+      "type": "subtitle1",
+      "text": "¿Qué es el Formateo de Texto?"
+    },
+    {
+      "type": "paragraph",
+      "text": "El formateo de texto consiste en combinar texto con variables o valores para generar mensajes dinámicos."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo básico:"
+    },
+    {
+      "type": "code",
+      "text": "nombre = \"Daniel\"\nedad = 20\n\nprint(\"Hola, me llamo\", nombre, \"y tengo\", edad, \"años\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Hola, me llamo Daniel y tengo 20 años"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "nombre = \"Daniel\"\nedad = 20\n\nprint(\"Hola, me llamo\", nombre, \"y tengo\", edad, \"años\")"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Este método funciona, pero puede volverse difícil de leer en textos más largos."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Uso de f-strings"
+    },
+    {
+      "type": "paragraph",
+      "text": "Las f-strings permiten insertar variables directamente dentro de una cadena."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Sintaxis"
+    },
+    {
+      "type": "code",
+      "text": "f\"texto {variable}\""
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo:"
+    },
+    {
+      "type": "code",
+      "text": "nombre = \"Daniel\"\nedad = 20\n\nprint(f\"Hola, me llamo {nombre} y tengo {edad} años\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Hola, me llamo Daniel y tengo 20 años"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "nombre = \"Daniel\"\nedad = 20\n\nprint(f\"Hola, me llamo {nombre} y tengo {edad} años\")"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Tip:</strong><br>Las f-strings comienzan con la letra <code class=\"language-python\">f</code> antes de las comillas."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Expresiones Dentro de f-strings"
+    },
+    {
+      "type": "paragraph",
+      "text": "Puedes realizar operaciones directamente dentro de <code class=\"language-python\">{}</code>."
+    },
+    {
+      "type": "code",
+      "text": "a = 5\nb = 3\n\nprint(f\"La suma es {a + b}\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "La suma es 8"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "a = 5\nb = 3\n\nprint(f\"La suma es {a + b}\")"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br>No solo puedes mostrar variables, también puedes hacer cálculos o llamar funciones."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Formateo de Números"
+    },
+    {
+      "type": "paragraph",
+      "text": "Las f-strings permiten controlar cómo se muestran los números."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo (Decimales):"
+    },
+    {
+      "type": "code",
+      "text": "precio = 19.9876\n\nprint(f\"Precio: {precio:.2f}\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Precio 19.99"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "precio = 19.9876\n\nprint(f\"Precio: {precio:.2f}\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo (Enteros con formato):"
+    },
+    {
+      "type": "code",
+      "text": "numero = 1000\n\nprint(f\"{numero:,}\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "1,000"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "numero = 1000\n\nprint(f\"{numero:,}\")"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Alineación de Texto"
+    },
+    {
+      "type": "paragraph",
+      "text": "Puedes alinear texto dentro de espacios definidos."
+    },
+    {
+      "type": "code",
+      "text": "nombre = \"Ana\"\n\nprint(f\"{nombre:>10}\")  # Derecha\nprint(f\"{nombre:<10}\")  # Izquierda\nprint(f\"{nombre:^10}\")  # Centro"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "       Ana\nAna       \n   Ana    "
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "nombre = \"Ana\"\n\nprint(f\"{nombre:>10}\")  # Derecha\nprint(f\"{nombre:<10}\")  # Izquierda\nprint(f\"{nombre:^10}\")  # Centro"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br>Esto es útil para mostrar datos en forma de tabla."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Otras Formas de Formateo (Básico)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Concatenación"
+    },
+    {
+      "type": "code",
+      "text": "nombre = \"Ana\"\nprint(\"Hola \" + nombre)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Hola Ana"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "nombre = \"Ana\"\nprint(\"Hola \" + nombre)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Método <code class=\"language-python\">format()</code>"
+    },
+    {
+      "type": "code",
+      "text": "nombre = \"Ana\"\nedad = 20\nprint(\"Hola {}, tienes {} años\".format(nombre, edad))"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Hola Ana, tienes 20 años"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "nombre = \"Ana\"\nedad = 20\nprint(\"Hola {}, tienes {} años\".format(nombre, edad))"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Aunque <code class=\"language-python\">format()</code> se usa, las f-strings son más modernas y recomendadas."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Comparación de Métodos"
+    },
+    {
+      "type": "table",
+      "headers": ["Método", "Ejemplo", "Legibilidad"],
+      "rows": [
+        [
+          "Concatenación",
+          "<code class=\"language-python\">\"Hola\" + nombre</code>",
+          "Baja"
+        ],
+        [
+          "<code class=\"language-python\">format()</code>",
+          "<code class=\"language-python\">\"Hola {}\".format(nombre)</code>",
+          "Media"
+        ],
+        [
+          "f-string",
+          "<code class=\"language-python\">f\"Hola {nombre}\"</code>",
+          "Alta"
+        ]
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejemplo Integrador"
+    },
+    {
+      "type": "code",
+      "text": "nombre = \"Luis\"\nedad = 30\nsaldo = 1234.567\n\nprint(f\"Usuario: {nombre}\")\nprint(f\"Edad: {edad}\")\nprint(f\"Saldo: {saldo:.2f}\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Usuario: Luis\nEdad: 30\nSaldo: 1234.57"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "nombre = \"Luis\"\nedad = 30\nsaldo = 1234.567\n\nprint(f\"Usuario: {nombre}\")\nprint(f\"Edad: {edad}\")\nprint(f\"Saldo: {saldo:.2f}\")"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejercicios Prácticos"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 1: Reporte de Usuario"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea un programa que:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Defina las siguientes variables: <code class=\"language-python\">nombre = \"Laura\"</code>, <code class=\"language-python\">edad = 28</code> y <code class=\"language-python\">salario = 2540.756</code>.",
+        "Muestre un mensaje usando f-string que incluya: <code class=\"language-python\">nombre</code>, <code class=\"language-python\">edad</code> y <code class=\"language-python\">salario</code> con solo 2 decimales.",
+        "El resultado debe verse organizado en múltiples líneas."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea un programa que:\n# 1. Defina las siguientes variables: nombre = \"Laura\",\n# edad = 28 y salario = 2540.756.\n# 2. Muestre un mensaje usando f-string que incluya:\n# nombre, edad y salario con solo 2 decimales.\n# 3. El resultado debe verse organizado en múltiples\n# líneas."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# 1. Defina las siguientes variables: nombre = \"Laura\",\n# edad = 28 y salario = 2540.756.\nnombre = \"Laura\"\nedad = 28\nsalario = 2540.756\n\n# 2. Muestre un mensaje usando f-string que incluya:\n# nombre, edad y salario con solo 2 decimales.\n# 3. El resultado debe verse organizado en múltiples\n# líneas.\nprint(f\"Nombre: {nombre}\")\nprint(f\"Edad: {edad}\")\nprint(f\"Salario: {salario:.2f}\")"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# 1. Defina las siguientes variables: nombre = \"Laura\",\n# edad = 28 y salario = 2540.756.\nnombre = \"Laura\"\nedad = 28\nsalario = 2540.756\n\n# 2. Muestre un mensaje usando f-string que incluya:\n# Nombre, edad y salario con solo 2 decimales.\n# 3. El resultado debe verse organizado en múltiples\n# líneas.\nprint(f\"Nombre: {nombre}\")\nprint(f\"Edad: {edad}\")\nprint(f\"Salario: {salario:.2f}\")"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 2: Tabla de Productos"
+    },
+    {
+      "type": "paragraph",
+      "text": "Desarrolla un programa que:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Define tres productos con: nombre y precio.",
+        "Muestre una tabla alineada con: Nombre del producto a la izquierda y precio alineado a la derecha con 2 decimales.",
+        "Usa f-strings para lograr la alineación."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Desarrolla un programa que:\n# 1. Define tres productos con: nombre y precio.\n# 2. Muestre una tabla alineada con: Nombre del\n# producto a la izquierda y precio alineado a la derecha\n# con 2 decimales.\n# 3. Usa f-strings para lograr la alineación."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# 1. Define tres productos con: nombre y precio.\np1 = \"Laptop\"\np2 = \"Mouse\"\np3 = \"Teclado\"\n\nprecio1 = 1200.5\nprecio2 = 25.99\nprecio3 = 75.456\n\n# 2. Muestre una tabla alineada con: Nombre del\n# producto a la izquierda y precio alineado a la derecha\n# con 2 decimales.\n# 3. Usa f-strings para lograr la alineación.\nprint(f\"{p1:<10} {precio1:>10.2f}\")\nprint(f\"{p2:<10} {precio2:>10.2f}\")\nprint(f\"{p3:<10} {precio3:>10.2f}\")"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# 1. Define tres productos con: nombre y precio.\np1 = \"Laptop\"\np2 = \"Mouse\"\np3 = \"Teclado\"\n\nprecio1 = 1200.5\nprecio2 = 25.99\nprecio3 = 75.456\n\n# 2. Muestre una tabla alineada con: Nombre del\n# producto a la izquierda y precio alineado a la derecha\n# con 2 decimales.\n# 3. Usa f-strings para lograr la alineación.\nprint(f\"{p1:<10} {precio1:>10.2f}\")\nprint(f\"{p2:<10} {precio2:>10.2f}\")\nprint(f\"{p3:<10} {precio3:>10.2f}\")"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 3: Calculadora Formateada"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea un programa que:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Defina dos números: <code class=\"language-python\">a = 15</code> y <code class=\"language-python\">b = 4</code>.",
+        "Calcule suma.",
+        "Calcule resta.",
+        "Calcule multiplicación.",
+        "División (con 2 decimales).",
+        "Muestre los resultados en formato claro usando f-strings."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea un programa que:\n# 1. Defina dos números: a = 15 y b = 4.\n# 2. Calcule suma.\n# 3. Calcule resta.\n# 4. Calcule multiplicación.\n# 5. División (con 2 decimales).\n# 6. Muestre los resultados en formato claro usando\n# f-strings."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# 1. Defina dos números: a = 15 y b = 4.\na = 15\nb = 4\n\n# 6. Muestre los resultados en formato claro usando\n# f-strings.\n\n# 2. Calcule suma.\nprint(f\"Suma: {a + b}\")\n# 3. Calcule resta.\nprint(f\"Resta: {a - b}\")\n# 4. Calcule multiplicación.\nprint(f\"Multiplicación: {a * b}\")\n# 5. División (con 2 decimales).\nprint(f\"División: {a / b:.2f}\")"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# 1. Defina dos números: a = 15 y b = 4.\na = 15\nb = 4\n\n# 6. Muestre los resultados en formato claro usando\n# f-strings.\n\n# 2. Calcule suma.\nprint(f\"Suma: {a + b}\")\n# 3. Calcule resta.\nprint(f\"Resta: {a - b}\")\n# 4. Calcule multiplicación.\nprint(f\"Multiplicación: {a * b}\")\n# 5. División (con 2 decimales).\nprint(f\"División: {a / b:.2f}\")"
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Notas Importantes:</strong><br><strong>1.</strong> Los f-strings permiten insertar variables fácilmente.<br><strong>2.</strong> Se pueden realizar operaciones dentro de <code class=\"language-python\">{}</code>.<br><strong>3.</strong> Los especificadores de formato permiten controlar el formato de números y texto."
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tips de Programación:</strong><br><strong>1.</strong> Usa f-strings en lugar de concatenación.<br><strong>2.</strong> Mejora la presentación de tus programas con formato.<br><strong>3.</strong> Usa alineación para mostrar datos organizados."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Conclusiones de la Unidad"
+    },
+    {
+      "type": "paragraph",
+      "text": "En esta unidad aprendiste a combinar texto con valores mediante diferentes técnicas de formateo, especialmente el uso de f-strings, que permiten insertar variables y expresiones directamente dentro de cadenas de manera clara y eficiente. Comprendiste cómo mejorar la presentación de la información, controlar el formato de números y organizar la salida de tus programas. Estas habilidades son fundamentales para crear programas más profesionales, legibles y orientados al usuario."
+    }
+  ]
+}
