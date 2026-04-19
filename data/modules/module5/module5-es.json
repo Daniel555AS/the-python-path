@@ -16,7 +16,7 @@
     },
     {
       "name": "3. Listas y Cadenas: Conversión entre Tipos",
-      "description": "En esta unidad se estudiará cómo combinar texto con valores de variables para generar salidas más claras y dinámicas, utilizando diferentes formas de formateo en Python, especialmente las f-strings, que permiten insertar expresiones directamente dentro de cadenas. El estudiante aprenderá a construir mensajes más legibles, mostrar resultados de manera organizada y mejorar la presentación de la información, lo cual es fundamental en aplicaciones que interactúan con usuarios o muestran resultados en pantalla.",
+      "description": "En esta unidad se estudiará cómo combinar texto con valores de variables para generar salidas más claras y dinámicas, utilizando diferentes formas de formateo en Python, especialmente las f-strings, que permiten insertar expresiones directamente dentro de cadenas. Aprenderás a construir mensajes más legibles, mostrar resultados de manera organizada y mejorar la presentación de la información, lo cual es fundamental en aplicaciones que interactúan con usuarios o muestran resultados en pantalla.",
       "color": "#1B983A",
       "unit": "learning-unit3"
     },
