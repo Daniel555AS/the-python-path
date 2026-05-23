@@ -107,6 +107,13 @@
   color: rgb(255, 255, 255);
 }
 
+img,
+table,
+pre,
+code {
+  max-width: 100%;
+}
+
 .block.image-block img {
   width: 100%;
   border-radius: 10px;
@@ -242,4 +249,62 @@ code[class*="language-"] {
   color: rgb(57, 189, 125);
   margin-bottom: 0.6rem;
   font-weight: 600;
+}
+
+@media (max-width: 768px) {
+
+  .unit-container {
+    width: 95%;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  #unit-title {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+
+  #unit-description {
+    font-size: 1rem;
+  }
+
+  .block.subtitle1 h2 {
+    font-size: 1.5rem;
+  }
+
+  .block.subtitle2 h3 {
+    font-size: 1.25rem;
+  }
+
+  .block.subtitle3 h4 {
+    font-size: 1.05rem;
+  }
+
+  .block.paragraph p,
+  .block.list ul li {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+
+  .block.code pre {
+    max-width: 100%;
+    overflow-x: auto;
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .unit-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .main-header {
+    padding: 1rem;
+  }
+
+  .language-btn {
+    padding: 6px 10px;
+  }
+  
 }
