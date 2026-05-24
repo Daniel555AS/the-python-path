@@ -125,26 +125,6 @@
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.45), 0 0 18px rgba(74, 136, 255, 0.75);
 }
 
-@media (max-width: 600px) {
-  .game-over-buttons button {
-    font-size: 1.4rem;
-    padding: 10px 0;
-    min-width: 120px;
-  }
-
-  .game-over-buttons {
-    gap: 20px;
-  }
-}
-
-@media (max-width: 400px) {
-  .game-over-buttons button {
-    font-size: 1.2rem;
-    padding: 8px 0;
-    min-width: 100px;
-  }
-}
-
 #python-question-modal {
   display: none;
   position: fixed;
@@ -415,4 +395,209 @@
 
 #answer-result-btn:hover {
   background: rgb(93, 153, 255);
+}
+
+/* =========================
+   TABLETS
+========================= */
+@media (max-width: 1024px) {
+  .snake-title h1 {
+    font-size: 2.5rem;
+  }
+
+  #snake-canvas {
+    width: 90%;
+    height: auto;
+  }
+
+  .modal-box,
+  .game-over-box,
+  .answer-box {
+    width: 92%;
+    padding: 35px;
+  }
+
+  .options-mc {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+  .snake-title {
+    margin-top: 20px;
+    padding: 0 15px;
+  }
+
+  .snake-title h1 {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+
+  .score-container {
+    font-size: 1.2rem;
+    padding: 0 15px;
+  }
+
+  #snake-canvas {
+    width: 95%;
+    max-width: 100%;
+    height: auto;
+    margin: 25px auto;
+  }
+
+  .game-over-box {
+    padding: 30px 20px;
+  }
+
+  .game-over-box h2 {
+    font-size: 2rem;
+  }
+
+  #final-score-text {
+    font-size: 1.1rem;
+  }
+
+  .game-over-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .game-over-buttons button {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 12px;
+  }
+
+  .modal-box {
+    width: 95%;
+    padding: 25px 20px;
+    max-height: 85vh;
+  }
+
+  .q-subtitle1 {
+    font-size: 1.3rem;
+  }
+
+  .q-subtitle2 {
+    font-size: 1.1rem;
+  }
+
+  .q-paragraph,
+  .q-list li,
+  .q-table td {
+    font-size: 1rem;
+  }
+
+  .q-code code {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .options-mc {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .opt-mc {
+    font-size: 1rem;
+    padding: 14px;
+  }
+
+  .options-tf {
+    flex-direction: column;
+  }
+
+  .options-tf button {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 14px 0;
+  }
+
+  .answer-box {
+    padding: 30px 20px;
+  }
+
+  #answer-result-title {
+    font-size: 2rem;
+  }
+
+  #answer-result-correct-text {
+    font-size: 1.1rem;
+  }
+
+  #answer-result-btn,
+  #close-question-btn {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .q-table {
+    overflow-x: auto;
+  }
+
+  .q-table table {
+    min-width: 500px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+@media (max-width: 480px) {
+  .snake-title h1 {
+    font-size: 1.7rem;
+  }
+
+  .score-container {
+    font-size: 1rem;
+  }
+
+  .game-over-box h2 {
+    font-size: 1.6rem;
+  }
+
+  #final-score-text {
+    font-size: 1rem;
+  }
+
+  .game-over-buttons button {
+    font-size: 1rem;
+    min-width: unset;
+  }
+
+  .modal-box {
+    padding: 20px 15px;
+  }
+
+  .q-subtitle1 {
+    font-size: 1.15rem;
+  }
+
+  .q-subtitle2 {
+    font-size: 1rem;
+  }
+
+  .q-paragraph {
+    font-size: 0.95rem;
+  }
+
+  .opt-mc {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  .options-tf button {
+    font-size: 1rem;
+  }
+
+  #answer-result-title {
+    font-size: 1.6rem;
+  }
+
+  #answer-result-correct-text {
+    font-size: 1rem;
+  }
 }
