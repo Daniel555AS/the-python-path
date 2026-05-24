@@ -1,0 +1,430 @@
+{
+  "title": "Listas y Cadenas: Conversión entre Tipos",
+  "description": "",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "En muchos programas es necesario transformar datos entre cadenas de texto (<code class=\"language-python\">str</code>) y listas (<code class=\"language-python\">list</code>) para poder procesarlos de manera más flexible. En esta unidad aprenderás a convertir texto en listas usando <code class=\"language-python\">split()</code> y a unir listas en una cadena con <code class=\"language-python\">join()</code>. Estas herramientas permiten separar palabras, manipular información por partes y reconstruir textos de forma eficiente, lo cual es esencial cuando trabajas con entradas de usuario, archivos o procesamiento de datos."
+    },
+    {
+      "type": "subtitle1",
+      "text": "¿Por Qué Convertir Entre Cadenas y Listas?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Una cadena es útil para mostrar texto, pero una lista es más útil para manipular cada elemento por separado."
+    },
+    {
+      "type": "code",
+      "text": "texto = \"Python es divertido\""
+    },
+    {
+      "type": "paragraph",
+      "text": "Si quieres trabajar palabra por palabra, necesitas convertirlo a lista."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Método <code class=\"language-python\">split()</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Convierte una cadena en una lista separando sus elementos."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Sintaxis"
+    },
+    {
+      "type": "code",
+      "text": "cadena.split(separador)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejemplo Básico"
+    },
+    {
+      "type": "code",
+      "text": "texto = \"Python es divertido\"\n\npalabras = texto.split()\n\nprint(palabras)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "['Python', 'es', 'divertido']"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "texto = \"Python es divertido\"\n\npalabras = texto.split()\n\nprint(palabras)"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Si no se especifica separador, <code class=\"language-python\">split()</code> separa por espacios."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Separador Personalizado"
+    },
+    {
+      "type": "code",
+      "text": "texto = \"manzana,pera,uva\"\n\nfrutas = texto.split(\",\")\n\nprint(frutas)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "['manzana', 'pera', 'uva']"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "texto = \"manzana,pera,uva\"\n\nfrutas = texto.split(\",\")\n\nprint(frutas)"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br>Usa separadores como <code class=\"language-python\">,</code>, <code class=\"language-python\">;</code>, <code class=\"language-python\">-</code> cuando trabajes con datos estructurados."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Método <code class=\"language-python\">join()</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Convierte una lista en una cadena."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Sintaxis"
+    },
+    {
+      "type": "code",
+      "text": "separador.join(lista)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejemplo Básico"
+    },
+    {
+      "type": "code",
+      "text": "palabras = [\"Python\", \"es\", \"genial\"]\n\ntexto = \" \".join(palabras)\n\nprint(texto)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Python es genial"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "palabras = [\"Python\", \"es\", \"genial\"]\n\ntexto = \" \".join(palabras)\n\nprint(texto)"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Todos los elementos de la lista deben ser cadenas."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Error Común"
+    },
+    {
+      "type": "code",
+      "text": "numeros = [1, 2, 3]\n\n# print(\" \".join(numeros))  # Error"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "TypeError: sequence item 0: expected str instance, int found"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "numeros = [1, 2, 3]\n\nprint(\" \".join(numeros))  # Error"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Solución"
+    },
+    {
+      "type": "code",
+      "text": "numeros = [1, 2, 3]\n\ntexto = \" \".join([str(n) for n in numeros])\n\nprint(texto)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "1 2 3"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "numeros = [1, 2, 3]\n\ntexto = \" \".join([str(n) for n in numeros])\n\nprint(texto)"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Conversión Combinada"
+    },
+    {
+      "type": "code",
+      "text": "texto = \"Hola mundo Python\"\n\npalabras = texto.split()\n\ntexto_nuevo = \"-\".join(palabras)\n\nprint(texto_nuevo)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Hola-mundo-Python"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "texto = \"Hola mundo Python\"\n\npalabras = texto.split()\n\ntexto_nuevo = \"-\".join(palabras)\n\nprint(texto_nuevo)"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Procesamiento de Texto con Listas"
+    },
+    {
+      "type": "code",
+      "text": "texto = \"python es poderoso\"\n\npalabras = texto.split()\n\nfor palabra in palabras:\n\tprint(palabra.upper())"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "PYTHON\nES\nPODEROSO"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "texto = \"python es poderoso\"\n\npalabras = texto.split()\n\nfor palabra in palabras:\n\tprint(palabra.upper())"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br>Convertir a lista permite recorrer y transformar cada elemento fácilmente."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Resumen de Métodos"
+    },
+    {
+      "type": "table",
+      "headers": ["Método", "Entrada", "Salida"],
+      "rows": [
+        [
+          "<code class=\"language-python\">split()</code>",
+          "<code class=\"language-python\">str</code>",
+          "<code class=\"language-python\">list</code>"
+        ],
+        [
+          "<code class=\"language-python\">join()</code>",
+          "<code class=\"language-python\">list</code>",
+          "<code class=\"language-python\">str</code>"
+        ]
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejemplo Integrador"
+    },
+    {
+      "type": "code",
+      "text": "texto = \"  Python es muy útil  \"\n\ntexto = texto.strip()\n\npalabras = texto.split()\n\npalabras_mayus = [p.upper() for p in palabras]\n\nresultado = \" \".join(palabras_mayus)\n\nprint(resultado)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "PYTHON ES MUY ÚTIL"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "texto = \"  Python es muy útil  \"\n\ntexto = texto.strip()\n\npalabras = texto.split()\n\npalabras_mayus = [p.upper() for p in palabras]\n\nresultado = \" \".join(palabras_mayus)\n\nprint(resultado)"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br><code class=\"language-python\">split()</code> y <code class=\"language-python\">join()</code> son herramientas clave para trabajar con datos reales y texto estructurado."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejercicios Prácticos"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 1: Normalizador de Texto"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea un programa que:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Defina una cadena con el siguiente texto (2 espacios al inicio y al final y 4 espacios entre palabras):"
+      ]
+    },
+    {
+      "type": "code",
+      "text": "\"  Python    es    un    lenguaje    poderoso  \""
+    },
+    {
+      "type": "list",
+      "items": [
+        "Elimine los espacios al inicio y al final.",
+        "Use <code class=\"language-python\">split()</code> para dividir el texto en palabras (ignorando múltiples espacios).",
+        "Convierta todas las palabras a minúsculas.",
+        "Una nuevamente el texto usando un solo espacio entre palabras.",
+        "Muestre el resultado final."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea un programa que:\n# 1. Defina una cadena con el siguiente texto (2\n# espacios al inicio y al final y 4 espacios entre\n# palabras):\n# \"  Python    es    un    lenguaje    poderoso  \"\n# 2. Elimine los espacios al inicio y al final.\n# 3. Use split() para dividir el texto en palabras\n# (ignorando múltiples espacios).\n# 4. Convierta todas las palabras a minúsculas.\n# 5. Una nuevamente el texto usando un solo espacio\n# entre palabras.\n# 6. Muestre el resultado final."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# 1. Defina una cadena con el siguiente texto (2\n# espacios al inicio y al final y 4 espacios entre\n# palabras):\n# \"  Python    es    un    lenguaje    poderoso  \"\ntexto = \"  Python    es    un    lenguaje    poderoso  \"\n\n# 2. Elimine los espacios al inicio y al final.\ntexto = texto.strip()\n\n# 3. Use split() para dividir el texto en palabras\n# (ignorando múltiples espacios).\npalabras = texto.split()\n\n# 4. Convierta todas las palabras a minúsculas.\npalabras = [p.lower() for p in palabras]\n\n# 5. Una nuevamente el texto usando un solo espacio\n# entre palabras.\nresultado = \" \".join(palabras)\n\n# 6. Muestre el resultado final.\nprint(resultado)"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# 1. Defina una cadena con el siguiente texto (2\n# espacios al inicio y al final y 4 espacios entre\n# palabras):\n# \"  Python    es    un    lenguaje    poderoso  \"\ntexto = \"  Python    es    un    lenguaje    poderoso  \"\n\n# 2. Elimine los espacios al inicio y al final.\ntexto = texto.strip()\n\n# 3. Use split() para dividir el texto en palabras\n# (ignorando múltiples espacios).\npalabras = texto.split()\n\n# 4. Convierta todas las palabras a minúsculas.\npalabras = [p.lower() for p in palabras]\n\n# 5. Una nuevamente el texto usando un solo espacio\n# entre palabras.\nresultado = \" \".join(palabras)\n\n# 6. Muestre el resultado final.\nprint(resultado)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 2: Contador de Palabras Únicas"
+    },
+    {
+      "type": "paragraph",
+      "text": "Desarrolla un programa que:"
+    },
+    {
+      "type": "list",
+      "items": ["Defina una cadena:"]
+    },
+    {
+      "type": "code",
+      "text": "\"python java python c++ python java\""
+    },
+    {
+      "type": "list",
+      "items": [
+        "Convierta el texto a lista usando <code class=\"language-python\">split()</code>.",
+        "Cuente cuántas veces aparece cada palabra.",
+        "Muestre el resultado en formato:"
+      ]
+    },
+    {
+      "type": "code",
+      "text": "python: 3\njava: 2\nc++: 1"
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Desarrolla un programa que:\n# 1. Defina una cadena:\n# \"python java python c++ python java\"\n# 2. Convierta el texto a lista usando split().\n# 3. Cuente cuántas veces aparece cada palabra.\n# 4. Muestre el resultado en formato:\n# python: 3\n# java: 2\n# c++: 1"
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# 1. Defina una cadena:\n# \"python java python c++ python java\"\ntexto = \"python java python c++ python java\"\n\n# 2. Convierta el texto a lista usando split().\npalabras = texto.split()\n\n# 3. Cuente cuántas veces aparece cada palabra.\nconteo = {}\n\nfor palabra in palabras:\n\tif palabra in conteo:\n\t\tconteo[palabra] += 1\n\telse:\n\t\tconteo[palabra] = 1\n\n# 4. Muestre el resultado en formato:\n# python: 3\n# java: 2\n# c++: 1\nfor clave, valor in conteo.items():\n\tprint(f\"{clave}: {valor}\")"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# 1. Defina una cadena:\n# \"python java python c++ python java\"\ntexto = \"python java python c++ python java\"\n\n# 2. Convierta el texto a lista usando split().\npalabras = texto.split()\n\n# 3. Cuente cuántas veces aparece cada palabra.\nconteo = {}\n\nfor palabra in palabras:\n\tif palabra in conteo:\n\t\tconteo[palabra] += 1\n\telse:\n\t\tconteo[palabra] = 1\n\n# 4. Muestre el resultado en formato:\n# python: 3\n# java: 2\n# c++: 1\nfor clave, valor in conteo.items():\n\tprint(f\"{clave}: {valor}\")"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 3: Transformador de Lista a Texto Estructurado"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea un programa que:"
+    },
+    {
+      "type": "list",
+      "items": ["Defina una lista de números:"]
+    },
+    {
+      "type": "code",
+      "text": "[10, 20, 30, 40, 50]"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Convierta cada número a cadena.",
+        "Una los valores usando <code class=\"language-python\">join()</code> con el separador <code class=\"language-python\">\" - \"</code>.",
+        "El resultado debe ser:"
+      ]
+    },
+    {
+      "type": "code",
+      "text": "10 - 20 - 30 - 40 - 50"
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea un programa que:\n# 1. Defina una lista de números:\n# [10, 20, 30, 40, 50]\n# 2. Convierta cada número a cadena.\n# 3. Una los valores usando join() con el separador \" - \".\n# 4. El resultado debe ser:\n# 10 - 20 - 30 - 40 - 50"
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# 1. Defina una lista de números:\n# [10, 20, 30, 40, 50]\nnumeros = [10, 20, 30, 40, 50]\n\n# 2. Convierta cada número a cadena.\nnumeros_str = [str(n) for n in numeros]\n\n# 3. Una los valores usando join() con el separador \" - \".\nresultado = \" - \".join(numeros_str)\n\n# 4. El resultado debe ser:\n# 10 - 20 - 30 - 40 - 50\nprint(resultado)"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# 1. Defina una lista de números:\n# [10, 20, 30, 40, 50]\nnumeros = [10, 20, 30, 40, 50]\n\n# 2. Convierta cada número a cadena.\nnumeros_str = [str(n) for n in numeros]\n\n# 3. Una los valores usando join() con el separador \" - \".\nresultado = \" - \".join(numeros_str)\n\n# 4. El resultado debe ser:\n# 10 - 20 - 30 - 40 - 50\nprint(resultado)"
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Notas Importantes:</strong><br><strong>1.</strong> <code class=\"language-python\">split()</code> divide cadenas en listas.<br><strong>2.</strong> <code class=\"language-python\">join()</code> une listas en cadenas.<br><strong>3.</strong> Es necesario convertir números a texto antes de usar <code class=\"language-python\">join()</code>."
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tips de Programación:</strong><br><strong>1.</strong> Usa <code class=\"language-python\">split()</code> para analizar texto.<br>2. Usa <code class=\"language-python\">join()</code> para reconstruir información.<br>3. Combina listas y cadenas para resolver problemas reales."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Conclusiones de la Unidad"
+    },
+    {
+      "type": "paragraph",
+      "text": "En esta unidad aprendiste a convertir datos entre cadenas y listas utilizando los métodos <code class=\"language-python\">split()</code> y <code class=\"language-python\">join()</code>, comprendiendo cómo separar texto en partes manipulables y cómo reconstruirlo de forma organizada. Estas herramientas te permiten procesar información textual de manera eficiente, facilitando tareas como limpieza de datos, análisis de palabras y transformación de información. Dominar estas conversiones es clave para trabajar con datos reales y construir programas más flexibles y potentes en Python."
+    }
+  ]
+}
