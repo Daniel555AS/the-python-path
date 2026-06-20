@@ -1,0 +1,476 @@
+{
+  "title": "Funciones Recursivas (Introducción)",
+  "description": "",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Las funciones recursivas son funciones que tienen la capacidad de llamarse a sí mismas para resolver un problema. La idea principal consiste en dividir una tarea grande en versiones más pequeñas del mismo problema hasta llegar a una situación simple que pueda resolverse directamente. Este enfoque es muy utilizado en informática para resolver problemas relacionados con estructuras jerárquicas, búsqueda, recorrido de datos y algoritmos matemáticos."
+    },
+    {
+      "type": "subtitle1",
+      "text": "¿Qué es la Recursión?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Una función recursiva es una función que se ejecuta a sí misma durante su proceso de resolución."
+    },
+    {
+      "type": "paragraph",
+      "text": "Observa el siguiente ejemplo conceptual:"
+    },
+    {
+      "type": "code",
+      "text": "def ejemplo():\n\tejemplo()"
+    },
+    {
+      "type": "paragraph",
+      "text": "Aunque la función se llama a sí misma, este código tiene un problema importante: nunca termina."
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Una función recursiva siempre debe tener una condición que detenga las llamadas recursivas. De lo contrario, el programa entrará en una recursión infinita."
+    },
+    {
+      "type": "subtitle1",
+      "text": "El Caso Base"
+    },
+    {
+      "type": "paragraph",
+      "text": "El caso base es la condición que indica cuándo la función debe dejar de llamarse a sí misma."
+    },
+    {
+      "type": "paragraph",
+      "text": "Sin un caso base, la recursión nunca finaliza."
+    },
+    {
+      "type": "paragraph",
+      "text": "Estructura general:"
+    },
+    {
+      "type": "code",
+      "text": "def funcion():\n\n\tif condicion_base:\n\t\treturn resultado\n\nreturn funcion()"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Primer Ejemplo: Cuenta Regresiva"
+    },
+    {
+      "type": "paragraph",
+      "text": "Supongamos que queremos mostrar una cuenta regresiva desde un número hasta cero."
+    },
+    {
+      "type": "code",
+      "text": "def cuenta_regresiva(numero):\n\n\tif numero == 0:\n\t\tprint(\"¡Despegue!\")\n\t\treturn\n\n\tprint(numero)\n\tcuenta_regresiva(numero - 1)\n\ncuenta_regresiva(5)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "5\n4\n3\n2\n1\n¡Despegue!"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "def cuenta_regresiva(numero):\n\n\tif numero == 0:\n\t\tprint(\"¡Despegue!\")\n\t\treturn\n\n\tprint(numero)\n\tcuenta_regresiva(numero - 1)\n\ncuenta_regresiva(5)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "¿Qué Ocurre Internamente?"
+    },
+    {
+      "type": "table",
+      "headers": ["Llamada", "Acción"],
+      "rows": [
+        [
+          "<code class=\"language-python\">cuenta_regresiva(5)</code>",
+          "Imprime 5"
+        ],
+        [
+          "<code class=\"language-python\">cuenta_regresiva(4)</code>",
+          "Imprime 4"
+        ],
+        [
+          "<code class=\"language-python\">cuenta_regresiva(3)</code>",
+          "Imprime 3"
+        ],
+        [
+          "<code class=\"language-python\">cuenta_regresiva(2)</code>",
+          "Imprime 2"
+        ],
+        [
+          "<code class=\"language-python\">cuenta_regresiva(1)</code>",
+          "Imprime 1"
+        ],
+        [
+          "<code class=\"language-python\">cuenta_regresiva(0)</code>",
+          "Caso base"
+        ]
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br>Cuando estudies recursión, intenta imaginar una pila de llamadas donde cada ejecución espera a que termine la siguiente."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejemplo Clásico: Factorial"
+    },
+    {
+      "type": "paragraph",
+      "text": "El factorial de un número se define como:"
+    },
+    {
+      "type": "code",
+      "text": "5! = 5 × 4 × 3 × 2 × 1"
+    },
+    {
+      "type": "paragraph",
+      "text": "Resultado:"
+    },
+    {
+      "type": "code",
+      "text": "5! = 120"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Implementación Recursiva"
+    },
+    {
+      "type": "code",
+      "text": "def factorial(numero):\n\n\tif numero == 1:\n\t\treturn 1\n\n\treturn numero * factorial(numero - 1)\n\nprint(factorial(5))"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "120"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "def factorial(numero):\n\n\tif numero == 1:\n\t\treturn 1\n\n\treturn numero * factorial(numero - 1)\n\nprint(factorial(5))"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Descomposición Paso a Paso"
+    },
+    {
+      "type": "code",
+      "text": "factorial(5)\n\n5 × factorial(4)\n\n5 × (4 × factorial(3))\n\n5 × (4 × (3 × factorial(2)))\n\n5 × (4 × (3 × (2 × factorial(1))))\n\n5 × 4 × 3 × 2 × 1\n\n120"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>La recursión suele parecer compleja al principio porque una función se ejecuta muchas veces antes de devolver el resultado final."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Recursión para Sumar Números"
+    },
+    {
+      "type": "paragraph",
+      "text": "Supongamos que deseamos sumar todos los números desde 1 hasta un valor dado."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo:"
+    },
+    {
+      "type": "code",
+      "text": "1 + 2 + 3 + 4 + 5 = 15"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Solución Recursiva"
+    },
+    {
+      "type": "code",
+      "text": "def suma_hasta(numero):\n\n\tif numero == 1:\n\t\treturn 1\n\n\treturn numero + suma_hasta(numero - 1)\n\nprint(suma_hasta(5))"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "15"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "def suma_hasta(numero):\n\n\tif numero == 1:\n\t\treturn 1\n\n\treturn numero + suma_hasta(numero - 1)\n\nprint(suma_hasta(5))"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Visualizando la Recursión"
+    },
+    {
+      "type": "paragraph",
+      "text": "Veamos cómo se expande:"
+    },
+    {
+      "type": "code",
+      "text": "suma_hasta(5)\n\n5 + suma_hasta(4)\n\n5 + (4 + suma_hasta(3))\n\n5 + (4 + (3 + suma_hasta(2)))\n\n5 + (4 + (3 + (2 + suma_hasta(1))))\n\n5 + 4 + 3 + 2 + 1\n\n15"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ventajas de la Recursión"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Permite expresar soluciones de forma elegante.",
+        "Facilita resolver problemas que tienen estructura repetitiva.",
+        "Ayuda a desarrollar el pensamiento lógico.",
+        "Se utiliza en numerosos algoritmos avanzados."
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Desventajas de la Recursión"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Puede consumir más memoria.",
+        "Puede ser más lenta que algunos bucles.",
+        "Una mala condición base puede generar errores."
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Comparación General"
+    },
+    {
+      "type": "table",
+      "headers": ["Característica", "Bucles", "Recursión"],
+      "rows": [
+        ["Repetición", "Sí", "Sí"],
+        ["Fácil para principiantes", "Sí", "Menos"],
+        ["Requiere caso base", "No", "Sí"],
+        ["Uso frecuente", "Muy alto", "Situacional"]
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br>Antes de escribir una función recursiva, identifica claramente dos cosas: el caso base y cómo reducir el problema en cada llamada."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejemplo: Contar Caracteres de una Cadena"
+    },
+    {
+      "type": "paragraph",
+      "text": "Supongamos que queremos contar cuántos caracteres tiene un texto usando recursión."
+    },
+    {
+      "type": "code",
+      "text": "def contar_caracteres(texto):\n\n\tif texto == \"\":\n\t\treturn 0\n\n\treturn 1 + contar_caracteres(texto[1:])\n\nprint(contar_caracteres(\"Python\"))"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "6"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "def contar_caracteres(texto):\n\n\tif texto == \"\":\n\t\treturn 0\n\n\treturn 1 + contar_caracteres(texto[1:])\n\nprint(contar_caracteres(\"Python\"))"
+    },
+    {
+      "type": "subtitle2",
+      "text": "¿Qué Sucede?"
+    },
+    {
+      "type": "code",
+      "text": "\"Python\"\n\n1 + contar_caracteres(\"ython\")\n\n1 + 1 + contar_caracteres(\"thon\")\n\n1 + 1 + 1 + contar_caracteres(\"hon\")\n\n...\n\n6"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Buenas Prácticas"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Definir siempre un caso base claro.",
+        "Reducir el problema en cada llamada.",
+        "Evitar recursiones infinitas.",
+        "Probar primero con valores pequeños.",
+        "Utilizar nombres descriptivos para las funciones."
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejercicios para Practicar"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 1: Suma de los Primeros Números Naturales"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea una función recursiva llamada <code class=\"language-python\">sumar_naturales()</code> que reciba un número entero positivo."
+    },
+    {
+      "type": "paragraph",
+      "text": "La función debe calcular la suma de todos los números desde 1 hasta dicho número."
+    },
+    {
+      "type": "paragraph",
+      "text": "Por ejemplo:"
+    },
+    {
+      "type": "code",
+      "text": "sumar_naturales(4)\n\n1 + 2 + 3 + 4 = 10"
+    },
+    {
+      "type": "paragraph",
+      "text": "No debes utilizar bucles (<code class=\"language-python\">for</code> o <code class=\"language-python\">while</code>)."
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea una función recursiva llamada sumar_naturales() que reciba un\n# número entero positivo.\n# La función debe calcular la suma de todos los números desde 1 hasta\n# dicho número.\n# No debes utilizar bucles (for o while)."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# Crea una función recursiva llamada sumar_naturales() que reciba un\n# número entero positivo.\n# La función debe calcular la suma de todos los números desde 1 hasta\n# dicho número.\n# No debes utilizar bucles (for o while).\n\ndef sumar_naturales(numero):\n\n\tif numero == 1:\n\t\treturn 1\n\n\treturn numero + sumar_naturales(numero - 1)\n\nprint(sumar_naturales(4))"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# Crea una función recursiva llamada sumar_naturales() que reciba un\n# número entero positivo.\n# La función debe calcular la suma de todos los números desde 1 hasta\n# dicho número.\n# No debes utilizar bucles (for o while).\n\ndef sumar_naturales(numero):\n\n\tif numero == 1:\n\t\treturn 1\n\n\treturn numero + sumar_naturales(numero - 1)\n\nprint(sumar_naturales(4))"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 2: Potencia Recursiva"
+    },
+    {
+      "type": "paragraph",
+      "text": "Desarrolla una función llamada <code class=\"language-python\">potencia()</code> que reciba dos parámetros:"
+    },
+    {
+      "type": "list",
+      "items": ["Base.", "Exponente."]
+    },
+    {
+      "type": "paragraph",
+      "text": "La función debe calcular la potencia utilizando únicamente recursión."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo:"
+    },
+    {
+      "type": "code",
+      "text": "2^4 = 16"
+    },
+    {
+      "type": "paragraph",
+      "text": "No utilices el operador <code class=\"language-python\">**</code>."
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Desarrolla una función llamada potencia() que reciba dos parámetros:\n# - Base.\n# - Exponente.\n# La función debe calcular la potencia utilizando únicamente recursión.\n# No utilices el operador **."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# Desarrolla una función llamada potencia() que reciba dos parámetros:\n# - Base.\n# - Exponente.\n# La función debe calcular la potencia utilizando únicamente recursión.\n# No utilices el operador **.\n\ndef potencia(base, exponente):\n\n\tif exponente == 0:\n\t\treturn 1\n\n\treturn base * potencia(base, exponente - 1)\n\nprint(potencia(2, 4))"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# Desarrolla una función llamada potencia() que reciba dos parámetros:\n# - Base.\n# - Exponente.\n# La función debe calcular la potencia utilizando únicamente recursión.\n# No utilices el operador **.\n\ndef potencia(base, exponente):\n\n\tif exponente == 0:\n\t\treturn 1\n\n\treturn base * potencia(base, exponente - 1)\n\nprint(potencia(2, 4))"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 3: Contador de Vocales Recursivo"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea una función llamada <code class=\"language-python\">contar_vocales()</code> que reciba una cadena de texto."
+    },
+    {
+      "type": "paragraph",
+      "text": "La función debe recorrer el texto de forma recursiva y devolver cuántas vocales contiene."
+    },
+    {
+      "type": "paragraph",
+      "text": "Por ejemplo:"
+    },
+    {
+      "type": "code",
+      "text": "\"Programacion\"\n\nResultado: 5"
+    },
+    {
+      "type": "paragraph",
+      "text": "Debes utilizar:"
+    },
+    {
+      "type": "list",
+      "items": ["Slicing.", "Condicionales.", "Recursión."]
+    },
+    {
+      "type": "paragraph",
+      "text": "No utilices bucles."
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea una función llamada contar_vocales() que reciba una cadena de\n# texto.\n# La función debe recorrer el texto de forma recursiva y devolver\n# cuántas vocales contiene.\n# Debes utilizar:\n# - Slicing.\n# - Condicionales.\n# - Recursión.\n# No utilices bucles."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# Crea una función llamada contar_vocales() que reciba una cadena de\n# texto.\n# La función debe recorrer el texto de forma recursiva y devolver\n# cuántas vocales contiene.\n# Debes utilizar:\n# - Slicing.\n# - Condicionales.\n# - Recursión.\n# No utilices bucles.\n\ndef contar_vocales(texto):\n\n\tif texto == \"\":\n\t\treturn 0\n\n\tvocales = \"aeiouAEIOU\"\n\n\tif texto[0] in vocales:\n\t\treturn 1 + contar_vocales(texto[1:])\n\n\treturn contar_vocales(texto[1:])\n\nprint(contar_vocales(\"Programacion\"))"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# Crea una función llamada contar_vocales() que reciba una cadena de\n# texto.\n# La función debe recorrer el texto de forma recursiva y devolver\n# cuántas vocales contiene.\n# Debes utilizar:\n# - Slicing.\n# - Condicionales.\n# - Recursión.\n# No utilices bucles.\n\ndef contar_vocales(texto):\n\n\tif texto == \"\":\n\t\treturn 0\n\n\tvocales = \"aeiouAEIOU\"\n\n\tif texto[0] in vocales:\n\t\treturn 1 + contar_vocales(texto[1:])\n\n\treturn contar_vocales(texto[1:])\n\nprint(contar_vocales(\"Programacion\"))"
+        }
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Conclusiones de la Unidad"
+    },
+    {
+      "type": "paragraph",
+      "text": "Durante esta unidad aprendiste a:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Comprender qué es una función recursiva.",
+        "Identificar la importancia del caso base.",
+        "Resolver problemas mediante llamadas a la misma función.",
+        "Analizar cómo un problema puede dividirse en versiones más pequeñas.",
+        "Implementar soluciones recursivas para conteos, sumas y cálculos matemáticos.",
+        "Desarrollar habilidades de pensamiento lógico para abordar problemas de forma estructurada y progresiva."
+      ]
+    }
+  ]
+}
