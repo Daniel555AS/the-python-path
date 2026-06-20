@@ -34,7 +34,7 @@
     },
     {
       "name": "6.🧱Pensamiento Lógico y Funciones Avanzadas",
-      "description": "En este módulo desarrollarás tu lógica de programación aprendiendo técnicas más avanzadas. Verás cómo usar funciones recursivas, comprensiones de listas y funciones integradas de Python para resolver problemas de forma más eficiente. También aprenderás a tratar las funciones como objetos para crear código más flexible..",
+      "description": "En este módulo desarrollarás tu lógica de programación aprendiendo técnicas más avanzadas. Verás cómo usar funciones recursivas, comprensiones de listas y funciones integradas de Python para resolver problemas de forma más eficiente. También aprenderás a tratar las funciones como objetos para crear código más flexible.",
       "color": "#3776AB",
       "module": "module6"
     },
