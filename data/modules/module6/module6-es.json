@@ -1,0 +1,30 @@
+{
+  "title": "6. 🧱Pensamiento Lógico y Funciones Avanzadas",
+  "description": "En este módulo desarrollarás tu lógica de programación aprendiendo técnicas más avanzadas. Verás cómo usar funciones recursivas, comprensiones de listas y funciones integradas de Python para resolver problemas de forma más eficiente. También aprenderás a tratar las funciones como objetos para crear código más flexible.",
+  "steps": [
+    {
+      "name": "1. Funciones Recursivas (Introducción)",
+      "description": "En esta unidad aprenderás qué es la recursión, una técnica en la que una función se llama a sí misma para resolver un problema dividiéndolo en versiones más pequeñas del mismo. Comprenderás la importancia del caso base para evitar ciclos infinitos y analizarás ejemplos sencillos que te ayudarán a desarrollar el pensamiento lógico y la capacidad de descomponer problemas complejos en pasos más simples.",
+      "color": "#FFD43B",
+      "unit": "learning-unit1"
+    },
+    {
+      "name": "2. List Comprehensions",
+      "description": "En esta unidad descubrirás cómo crear listas de manera más compacta y expresiva mediante las list comprehensions. Aprenderás a generar nuevas listas a partir de secuencias existentes, aplicar transformaciones a los elementos y utilizar condiciones dentro de una única expresión, logrando código más limpio, legible y eficiente en comparación con algunos enfoques tradicionales basados en bucles.",
+      "color": "#3776AB",
+      "unit": "learning-unit2"
+    },
+    {
+      "name": "3. Uso Básico de Funciones Integradas (<code>len()</code>, <code>sum()</code>, <code>max()</code>, etc.)",
+      "description": "En esta unidad explorarás algunas de las funciones integradas más utilizadas de Python, las cuales permiten realizar operaciones comunes sin necesidad de programarlas desde cero. Aprenderás a obtener tamaños de colecciones con <code>len()</code>, calcular sumas con <code>sum()</code>, encontrar valores máximos y mínimos con <code>max()</code> y <code>min()</code>, entre otras herramientas que simplifican el desarrollo y mejoran la productividad al resolver problemas cotidianos.",
+      "color": "#1B983A",
+      "unit": "learning-unit3"
+    },
+    {
+      "name": "4. Funciones como Objetos",
+      "description": "En esta unidad conocerás una característica avanzada de Python: las funciones pueden tratarse como objetos. Aprenderás que una función puede almacenarse en variables, enviarse como argumento a otras funciones o devolverse como resultado, comprendiendo conceptos fundamentales para utilizar herramientas como <code>map()</code>, <code>filter()</code> y <code>sorted()</code>. Esto te permitirá escribir programas más flexibles y reutilizables, además de introducirte a ideas utilizadas en la programación funcional.",
+      "color": "#6464FF",
+      "unit": "learning-unit4"
+    }
+  ]
+}
