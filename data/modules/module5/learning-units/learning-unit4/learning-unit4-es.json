@@ -1,0 +1,537 @@
+{
+  "title": "Mini Proyectos con Texto",
+  "description": "",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "En esta unidad pondrás en práctica los conocimientos aprendidos sobre cadenas (<code class=\"language-python\">str</code>), listas y manipulación de texto mediante pequeños proyectos funcionales. A diferencia de ejercicios cortos y aislados, aquí combinarás varias herramientas de Python para resolver problemas más completos, organizando mejor tu lógica y desarrollando soluciones paso a paso. Trabajarás con procesamiento de palabras, validación de información y transformación de cadenas, habilidades muy utilizadas en aplicaciones reales."
+    },
+    {
+      "type": "subtitle1",
+      "text": "¿Por Qué Hacer Mini Proyectos?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Los mini proyectos ayudan a:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Aplicar varios conceptos al mismo tiempo.",
+        "Pensar de manera más lógica y estructurada.",
+        "Resolver problemas similares a los de programas reales.",
+        "Mejorar la práctica con cadenas, listas y condicionales.",
+        "Aprender a dividir problemas grandes en partes pequeñas."
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Proyecto 1: Contador de Palabras"
+    },
+    {
+      "type": "subtitle2",
+      "text": "¿Qué Hace Este Proyecto?"
+    },
+    {
+      "type": "paragraph",
+      "text": "El programa analiza un texto y calcula:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Cuántas palabras contiene.",
+        "Cuántos caracteres tiene.",
+        "Cuántas veces aparece una palabra específica."
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Paso 1: Crear un Texto"
+    },
+    {
+      "type": "code",
+      "text": "texto = \"Python es un lenguaje muy poderoso y Python es fácil de aprender\""
+    },
+    {
+      "type": "subtitle2",
+      "text": "Paso 2: Separar el Texto en Palabras"
+    },
+    {
+      "type": "code",
+      "text": "palabras = texto.split()\nprint(palabras)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Resultado:"
+    },
+    {
+      "type": "code",
+      "text": "['Python', 'es', 'un', 'lenguaje', 'muy', 'poderoso', 'y', 'Python', 'es', 'fácil', 'de', 'aprender']"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>El método <code class=\"language-python\">split()</code> convierte un texto en una lista separando las palabras por espacios."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Paso 3: Contar Palabras"
+    },
+    {
+      "type": "code",
+      "text": "cantidad = len(palabras)\n\nprint(cantidad)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Resultado:"
+    },
+    {
+      "type": "code",
+      "text": "12"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Paso 4: Contar Caracteres"
+    },
+    {
+      "type": "code",
+      "text": "print(len(texto))"
+    },
+    {
+      "type": "paragraph",
+      "text": "Resultado:"
+    },
+    {
+      "type": "code",
+      "text": "64"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Paso 5: Contar Apariciones de una Palabra"
+    },
+    {
+      "type": "code",
+      "text": "print(texto.count(\"Python\"))"
+    },
+    {
+      "type": "paragraph",
+      "text": "Resultado:"
+    },
+    {
+      "type": "code",
+      "text": "2"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "texto = \"Python es un lenguaje muy poderoso y Python es fácil de aprender\"\n\npalabras = texto.split()\n\nprint(palabras)\n\ncantidad = len(palabras)\n\nprint(cantidad)\n\nprint(len(texto))\n\nprint(texto.count(\"Python\"))"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br>Puedes combinar <code class=\"language-python\">.lower()</code> con <code class=\"language-python\">.count()</code> para evitar problemas entre mayúsculas y minúsculas."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo:"
+    },
+    {
+      "type": "code",
+      "text": "texto = \"Python es un lenguaje muy poderoso y Python es fácil de aprender\"\n\ntexto = texto.lower()\n\nprint(texto.count(\"python\"))"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "texto = \"Python es un lenguaje muy poderoso y Python es fácil de aprender\"\n\ntexto = texto.lower()\n\nprint(texto.count(\"python\"))"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Proyecto 2: Verificador de Contraseñas"
+    },
+    {
+      "type": "subtitle2",
+      "text": "¿Qué Hace Este Proyecto?"
+    },
+    {
+      "type": "paragraph",
+      "text": "El programa revisa si una contraseña cumple ciertas reglas básicas de seguridad."
+    },
+    {
+      "type": "paragraph",
+      "text": "Por ejemplo:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Tener mínimo 8 caracteres.",
+        "Contener números.",
+        "Contener letras mayúsculas."
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Verificación Básica"
+    },
+    {
+      "type": "code",
+      "text": "contraseña = \"Python123\"\n\nif len(contraseña) >= 8:\n\tprint(\"La contraseña tiene buena longitud\")\nelse:\n\tprint(\"La contraseña es demasiado corta\")"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "contraseña = \"Python123\"\n\nif len(contraseña) >= 8:\n\tprint(\"La contraseña tiene buena longitud\")\nelse:\n\tprint(\"La contraseña es demasiado corta\")"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Buscar Números Dentro del Texto"
+    },
+    {
+      "type": "code",
+      "text": "contraseña = \"Python123\"\n\ntiene_numero = False\n\nfor caracter in contraseña:\n\tif caracter.isdigit():\n\t\ttiene_numero = True\n\nprint(tiene_numero)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Resultado:"
+    },
+    {
+      "type": "code",
+      "text": "True"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "contraseña = \"Python123\"\n\ntiene_numero = False\n\nfor caracter in contraseña:\n\tif caracter.isdigit():\n\t\ttiene_numero = True\n\nprint(tiene_numero)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Buscar Letras Mayúsculas"
+    },
+    {
+      "type": "code",
+      "text": "contraseña = \"Python123\"\n\ntiene_mayuscula = False\n\nfor caracter in contraseña:\n\tif caracter.isupper():\n\t\ttiene_mayuscula = True\n\nprint(tiene_mayuscula)"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "contraseña = \"Python123\"\n\ntiene_mayuscula = False\n\nfor caracter in contraseña:\n\tif caracter.isupper():\n\t\ttiene_mayuscula = True\n\nprint(tiene_mayuscula)"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br><code class=\"language-python\">isdigit()</code> verifica si un carácter es un número.<br><code class=\"language-python\">isupper()</code> verifica si una letra está en mayúscula."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Verificador Completo"
+    },
+    {
+      "type": "code",
+      "text": "contraseña = \"DG8464INndks*om568sa@\"\n\ntiene_numero = False\ntiene_mayuscula = False\n\nfor caracter in contraseña:\n\tif caracter.isdigit():\n\t\ttiene_numero = True\n\n\tif caracter.isupper():\n\t\ttiene_mayuscula = True\n\nif len(contraseña) >= 8 and tiene_numero and tiene_mayuscula:\n\tprint(\"Contraseña válida\")\nelse:\n\tprint(\"Contraseña insegura\")"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "contraseña = \"DG8464INndks*om568sa@\"\n\ntiene_numero = False\ntiene_mayuscula = False\n\nfor caracter in contraseña:\n\tif caracter.isdigit():\n\t\ttiene_numero = True\n\n\tif caracter.isupper():\n\t\ttiene_mayuscula = True\n\nif len(contraseña) >= 8 and tiene_numero and tiene_mayuscula:\n\tprint(\"Contraseña válida\")\nelse:\n\tprint(\"Contraseña insegura\")"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br>Dividir un problema en pequeñas verificaciones facilita mucho la programación."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Proyecto 3: Inversor de Texto"
+    },
+    {
+      "type": "subtitle2",
+      "text": "¿Qué Hace este Proyecto?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Este programa invierte el orden de un texto."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo:"
+    },
+    {
+      "type": "code",
+      "text": "Hola"
+    },
+    {
+      "type": "paragraph",
+      "text": "Resultado:"
+    },
+    {
+      "type": "code",
+      "text": "aloH"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Usando Slicing"
+    },
+    {
+      "type": "code",
+      "text": "texto = \"Python\"\n\ninvertido = texto[::-1]\n\nprint(invertido)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "nohtyP"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "texto = \"Python\"\n\ninvertido = texto[::-1]\n\nprint(invertido)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Explicación del Slicing"
+    },
+    {
+      "type": "table",
+      "headers": ["Parte", "Significado"],
+      "rows": [
+        [
+          "<code class=\"language-python\">texto[inicio:fin:paso]</code>",
+          "Estructura general"
+        ],
+        [
+          "<code class=\"language-python\">[::-1]</code>",
+          "Recorre el texto al revés"
+        ]
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Invertir Usando un Bucle"
+    },
+    {
+      "type": "code",
+      "text": "texto = \"Python\"\n\nresultado = \"\"\n\nfor letra in texto:\n\tresultado = letra + resultado\n\nprint(resultado)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "nohtyP"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "texto = \"Python\"\n\nresultado = \"\"\n\nfor letra in texto:\n\tresultado = letra + resultado\n\nprint(resultado)"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Este segundo método ayuda a entender mejor cómo construir cadenas manualmente."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Combinando Proyectos"
+    },
+    {
+      "type": "paragraph",
+      "text": "A medida que aprendas más Python, podrás combinar todas estas ideas en programas más grandes."
+    },
+    {
+      "type": "paragraph",
+      "text": "Por ejemplo:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Un analizador de texto.",
+        "Un corrector básico.",
+        "Un generador de usuarios.",
+        "Un sistema simple de validación."
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Tabla Resumen"
+    },
+    {
+      "type": "table",
+      "headers": ["Proyecto", "Conceptos Usados"],
+      "rows": [
+        [
+          "Contador de palabras",
+          "<code class=\"language-python\">split()</code>, <code class=\"language-python\">len()</code>, <code class=\"language-python\">count()</code>"
+        ],
+        [
+          "Verificador de contraseñas",
+          "<code class=\"language-python\">if</code>, <code class=\"language-python\">for</code>, <code class=\"language-python\">isdigit()</code>, <code class=\"language-python\">isupper()</code>"
+        ],
+        ["Inversor de texto", "slicing, bucles, concatenación"]
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejercicios para Practicar"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 1: Analizador de Texto Completo"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea un programa que almacene un texto en una variable y luego muestre:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Cantidad total de caracteres.",
+        "Cantidad total de palabras.",
+        "Primera palabra del texto.",
+        "Última palabra del texto.",
+        "El texto completamente en mayúsculas.",
+        "El texto completamente invertido."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "El programa debe utilizar:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "<code class=\"language-python\">split()</code>.",
+        "<code class=\"language-python\">len()</code>.",
+        "Slicing.",
+        "Métodos de cadenas."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea un programa que:\n# 1. Almacene un texto en una variable.\n#  Y luego muestre:\n# 2. Cantidad total de caracteres.\n# 3. Cantidad total de palabras.\n# 4. Primera palabra del texto.\n# 5. Última palabra del texto.\n# 6. El texto completamente en mayúsculas.\n# 7. El texto completamente invertido.\n# El programa debe utilizar:\n# 8. split().\n# 9. len().\n# 10. Slicing.\n# 11. Métodos de cadenas."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# Crea un programa que:\n# 1. Almacene un texto en una variable.\ntexto = \"Python es divertido y poderoso\"\n\n# El programa debe utilizar:\n# 8. split().\npalabras = texto.split()\n\n# El programa debe utilizar:\n# 9. len().\n# 10. Slicing.\n# 11. Métodos de cadenas.\n# Y luego muestre:\n# 2. Cantidad total de caracteres.\nprint(\"Caracteres:\", len(texto))\n# 3. Cantidad total de palabras.\nprint(\"Palabras:\", len(palabras))\n# 4. Primera palabra del texto.\nprint(\"Primera palabra:\", palabras[0])\n# 5. Última palabra del texto.\nprint(\"Última palabra:\", palabras[-1])\n# 6. El texto completamente en mayúsculas.\nprint(\"Mayúsculas:\", texto.upper())\n# 7. El texto completamente invertido.\nprint(\"Invertido:\", texto[::-1])"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# Crea un programa que:\n# 1. Almacene un texto en una variable.\ntexto = \"Python es divertido y poderoso\"\n\n# El programa debe utilizar:\n# 8. split().\npalabras = texto.split()\n\n# El programa debe utilizar:\n# 9. len().\n# 10. Slicing.\n# 11. Métodos de cadenas.\n# Y luego muestre:\n# 2. Cantidad total de caracteres.\nprint(\"Caracteres:\", len(texto))\n# 3. Cantidad total de palabras.\nprint(\"Palabras:\", len(palabras))\n# 4. Primera palabra del texto.\nprint(\"Primera palabra:\", palabras[0])\n# 5. Última palabra del texto.\nprint(\"Última palabra:\", palabras[-1])\n# 6. El texto completamente en mayúsculas.\nprint(\"Mayúsculas:\", texto.upper())\n# 7. El texto completamente invertido.\nprint(\"Invertido:\", texto[::-1])"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 2: Validador de Contraseña Mejorado"
+    },
+    {
+      "type": "paragraph",
+      "text": "Desarrolla un programa que revise si una contraseña cumple estas condiciones:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Tiene mínimo 10 caracteres.",
+        "Contiene al menos un número.",
+        "Contiene al menos una letra mayúscula.",
+        "Contiene al menos una letra minúscula."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "El programa debe mostrar mensajes indicando qué condición no se cumple."
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Desarrolla un programa que revise si una contraseña cumple estas\n# condiciones:\n# 1. Tiene mínimo 10 caracteres.\n# 2. Contiene al menos un número.\n# 3. Contiene al menos una letra mayúscula.\n# 4. Contiene al menos una letra minúscula.\n# 5. El programa debe mostrar mensajes indicando qué condición no se\n# cumple."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# Desarrolla un programa que revise si una contraseña cumple estas\n# condiciones:\ncontraseña = \"PiG85D59*@fd\"\n\ntiene_numero = False\ntiene_mayuscula = False\ntiene_minuscula = False\n\nfor caracter in contraseña:\n\t# 2. Contiene al menos un número.\n\tif caracter.isdigit():\n\t\ttiene_numero = True\n\n\t# 3. Contiene al menos una letra mayúscula.\n\tif caracter.isupper():\n\t\ttiene_mayuscula = True\n\n\t# 4. Contiene al menos una letra minúscula.\n\tif caracter.islower():\n\t\ttiene_minuscula = True\n\n# 5. El programa debe mostrar mensajes indicando qué condición no se\n# cumple.\n\n# 1. Tiene mínimo 10 caracteres.\nif len(contraseña) < 10:\n\tprint(\"La contraseña es demasiado corta\")\n\nif not tiene_numero:\n\tprint(\"Falta un número\")\n\nif not tiene_mayuscula:\n\tprint(\"Falta una mayúscula\")\n\nif not tiene_minuscula:\n\tprint(\"Falta una minúscula\")\n\nif len(contraseña) >= 10 and tiene_numero and tiene_mayuscula and tiene_minuscula:\n\tprint(\"Contraseña válida\")"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# Desarrolla un programa que revise si una contraseña cumple estas\n# condiciones:\ncontraseña = \"PiG85D59*@fd\"\n\ntiene_numero = False\ntiene_mayuscula = False\ntiene_minuscula = False\n\nfor caracter in contraseña:\n\t# 2. Contiene al menos un número.\n\tif caracter.isdigit():\n\t\ttiene_numero = True\n\n\t# 3. Contiene al menos una letra mayúscula.\n\tif caracter.isupper():\n\t\ttiene_mayuscula = True\n\n\t# 4. Contiene al menos una letra minúscula.\n\tif caracter.islower():\n\t\ttiene_minuscula = True\n\n# 5. El programa debe mostrar mensajes indicando qué condición no se\n# cumple.\n\n# 1. Tiene mínimo 10 caracteres.\nif len(contraseña) < 10:\n\tprint(\"La contraseña es demasiado corta\")\n\nif not tiene_numero:\n\tprint(\"Falta un número\")\n\nif not tiene_mayuscula:\n\tprint(\"Falta una mayúscula\")\n\nif not tiene_minuscula:\n\tprint(\"Falta una minúscula\")\n\nif len(contraseña) >= 10 and tiene_numero and tiene_mayuscula and tiene_minuscula:\n\tprint(\"Contraseña válida\")"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 3: Inversor de Frases"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crea un programa que:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Guarde una frase en una variable.",
+        "Invierta completamente el texto.",
+        "Muestre también cada palabra invertida individualmente."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo:"
+    },
+    {
+      "type": "code",
+      "text": "Hola mundo"
+    },
+    {
+      "type": "paragraph",
+      "text": "Resultado:"
+    },
+    {
+      "type": "code",
+      "text": "odnum aloH\naloH odnum"
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Crea un programa que:\n# 1. Guarde una frase en una variable.\n# 2. Invierta completamente el texto.\n# 3. Muestre también cada palabra invertida individualmente."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# 1. Guarde una frase en una variable.\nfrase = \"Hola mundo\"\n\n# 2. Invierta completamente el texto.\nprint(frase[::-1])\n\n# 3. Muestre también cada palabra invertida individualmente.\n\npalabras = frase.split()\n\nresultado = \"\"\n\nfor palabra in palabras:\n\tresultado += palabra[::-1] + \" \"\n\nprint(resultado)"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# 1. Guarde una frase en una variable.\nfrase = \"Hola mundo\"\n\n# 2. Invierta completamente el texto.\nprint(frase[::-1])\n\n# 3. Muestre también cada palabra invertida individualmente.\n\npalabras = frase.split()\n\nresultado = \"\"\n\nfor palabra in palabras:\n\tresultado += palabra[::-1] + \" \"\n\nprint(resultado)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Conclusiones de la Unidad"
+    },
+    {
+      "type": "paragraph",
+      "text": "Durante esta unidad aprendiste a:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Combinar cadenas, listas y estructuras de control.",
+        "Procesar y analizar texto utilizando métodos de Python.",
+        "Resolver problemas prácticos relacionados con información textual.",
+        "Construir programas más completos utilizando lógica paso a paso.",
+        "Aplicar varios conceptos al mismo tiempo en mini proyectos reales."
+      ]
+    }
+  ]
+}
