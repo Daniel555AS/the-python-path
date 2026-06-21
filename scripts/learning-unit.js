@@ -171,19 +171,25 @@ function buildBlock(block) {
     case "table":
       el.innerHTML = `
         ${block.title ? `<h3 class="table-title">${block.title}</h3>` : ""}
-        <table class="unit-table">
-          <thead>
-            <tr>${block.headers.map((h) => `<th>${h}</th>`).join("")}</tr>
-          </thead>
-          <tbody>
-            ${block.rows
-              .map(
-                (row) =>
-                  `<tr>${row.map((col) => `<td>${col}</td>`).join("")}</tr>`
-              )
-              .join("")}
-          </tbody>
-        </table>
+
+        <div class="table-wrapper">
+          <table class="unit-table">
+            <thead>
+              <tr>
+                ${block.headers.map((h) => `<th>${h}</th>`).join("")}
+              </tr>
+            </thead>
+
+            <tbody>
+              ${block.rows
+                .map(
+                  (row) =>
+                    `<tr>${row.map((col) => `<td>${col}</td>`).join("")}</tr>`
+                )
+                .join("")}
+            </tbody>
+          </table>
+        </div>
       `;
       break;
   }

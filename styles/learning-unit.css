@@ -214,14 +214,21 @@ code[class*="language-"] {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
 .unit-table {
   width: 100%;
-  border-collapse: collapse;
+  min-width: max-content;
+  border-collapse: separate;
+  border-spacing: 0;
   margin: 1.5rem 0;
   background: rgba(255, 255, 255, 0.03);
   color: #e6e6e6;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
 }
 
@@ -234,6 +241,7 @@ code[class*="language-"] {
   padding: 0.7rem 1rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   text-align: left;
+  white-space: nowrap;
 }
 
 .unit-table tr:last-child td {
@@ -293,12 +301,6 @@ code[class*="language-"] {
     font-size: 0.9rem;
   }
 
-  .unit-table {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-
   .main-header {
     padding: 1rem;
   }
@@ -306,5 +308,4 @@ code[class*="language-"] {
   .language-btn {
     padding: 6px 10px;
   }
-  
 }
