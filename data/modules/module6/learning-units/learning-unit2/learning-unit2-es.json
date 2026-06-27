@@ -1,0 +1,744 @@
+{
+  "title": "List Comprehensions",
+  "description": "",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "A medida que los programas crecen, es muy común necesitar recorrer listas para generar nuevas colecciones de datos. Una de las características más elegantes y utilizadas de Python para este propósito son las <strong>List Comprehensions</strong>."
+    },
+    {
+      "type": "paragraph",
+      "text": "Las List Comprehensions permiten crear listas de forma compacta, legible y eficiente utilizando una única expresión. En lugar de crear una lista vacía y agregar elementos manualmente mediante un bucle <code class=\"language-python\">for</code>, podemos construir la lista directamente especificando cómo debe generarse cada elemento."
+    },
+    {
+      "type": "paragraph",
+      "text": "Su principal ventaja es que permiten escribir código más corto y expresivo sin sacrificar claridad cuando se utilizan adecuadamente."
+    },
+    {
+      "type": "subtitle1",
+      "text": "¿Por Qué Usar List Comprehensions?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Supongamos que queremos obtener los cuadrados de varios números."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Enfoque Tradicional"
+    },
+    {
+      "type": "code",
+      "text": "numeros = [1, 2, 3, 4, 5]\n\ncuadrados = []\n\nfor numero in numeros:\n\tcuadrados.append(numero ** 2)\n\nprint(cuadrados)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "[1, 4, 9, 16, 25]"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "numeros = [1, 2, 3, 4, 5]\n\ncuadrados = []\n\nfor numero in numeros:\n\tcuadrados.append(numero ** 2)\n\nprint(cuadrados)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Usando List Comprehension"
+    },
+    {
+      "type": "code",
+      "text": "numeros = [1, 2, 3, 4, 5]\n\ncuadrados = [numero ** 2 for numero in numeros]\n\nprint(cuadrados)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "[1, 4, 9, 16, 25]"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "numeros = [1, 2, 3, 4, 5]\n\ncuadrados = [numero ** 2 for numero in numeros]\n\nprint(cuadrados)"
+    },
+    {
+      "type": "paragraph",
+      "text": "La segunda solución realiza exactamente la misma tarea utilizando menos código y expresando claramente la intención del programador."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Sintaxis General"
+    },
+    {
+      "type": "paragraph",
+      "text": "La estructura básica es:"
+    },
+    {
+      "type": "code",
+      "text": "[nuevo_elemento for elemento in iterable]"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Componentes"
+    },
+    {
+      "type": "table",
+      "headers": ["Elemento", "Descripción"],
+      "rows": [
+        [
+          "<code class=\"language-python\">nuevo_elemento</code>",
+          "Valor que será agregado a la nueva lista"
+        ],
+        [
+          "<code class=\"language-python\">for elemento in iterable</code>",
+          "Recorrido de la colección original"
+        ],
+        [
+          "<code class=\"language-python\">iterable</code>",
+          "Lista, tupla, rango u objeto iterable"
+        ]
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Visualizando la Sintaxis"
+    },
+    {
+      "type": "code",
+      "text": "numeros = [1, 2, 3]\n\nresultado = [numero * 10 for numero in numeros]\n\nprint(resultado)"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "numeros = [1, 2, 3]\n\nresultado = [numero * 10 for numero in numeros]\n\nprint(resultado)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Equivale a:"
+    },
+    {
+      "type": "code",
+      "text": "numeros = [1, 2, 3]\n\nresultado = []\n\nfor numero in numeros:\n\tresultado.append(numero * 10)\n\nprint(resultado)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "[10, 20, 30]"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "numeros = [1, 2, 3]\n\nresultado = []\n\nfor numero in numeros:\n\tresultado.append(numero * 10)\n\nprint(resultado)"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Transformando Datos"
+    },
+    {
+      "type": "paragraph",
+      "text": "Una List Comprehension puede modificar los elementos durante la creación de la nueva lista."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Convertir Palabras a Mayúsculas"
+    },
+    {
+      "type": "code",
+      "text": "palabras = [\"python\", \"java\", \"c++\"]\n\npalabras_mayusculas = [palabra.upper() for palabra in palabras]\n\nprint(palabras_mayusculas)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "['PYTHON', 'JAVA', 'C++']"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "palabras = [\"python\", \"java\", \"c++\"]\n\npalabras_mayusculas = [palabra.upper() for palabra in palabras]\n\nprint(palabras_mayusculas)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Obtener Longitudes de Cadenas"
+    },
+    {
+      "type": "code",
+      "text": "nombres = [\"Daniel\", \"Ana\", \"Sebastian\"]\n\nlongitudes = [len(nombre) for nombre in nombres]\n\nprint(longitudes)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "[6, 3, 9]"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "nombres = [\"Daniel\", \"Ana\", \"Sebastian\"]\n\nlongitudes = [len(nombre) for nombre in nombres]\n\nprint(longitudes)"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Utilizando Condiciones"
+    },
+    {
+      "type": "paragraph",
+      "text": "Una de las características más poderosas es la posibilidad de filtrar elementos."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Sintaxis"
+    },
+    {
+      "type": "code",
+      "text": "[nuevo_elemento for elemento in iterable if condicion]"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Obtener Únicamente Números Pares"
+    },
+    {
+      "type": "code",
+      "text": "numeros = range(1, 21)\n\nnumeros_pares = [\n\tnumero\n\tfor numero in numeros\n\tif numero % 2 == 0\n]\n\nprint(numeros_pares)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "[2, 4, 6, 8, 10, 12, 14, 16, 18, 20]"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "numeros = range(1, 21)\n\nnumeros_pares = [\n\tnumero\n\tfor numero in numeros\n\tif numero % 2 == 0\n]\n\nprint(numeros_pares)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Obtener Palabras Largas"
+    },
+    {
+      "type": "code",
+      "text": "palabras = [\n\t\"Python\",\n\t\"IA\",\n\t\"Programacion\",\n\t\"Codigo\",\n\t\"Desarrollo\"\n]\n\npalabras_largas = [\n\tpalabra\n\tfor palabra in palabras\n\tif len(palabra) > 5]\n\nprint(palabras_largas)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "['Python', 'Programacion', 'Codigo', 'Desarrollo']"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "palabras = [\n\t\"Python\",\n\t\"IA\",\n\t\"Programacion\",\n\t\"Codigo\",\n\t\"Desarrollo\"\n]\n\npalabras_largas = [\n\tpalabra\n\tfor palabra in palabras\n\tif len(palabra) > 5]\n\nprint(palabras_largas)"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>La condición siempre se evalúa después del <code class=\"language-python\">for</code>. Si la condición es verdadera, el elemento es agregado a la nueva lista."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Expresiones Condicionales Dentro de la Comprensión"
+    },
+    {
+      "type": "paragraph",
+      "text": "También podemos decidir qué valor guardar según una condición."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Sintaxis"
+    },
+    {
+      "type": "code",
+      "text": "[valor_si_verdadero if condicion else valor_si_falso for elemento in iterable]"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Clasificar Números Como Pares o Impares"
+    },
+    {
+      "type": "code",
+      "text": "numeros = range(1, 11)\n\netiquetas = [\n\t\"Par\"\n\tif numero % 2 == 0\n\telse \"Impar\"\n\tfor numero in numeros\n]\n\nprint(etiquetas)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "['Impar', 'Par', 'Impar', 'Par', 'Impar', 'Par', 'Impar', 'Par', 'Impar', 'Par']"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "numeros = range(1, 11)\n\netiquetas = [\n\t\"Par\"\n\tif numero % 2 == 0\n\telse \"Impar\"\n\tfor numero in numeros\n]\n\nprint(etiquetas)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Trabajando con Múltiples Condiciones"
+    },
+    {
+      "type": "code",
+      "text": "numeros = range(1, 51)\n\nresultado = [\n\tnumero\n\tfor numero in numeros\n\tif numero % 2 == 0 and numero % 3 == 0\n]\n\nprint(resultado)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "[6, 12, 18, 24, 30, 36, 42, 48]"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "numeros = range(1, 51)\n\nresultado = [\n\tnumero\n\tfor numero in numeros\n\tif numero % 2 == 0 and numero % 3 == 0\n]\n\nprint(resultado)"
+    },
+    {
+      "type": "subtitle1",
+      "text": "List Comprehensions con Strings"
+    },
+    {
+      "type": "paragraph",
+      "text": "Los strings son iterables, por lo que podemos recorrer sus caracteres."
+    },
+    {
+      "type": "code",
+      "text": "palabra = \"python\"\n\nletras = [letra.upper() for letra in palabra]\n\nprint(letras)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "['P', 'Y', 'T', 'H', 'O', 'N']"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "palabra = \"python\"\n\nletras = [letra.upper() for letra in palabra]\n\nprint(letras)"
+    },
+    {
+      "type": "subtitle1",
+      "text": "List Comprehensions Anidadas"
+    },
+    {
+      "type": "paragraph",
+      "text": "Las List Comprehensions también pueden contener múltiples bucles."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo:"
+    },
+    {
+      "type": "code",
+      "text": "pares = [\n\t(x, y)\n\tfor x in range(1, 4)\n\tfor y in range(1, 4)\n]\n\nprint(pares)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "[(1, 1), (1, 2), (1, 3), (2, 1), (2, 2), (2, 3), (3, 1), (3, 2), (3, 3)]"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "pares = [\n\t(x, y)\n\tfor x in range(1, 4)\n\tfor y in range(1, 4)\n]\n\nprint(pares)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Creando Matrices"
+    },
+    {
+      "type": "code",
+      "text": "matriz = [\n\t[columna for columna in range(4)]\n\tfor fila in range(3)\n]\n\nprint(matriz)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "[\n\t[0, 1, 2, 3],\n\t[0, 1, 2, 3],\n\t[0, 1, 2, 3]\n]"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "matriz = [\n\t[columna for columna in range(4)]\n\tfor fila in range(3)\n]\n\nprint(matriz)"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Comparación de Enfoques"
+    },
+    {
+      "type": "table",
+      "headers": ["Característica", "Bucle Tradicional", "List Comprehension"],
+      "rows": [
+        ["Cantidad de líneas", "Mayor", "Menor"],
+        ["Legibilidad", "Buena", "Excelente para tareas simples"],
+        ["Rendimiento", "Bueno", "Generalmente mejor"],
+        ["Complejidad permitida", "Alta", "Baja a media"],
+        ["Uso recomendado", "Procesos complejos", "Transformaciones simples"]
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Buenas Prácticas"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Utiliza List Comprehensions Cuando"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Realices transformaciones simples.",
+        "Filtres elementos.",
+        "Generes nuevas listas rápidamente."
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Evítalas Cuando"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Existan múltiples condiciones complejas.",
+        "La comprensión tenga varios niveles difíciles de leer.",
+        "Sea necesario realizar múltiples acciones dentro del bucle."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "📌 <strong>Nota:</strong><br>Si una List Comprehension requiere varias líneas para entenderse, probablemente un bucle tradicional sea una mejor opción."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejercicios para Practicar"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 1: Filtrado de Estudiantes Aprobados"
+    },
+    {
+      "type": "paragraph",
+      "text": "Una institución educativa almacena las calificaciones finales de sus estudiantes en una lista."
+    },
+    {
+      "type": "code",
+      "text": "calificaciones = [45, 80, 62, 95, 30, 71, 88, 56]"
+    },
+    {
+      "type": "paragraph",
+      "text": "Debes crear una nueva lista que contenga únicamente las calificaciones aprobatorias."
+    },
+    {
+      "type": "paragraph",
+      "text": "Se considera aprobada cualquier nota mayor o igual a 60."
+    },
+    {
+      "type": "paragraph",
+      "text": "Instrucciones:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Crear una nueva lista utilizando una List Comprehension.",
+        "Recorrer cada elemento de la lista original.",
+        "Conservar únicamente las calificaciones mayores o iguales a 60.",
+        "Guardar el resultado en una variable llamada <code class=\"language-python\">calificaciones_aprobadas</code>.",
+        "Mostrar el contenido de la nueva lista utilizando <code class=\"language-python\">print()</code>."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Una institución educativa almacena las calificaciones finales de\n# sus estudiantes en una lista.\n#\n# calificaciones = [45, 80, 62, 95, 30, 71, 88, 56]\n#\n# Debes crear una nueva lista que contenga únicamente las\n# calificaciones aprobatorias.\n#\n# Se considera aprobada cualquier nota mayor o igual a 60.\n#\n# Intrucciones:\n# - Crear una nueva lista utilizando una List Comprehension.\n# - Recorrer cada elemento de la lista original.\n# - Conservar únicamente las calificaciones mayores o iguales a 60.\n# - Guardar el resultado en una variable llamada\n#   calificaciones_aprobadas.\n# - Mostrar el contenido de la nueva lista utilizando print()."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# Una institución educativa almacena las calificaciones finales de\n# sus estudiantes en una lista.\n#\n# calificaciones = [45, 80, 62, 95, 30, 71, 88, 56]\n\ncalificaciones = [45, 80, 62, 95, 30, 71, 88, 56]\n\n# Debes crear una nueva lista que contenga únicamente las\n# calificaciones aprobatorias.\n#\n# Se considera aprobada cualquier nota mayor o igual a 60.\n#\n# Intrucciones:\n# - Crear una nueva lista utilizando una List Comprehension.\n# - Guardar el resultado en una variable llamada\n#   calificaciones_aprobadas.\n\ncalificaciones_aprobadas = [\n\t# - Recorrer cada elemento de la lista original\n\tnota\n\tfor nota in calificaciones\n\t# - Conservar únicamente las calificaciones mayores o iguales a 60.\n\tif nota >= 60\n]\n\n# - Mostrar el contenido de la nueva lista utilizando print().\nprint(calificaciones_aprobadas)"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# Una institución educativa almacena las calificaciones finales de\n# sus estudiantes en una lista.\n#\n# calificaciones = [45, 80, 62, 95, 30, 71, 88, 56]\n\ncalificaciones = [45, 80, 62, 95, 30, 71, 88, 56]\n\n# Debes crear una nueva lista que contenga únicamente las\n# calificaciones aprobatorias.\n#\n# Se considera aprobada cualquier nota mayor o igual a 60.\n#\n# Intrucciones:\n# - Crear una nueva lista utilizando una List Comprehension.\n# - Guardar el resultado en una variable llamada\n#   calificaciones_aprobadas.\n\ncalificaciones_aprobadas = [\n\t# - Recorrer cada elemento de la lista original\n\tnota\n\tfor nota in calificaciones\n\t# - Conservar únicamente las calificaciones mayores o iguales a 60.\n\tif nota >= 60\n]\n\n# - Mostrar el contenido de la nueva lista utilizando print().\nprint(calificaciones_aprobadas)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 2: Catálogo de Productos en Mayúsculas"
+    },
+    {
+      "type": "paragraph",
+      "text": "Una tienda almacena los nombres de sus productos en la siguiente lista:"
+    },
+    {
+      "type": "code",
+      "text": "productos = [\n\t\"Laptop\",\n\t\"Mouse\",\n\t\"Teclado\",\n\t\"Monitor\",\n\t\"Memoria USB\"\n]"
+    },
+    {
+      "type": "paragraph",
+      "text": "El administrador desea generar una nueva lista donde todos los nombres aparezcan completamente en mayúsculas."
+    },
+    {
+      "type": "paragraph",
+      "text": "Instrucciones:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Crear una nueva lista utilizando una List Comprehension.",
+        "Recorrer todos los productos de la lista original.",
+        "Convertir cada nombre a mayúsculas mediante el método <code class=\"language-python\">upper()</code>.",
+        "Guardar el resultado en una variable llamada <code class=\"language-python\">productos_mayusculas</code>.",
+        "Mostrar la lista resultante."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Una tienda almacena los nombres de sus productos en la siguiente lista:\n#\n# productos = [\n#\t\"Laptop\",\n#\t\"Mouse\",\n#\t\"Teclado\",\n#\t\"Monitor\",\n#\t\"Memoria USB\"\n# ]\n#\n# El administrador desea generar una nueva lista donde todos los nombres\n# aparezcan completamente en mayúsculas.\n#\n# Instrucciones:\n# - Crear una nueva lista utilizando una List Comprehension.\n# - Recorrer todos los productos de la lista original.\n# - Convertir cada nombre a mayúsculas mediante el método upper().\n# - Guardar el resultado en una variable llamada productos_mayusculas.\n# - Mostrar la lista resultante."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# Una tienda almacena los nombres de sus productos en la siguiente lista:\n#\n# productos = [\n#\t\"Laptop\",\n#\t\"Mouse\",\n#\t\"Teclado\",\n#\t\"Monitor\",\n#\t\"Memoria USB\"\n# ]\n\nproductos = [\n\t\"Laptop\",\n\t\"Mouse\",\n\t\"Teclado\",\n\t\"Monitor\",\n\t\"Memoria USB\"\n]\n\n# El administrador desea generar una nueva lista donde todos los nombres\n# aparezcan completamente en mayúsculas.\n#\n# Instrucciones:\n# - Crear una nueva lista utilizando una List Comprehension.\n# - Guardar el resultado en una variable llamada productos_mayusculas.\n\nproductos_mayusculas = [\n\t# - Recorrer todos los productos de la lista original.\n\t# - Convertir cada nombre a mayúsculas mediante el método upper().\n\tproducto.upper()\n\tfor producto in productos\n]\n\n# - Mostrar la lista resultante.\nprint(productos_mayusculas)"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# Una tienda almacena los nombres de sus productos en la siguiente lista:\n#\n# productos = [\n#\t\"Laptop\",\n#\t\"Mouse\",\n#\t\"Teclado\",\n#\t\"Monitor\",\n#\t\"Memoria USB\"\n# ]\n\nproductos = [\n\t\"Laptop\",\n\t\"Mouse\",\n\t\"Teclado\",\n\t\"Monitor\",\n\t\"Memoria USB\"\n]\n\n# El administrador desea generar una nueva lista donde todos los nombres\n# aparezcan completamente en mayúsculas.\n#\n# Instrucciones:\n# - Crear una nueva lista utilizando una List Comprehension.\n# - Guardar el resultado en una variable llamada productos_mayusculas.\n\nproductos_mayusculas = [\n\t# - Recorrer todos los productos de la lista original.\n\t# - Convertir cada nombre a mayúsculas mediante el método upper().\n\tproducto.upper()\n\tfor producto in productos\n]\n\n# - Mostrar la lista resultante.\nprint(productos_mayusculas)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 3: Sistema de Monitoreo de Temperaturas"
+    },
+    {
+      "type": "paragraph",
+      "text": "Una estación meteorológica registra temperaturas durante el día."
+    },
+    {
+      "type": "code",
+      "text": "temperaturas = [\n\t15, 28, 35, 42, 18,\n\t39, 50, 24, 45, 32\n]"
+    },
+    {
+      "type": "paragraph",
+      "text": "Debes generar una lista de alertas para todas las temperaturas consideradas críticas."
+    },
+    {
+      "type": "paragraph",
+      "text": "Una temperatura es crítica cuando supera los 40 °C."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cada alerta debe almacenarse con el siguiente formato:"
+    },
+    {
+      "type": "code",
+      "text": "ALERTA: 42°C"
+    },
+    {
+      "type": "paragraph",
+      "text": "Instrucciones:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Recorrer todas las temperaturas utilizando una List Comprehension.",
+        "Filtrar únicamente las temperaturas superiores a 40.",
+        "Crear una cadena de texto con el formato indicado.",
+        "Guardar las alertas en una variable llamada <code class=\"language-python\">alertas_criticas</code>.",
+        "Mostrar el resultado."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Una estación meteorológica registra temperaturas durante el día.\n#\n# temperaturas = [\n#\t15, 28, 35, 42, 18,\n#\t39, 50, 24, 45, 32\n# ]\n#\n# Debes generar una lista de alertas para todas las temperaturas\n# consideradas críticas.\n#\n# Una temperatura es crítica cuando supera los 40 °C.\n#\n# Cada alerta debe almacenarse con el siguiente formato:\n# ALERTA: 42°C\n#\n# Instrucciones:\n# - Recorrer todas las temperaturas utilizando una List Comprehension.\n# - Filtrar únicamente las temperaturas superiores a 40.\n# - Crear una cadena de texto con el formato indicado.\n# - Guardar las alertas en una variable llamada alertas_criticas.\n# - Mostrar el resultado."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# Una estación meteorológica registra temperaturas durante el día.\n#\n# temperaturas = [\n#\t15, 28, 35, 42, 18,\n#\t39, 50, 24, 45, 32\n# ]\n\ntemperaturas = [\n\t15, 28, 35, 42, 18,\n\t39, 50, 24, 45, 32\n]\n\n# Debes generar una lista de alertas para todas las temperaturas\n# consideradas críticas.\n#\n# Una temperatura es crítica cuando supera los 40 °C.\n#\n# Cada alerta debe almacenarse con el siguiente formato:\n# ALERTA: 42°C\n#\n# Instrucciones:\n# - Guardar las alertas en una variable llamada alertas_criticas.\nalertas_criticas = [\n\t# - Crear una cadena de texto con el formato indicado.\n\tf\"ALERTA: {temperatura}°C\"\n\t# - Recorrer todas las temperaturas utilizando una List Comprehension.\n\tfor temperatura in temperaturas\n\t# - Filtrar únicamente las temperaturas superiores a 40.\n\tif temperatura > 40\n]\n\n# - Mostrar el resultado.\nprint(alertas_criticas)"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# Una estación meteorológica registra temperaturas durante el día.\n#\n# temperaturas = [\n#\t15, 28, 35, 42, 18,\n#\t39, 50, 24, 45, 32\n# ]\n\ntemperaturas = [\n\t15, 28, 35, 42, 18,\n\t39, 50, 24, 45, 32\n]\n\n# Debes generar una lista de alertas para todas las temperaturas\n# consideradas críticas.\n#\n# Una temperatura es crítica cuando supera los 40 °C.\n#\n# Cada alerta debe almacenarse con el siguiente formato:\n# ALERTA: 42°C\n#\n# Instrucciones:\n# - Guardar las alertas en una variable llamada alertas_criticas.\nalertas_criticas = [\n\t# - Crear una cadena de texto con el formato indicado.\n\tf\"ALERTA: {temperatura}°C\"\n\t# - Recorrer todas las temperaturas utilizando una List Comprehension.\n\tfor temperatura in temperaturas\n\t# - Filtrar únicamente las temperaturas superiores a 40.\n\tif temperatura > 40\n]\n\n# - Mostrar el resultado.\nprint(alertas_criticas)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 4: Análisis de Intentos de Inicio de Sesión"
+    },
+    {
+      "type": "paragraph",
+      "text": "Un sistema de seguridad almacena eventos en la siguiente estructura:"
+    },
+    {
+      "type": "code",
+      "text": "eventos = [\n\t(\"LOGIN_SUCCESS\", 120),\n\t(\"LOGIN_FAILED\", 18),\n\t(\"FILE_ACCESS\", 320),\n\t(\"LOGIN_FAILED\", 24),\n\t(\"FILE_DELETE\", 8),\n\t(\"LOGIN_FAILED\", 41)\n]"
+    },
+    {
+      "type": "paragraph",
+      "text": "Debes identificar aquellos eventos correspondientes a intentos fallidos de inicio de sesión cuya cantidad sea superior a 20."
+    },
+    {
+      "type": "paragraph",
+      "text": "La lista final debe contener únicamente los valores numéricos asociados a dichos eventos."
+    },
+    {
+      "type": "paragraph",
+      "text": "Instrucciones:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Utilizar una List Comprehension.",
+        "Recorrer cada tupla de la lista.",
+        "Separar el tipo de evento y la cantidad.",
+        "Filtrar únicamente los eventos <code class=\"language-python\">\"LOGIN_FAILED\"</code>.",
+        "Conservar solo aquellos cuya cantidad sea mayor a 20.",
+        "Guardar el resultado en una variable llamada <code class=\"language-python\">intentos_fallidos</code>.",
+        "Mostrar la lista obtenida."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Un sistema de seguridad almacena eventos en la siguiente estructura:\n#\n# eventos = [\n#\t(\"LOGIN_SUCCESS\", 120),\n#\t(\"LOGIN_FAILED\", 18),\n#\t(\"FILE_ACCESS\", 320),\n#\t(\"LOGIN_FAILED\", 24),\n#\t(\"FILE_DELETE\", 8),\n#\t(\"LOGIN_FAILED\", 41)\n# ]\n#\n# Debes identificar aquellos eventos correspondientes a intentos\n# fallidos de inicio de sesión cuya cantidad sea superior a 20.\n#\n# La lista final debe contener únicamente los valores numéricos\n# asociados a dichos eventos.\n#\n# Instrucciones:\n# - Utilizar una List Comprehension.\n# - Recorrer cada tupla de la lista.\n# - Separar el tipo de evento y la cantidad.\n# - Filtrar únicamente los eventos \"LOGIN_FAILED\".\n# - Conservar solo aquellos cuya cantidad sea mayor a 20.\n# - Guardar el resultado en una variable llamada intentos_fallidos.\n# - Mostrar la lista obtenida."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# Un sistema de seguridad almacena eventos en la siguiente estructura:\n#\n# eventos = [\n#\t(\"LOGIN_SUCCESS\", 120),\n#\t(\"LOGIN_FAILED\", 18),\n#\t(\"FILE_ACCESS\", 320),\n#\t(\"LOGIN_FAILED\", 24),\n#\t(\"FILE_DELETE\", 8),\n#\t(\"LOGIN_FAILED\", 41)\n# ]\n\neventos = [\n\t(\"LOGIN_SUCCESS\", 120),\n\t(\"LOGIN_FAILED\", 18),\n\t(\"FILE_ACCESS\", 320),\n\t(\"LOGIN_FAILED\", 24),\n\t(\"FILE_DELETE\", 8),\n\t(\"LOGIN_FAILED\", 41)\n]\n\n# Debes identificar aquellos eventos correspondientes a intentos\n# fallidos de inicio de sesión cuya cantidad sea superior a 20.\n#\n# La lista final debe contener únicamente los valores numéricos\n# asociados a dichos eventos.\n#\n# Instrucciones:\n# - Utilizar una List Comprehension.\n# - Guardar el resultado en una variable llamada intentos_fallidos.\nintentos_fallidos = [\n\t# - Recorrer cada tupla de la lista.\n\tcantidad\n\t# - Separar el tipo de evento y la cantidad.\n\tfor tipo_evento, cantidad in eventos\n\t# - Filtrar únicamente los eventos \"LOGIN_FAILED\".\n\tif tipo_evento == \"LOGIN_FAILED\"\n\t# - Conservar solo aquellos cuya cantidad sea mayor a 20.\n\tand cantidad > 20\n]\n\n# - Mostrar la lista obtenida.\nprint(intentos_fallidos)"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# Un sistema de seguridad almacena eventos en la siguiente estructura:\n#\n# eventos = [\n#\t(\"LOGIN_SUCCESS\", 120),\n#\t(\"LOGIN_FAILED\", 18),\n#\t(\"FILE_ACCESS\", 320),\n#\t(\"LOGIN_FAILED\", 24),\n#\t(\"FILE_DELETE\", 8),\n#\t(\"LOGIN_FAILED\", 41)\n# ]\n\neventos = [\n\t(\"LOGIN_SUCCESS\", 120),\n\t(\"LOGIN_FAILED\", 18),\n\t(\"FILE_ACCESS\", 320),\n\t(\"LOGIN_FAILED\", 24),\n\t(\"FILE_DELETE\", 8),\n\t(\"LOGIN_FAILED\", 41)\n]\n\n# Debes identificar aquellos eventos correspondientes a intentos\n# fallidos de inicio de sesión cuya cantidad sea superior a 20.\n#\n# La lista final debe contener únicamente los valores numéricos\n# asociados a dichos eventos.\n#\n# Instrucciones:\n# - Utilizar una List Comprehension.\n# - Guardar el resultado en una variable llamada intentos_fallidos.\nintentos_fallidos = [\n\t# - Recorrer cada tupla de la lista.\n\tcantidad\n\t# - Separar el tipo de evento y la cantidad.\n\tfor tipo_evento, cantidad in eventos\n\t# - Filtrar únicamente los eventos \"LOGIN_FAILED\".\n\tif tipo_evento == \"LOGIN_FAILED\"\n\t# - Conservar solo aquellos cuya cantidad sea mayor a 20.\n\tand cantidad > 20\n]\n\n# - Mostrar la lista obtenida.\nprint(intentos_fallidos)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 5: Generador de Coordenadas Estratégicas"
+    },
+    {
+      "type": "paragraph",
+      "text": "Un videojuego necesita generar posiciones válidas dentro de un mapa bidimensional."
+    },
+    {
+      "type": "paragraph",
+      "text": "Debes crear todas las coordenadas posibles <code class=\"language-python\">(x, y)</code> donde:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "<code class=\"language-python\">x</code> tome valores desde 1 hasta 10.",
+        "<code class=\"language-python\">y</code> tome valores desde 1 hasta 10."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Posteriormente, solo deben conservarse aquellas coordenadas cuya suma sea múltiplo de 4."
+    },
+    {
+      "type": "paragraph",
+      "text": "Instrucciones:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Utilizar una List Comprehension anidada.",
+        "Generar todas las combinaciones posibles de coordenadas.",
+        "Evaluar la suma de cada coordenada.",
+        "Conservar únicamente aquellas cuya suma sea múltiplo de 4.",
+        "Guardar el resultado en una variable llamada coordenadas.",
+        "Mostrar la lista obtenida."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Un videojuego necesita generar posiciones válidas dentro de un mapa\n# bidimensional.\n#\n# Debes crear todas las coordenadas posibles (x, y) donde:\n# - x tome valores desde 1 hasta 10.\n# - y tome valores desde 1 hasta 10.\n#\n# Posteriormente, solo deben conservarse aquellas coordenadas cuya\n# suma sea múltiplo de 4.\n#\n# Instrucciones:\n# - Utilizar una List Comprehension anidada.\n# - Generar todas las combinaciones posibles de coordenadas.\n# - Evaluar la suma de cada coordenada.\n# - Conservar únicamente aquellas cuya suma sea múltiplo de 4.\n# - Guardar el resultado en una variable llamada coordenadas.\n# - Mostrar la lista obtenida."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# Un videojuego necesita generar posiciones válidas dentro de un mapa\n# bidimensional.\n#\n# Debes crear todas las coordenadas posibles (x, y) donde:\n# - x tome valores desde 1 hasta 10.\n# - y tome valores desde 1 hasta 10.\n#\n# Posteriormente, solo deben conservarse aquellas coordenadas cuya\n# suma sea múltiplo de 4.\n#\n# Instrucciones:\n# - Utilizar una List Comprehension anidada.\n# - Guardar el resultado en una variable llamada coordenadas.\ncoordenadas = [\n\t# - Generar todas las combinaciones posibles de coordenadas.\n\t(x, y)\n\tfor x in range(1, 11)\n\tfor y in range(1, 11)\n\t# - Evaluar la suma de cada coordenada.\n\t# - Conservar únicamente aquellas cuya suma sea múltiplo de 4.\n\tif (x + y) % 4 == 0\n]\n\n# - Mostrar la lista obtenida.\nprint(coordenadas)"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# Un videojuego necesita generar posiciones válidas dentro de un mapa\n# bidimensional.\n#\n# Debes crear todas las coordenadas posibles (x, y) donde:\n# - x tome valores desde 1 hasta 10.\n# - y tome valores desde 1 hasta 10.\n#\n# Posteriormente, solo deben conservarse aquellas coordenadas cuya\n# suma sea múltiplo de 4.\n#\n# Instrucciones:\n# - Utilizar una List Comprehension anidada.\n# - Guardar el resultado en una variable llamada coordenadas.\ncoordenadas = [\n\t# - Generar todas las combinaciones posibles de coordenadas.\n\t(x, y)\n\tfor x in range(1, 11)\n\tfor y in range(1, 11)\n\t# - Evaluar la suma de cada coordenada.\n\t# - Conservar únicamente aquellas cuya suma sea múltiplo de 4.\n\tif (x + y) % 4 == 0\n]\n\n# - Mostrar la lista obtenida.\nprint(coordenadas)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Conclusiones de la Unidad"
+    },
+    {
+      "type": "paragraph",
+      "text": "Las List Comprehensions son una de las características más elegantes y utilizadas de Python. Permiten construir listas de forma compacta, legible y eficiente, reduciendo la cantidad de código necesario para transformar y filtrar datos."
+    },
+    {
+      "type": "paragraph",
+      "text": "Durante esta unidad aprendiste a:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Crear listas mediante List Comprehensions.",
+        "Transformar elementos durante la construcción de una lista.",
+        "Filtrar datos utilizando condiciones.",
+        "Utilizar expresiones condicionales.",
+        "Trabajar con múltiples condiciones.",
+        "Construir comprensiones anidadas.",
+        "Aplicar esta técnica a escenarios reales de procesamiento de datos, inventarios, monitoreo y análisis de registros."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Dominar las List Comprehensions te permitirá escribir código más idiomático en Python y mejorar la legibilidad de tus programas."
+    }
+  ]
+}
