@@ -426,7 +426,7 @@
     },
     {
       "type": "tip",
-      "text": "📌 <strong>Nota:</strong><br>Si una List Comprehension requiere varias líneas para entenderse, probablemente un bucle tradicional sea una mejor opción."
+      "text": "⭐ <strong>Tip:</strong><br>Si una List Comprehension requiere varias líneas para entenderse, probablemente un bucle tradicional sea una mejor opción."
     },
     {
       "type": "subtitle1",
