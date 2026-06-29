@@ -1,0 +1,704 @@
+{
+  "title": "Uso Básico de Funciones Integradas (<code class=\"language-python\">len()</code>, <code class=\"language-python\">sum()</code>, <code class=\"language-python\">max()</code>, <code class=\"language-python\">min()</code>, etc.)",
+  "description": "",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "En Python existen numerosas funciones integradas (built-in functions) que están disponibles desde el momento en que se inicia el programa. Estas funciones permiten realizar tareas frecuentes de manera rápida y eficiente sin necesidad de escribir implementaciones propias para cada operación."
+    },
+    {
+      "type": "paragraph",
+      "text": "A lo largo de esta unidad aprenderás a utilizar algunas de las funciones integradas más utilizadas, incluyendo <code class=\"language-python\">len()</code>, <code class=\"language-python\">sum()</code>, <code class=\"language-python\">max()</code>, <code class=\"language-python\">min()</code>, <code class=\"language-python\">sorted()</code>, <code class=\"language-python\">abs()</code> y <code class=\"language-python\">round()</code>. Estas herramientas simplifican significativamente el desarrollo de programas y permiten escribir código más limpio, legible y mantenible."
+    },
+    {
+      "type": "subtitle2",
+      "text": "¿Qué es una Función Integrada?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Una función integrada es una función que ya forma parte de Python y puede utilizarse directamente sin necesidad de importar módulos adicionales."
+    },
+    {
+      "type": "paragraph",
+      "text": "Por ejemplo:"
+    },
+    {
+      "type": "code",
+      "text": "numeros = [10, 20, 30, 40]\n\ncantidad = len(numeros)\n\nprint(cantidad)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "4"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "numeros = [10, 20, 30, 40]\n\ncantidad = len(numeros)\n\nprint(cantidad)"
+    },
+    {
+      "type": "paragraph",
+      "text": "En este caso, <code class=\"language-python\">len()</code> ya existe dentro de Python y puede utilizarse inmediatamente."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Función <code class=\"language-python\">len()</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "La función <code class=\"language-python\">len()</code> permite obtener la cantidad de elementos contenidos dentro de una colección."
+    },
+    {
+      "type": "paragraph",
+      "text": "Puede utilizarse con:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Listas.",
+        "Tuplas.",
+        "Cadenas de texto.",
+        "Diccionarios.",
+        "Conjuntos."
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Sintaxis"
+    },
+    {
+      "type": "code",
+      "text": "len(objeto)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejemplo con una Lista"
+    },
+    {
+      "type": "code",
+      "text": "frutas = [\"Manzana\", \"Pera\", \"Uva\", \"Mango\"]\n\nprint(len(frutas))"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "4"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "frutas = [\"Manzana\", \"Pera\", \"Uva\", \"Mango\"]\n\nprint(len(frutas))"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejemplo con una Cadena"
+    },
+    {
+      "type": "code",
+      "text": "mensaje = \"Python\"\n\nprint(len(mensaje))"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "6"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "mensaje = \"Python\"\n\nprint(len(mensaje))"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br><code class=\"language-python\">len()</code> cuenta todos los caracteres de una cadena, incluyendo espacios en blanco."
+    },
+    {
+      "type": "code",
+      "text": "texto = \"Hola Mundo\"\n\nprint(len(texto))"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "10"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "texto = \"Hola Mundo\"\n\nprint(len(texto))"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Función <code class=\"language-python\">sum()</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "La función <code class=\"language-python\">sum()</code> calcula la suma de todos los elementos numéricos de una colección."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Sintaxis"
+    },
+    {
+      "type": "code",
+      "text": "sum(iterable)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo:"
+    },
+    {
+      "type": "code",
+      "text": "ventas = [120, 350, 200, 430]\n\ntotal = sum(ventas)\n\nprint(total)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "1100"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "ventas = [120, 350, 200, 430]\n\ntotal = sum(ventas)\n\nprint(total)"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br>Cuando necesites sumar una gran cantidad de números almacenados en una lista, utiliza <code class=\"language-python\">sum()</code> en lugar de crear manualmente un bucle <code class=\"language-python\">for</code>."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Función <code class=\"language-python\">max()</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "La función <code class=\"language-python\">max()</code> devuelve el valor más grande de una colección."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo:"
+    },
+    {
+      "type": "code",
+      "text": "temperaturas = [18, 25, 31, 22, 29]\n\nprint(max(temperaturas))"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "31"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "temperaturas = [18, 25, 31, 22, 29]\n\nprint(max(temperaturas))"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Función <code class=\"language-python\">min()</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "La función <code class=\"language-python\">min()</code> devuelve el valor más pequeño de una colección."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo:"
+    },
+    {
+      "type": "code",
+      "text": "temperaturas = [18, 25, 31, 22, 29]\n\nprint(min(temperaturas))"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "18"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "temperaturas = [18, 25, 31, 22, 29]\n\nprint(min(temperaturas))"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Comparación entre <code class=\"language-python\">len()</code>, <code class=\"language-python\">sum()</code>, <code class=\"language-python\">max()</code> y <code class=\"language-python\">min()</code>"
+    },
+    {
+      "type": "table",
+      "headers": ["Función", "Propósito", "Ejemplo"],
+      "rows": [
+        [
+          "<code class=\"language-python\">len()</code>",
+          "Contar elementos",
+          "<code class=\"language-python\">len(lista)</code>"
+        ],
+        [
+          "<code class=\"language-python\">sum()</code>",
+          "Sumar valores",
+          "<code class=\"language-python\">sum(lista)</code>"
+        ],
+        [
+          "<code class=\"language-python\">max()</code>",
+          "Obtener el valor mayor",
+          "<code class=\"language-python\">max(lista)</code>"
+        ],
+        [
+          "<code class=\"language-python\">min()</code>",
+          "Obtener el valor menor",
+          "<code class=\"language-python\">min(lista)</code>"
+        ]
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Función <code class=\"language-python\">sorted()</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "La función <code class=\"language-python\">sorted()</code> devuelve una nueva colección ordenada."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Orden Ascendente"
+    },
+    {
+      "type": "code",
+      "text": "numeros = [9, 4, 2, 7, 1]\n\nresultado = sorted(numeros)\n\nprint(resultado)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "[1, 2, 4, 7, 9]"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "numeros = [9, 4, 2, 7, 1]\n\nresultado = sorted(numeros)\n\nprint(resultado)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Orden Descendente"
+    },
+    {
+      "type": "code",
+      "text": "numeros = [9, 4, 2, 7, 1]\n\nresultado = sorted(numeros, reverse=True)\n\nprint(resultado)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "[9, 7, 4, 2, 1]"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "numeros = [9, 4, 2, 7, 1]\n\nresultado = sorted(numeros, reverse=True)\n\nprint(resultado)"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br><code class=\"language-python\">sorted()</code> no modifica la lista original."
+    },
+    {
+      "type": "code",
+      "text": "numeros = [5, 3, 8]\n\nordenados = sorted(numeros)\n\nprint(numeros)\nprint(ordenados)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "[5, 3, 8]\n[3, 5, 8]"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "numeros = [5, 3, 8]\n\nordenados = sorted(numeros)\n\nprint(numeros)\nprint(ordenados)"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Función <code class=\"language-python\">abs()</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "La función <code class=\"language-python\">abs()</code> devuelve el valor absoluto de un número."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo:"
+    },
+    {
+      "type": "code",
+      "text": "numero = -15\n\nprint(abs(numero))"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "15"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "numero = -15\n\nprint(abs(numero))"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Función <code class=\"language-python\">round()</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "La función <code class=\"language-python\">round()</code> permite redondear números decimales."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo:"
+    },
+    {
+      "type": "code",
+      "text": "precio = 15.6789\n\nprint(round(precio, 2))"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "15.68"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "precio = 15.6789\n\nprint(round(precio, 2))"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Tabla Resumen de Funciones Integradas"
+    },
+    {
+      "type": "table",
+      "headers": ["Función", "Descripción"],
+      "rows": [
+        ["<code class=\"language-python\">len()</code>", "Cuenta elementos"],
+        [
+          "<code class=\"language-python\">sum()</code>",
+          "Suma elementos numéricos"
+        ],
+        [
+          "<code class=\"language-python\">max()</code>",
+          "Obtiene el mayor valor"
+        ],
+        [
+          "<code class=\"language-python\">min()</code>",
+          "Obtiene el menor valor"
+        ],
+        ["<code class=\"language-python\">sorted()</code>", "Ordena elementos"],
+        [
+          "<code class=\"language-python\">abs()</code>",
+          "Obtiene el valor absoluto"
+        ],
+        ["<code class=\"language-python\">round()</code>", "Redondea números"]
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Combinando Varias Funciones"
+    },
+    {
+      "type": "paragraph",
+      "text": "Es común utilizar varias funciones integradas dentro del mismo programa."
+    },
+    {
+      "type": "code",
+      "text": "calificaciones = [72, 85, 91, 64, 78]\n\ncantidad = len(calificaciones)\npromedio = sum(calificaciones) / len(calificaciones)\nmayor = max(calificaciones)\nmenor = min(calificaciones)\n\nprint(\"Cantidad:\", cantidad)\nprint(\"Promedio:\", promedio)\nprint(\"Mayor:\", mayor)\nprint(\"Menor:\", menor)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Cantidad: 5\nPromedio: 78.0\nMayor: 91\nMenor: 64"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "calificaciones = [72, 85, 91, 64, 78]\n\ncantidad = len(calificaciones)\npromedio = sum(calificaciones) / len(calificaciones)\nmayor = max(calificaciones)\nmenor = min(calificaciones)\n\nprint(\"Cantidad:\", cantidad)\nprint(\"Promedio:\", promedio)\nprint(\"Mayor:\", mayor)\nprint(\"Menor:\", menor)"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br>Las funciones integradas suelen estar altamente optimizadas internamente, por lo que generalmente son más eficientes y legibles que implementar la misma lógica manualmente."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejercicios para Practicar"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 1: Análisis de Ventas Mensuales"
+    },
+    {
+      "type": "paragraph",
+      "text": "Una empresa ha registrado las ventas obtenidas durante varios meses y desea generar un pequeño informe estadístico."
+    },
+    {
+      "type": "code",
+      "text": "ventas = [1250, 1875, 980, 2150, 1640, 1990]"
+    },
+    {
+      "type": "paragraph",
+      "text": "Instrucciones:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Determinar cuántos registros de ventas existen.",
+        "Calcular el total acumulado de ventas.",
+        "Obtener la venta más alta registrada.",
+        "Obtener la venta más baja registrada.",
+        "Mostrar todos los resultados."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Una empresa ha registrado las ventas obtenidas durante varios meses\n# y desea generar un pequeño informe estadístico.\n#\n# ventas = [1250, 1875, 980, 2150, 1640, 1990]\n#\n# Instrucciones:\n# - Determinar cuántos registros de ventas existen.\n# - Calcular el total acumulado de ventas.\n# - Obtener la venta más alta registrada.\n# - Obtener la venta más baja registrada.\n# - Mostrar todos los resultados."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "ventas = [1250, 1875, 980, 2150, 1640, 1990]\n\n# Obtener la cantidad de registros almacenados.\ncantidad_ventas = len(ventas)\n\n# Calcular el total acumulado de ventas.\ntotal_ventas = sum(ventas)\n\n# Obtener la venta más alta registrada.\nventa_maxima = max(ventas)\n\n# Obtener la venta más baja registrada.\nventa_minima = min(ventas)\n\n# Mostrar los resultados obtenidos.\nprint(\"Cantidad:\", cantidad_ventas)\nprint(\"Total:\", total_ventas)\nprint(\"Máxima:\", venta_maxima)\nprint(\"Mínima:\", venta_minima)"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "ventas = [1250, 1875, 980, 2150, 1640, 1990]\n\n# Obtener la cantidad de registros almacenados.\ncantidad_ventas = len(ventas)\n\n# Calcular el total acumulado de ventas.\ntotal_ventas = sum(ventas)\n\n# Obtener la venta más alta registrada.\nventa_maxima = max(ventas)\n\n# Obtener la venta más baja registrada.\nventa_minima = min(ventas)\n\n# Mostrar los resultados obtenidos.\nprint(\"Cantidad:\", cantidad_ventas)\nprint(\"Total:\", total_ventas)\nprint(\"Máxima:\", venta_maxima)\nprint(\"Mínima:\", venta_minima)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 2: Monitoreo de Temperaturas Ambientales"
+    },
+    {
+      "type": "paragraph",
+      "text": "Un sistema meteorológico ha almacenado las temperaturas registradas durante una semana."
+    },
+    {
+      "type": "code",
+      "text": "temperaturas = [18.4, 21.7, 25.1, 19.6, 28.3, 30.5, 24.8]"
+    },
+    {
+      "type": "paragraph",
+      "text": "Instrucciones:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Determinar la temperatura más alta registrada.",
+        "Determinar la temperatura más baja registrada.",
+        "Calcular la temperatura promedio.",
+        "Redondear el promedio a dos decimales.",
+        "Mostrar toda la información obtenida."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Un sistema meteorológico ha almacenado las temperaturas registradas\n# durante una semana.\n#\n# temperaturas = [18.4, 21.7, 25.1, 19.6, 28.3, 30.5, 24.8]\n#\n# Instrucciones:\n# - Determinar la temperatura más alta registrada.\n# - Determinar la temperatura más baja registrada.\n# - Calcular la temperatura promedio.\n# - Redondear el promedio a dos decimales.\n# - Mostrar toda la información obtenida."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "temperaturas = [18.4, 21.7, 25.1, 19.6, 28.3, 30.5, 24.8]\n\n# Obtener la temperatura máxima registrada.\ntemperatura_maxima = max(temperaturas)\n\n# Obtener la temperatura mínima registrada.\ntemperatura_minima = min(temperaturas)\n\n# Calcular el promedio de temperaturas.\npromedio = sum(temperaturas) / len(temperaturas)\n\n# Redondear el promedio a dos decimales.\npromedio_redondeado = round(promedio, 2)\n\n# Mostrar los resultados obtenidos.\nprint(\"Máxima:\", temperatura_maxima)\nprint(\"Mínima:\", temperatura_minima)\nprint(\"Promedio:\", promedio_redondeado)"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "temperaturas = [18.4, 21.7, 25.1, 19.6, 28.3, 30.5, 24.8]\n\n# Obtener la temperatura máxima registrada.\ntemperatura_maxima = max(temperaturas)\n\n# Obtener la temperatura mínima registrada.\ntemperatura_minima = min(temperaturas)\n\n# Calcular el promedio de temperaturas.\npromedio = sum(temperaturas) / len(temperaturas)\n\n# Redondear el promedio a dos decimales.\npromedio_redondeado = round(promedio, 2)\n\n# Mostrar los resultados obtenidos.\nprint(\"Máxima:\", temperatura_maxima)\nprint(\"Mínima:\", temperatura_minima)\nprint(\"Promedio:\", promedio_redondeado)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 3: Auditoría de Transacciones Bancarias"
+    },
+    {
+      "type": "paragraph",
+      "text": "Un banco almacena movimientos financieros donde los números negativos representan retiros y los positivos representan depósitos."
+    },
+    {
+      "type": "code",
+      "text": "transacciones = [\n\t1200,\n\t-350,\n\t850,\n\t-120,\n\t-780,\n\t1500,\n\t-95\n]"
+    },
+    {
+      "type": "paragraph",
+      "text": "Instrucciones:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Calcular el saldo final de la cuenta.",
+        "Determinar cuál fue el depósito más grande realizado.",
+        "Determinar cuál fue el retiro más grande realizado.",
+        "Obtener el valor absoluto del retiro más grande.",
+        "Mostrar toda la información obtenida."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Un banco almacena movimientos financieros donde los números\n# negativos representan retiros y los positivos representan depósitos.\n#\n# transacciones = [\n#\t1200,\n#\t-350,\n#\t850,\n#\t-120,\n#\t-780,\n#\t1500,\n#\t-95\n# ]\n#\n# Instrucciones:\n# - Calcular el saldo final de la cuenta.\n# - Determinar cuál fue el depósito más grande realizado.\n# - Determinar cuál fue el retiro más grande realizado.\n# - Obtener el valor absoluto del retiro más grande.\n# - Mostrar toda la información obtenida."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "transacciones = [\n\t1200,\n\t-350,\n\t850,\n\t-120,\n\t-780,\n\t1500,\n\t-95\n]\n\n# Calcular el saldo final de la cuenta.\nsaldo_final = sum(transacciones)\n\n# Obtener el depósito más grande realizado.\ndeposito_mayor = max(transacciones)\n\n# Obtener el retiro más grande realizado.\nretiro_mayor = min(transacciones)\n\n# Obtener el valor absoluto del retiro más grande.\nvalor_retiro = abs(retiro_mayor)\n\n# Mostrar los resultados obtenidos.\nprint(\"Saldo final:\", saldo_final)\nprint(\"Mayor depósito:\", deposito_mayor)\nprint(\"Mayor retiro:\", valor_retiro)"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "transacciones = [\n\t1200,\n\t-350,\n\t850,\n\t-120,\n\t-780,\n\t1500,\n\t-95\n]\n\n# Calcular el saldo final de la cuenta.\nsaldo_final = sum(transacciones)\n\n# Obtener el depósito más grande realizado.\ndeposito_mayor = max(transacciones)\n\n# Obtener el retiro más grande realizado.\nretiro_mayor = min(transacciones)\n\n# Obtener el valor absoluto del retiro más grande.\nvalor_retiro = abs(retiro_mayor)\n\n# Mostrar los resultados obtenidos.\nprint(\"Saldo final:\", saldo_final)\nprint(\"Mayor depósito:\", deposito_mayor)\nprint(\"Mayor retiro:\", valor_retiro)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 4: Clasificación de Resultados Académicos"
+    },
+    {
+      "type": "paragraph",
+      "text": "Una universidad desea organizar las calificaciones finales de un grupo de estudiantes."
+    },
+    {
+      "type": "code",
+      "text": "calificaciones = [72, 91, 64, 88, 95, 70, 81, 60, 77]"
+    },
+    {
+      "type": "paragraph",
+      "text": "Instrucciones:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Crear una nueva lista ordenada de menor a mayor.",
+        "Crear una segunda lista ordenada de mayor a menor.",
+        "Obtener la calificación más alta.",
+        "Obtener la calificación más baja.",
+        "Mostrar toda la información generada."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Una universidad desea organizar las calificaciones finales de un\n# grupo de estudiantes.\n#\n# calificaciones = [72, 91, 64, 88, 95, 70, 81, 60, 77]\n#\n# Instrucciones:\n# - Crear una nueva lista ordenada de menor a mayor.\n# - Crear una segunda lista ordenada de mayor a menor.\n# - Obtener la calificación más alta.\n# - Obtener la calificación más baja.\n# - Mostrar toda la información generada."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "calificaciones = [72, 91, 64, 88, 95, 70, 81, 60, 77]\n\n# Crear una lista ordenada de menor a mayor.\norden_ascendente = sorted(calificaciones)\n\n# Crear una lista ordenada de mayor a menor.\norden_descendente = sorted(calificaciones, reverse=True)\n\n# Obtener la calificación más alta.\nnota_maxima = max(calificaciones)\n\n# Obtener la calificación más baja.\nnota_minima = min(calificaciones)\n\n# Mostrar toda la información obtenida.\nprint(orden_ascendente)\nprint(orden_descendente)\nprint(nota_maxima)\nprint(nota_minima)"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "calificaciones = [72, 91, 64, 88, 95, 70, 81, 60, 77]\n\n# Crear una lista ordenada de menor a mayor.\norden_ascendente = sorted(calificaciones)\n\n# Crear una lista ordenada de mayor a menor.\norden_descendente = sorted(calificaciones, reverse=True)\n\n# Obtener la calificación más alta.\nnota_maxima = max(calificaciones)\n\n# Obtener la calificación más baja.\nnota_minima = min(calificaciones)\n\n# Mostrar toda la información obtenida.\nprint(orden_ascendente)\nprint(orden_descendente)\nprint(nota_maxima)\nprint(nota_minima)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 5: Centro de Análisis de Sensores Industriales"
+    },
+    {
+      "type": "paragraph",
+      "text": "Una planta industrial ha registrado miles de lecturas, pero para realizar una prueba inicial se dispone del siguiente conjunto:"
+    },
+    {
+      "type": "code",
+      "text": "lecturas = [\n\t-15,\n\t22,\n\t-7,\n\t34,\n\t-42,\n\t18,\n\t29,\n\t-3,\n\t41,\n\t-27\n]"
+    },
+    {
+      "type": "paragraph",
+      "text": "Instrucciones:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Determinar cuántas lecturas existen.",
+        "Obtener el valor máximo registrado.",
+        "Obtener el valor mínimo registrado.",
+        "Calcular la suma total de todas las lecturas.",
+        "Obtener el valor absoluto de la lectura más negativa.",
+        "Crear una nueva lista ordenada de menor a mayor.",
+        "Mostrar todos los resultados obtenidos."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Una planta industrial ha registrado miles de lecturas, pero para\n# realizar una prueba inicial se dispone del siguiente conjunto:\n#\n# lecturas = [\n#\t-15,\n#\t22,\n#\t-7,\n#\t34,\n#\t-42,\n#\t18,\n#\t29,\n#\t-3,\n#\t41,\n#\t-27\n# ]\n#\n# Instrucciones:\n# - Determinar cuántas lecturas existen.\n# - Obtener el valor máximo registrado.\n# - Obtener el valor mínimo registrado.\n# - Calcular la suma total de todas las lecturas.\n# - Obtener el valor absoluto de la lectura más negativa.\n# - Crear una nueva lista ordenada de menor a mayor.\n# - Mostrar todos los resultados obtenidos."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "lecturas = [\n\t-15,\n\t22,\n\t-7,\n\t34,\n\t-42,\n\t18,\n\t29,\n\t-3,\n\t41,\n\t-27\n]\n\n# Determinar cuántas lecturas existen.\ncantidad_lecturas = len(lecturas)\n\n# Obtener el valor máximo registrado.\nvalor_maximo = max(lecturas)\n\n# Obtener el valor mínimo registrado.\nvalor_minimo = min(lecturas)\n\n# Calcular la suma total de todas las lecturas.\nsuma_total = sum(lecturas)\n\n# Obtener el valor absoluto de la lectura más negativa.\nvalor_absoluto = abs(valor_minimo)\n\n# Crear una nueva lista ordenada de menor a mayor.\nlecturas_ordenadas = sorted(lecturas)\n\n# Mostrar todos los resultados obtenidos.\nprint(\"Cantidad:\", cantidad_lecturas)\nprint(\"Máximo:\", valor_maximo)\nprint(\"Mínimo:\", valor_minimo)\nprint(\"Suma:\", suma_total)\nprint(\"Valor absoluto:\", valor_absoluto)\nprint(\"Ordenadas:\", lecturas_ordenadas)"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "lecturas = [\n\t-15,\n\t22,\n\t-7,\n\t34,\n\t-42,\n\t18,\n\t29,\n\t-3,\n\t41,\n\t-27\n]\n\n# Determinar cuántas lecturas existen.\ncantidad_lecturas = len(lecturas)\n\n# Obtener el valor máximo registrado.\nvalor_maximo = max(lecturas)\n\n# Obtener el valor mínimo registrado.\nvalor_minimo = min(lecturas)\n\n# Calcular la suma total de todas las lecturas.\nsuma_total = sum(lecturas)\n\n# Obtener el valor absoluto de la lectura más negativa.\nvalor_absoluto = abs(valor_minimo)\n\n# Crear una nueva lista ordenada de menor a mayor.\nlecturas_ordenadas = sorted(lecturas)\n\n# Mostrar todos los resultados obtenidos.\nprint(\"Cantidad:\", cantidad_lecturas)\nprint(\"Máximo:\", valor_maximo)\nprint(\"Mínimo:\", valor_minimo)\nprint(\"Suma:\", suma_total)\nprint(\"Valor absoluto:\", valor_absoluto)\nprint(\"Ordenadas:\", lecturas_ordenadas)"
+        }
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Conclusiones de la Unidad"
+    },
+    {
+      "type": "paragraph",
+      "text": "Las funciones integradas de Python constituyen algunas de las herramientas más útiles y utilizadas durante el desarrollo de programas. Gracias a funciones como <code class=\"language-python\">len()</code>, <code class=\"language-python\">sum()</code>, <code class=\"language-python\">max()</code>, <code class=\"language-python\">min()</code>, <code class=\"language-python\">sorted()</code>, <code class=\"language-python\">abs()</code> y <code class=\"language-python\">round()</code>, es posible resolver problemas comunes con muy pocas líneas de código, mejorando tanto la legibilidad como la eficiencia de las soluciones."
+    },
+    {
+      "type": "paragraph",
+      "text": "Dominar estas funciones permite aprovechar mejor las capacidades del lenguaje y evitar la implementación manual de operaciones que Python ya proporciona de forma optimizada. A medida que desarrolles programas más complejos, descubrirás que estas funciones aparecen constantemente en tareas relacionadas con procesamiento de datos, análisis de información, automatización y desarrollo de aplicaciones."
+    }
+  ]
+}
