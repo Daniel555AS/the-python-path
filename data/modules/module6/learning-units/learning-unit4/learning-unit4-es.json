@@ -1,0 +1,700 @@
+{
+  "title": "Funciones como Objetos",
+  "description": "",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Hasta este momento has utilizado funciones principalmente para agrupar instrucciones y reutilizar código. Sin embargo, en Python las funciones poseen una característica muy poderosa: son objetos de primera clase (<strong>First-Class Objects</strong>)."
+    },
+    {
+      "type": "paragraph",
+      "text": "Esto significa que una función puede almacenarse en una variable, pasarse como argumento a otra función, devolverse como resultado desde otra función e incluso almacenarse dentro de estructuras de datos como listas o diccionarios."
+    },
+    {
+      "type": "paragraph",
+      "text": "Comprender este concepto es fundamental para trabajar posteriormente con herramientas como <code class=\"language-python\">map()</code>, <code class=\"language-python\">filter()</code>, <code class=\"language-python\">sorted()</code>, decoradores y muchas técnicas utilizadas en programación funcional."
+    },
+    {
+      "type": "subtitle1",
+      "text": "¿Qué Significa que una Función sea un Objeto?"
+    },
+    {
+      "type": "paragraph",
+      "text": "En Python prácticamente todo es un objeto, incluyendo:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Números.",
+        "Cadenas de texto.",
+        "Listas.",
+        "Diccionarios.",
+        "Funciones"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Por lo tanto, una función puede manipularse igual que cualquier otro valor."
+    },
+    {
+      "type": "paragraph",
+      "text": "Por ejemplo:"
+    },
+    {
+      "type": "code",
+      "text": "def saludar():\n\tprint(\"Hola\")\n\nprint(type(saludar))"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "&lt;class 'function'>"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "def saludar():\n\tprint(\"Hola\")\n\nprint(type(saludar))"
+    },
+    {
+      "type": "paragraph",
+      "text": "Observa que Python reconoce a <code class=\"language-python\">saludar</code> como un objeto de tipo función."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Asignar una Función a una Variable"
+    },
+    {
+      "type": "paragraph",
+      "text": "Una función puede almacenarse dentro de una variable."
+    },
+    {
+      "type": "code",
+      "text": "def saludar():\n\tprint(\"Hola\")\n\nmensaje = saludar\n\nmensaje()"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Hola"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "def saludar():\n\tprint(\"Hola\")\n\nmensaje = saludar\n\nmensaje()"
+    },
+    {
+      "type": "subtitle2",
+      "text": "¿Qué Ocurrió?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Aquí:"
+    },
+    {
+      "type": "code",
+      "text": "mensaje = saludar"
+    },
+    {
+      "type": "paragraph",
+      "text": "No estamos ejecutando la función."
+    },
+    {
+      "type": "paragraph",
+      "text": "Estamos almacenando una referencia a la función dentro de la variable <code class=\"language-python\">mensaje</code>."
+    },
+    {
+      "type": "paragraph",
+      "text": "Posteriormente:"
+    },
+    {
+      "type": "code",
+      "text": "mensaje()"
+    },
+    {
+      "type": "paragraph",
+      "text": "ejecuta exactamente la misma función."
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Existe una diferencia importante entre:<br><code class=\"language-python\">mensaje = saludar</code><br>y<br><code class=\"language-python\">mensaje = saludar()</code><br>La primera almacena la función.<br>La segunda ejecuta la función inmediatamente."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Funciones Dentro de Estructuras de Datos"
+    },
+    {
+      "type": "paragraph",
+      "text": "Las funciones pueden almacenarse dentro de listas."
+    },
+    {
+      "type": "code",
+      "text": "def sumar(a, b):\n\treturn a + b\n\ndef multiplicar(a, b):\n\treturn a * b\n\noperaciones = [\n\tsumar,\n\tmultiplicar\n]\n\nprint(operaciones[0](5, 3))\nprint(operaciones[1](5, 3))"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "8\n15"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "def sumar(a, b):\n\treturn a + b\n\ndef multiplicar(a, b):\n\treturn a * b\n\noperaciones = [\n\tsumar,\n\tmultiplicar\n]\n\nprint(operaciones[0](5, 3))\nprint(operaciones[1](5, 3))"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Funciones como Parámetros"
+    },
+    {
+      "type": "paragraph",
+      "text": "Una función puede recibir otra función como argumento."
+    },
+    {
+      "type": "code",
+      "text": "def saludar():\n\tprint(\"Hola\")\n\ndef ejecutar(funcion):\n\tfuncion()\n\nejecutar(saludar)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Hola"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "def saludar():\n\tprint(\"Hola\")\n\ndef ejecutar(funcion):\n\tfuncion()\n\nejecutar(saludar)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "¿Por Qué es Útil?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Permite construir programas más flexibles."
+    },
+    {
+      "type": "paragraph",
+      "text": "La función <code class=\"language-python\">ejecutar()</code> puede trabajar con cualquier función compatible."
+    },
+    {
+      "type": "code",
+      "text": "def ejecutar(funcion):\n\tfuncion()\n\ndef despedirse():\n\tprint(\"Adiós\")\n\nejecutar(despedirse)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Adiós"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "def ejecutar(funcion):\n\tfuncion()\n\ndef despedirse():\n\tprint(\"Adiós\")\n\nejecutar(despedirse)"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejemplo Práctico: Aplicar una Operación"
+    },
+    {
+      "type": "code",
+      "text": "def cuadrado(numero):\n\treturn numero ** 2\n\ndef cubo(numero):\n\treturn numero ** 3\n\ndef procesar(valor, operacion):\n\tresultado = operacion(valor)\n\treturn resultado\n\nprint(procesar(4, cuadrado))\nprint(procesar(4, cubo))"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "16\n64"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "def cuadrado(numero):\n\treturn numero ** 2\n\ndef cubo(numero):\n\treturn numero ** 3\n\ndef procesar(valor, operacion):\n\tresultado = operacion(valor)\n\treturn resultado\n\nprint(procesar(4, cuadrado))\nprint(procesar(4, cubo))"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Cuando una función recibe otra función como parámetro se suele decir que trabaja con una función de orden superior (<strong>Higher-Order Function</strong>)."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Funciones que Devuelven Otras Funciones"
+    },
+    {
+      "type": "paragraph",
+      "text": "Una función también puede devolver otra función."
+    },
+    {
+      "type": "code",
+      "text": "def crear_saludo():\n\n\tdef saludar():\n\t\tprint(\"Bienvenido\")\n\n\treturn saludar\n\nfuncion = crear_saludo()\n\nfuncion()"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Bienvenido"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "def crear_saludo():\n\n\tdef saludar():\n\t\tprint(\"Bienvenido\")\n\n\treturn saludar\n\nfuncion = crear_saludo()\n\nfuncion()"
+    },
+    {
+      "type": "subtitle2",
+      "text": "¿Qué Ocurrió?"
+    },
+    {
+      "type": "paragraph",
+      "text": "La función:"
+    },
+    {
+      "type": "code",
+      "text": "crear_saludo()"
+    },
+    {
+      "type": "paragraph",
+      "text": "retorna otra función."
+    },
+    {
+      "type": "paragraph",
+      "text": "Por lo tanto:"
+    },
+    {
+      "type": "code",
+      "text": "funcion = crear_saludo()"
+    },
+    {
+      "type": "paragraph",
+      "text": "almacena una función dentro de la variable <code class=\"language-python\">funcion</code>."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejemplo de Generador de Operaciones"
+    },
+    {
+      "type": "code",
+      "text": "def crear_multiplicador(factor):\n\n\tdef multiplicar(numero):\n\t\treturn numero * factor\n\n\treturn multiplicar\n\nduplicar = crear_multiplicador(2)\n\ntriplicar = crear_multiplicador(3)\n\nprint(duplicar(10))\nprint(triplicar(10))"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "20\n30"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "def crear_multiplicador(factor):\n\n\tdef multiplicar(numero):\n\t\treturn numero * factor\n\n\treturn multiplicar\n\nduplicar = crear_multiplicador(2)\n\ntriplicar = crear_multiplicador(3)\n\nprint(duplicar(10))\nprint(triplicar(10))"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Este comportamiento es la base de los llamados <strong>Closures</strong>, un concepto muy utilizado en programación funcional."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Relación con <code class=\"language-python\">map()</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "La función <code class=\"language-python\">map()</code> recibe una función como argumento."
+    },
+    {
+      "type": "code",
+      "text": "def cuadrado(numero):\n\treturn numero ** 2\n\nnumeros = [1, 2, 3, 4, 5]\n\nresultado = list(\n\tmap(\n\t\tcuadrado,\n\t\tnumeros\n\t)\n)\n\nprint(resultado)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "[1, 4, 9, 16, 25]"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "def cuadrado(numero):\n\treturn numero ** 2\n\nnumeros = [1, 2, 3, 4, 5]\n\nresultado = list(\n\tmap(\n\t\tcuadrado,\n\t\tnumeros\n\t)\n)\n\nprint(resultado)"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Relación con <code class=\"language-python\">filter()</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "La función <code class=\"language-python\">filter()</code> también recibe funciones."
+    },
+    {
+      "type": "code",
+      "text": "def es_par(numero):\n\treturn numero % 2 == 0\n\nnumeros = [1, 2, 3, 4, 5, 6]\n\nresultado = list(\n\tfilter(\n\t\tes_par,\n\t\tnumeros\n\t)\n)\n\nprint(resultado)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "[2, 4, 6]"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "def es_par(numero):\n\treturn numero % 2 == 0\n\nnumeros = [1, 2, 3, 4, 5, 6]\n\nresultado = list(\n\tfilter(\n\t\tes_par,\n\t\tnumeros\n\t)\n)\n\nprint(resultado)"
+    },
+    {
+      "type": "subtitle1",
+      "text": "Relación con <code class=\"language-python\">sorted()</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "<code class=\"language-python\">sorted()</code> puede recibir una función para indicar cómo realizar el ordenamiento."
+    },
+    {
+      "type": "code",
+      "text": "nombres = [\n\t\"Alejandro\",\n\t\"Ana\",\n\t\"Carlos\",\n\t\"Beatriz\"\n]\n\nresultado = sorted(\n\tnombres,\n\tkey=len\n)\n\nprint(resultado)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "['Ana', 'Carlos', 'Beatriz', 'Alejandro']"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "nombres = [\n\t\"Alejandro\",\n\t\"Ana\",\n\t\"Carlos\",\n\t\"Beatriz\"\n]\n\nresultado = sorted(\n\tnombres,\n\tkey=len\n)\n\nprint(resultado)"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tip:</strong><br>Muchas funciones integradas de Python aprovechan la capacidad de tratar funciones como objetos para ofrecer comportamientos personalizables."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Resumen de Conceptos"
+    },
+    {
+      "type": "table",
+      "headers": ["Concepto", "Ejemplo"],
+      "rows": [
+        [
+          "Almacenar funciones",
+          "<code class=\"language-python\">variable = funcion</code>"
+        ],
+        [
+          "Pasar funciones como parámetro",
+          "<code class=\"language-python\">ejecutar(funcion)</code>"
+        ],
+        [
+          "Retornar funciones",
+          "<code class=\"language-python\">return funcion</code>"
+        ],
+        [
+          "Guardar funciones en listas",
+          "<code class=\"language-python\">[sumar, restar]</code>"
+        ],
+        [
+          "Utilizar funciones en <code class=\"language-python\">map()</code>",
+          "<code class=\"language-python\">map(funcion, datos)</code>"
+        ],
+        [
+          "Utilizar funciones en <code class=\"language-python\">filter()</code>",
+          "<code class=\"language-python\">filter(funcion, datos)</code>"
+        ],
+        [
+          "Utilizar funciones en <code class=\"language-python\">sorted()</code>",
+          "<code class=\"language-python\">sorted(datos, key=funcion)</code>"
+        ]
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejercicios para Practicar"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 1: Sistema de Operaciones Matemáticas Dinámicas"
+    },
+    {
+      "type": "paragraph",
+      "text": "Una calculadora avanzada necesita permitir que diferentes operaciones matemáticas puedan ejecutarse utilizando una única función central."
+    },
+    {
+      "type": "paragraph",
+      "text": "Debes construir un sistema que utilice funciones como objetos para seleccionar dinámicamente la operación que será aplicada."
+    },
+    {
+      "type": "paragraph",
+      "text": "Instrucciones:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Crear una función llamada <code class=\"language-python\">sumar()</code>.",
+        "Crear una función llamada <code class=\"language-python\">restar()</code>.",
+        "Crear una función llamada <code class=\"language-python\">multiplicar()</code>.",
+        "Crear una función llamada <code class=\"language-python\">dividir()</code>.",
+        "Crear una función llamada <code class=\"language-python\">ejecutar_operacion()</code> que reciba dos números y una función que represente la operación.",
+        "Ejecutar cada operación utilizando la misma función principal.",
+        "Mostrar todos los resultados."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Una calculadora avanzada necesita permitir que diferentes\n# operaciones matemáticas puedan ejecutarse utilizando una única\n# función central.\n#\n# Debes construir un sistema que utilice funciones como objetos para\n# seleccionar dinámicamente la operación que será aplicada.\n#\n# Instrucciones:\n# - Crear una función llamada sumar().\n# - Crear una función llamada restar().\n# - Crear una función llamada multiplicar().\n# - Crear una función llamada dividir().\n# - Crear una función llamada ejecutar_operacion() que reciba dos\n#   números y una función que represente la operación.\n# - Ejecutar cada operación utilizando la misma función principal.\n# - Mostrar todos los resultados."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# Crear una función que realice una suma.\ndef sumar(a, b):\n\treturn a + b\n\n# Crear una función que realice una resta.\ndef restar(a, b):\n\treturn a - b\n\n# Crear una función que realice una multiplicación.\ndef multiplicar(a, b):\n\treturn a * b\n\n# Crear una función que realice una división.\ndef dividir(a, b):\n\treturn a / b\n\n# Crear una función que reciba otra función como parámetro.\ndef ejecutar_operacion(numero1, numero2, operacion):\n\treturn operacion(numero1, numero2)\n\n# Ejecutar la suma utilizando la función principal.\nprint(ejecutar_operacion(20, 5, sumar))\n\n# Ejecutar la resta utilizando la función principal.\nprint(ejecutar_operacion(20, 5, restar))\n\n# Ejecutar la multiplicación utilizando la función principal.\nprint(ejecutar_operacion(20, 5, multiplicar))\n\n# Ejecutar la división utilizando la función principal.\nprint(ejecutar_operacion(20, 5, dividir))"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# Crear una función que realice una suma.\ndef sumar(a, b):\n\treturn a + b\n\n# Crear una función que realice una resta.\ndef restar(a, b):\n\treturn a - b\n\n# Crear una función que realice una multiplicación.\ndef multiplicar(a, b):\n\treturn a * b\n\n# Crear una función que realice una división.\ndef dividir(a, b):\n\treturn a / b\n\n# Crear una función que reciba otra función como parámetro.\ndef ejecutar_operacion(numero1, numero2, operacion):\n\treturn operacion(numero1, numero2)\n\n# Ejecutar la suma utilizando la función principal.\nprint(ejecutar_operacion(20, 5, sumar))\n\n# Ejecutar la resta utilizando la función principal.\nprint(ejecutar_operacion(20, 5, restar))\n\n# Ejecutar la multiplicación utilizando la función principal.\nprint(ejecutar_operacion(20, 5, multiplicar))\n\n# Ejecutar la división utilizando la función principal.\nprint(ejecutar_operacion(20, 5, dividir))"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 2: Centro de Procesamiento de Calificaciones"
+    },
+    {
+      "type": "paragraph",
+      "text": "Una universidad necesita aplicar diferentes transformaciones a las notas de los estudiantes."
+    },
+    {
+      "type": "paragraph",
+      "text": "Dependiendo de la situación, las calificaciones pueden:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Incrementarse en 5 puntos.",
+        "Incrementarse en 10 puntos.",
+        "Reducirse en 2 puntos."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "El sistema debe permitir seleccionar dinámicamente la función que será utilizada para modificar las notas."
+    },
+    {
+      "type": "paragraph",
+      "text": "Instrucciones:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Crear una función llamada <code class=\"language-python\">bonificacion_cinco()</code>.",
+        "Crear una función llamada <code class=\"language-python\">bonificacion_diez()</code>.",
+        "Crear una función llamada <code class=\"language-python\">penalizacion_dos()</code>.",
+        "Crear una función llamada <code class=\"language-python\">procesar_calificacion()</code>.",
+        "Recibir una nota y una función.",
+        "Aplicar la función recibida.",
+        "Mostrar varios ejemplos de uso."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Una universidad necesita aplicar diferentes transformaciones a las\n# notas de los estudiantes.\n#\n# Dependiendo de la situación, las calificaciones pueden:\n# - Incrementarse en 5 puntos.\n# - Incrementarse en 10 puntos.\n# - Reducirse en 2 puntos.\n#\n# El sistema debe permitir seleccionar dinámicamente la función que\n# será utilizada para modificar las notas.\n#\n# Instrucciones:\n#\n# - Crear una función llamada bonificacion_cinco().\n# - Crear una función llamada bonificacion_diez().\n# - Crear una función llamada penalizacion_dos().\n# - Crear una función llamada procesar_calificacion().\n# - Recibir una nota y una función.\n# - Aplicar la función recibida.\n# - Mostrar varios ejemplos de uso."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# Crear una función que aumente una nota en cinco puntos.\ndef bonificacion_cinco(calificacion):\n\treturn calificacion + 5\n\n# Crear una función que aumente una nota en diez puntos.\ndef bonificacion_diez(calificacion):\n\treturn calificacion + 10\n\n# Crear una función que reduzca una nota en dos puntos.\ndef penalizacion_dos(calificacion):\n\treturn calificacion - 2\n\n# Crear una función que reciba otra función como argumento.\ndef procesar_calificacion(calificacion, operacion):\n\treturn operacion(calificacion)\n\n# Aplicar la bonificación de cinco puntos.\nprint(procesar_calificacion(70, bonificacion_cinco))\n\n# Aplicar la bonificación de diez puntos.\nprint(procesar_calificacion(70, bonificacion_diez))\n\n# Aplicar la penalización de dos puntos.\nprint(procesar_calificacion(70, penalizacion_dos))"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# Crear una función que aumente una nota en cinco puntos.\ndef bonificacion_cinco(calificacion):\n\treturn calificacion + 5\n\n# Crear una función que aumente una nota en diez puntos.\ndef bonificacion_diez(calificacion):\n\treturn calificacion + 10\n\n# Crear una función que reduzca una nota en dos puntos.\ndef penalizacion_dos(calificacion):\n\treturn calificacion - 2\n\n# Crear una función que reciba otra función como argumento.\ndef procesar_calificacion(calificacion, operacion):\n\treturn operacion(calificacion)\n\n# Aplicar la bonificación de cinco puntos.\nprint(procesar_calificacion(70, bonificacion_cinco))\n\n# Aplicar la bonificación de diez puntos.\nprint(procesar_calificacion(70, bonificacion_diez))\n\n# Aplicar la penalización de dos puntos.\nprint(procesar_calificacion(70, penalizacion_dos))"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 3: Generador de Multiplicadores Personalizados"
+    },
+    {
+      "type": "paragraph",
+      "text": "Una aplicación científica necesita crear funciones capaces de multiplicar valores por factores configurables."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cada función generada deberá recordar el factor utilizado durante su creación."
+    },
+    {
+      "type": "paragraph",
+      "text": "Instrucciones:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Crear una función llamada <code class=\"language-python\">crear_multiplicador()</code>.",
+        "Recibir un factor como parámetro.",
+        "Crear una función interna llamada <code class=\"language-python\">multiplicar()</code>.",
+        "La función interna debe multiplicar cualquier número recibido por el factor original.",
+        "Retornar la función interna.",
+        "Crear una función para duplicar.",
+        "Crear una función para triplicar.",
+        "Crear una función para multiplicar por diez.",
+        "Probar cada una de ellas."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Una aplicación científica necesita crear funciones capaces de\n# multiplicar valores por factores configurables.\n#\n# Cada función generada deberá recordar el factor utilizado durante su\n# creación.\n#\n# Instrucciones:\n# - Crear una función llamada crear_multiplicador().\n# - Recibir un factor como parámetro.\n# - Crear una función interna llamada multiplicar().\n# - La función interna debe multiplicar cualquier número recibido por\n#   el factor original.\n# - Retornar la función interna.\n# - Crear una función para duplicar.\n# - Crear una función para triplicar.\n# - Crear una función para multiplicar por diez.\n# - Probar cada una de ellas."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# Crear una función que genere multiplicadores personalizados.\ndef crear_multiplicador(factor):\n\n\t# Crear una función interna que utilice el factor recibido.\n\tdef multiplicar(numero):\n\t\treturn numero * factor\n\n\t# Retornar la función creada.\n\treturn multiplicar\n\n# Crear una función para duplicar valores.\nduplicar = crear_multiplicador(2)\n\n# Crear una función para triplicar valores.\ntriplicar = crear_multiplicador(3)\n\n# Crear una función para multiplicar por diez.\nmultiplicar_por_diez = crear_multiplicador(10)\n\n# Ejecutar la función duplicar.\nprint(duplicar(8))\n\n# Ejecutar la función triplicar.\nprint(triplicar(8))\n\n# Ejecutar la función multiplicar por diez.\nprint(multiplicar_por_diez(8))"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# Crear una función que genere multiplicadores personalizados.\ndef crear_multiplicador(factor):\n\n\t# Crear una función interna que utilice el factor recibido.\n\tdef multiplicar(numero):\n\t\treturn numero * factor\n\n\t# Retornar la función creada.\n\treturn multiplicar\n\n# Crear una función para duplicar valores.\nduplicar = crear_multiplicador(2)\n\n# Crear una función para triplicar valores.\ntriplicar = crear_multiplicador(3)\n\n# Crear una función para multiplicar por diez.\nmultiplicar_por_diez = crear_multiplicador(10)\n\n# Ejecutar la función duplicar.\nprint(duplicar(8))\n\n# Ejecutar la función triplicar.\nprint(triplicar(8))\n\n# Ejecutar la función multiplicar por diez.\nprint(multiplicar_por_diez(8))"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 4: Plataforma de Validación de Datos"
+    },
+    {
+      "type": "paragraph",
+      "text": "Una empresa recibe información de múltiples fuentes y necesita validar los datos mediante diferentes reglas."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cada regla será una función independiente."
+    },
+    {
+      "type": "paragraph",
+      "text": "Instrucciones:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Crear una función que verifique si un número es positivo.",
+        "Crear una función que verifique si un número es par.",
+        "Crear una función que verifique si un número es mayor que 100.",
+        "Crear una función llamada <code class=\"language-python\">validar_dato()</code>.",
+        "La función debe recibir un valor y una función de validación.",
+        "Ejecutar varias validaciones utilizando la misma función principal.",
+        "Mostrar los resultados obtenidos."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Una empresa recibe información de múltiples fuentes y necesita\n# validar los datos mediante diferentes reglas.\n#\n# Cada regla será una función independiente.\n#\n# Instrucciones:\n# - Crear una función que verifique si un número es positivo.\n# - Crear una función que verifique si un número es par.\n# - Crear una función que verifique si un número es mayor que 100.\n# - Crear una función llamada validar_dato().\n# - La función debe recibir un valor y una función de validación.\n# - Ejecutar varias validaciones utilizando la misma función principal.\n# - Mostrar los resultados obtenidos."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# Crear una función que determine si un número es positivo.\ndef es_positivo(numero):\n\treturn numero > 0\n\n# Crear una función que determine si un número es par.\ndef es_par(numero):\n\treturn numero % 2 == 0\n\n# Crear una función que determine si un número es mayor que cien.\ndef es_mayor_que_cien(numero):\n\treturn numero > 100\n\n# Crear una función que reciba una función de validación.\ndef validar_dato(valor, regla):\n\treturn regla(valor)\n\n# Validar si un número es positivo.\nprint(validar_dato(50, es_positivo))\n\n# Validar si un número es par.\nprint(validar_dato(50, es_par))\n\n# Validar si un número es mayor que cien.\nprint(validar_dato(50, es_mayor_que_cien))"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# Crear una función que determine si un número es positivo.\ndef es_positivo(numero):\n\treturn numero > 0\n\n# Crear una función que determine si un número es par.\ndef es_par(numero):\n\treturn numero % 2 == 0\n\n# Crear una función que determine si un número es mayor que cien.\ndef es_mayor_que_cien(numero):\n\treturn numero > 100\n\n# Crear una función que reciba una función de validación.\ndef validar_dato(valor, regla):\n\treturn regla(valor)\n\n# Validar si un número es positivo.\nprint(validar_dato(50, es_positivo))\n\n# Validar si un número es par.\nprint(validar_dato(50, es_par))\n\n# Validar si un número es mayor que cien.\nprint(validar_dato(50, es_mayor_que_cien))"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio 5: Motor de Transformación de Registros Empresariales"
+    },
+    {
+      "type": "paragraph",
+      "text": "Una empresa almacena información de ventas y desea aplicar diferentes estrategias de procesamiento sobre la misma colección de datos."
+    },
+    {
+      "type": "code",
+      "text": "ventas = [1200, 1500, 1800, 2100, 2400]"
+    },
+    {
+      "type": "paragraph",
+      "text": "Cada estrategia será una función diferente."
+    },
+    {
+      "type": "paragraph",
+      "text": "Instrucciones:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Crear una función que aplique un descuento del 10%.",
+        "Crear una función que aplique un incremento del 15%.",
+        "Crear una función que convierta el valor a texto descriptivo.",
+        "Crear una función llamada <code class=\"language-python\">procesar_lista()</code>.",
+        "La función debe recibir una lista y una función de procesamiento.",
+        "Aplicar la función recibida a cada elemento de la lista.",
+        "Construir una nueva lista con los resultados.",
+        "Mostrar los resultados de las tres transformaciones."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Una empresa almacena información de ventas y desea aplicar\n# diferentes estrategias de procesamiento sobre la misma colección de\n# datos.\n#\n# ventas = [1200, 1500, 1800, 2100, 2400]\n#\n# Cada estrategia será una función diferente.\n#\n# Instrucciones:\n# - Crear una función que aplique un descuento del 10%.\n# - Crear una función que aplique un incremento del 15%.\n# - Crear una función que convierta el valor a texto descriptivo.\n# - Crear una función llamada procesar_lista().\n# - La función debe recibir una lista y una función de procesamiento.\n# - Aplicar la función recibida a cada elemento de la lista.\n# - Construir una nueva lista con los resultados.\n# - Mostrar los resultados de las tres transformaciones."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# Crear una función que aplique un descuento del diez por ciento.\ndef aplicar_descuento(valor):\n\treturn valor * 0.90\n\n# Crear una función que aplique un incremento del quince por ciento.\ndef aplicar_incremento(valor):\n\treturn valor * 1.15\n\n# Crear una función que convierta el valor a una descripción textual.\ndef convertir_descripcion(valor):\n\treturn f\"Venta registrada: {valor}\"\n\n# Crear una función que procese una lista utilizando otra función.\ndef procesar_lista(lista, funcion):\n\n\tresultado = []\n\n\t# Recorrer todos los elementos de la lista.\n\tfor elemento in lista:\n\n\t\t# Aplicar la función recibida al elemento actual.\n\t\tresultado.append(funcion(elemento))\n\n\t# Retornar la nueva lista construida.\n\treturn resultado\n\nventas = [1200, 1500, 1800, 2100, 2400]\n\n# Aplicar la estrategia de descuento.\nprint(procesar_lista(ventas, aplicar_descuento))\n\n# Aplicar la estrategia de incremento.\nprint(procesar_lista(ventas, aplicar_incremento))\n\n# Aplicar la estrategia de descripción.\nprint(procesar_lista(ventas, convertir_descripcion))"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# Crear una función que aplique un descuento del diez por ciento.\ndef aplicar_descuento(valor):\n\treturn valor * 0.90\n\n# Crear una función que aplique un incremento del quince por ciento.\ndef aplicar_incremento(valor):\n\treturn valor * 1.15\n\n# Crear una función que convierta el valor a una descripción textual.\ndef convertir_descripcion(valor):\n\treturn f\"Venta registrada: {valor}\"\n\n# Crear una función que procese una lista utilizando otra función.\ndef procesar_lista(lista, funcion):\n\n\tresultado = []\n\n\t# Recorrer todos los elementos de la lista.\n\tfor elemento in lista:\n\n\t\t# Aplicar la función recibida al elemento actual.\n\t\tresultado.append(funcion(elemento))\n\n\t# Retornar la nueva lista construida.\n\treturn resultado\n\nventas = [1200, 1500, 1800, 2100, 2400]\n\n# Aplicar la estrategia de descuento.\nprint(procesar_lista(ventas, aplicar_descuento))\n\n# Aplicar la estrategia de incremento.\nprint(procesar_lista(ventas, aplicar_incremento))\n\n# Aplicar la estrategia de descripción.\nprint(procesar_lista(ventas, convertir_descripcion))"
+        }
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Conclusiones de la Unidad"
+    },
+    {
+      "type": "paragraph",
+      "text": "Las funciones como objetos constituyen una de las características más poderosas y flexibles de Python. Gracias a esta capacidad, es posible almacenar funciones en variables, pasarlas como argumentos, devolverlas desde otras funciones y construir programas altamente reutilizables y configurables."
+    },
+    {
+      "type": "paragraph",
+      "text": "Estos conceptos representan la base de numerosas herramientas avanzadas del lenguaje, incluyendo <code class=\"language-python\">map()</code>, <code class=\"language-python\">filter()</code>, <code class=\"language-python\">sorted()</code>, los decoradores, los closures y gran parte de las técnicas asociadas a la programación funcional. Comprender cómo funcionan las funciones como objetos te permitirá diseñar soluciones más elegantes, modulares y escalables, preparándote para abordar proyectos de software cada vez más complejos."
+    }
+  ]
+}
