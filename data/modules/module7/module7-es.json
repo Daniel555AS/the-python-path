@@ -1,0 +1,30 @@
+{
+  "title": "7.⚠️Manejo de Errores y Excepciones",
+  "description": "En este módulo aprenderás a identificar los errores más comunes en Python y a controlarlos mediante excepciones. Usarás bloques try, except, finally y else para manejar fallos de forma segura y mantener tus programas funcionando correctamente.",
+  "steps": [
+    {
+      "name": "1. Errores Comunes en Python",
+      "description": "En esta unidad aprenderás a identificar los errores más frecuentes que pueden aparecer durante el desarrollo de programas en Python. Conocerás la diferencia entre errores de sintaxis, errores en tiempo de ejecución y errores lógicos, además de analizar situaciones comunes como el uso de variables inexistentes, incompatibilidades entre tipos de datos, divisiones entre cero, índices fuera de rango y otros problemas habituales. Comprender estos errores te permitirá interpretar los mensajes que genera Python y corregirlos de manera más rápida y efectiva.",
+      "color": "#FFD43B",
+      "unit": "learning-unit1"
+    },
+    {
+      "name": "2. Manejo de Excepciones con <code>try</code>  y <code>except</code>",
+      "description": "En esta unidad descubrirás cómo manejar errores de forma controlada mediante los bloques <code>try</code> y <code>except</code>, evitando que un programa termine inesperadamente cuando ocurre una excepción. Aprenderás a capturar distintos tipos de errores, responder adecuadamente a cada uno de ellos y proporcionar mensajes claros al usuario, desarrollando aplicaciones más robustas, confiables y capaces de continuar su ejecución incluso cuando se presentan situaciones imprevistas.",
+      "color": "#3776AB",
+      "unit": "learning-unit2"
+    },
+    {
+      "name": "3. Uso de <code>finally</code> y <code>else</code> en Excepciones",
+      "description": "En esta unidad profundizarás en el manejo de excepciones aprendiendo el propósito de los bloques <code>else</code> y <code>finally</code>. Comprenderás cuándo ejecutar código únicamente si no ocurre ningún error y cuándo realizar acciones que deben ejecutarse siempre, independientemente del resultado del bloque <code>try</code>, como cerrar archivos, liberar recursos o finalizar procesos. Esto te permitirá escribir programas más seguros, organizados y fáciles de mantener.",
+      "color": "#1B983A",
+      "unit": "learning-unit3"
+    },
+    {
+      "name": "4. Depuración y Buenas Prácticas",
+      "description": "En esta unidad conocerás diferentes estrategias para detectar, analizar y corregir errores en tus programas mediante técnicas de depuración y buenas prácticas de desarrollo. Aprenderás a utilizar instrucciones como <code>print()</code> de manera estratégica para inspeccionar el comportamiento del código, interpretar los mensajes de error generados por Python, comentar adecuadamente las secciones importantes del programa y adoptar hábitos de programación que faciliten el mantenimiento, la comprensión y la localización de fallos en proyectos de cualquier tamaño.",
+      "color": "#6464FF",
+      "unit": "learning-unit4"
+    }
+  ]
+}
