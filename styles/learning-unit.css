@@ -55,6 +55,14 @@
   font-weight: 500;
 }
 
+.block.subtitle4 h5 {
+  font-size: 1rem;
+  margin-top: 0.7rem;
+  margin-bottom: 0.4rem;
+  color: rgb(185, 146, 255);
+  font-weight: 500;
+}
+
 .block.paragraph p {
   font-size: 1.15rem;
   margin-bottom: 1rem;
@@ -260,7 +268,6 @@ code[class*="language-"] {
 }
 
 @media (max-width: 768px) {
-
   .unit-container {
     width: 95%;
     padding: 1rem;
@@ -286,6 +293,10 @@ code[class*="language-"] {
 
   .block.subtitle3 h4 {
     font-size: 1.05rem;
+  }
+
+  .block.subtitle4 h5 {
+    font-size: 0.95rem;
   }
 
   .block.paragraph p,
