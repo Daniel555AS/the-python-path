@@ -1,0 +1,977 @@
+{
+  "title": "Errores Comunes en Python",
+  "description": "",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Al desarrollar programas es completamente normal cometer errores. De hecho, incluso los programadores con muchos años de experiencia encuentran errores constantemente durante el proceso de desarrollo. Por lo tanto, es importante aprender a identificarlos, comprender por qué ocurren y corregirlos de manera eficiente."
+    },
+    {
+      "type": "paragraph",
+      "text": "Python proporciona mensajes de error muy descriptivos que ayudan a localizar el origen de un problema. Sin embargo, interpretar correctamente estos mensajes requiere conocer los distintos tipos de errores que pueden presentarse y las circunstancias en las que aparecen. Algunos errores impiden que el programa siquiera pueda comenzar a ejecutarse, mientras que otros ocurren durante la ejecución o producen resultados incorrectos sin mostrar ningún mensaje de advertencia."
+    },
+    {
+      "type": "paragraph",
+      "text": "En esta unidad estudiarás los errores más comunes que pueden aparecer al programar en Python, aprenderás a diferenciarlos y conocerás estrategias para analizarlos y solucionarlos. Estas habilidades constituyen uno de los pilares fundamentales del desarrollo de software, ya que todo programa, sin importar su tamaño o complejidad, requerirá procesos de depuración y corrección."
+    },
+    {
+      "type": "subtitle1",
+      "text": "¿Qué es un Error en Python?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Un error es cualquier situación que impide que un programa funcione de la manera esperada. Dependiendo del tipo de problema, el programa puede no ejecutarse, detenerse durante la ejecución o finalizar normalmente produciendo resultados incorrectos."
+    },
+    {
+      "type": "paragraph",
+      "text": "En Python, cuando ocurre un error, el intérprete genera un mensaje conocido como <strong>Traceback</strong>, el cual contiene información muy útil para localizar el problema. Generalmente este mensaje indica:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "El archivo donde ocurrió el error.",
+        "La línea específica del código.",
+        "El tipo de error detectado.",
+        "Una descripción del problema."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Por ejemplo:"
+    },
+    {
+      "type": "code",
+      "text": "numero = 10\n\nprint(numero2)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "PythonError: Traceback (most recent call last):\n  File \"/lib/python311.zip/_pyodide/_base.py\", line 573, in eval_code_async\n    await CodeRunner(\n  File \"/lib/python311.zip/_pyodide/_base.py\", line 393, in run_async\n    coroutine = eval(self.code, globals, locals)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"&lt;exec>\", line 2, in &lt;module>\n  File \"&lt;string>\", line 4, in &lt;module>\nNameError: name 'numero2' is not defined"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "numero = 10\n\nprint(numero2)"
+    },
+    {
+      "type": "paragraph",
+      "text": "En este caso, Python informa que la variable <code class=\"language-python\">numero2</code> no existe."
+    },
+    {
+      "type": "paragraph",
+      "text": "Gracias a estos mensajes es posible identificar rápidamente la causa del problema y corregir el código."
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Si estás utilizando esta plataforma para ejecutar el código directamente desde el navegador, es posible que observes mensajes de error más extensos que los mostrados habitualmente en un entorno local de Python. Esto ocurre porque el código es ejecutado mediante una versión de Python integrada en el navegador (<strong><i>Pyodide</i></strong>), la cual añade información interna relacionada con el proceso de ejecución."
+    },
+    {
+      "type": "subtitle1",
+      "text": "¿Por Qué Ocurren los Errores?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Los errores pueden aparecer por diversas razones, entre ellas:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Escribir incorrectamente una instrucción.",
+        "Utilizar una variable que no existe.",
+        "Trabajar con datos de un tipo incompatible.",
+        "Acceder a posiciones inexistentes de una lista.",
+        "Dividir un número entre cero.",
+        "Diseñar incorrectamente el algoritmo."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Cada uno de estos problemas pertenece a una categoría diferente de errores."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Tipos de Errores en Python"
+    },
+    {
+      "type": "paragraph",
+      "text": "Los errores pueden clasificarse en tres grandes categorías:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Errores de sintaxis.",
+        "Errores en tiempo de ejecución.",
+        "Errores lógicos."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Cada uno posee características distintas y requiere un enfoque diferente para solucionarlo."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Errores de Sintaxis"
+    },
+    {
+      "type": "paragraph",
+      "text": "Los errores de sintaxis (<strong><i>Syntax Errors</i></strong>) ocurren cuando el código no respeta las reglas del lenguaje Python."
+    },
+    {
+      "type": "paragraph",
+      "text": "En estos casos el intérprete ni siquiera puede comenzar la ejecución del programa, ya que no logra comprender correctamente la estructura del código."
+    },
+    {
+      "type": "paragraph",
+      "text": "Son generalmente los errores más fáciles de detectar porque Python indica exactamente la línea donde encontró el problema."
+    },
+    {
+      "type": "subtitle3",
+      "text": "Características"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Impiden que el programa inicie.",
+        "Son detectados antes de ejecutar el código",
+        "Generalmente indican la línea donde aparece el error.",
+        "Se producen por escribir incorrectamente las instrucciones."
+      ]
+    },
+    {
+      "type": "subtitle4",
+      "text": "Ejemplo 1: Falta de Dos Puntos"
+    },
+    {
+      "type": "paragraph",
+      "text": "Código incorrecto:"
+    },
+    {
+      "type": "code",
+      "text": "edad = 20\n\nif edad >= 18\n\tprint(\"Mayor de edad\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "PythonError: Traceback (most recent call last):\n  File \"/lib/python311.zip/_pyodide/_base.py\", line 573, in eval_code_async\n    await CodeRunner(\n  File \"/lib/python311.zip/_pyodide/_base.py\", line 393, in run_async\n    coroutine = eval(self.code, globals, locals)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"&lt;exec>\", line 2, in &lt;module>\n  File \"&lt;string>\", line 4\n    if edad >= 18\n                 ^\nSyntaxError: expected ':'"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "edad = 20\n\nif edad >= 18\n\tprint(\"Mayor de edad\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Corrección:"
+    },
+    {
+      "type": "code",
+      "text": "edad = 20\n\nif edad >= 18:\n\tprint(\"Mayor de edad\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Mayor de edad"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "edad = 20\n\nif edad >= 18:\n\tprint(\"Mayor de edad\")"
+    },
+    {
+      "type": "subtitle4",
+      "text": "Ejemplo 2: Paréntesis Sin Cerrar"
+    },
+    {
+      "type": "paragraph",
+      "text": "Código incorrecto:"
+    },
+    {
+      "type": "code",
+      "text": "print(\"Hola Mundo\""
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "PythonError: Traceback (most recent call last):\n  File \"/lib/python311.zip/_pyodide/_base.py\", line 573, in eval_code_async\n    await CodeRunner(\n  File \"/lib/python311.zip/_pyodide/_base.py\", line 393, in run_async\n    coroutine = eval(self.code, globals, locals)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"&lt;exec>\", line 2, in &lt;module>\n  File \"&lt;string>\", line 2\n    print(\"Hola Mundo\"\n         ^\nSyntaxError: '(' was never closed"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "print(\"Hola Mundo\""
+    },
+    {
+      "type": "paragraph",
+      "text": "Corrección:"
+    },
+    {
+      "type": "code",
+      "text": "print(\"Hola Mundo\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Hola Mundo"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "print(\"Hola Mundo\")"
+    },
+    {
+      "type": "subtitle4",
+      "text": "Ejemplo 3: Error de Indentación"
+    },
+    {
+      "type": "paragraph",
+      "text": "Python utiliza la indentación para definir bloques de código."
+    },
+    {
+      "type": "paragraph",
+      "text": "Código incorrecto:"
+    },
+    {
+      "type": "code",
+      "text": "numero = 8\n\nif numero > 5:\nprint(\"Es mayor que cinco\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "PythonError: Traceback (most recent call last):\n  File \"/lib/python311.zip/_pyodide/_base.py\", line 573, in eval_code_async\n    await CodeRunner(\n  File \"/lib/python311.zip/_pyodide/_base.py\", line 393, in run_async\n    coroutine = eval(self.code, globals, locals)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"&lt;exec>\", line 2, in &lt;module>\n  File \"&lt;string>\", line 5\n    print(\"Es mayor que cinco\")\n    ^^^^^\nIndentationError: expected an indented block after 'if' statement on line 4"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "numero = 8\n\nif numero > 5:\nprint(\"Es mayor que cinco\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Corrección:"
+    },
+    {
+      "type": "code",
+      "text": "numero = 8\n\nif numero > 5:\n\tprint(\"Es mayor que cinco\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Es mayor que cinco"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "numero = 8\n\nif numero > 5:\n\tprint(\"Es mayor que cinco\")"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Aunque <code class=\"language-python\">IndentationError</code> aparece con un nombre diferente, forma parte de los errores relacionados con la sintaxis del lenguaje, ya que la indentación constituye una regla obligatoria en Python."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Errores en Tiempo de Ejecución"
+    },
+    {
+      "type": "paragraph",
+      "text": "Los errores en tiempo de ejecución (<strong><i>Runtime Errors</i></strong>) aparecen después de que el programa ha comenzado a ejecutarse."
+    },
+    {
+      "type": "paragraph",
+      "text": "En estos casos, el código posee una sintaxis válida, pero durante la ejecución ocurre una situación que Python no puede resolver."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cuando esto sucede, el programa se detiene y genera una excepción."
+    },
+    {
+      "type": "subtitle3",
+      "text": "Características"
+    },
+    {
+      "type": "list",
+      "items": [
+        "El programa comienza a ejecutarse correctamente.",
+        "El error aparece durante la ejecución.",
+        "Generalmente producen una excepción (<strong><i>Exception</i></strong>).",
+        "Pueden evitarse mediante el manejo de excepciones (<code class=\"language-python\">try</code> y <code class=\"language-python\">except</code>)."
+      ]
+    },
+    {
+      "type": "subtitle4",
+      "text": "Ejemplo 1: Variable Inexistente"
+    },
+    {
+      "type": "code",
+      "text": "nombre = \"Carlos\"\n\nprint(apellido)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "PythonError: Traceback (most recent call last):\n  File \"/lib/python311.zip/_pyodide/_base.py\", line 573, in eval_code_async\n    await CodeRunner(\n  File \"/lib/python311.zip/_pyodide/_base.py\", line 393, in run_async\n    coroutine = eval(self.code, globals, locals)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"&lt;exec>\", line 2, in &lt;module>\n  File \"&lt;string>\", line 4, in &lt;module>\nNameError: name 'apellido' is not defined"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "nombre = \"Carlos\"\n\nprint(apellido)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Python indica que la variable nunca fue creada."
+    },
+    {
+      "type": "subtitle4",
+      "text": "Ejemplo 2: División Entre Cero"
+    },
+    {
+      "type": "code",
+      "text": "numero = 20\nresultado = numero / 0\n\nprint(resultado)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "PythonError: Traceback (most recent call last):\n  File \"/lib/python311.zip/_pyodide/_base.py\", line 573, in eval_code_async\n    await CodeRunner(\n  File \"/lib/python311.zip/_pyodide/_base.py\", line 393, in run_async\n    coroutine = eval(self.code, globals, locals)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"&lt;exec>\", line 2, in &lt;module>\n  File \"&lt;string>\", line 3, in &lt;module>\nZeroDivisionError: division by zero"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "numero = 20\nresultado = numero / 0\n\nprint(resultado)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Python no permite dividir entre cero."
+    },
+    {
+      "type": "subtitle4",
+      "text": "Ejemplo 3: Índice Fuera del Rango"
+    },
+    {
+      "type": "code",
+      "text": "numeros = [10, 20, 30]\n\nprint(numeros[5])"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "PythonError: Traceback (most recent call last):\n  File \"/lib/python311.zip/_pyodide/_base.py\", line 573, in eval_code_async\n    await CodeRunner(\n  File \"/lib/python311.zip/_pyodide/_base.py\", line 393, in run_async\n    coroutine = eval(self.code, globals, locals)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"&lt;exec>\", line 2, in &lt;module>\n  File \"&lt;string>\", line 4, in &lt;module>\nIndexError: list index out of range"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "numeros = [10, 20, 30]\n\nprint(numeros[5])"
+    },
+    {
+      "type": "paragraph",
+      "text": "La lista únicamente posee tres elementos."
+    },
+    {
+      "type": "subtitle4",
+      "text": "Ejemplo 4: Conversión Incorrecta"
+    },
+    {
+      "type": "code",
+      "text": "edad = \"veinte\"\n\nnumero = int(edad)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "PythonError: Traceback (most recent call last):\n  File \"/lib/python311.zip/_pyodide/_base.py\", line 573, in eval_code_async\n    await CodeRunner(\n  File \"/lib/python311.zip/_pyodide/_base.py\", line 393, in run_async\n    coroutine = eval(self.code, globals, locals)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"&lt;exec>\", line 2, in &lt;module>\n  File \"&lt;string>\", line 4, in &lt;module>\nValueError: invalid literal for int() with base 10: 'veinte'"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "edad = \"veinte\"\n\nnumero = int(edad)"
+    },
+    {
+      "type": "paragraph",
+      "text": "La cadena no representa un número entero válido."
+    },
+    {
+      "type": "subtitle4",
+      "text": "Ejemplo 5: Tipo Incompatible"
+    },
+    {
+      "type": "code",
+      "text": "numero = 15\n\nprint(numero + \" años\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "PythonError: Traceback (most recent call last):\n  File \"/lib/python311.zip/_pyodide/_base.py\", line 573, in eval_code_async\n    await CodeRunner(\n  File \"/lib/python311.zip/_pyodide/_base.py\", line 393, in run_async\n    coroutine = eval(self.code, globals, locals)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"&lt;exec>\", line 2, in &lt;module>\n  File \"&lt;string>\", line 4, in &lt;module>\nTypeError: unsupported operand type(s) for +: 'int' and 'str'"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "numero = 15\n\nprint(numero + \" años\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "No es posible sumar directamente un entero y una cadena."
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Los errores en tiempo de ejecución suelen ser los más frecuentes durante el desarrollo de software, ya que muchas veces dependen de los datos proporcionados por el usuario y no únicamente del código escrito por el programador."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Errores Lógicos"
+    },
+    {
+      "type": "paragraph",
+      "text": "Los errores lógicos son los más difíciles de detectar porque el programa no produce mensajes de error."
+    },
+    {
+      "type": "paragraph",
+      "text": "El código se ejecuta completamente, pero el resultado obtenido no corresponde con el esperado."
+    },
+    {
+      "type": "paragraph",
+      "text": "Generalmente estos errores aparecen cuando el algoritmo fue diseñado incorrectamente o cuando alguna condición no representa realmente el problema que se desea resolver."
+    },
+    {
+      "type": "subtitle3",
+      "text": "Características"
+    },
+    {
+      "type": "list",
+      "items": [
+        "El programa ejecuta sin interrupciones.",
+        "No aparecen excepciones.",
+        "El resultado es incorrecto.",
+        "Requieren revisar cuidadosamente la lógica del algoritmo."
+      ]
+    },
+    {
+      "type": "subtitle4",
+      "text": "Ejemplo 1: Fórmula Incorrecta"
+    },
+    {
+      "type": "paragraph",
+      "text": "Código:"
+    },
+    {
+      "type": "code",
+      "text": "base = 8\naltura = 6\n\narea = base + altura\n\nprint(area)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "14"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "base = 8\naltura = 6\n\narea = base + altura\n\nprint(area)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Aunque el programa funciona correctamente, el área de un rectángulo no se obtiene mediante una suma de su base más su altura."
+    },
+    {
+      "type": "paragraph",
+      "text": "La solución correcta sería:"
+    },
+    {
+      "type": "code",
+      "text": "base = 8\naltura = 6\n\narea = base * altura\n\nprint(area)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "48"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "base = 8\naltura = 6\n\narea = base * altura\n\nprint(area)"
+    },
+    {
+      "type": "subtitle4",
+      "text": "Ejemplo 2: Condición Equivocada"
+    },
+    {
+      "type": "paragraph",
+      "text": "Código:"
+    },
+    {
+      "type": "code",
+      "text": "edad = 18\n\nif edad > 18:\n\tprint(\"Usted es un adultuo, puede ingresar\")\nelse:\n\tprint(\"Usted no es un adulto, no puede ingresar\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Usted no es un adulto, no puede ingresar"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "edad = 18\n\nif edad > 18:\n\tprint(\"Usted es un adultuo, puede ingresar\")\nelse:\n\tprint(\"Usted no es un adulto, no puede ingresar\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "El programa funciona, pero una persona de 18 años también debería poder ingresar."
+    },
+    {
+      "type": "paragraph",
+      "text": "Corrección:"
+    },
+    {
+      "type": "code",
+      "text": "edad = 18\n\nif edad >= 18:\n\tprint(\"Usted es un adultuo, puede ingresar\")\nelse:\n\tprint(\"Usted no es un adulto, no puede ingresar\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "Usted es un adulto, puede ingresar"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "edad = 18\n\nif edad >= 18:\n\tprint(\"Usted es un adultuo, puede ingresar\")\nelse:\n\tprint(\"Usted no es un adulto, no puede ingresar\")"
+    },
+    {
+      "type": "subtitle4",
+      "text": "Ejemplo 3: Promedio Mal Calculado"
+    },
+    {
+      "type": "paragraph",
+      "text": "Código:"
+    },
+    {
+      "type": "code",
+      "text": "notas = [3.5, 4.2, 4.8]\n\npromedio = sum(notas) / 2\n\nprint(promedio)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "6.25"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "notas = [3.5, 4.2, 4.8]\n\npromedio = sum(notas) / 2\n\nprint(promedio)"
+    },
+    {
+      "type": "paragraph",
+      "text": "El programa no genera ningún error, pero el promedio está mal calculado."
+    },
+    {
+      "type": "paragraph",
+      "text": "La solución correcta sería:"
+    },
+    {
+      "type": "code",
+      "text": "notas = [3.5, 4.2, 4.8]\n\npromedio = sum(notas) / len(notas)\n\nprint(promedio)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "4.166666666666667\n\n# Se podría considerar redondear el resultado a dos decimales, por ejemplo."
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "notas = [3.5, 4.2, 4.8]\n\npromedio = sum(notas) / len(notas)\n\nprint(promedio)"
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Nota:</strong><br>Los errores lógicos son especialmente peligrosos porque pueden pasar desapercibidos durante mucho tiempo si no se prueban cuidadosamente los resultados obtenidos por el programa."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Características",
+        "Error de Sintaxis",
+        "Error en Tiempo de Ejecución",
+        "Error Lógico"
+      ],
+      "rows": [
+        ["¿El programa inicia?", "No", "Sí", "Sí"],
+        ["¿Se genera un mensaje de error?", "Sí", "Sí", "No"],
+        ["¿El programa puede finalizar?", "No", "Generalmente no", "Sí"],
+        [
+          "¿Produce resultados incorrectos?",
+          "No aplica",
+          "Generalmente no",
+          "Sí"
+        ],
+        ["¿Es fácil localizarlo?", "Alta", "Media", "Baja"],
+        [
+          "Ejemplos comunes",
+          "<code class=\"language-python\">SyntaxError</code>, <code class=\"language-python\">IndentationError</code>",
+          "<code class=\"language-python\">NameError</code>, <code class=\"language-python\">TypeError</code>, <code class=\"language-python\">IndexError</code>, <code class=\"language-python\">ValueError</code>, <code class=\"language-python\">ZeroDivisionError</code>",
+          "Algoritmos incorrectos, condiciones equivocadas, fórmulas erróneas"
+        ]
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejemplos Detallados"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejemplo 1: Identificando un Error de Sintaxis"
+    },
+    {
+      "type": "code",
+      "text": "numero = 15\n\nif numero > 10\n\tprint(\"Número válido\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "PythonError: Traceback (most recent call last):\n  File \"/lib/python311.zip/_pyodide/_base.py\", line 573, in eval_code_async\n    await CodeRunner(\n  File \"/lib/python311.zip/_pyodide/_base.py\", line 393, in run_async\n    coroutine = eval(self.code, globals, locals)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"&lt;exec>\", line 2, in &lt;module>\n  File \"&lt;string>\", line 4\n    if numero > 10\n                  ^\nSyntaxError: expected ':'"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "numero = 15\n\nif numero > 10\n\tprint(\"Número válido\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Python detectará inmediatamente que falta el carácter <code class=\"language-python\">:</code> al finalizar la condición del <code class=\"language-python\">if</code>, por lo que el programa no llegará a ejecutarse."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejemplo 2: Identificando un Error en Tiempo de Ejecución"
+    },
+    {
+      "type": "code",
+      "text": "edades = [20, 25, 30]\n\nprint(edades[5])"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "PythonError: Traceback (most recent call last):\n  File \"/lib/python311.zip/_pyodide/_base.py\", line 573, in eval_code_async\n    await CodeRunner(\n  File \"/lib/python311.zip/_pyodide/_base.py\", line 393, in run_async\n    coroutine = eval(self.code, globals, locals)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"&lt;exec>\", line 2, in &lt;module>\n  File \"&lt;string>\", line 4, in &lt;module>\nIndexError: list index out of range"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "edades = [20, 25, 30]\n\nprint(edades[5])"
+    },
+    {
+      "type": "paragraph",
+      "text": "El programa comienza a ejecutarse correctamente, pero al intentar acceder a una posición inexistente de la lista se produce un <code class=\"language-python\">IndexError</code>, deteniendo la ejecución."
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejemplo 3: Identificando un Error Lógico"
+    },
+    {
+      "type": "code",
+      "text": "precio = 100\ndescuento = 20\n\nprecio_final = precio + descuento\n\nprint(precio_final)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "120"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "precio = 100\ndescuento = 20\n\nprecio_final = precio + descuento\n\nprint(precio_final)"
+    },
+    {
+      "type": "paragraph",
+      "text": "No aparece ningún mensaje de error y el programa finaliza normalmente. Sin embargo, el resultado es incorrecto, ya que el descuento debería restarse del precio original y no sumarse."
+    },
+    {
+      "type": "paragraph",
+      "text": "La implementación correcta sería:"
+    },
+    {
+      "type": "code",
+      "text": "precio = 100\ndescuento = 20\n\nprecio_final = precio - descuento\n\nprint(precio_final)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Salida:"
+    },
+    {
+      "type": "code",
+      "text": "80"
+    },
+    {
+      "type": "test-button",
+      "text": "Probar >>",
+      "code": "precio = 100\ndescuento = 20\n\nprecio_final = precio - descuento\n\nprint(precio_final)"
+    },
+    {
+      "type": "tip",
+      "text": "⭐ <strong>Tips:</strong><br><strong>1.</strong> Lee siempre el mensaje de error completo antes de modificar el código. Muchas veces la solución se encuentra explícitamente indicada en el propio mensaje.<br><strong>2.</strong> Corrige primero el primer error reportado por Python. En numerosas ocasiones, los errores posteriores desaparecen automáticamente una vez solucionado el inicial.<br><strong>3.</strong> Si el programa produce resultados inesperados sin mostrar errores, revisa cuidadosamente la lógica del algoritmo y verifica los valores de las variables durante la ejecución.<br><strong>4.</strong> Es recomendable ejecutar el programa con diferentes conjuntos de datos para comprobar que funciona correctamente en distintos escenarios y detectar posibles errores lógicos."
+    },
+    {
+      "type": "note",
+      "text": "📌 <strong>Notas:</strong><br><strong>1.</strong> Los errores forman parte natural del proceso de desarrollo de software. Incluso aplicaciones profesionales requieren constantes procesos de depuración antes de llegar a su versión final.<br><strong>2.</strong> Aprender a interpretar el tipo de error y el mensaje que proporciona Python es una habilidad tan importante como aprender la sintaxis del lenguaje, ya que permite resolver problemas con mayor rapidez y comprender mejor el funcionamiento interno de los programas."
+    },
+    {
+      "type": "subtitle1",
+      "text": "Ejercicios para Practicar"
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio Práctico 1: Corrección de un Sistema de Registro de Estudiantes"
+    },
+    {
+      "type": "paragraph",
+      "text": "Una institución educativa está desarrollando un sistema para registrar las calificaciones de varios estudiantes. Sin embargo, el programa contiene diferentes errores que impiden su correcto funcionamiento."
+    },
+    {
+      "type": "paragraph",
+      "text": "Tu tarea consiste en analizar cuidadosamente el código, identificar los errores presentes y corregirlos para que el programa funcione correctamente."
+    },
+    {
+      "type": "paragraph",
+      "text": "Durante este ejercicio deberás prestar atención tanto a la sintaxis como a los errores que aparecen durante la ejecución."
+    },
+    {
+      "type": "paragraph",
+      "text": "Código inicial:"
+    },
+    {
+      "type": "code",
+      "text": "estudiantes = [\"Ana\", \"Carlos\", \"Luisa\", \"Pedro\"]\n\nnotas = [4.5, 3.8, 4.9, 4.2]\n\nfor i in range(len(estudiantes))\n\tprint(estudiantes[i], \"obtuvo\", notas[i])\n\nprint(\"Proceso finalizado\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Instrucciones:"
+    },
+    {
+      "type": "paragraph",
+      "text": "Debes modificar el código para cumplir con los siguientes objetivos:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Identificar el error de sintaxis que impide ejecutar el programa.",
+        "Corregir dicho error respetando la estructura del ciclo.",
+        "Verificar que el recorrido de ambas listas se realice correctamente.",
+        "Mostrar el nombre de cada estudiante junto con su respectiva nota.",
+        "Confirmar que el programa finalice mostrando el mensaje correspondiente."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Una institución educativa está desarrollando un sistema para\n# registrar las calificaciones de varios estudiantes. Sin embargo, el\n# programa contiene diferentes errores que impiden su correcto\n# funcionamiento.\n#\n# Tu tarea consiste en analizar cuidadosamente el código, identificar\n# los errores presentes y corregirlos para que el programa funcione\n# correctamente.\n#\n# Durante este ejercicio deberás prestar atención tanto a la sintaxis\n# como a los errores que aparecen durante la ejecución.\n#\n# Código inicial:\n#\n# estudiantes = [\"Ana\", \"Carlos\", \"Luisa\", \"Pedro\"]\n#\n# notas = [4.5, 3.8, 4.9, 4.2]\n#\n# for i in range(len(estudiantes))\n# \tprint(estudiantes[i], \"obtuvo\", notas[i])\n#\n# print(\"Proceso finalizado\")\n#\n# Instrucciones:\n#\n# Debes modificar el código para cumplir con los siguientes objetivos:\n#\n# - Identificar el error de sintaxis que impide ejecutar el programa.\n# - Corregir dicho error respetando la estructura del ciclo.\n# - Verificar que el recorrido de ambas listas se realice\n#   correctamente.\n# - Mostrar el nombre de cada estudiante junto con su respectiva nota.\n# - Confirmar que el programa finalice mostrando el mensaje\n#   correspondiente."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# Crear la lista de estudiantes.\nestudiantes = [\"Ana\", \"Carlos\", \"Luisa\", \"Pedro\"]\n\n# Crear la lista de calificaciones.\nnotas = [4.5, 3.8, 4.9, 4.2]\n\n# Corregir el error de sintaxis agregando los dos puntos al final del ciclo for.\nfor i in range(len(estudiantes)):\n\n\t# Mostrar el nombre del estudiante junto con su calificación correspondiente.\n\tprint(estudiantes[i], \"obtuvo\", notas[i])\n\n# Confirmar que el programa terminó correctamente.\nprint(\"Proceso finalizado\")"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# Crear la lista de estudiantes.\nestudiantes = [\"Ana\", \"Carlos\", \"Luisa\", \"Pedro\"]\n\n# Crear la lista de calificaciones.\nnotas = [4.5, 3.8, 4.9, 4.2]\n\n# Corregir el error de sintaxis agregando los dos puntos al final del ciclo for.\nfor i in range(len(estudiantes)):\n\n\t# Mostrar el nombre del estudiante junto con su calificación correspondiente.\n\tprint(estudiantes[i], \"obtuvo\", notas[i])\n\n# Confirmar que el programa terminó correctamente.\nprint(\"Proceso finalizado\")"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio Práctico 2: Diagnóstico de Errores en un Sistema de Inventario"
+    },
+    {
+      "type": "paragraph",
+      "text": "Una empresa almacena la información de sus productos utilizando dos listas: una contiene los nombres de los productos y otra las cantidades disponibles."
+    },
+    {
+      "type": "paragraph",
+      "text": "El desarrollador realizó varias modificaciones al programa y ahora este presenta errores durante su ejecución."
+    },
+    {
+      "type": "paragraph",
+      "text": "Tu objetivo será localizar el problema, comprender por qué ocurre y corregir el código para que funcione correctamente."
+    },
+    {
+      "type": "paragraph",
+      "text": "Código inicial:"
+    },
+    {
+      "type": "code",
+      "text": "productos = [\n\t\"Mouse\",\n\t\"Teclado\",\n\t\"Monitor\",\n\t\"Impresora\"\n]\n\ncantidades = [15, 8, 12]\n\nfor i in range(len(productos)):\n\tprint(productos[i], \"-\", cantidades[i])"
+    },
+    {
+      "type": "paragraph",
+      "text": "Instrucciones:"
+    },
+    {
+      "type": "paragraph",
+      "text": "Analiza cuidadosamente el código anterior y realiza las siguientes actividades:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Ejecutar el programa para observar el mensaje de error generado por Python.",
+        "Identificar el tipo de error que aparece durante la ejecución.",
+        "Analizar por qué ambas listas producen dicho problema.",
+        "Corregir los errores asociados.",
+        "Recorrer correctamente ambas listas.",
+        "Mostrar el nombre de cada producto junto con la cantidad disponible.",
+        "Verificar que el programa termine sin generar excepciones."
+      ]
+    },
+    {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Una empresa almacena la información de sus productos utilizando dos\n# listas: una contiene los nombres de los productos y otra las\n# cantidades disponibles.\n#\n# El desarrollador realizó varias modificaciones al programa y ahora\n# este presenta errores durante su ejecución.\n#\n# Tu objetivo será localizar el problema, comprender por qué ocurre y\n# corregir el código para que funcione correctamente.\n#\n# Código inicial:\n#\n# productos = [\n# \t\"Mouse\",\n# \t\"Teclado\",\n# \t\"Monitor\",\n# \t\"Impresora\"\n# ]\n#\n# cantidades = [15, 8, 12]\n#\n# for i in range(len(productos)):\n# \tprint(productos[i], \"-\", cantidades[i])\n#\n# Instrucciones:\n#\n# Analiza cuidadosamente el código anterior y realiza las siguientes\n# actividades:\n#\n# - Ejecutar el programa para observar el mensaje de error generado\n#   por Python.\n# - Identificar el tipo de error que aparece durante la ejecución.\n# - Analizar por qué ambas listas producen dicho problema.\n# - Corregir los errores asociados.\n# - Recorrer correctamente ambas listas.\n# - Mostrar el nombre de cada producto junto con la cantidad\n#   disponible.\n# - Verificar que el programa termine sin generar excepciones."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# Crear la lista con los nombres de los productos.\nproductos = [\n\t\"Mouse\",\n\t\"Teclado\",\n\t\"Monitor\",\n\t\"Impresora\"\n]\n\n# Corregir la lista agregando la cantidad faltante.\ncantidades = [15, 8, 12, 6]\n\n# Recorrer ambas listas utilizando sus índices.\nfor i in range(len(productos)):\n\n\t# Mostrar el producto junto con su cantidad correspondiente.\n\tprint(productos[i], \"-\", cantidades[i])\n\n# Mostrar un mensaje indicando que el recorrido terminó correctamente.\nprint(\"Inventario procesado correctamente.\")"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# Crear la lista con los nombres de los productos.\nproductos = [\n\t\"Mouse\",\n\t\"Teclado\",\n\t\"Monitor\",\n\t\"Impresora\"\n]\n\n# Corregir la lista agregando la cantidad faltante.\ncantidades = [15, 8, 12, 6]\n\n# Recorrer ambas listas utilizando sus índices.\nfor i in range(len(productos)):\n\n\t# Mostrar el producto junto con su cantidad correspondiente.\n\tprint(productos[i], \"-\", cantidades[i])\n\n# Mostrar un mensaje indicando que el recorrido terminó correctamente.\nprint(\"Inventario procesado correctamente.\")"
+        }
+      ]
+    },
+    {
+      "type": "subtitle2",
+      "text": "Ejercicio Práctico 3: Depuración Completa de un Sistema de Procesamiento de Ventas"
+    },
+    {
+      "type": "paragraph",
+      "text": "Una tienda desea calcular el precio final de varios productos aplicando un descuento del 15% a aquellos cuyo precio sea superior a 100 unidades monetarias."
+    },
+    {
+      "type": "paragraph",
+      "text": "Sin embargo, el programa desarrollado presenta múltiples errores de diferente naturaleza. Algunos impiden su ejecución, otros generan excepciones y algunos producen resultados incorrectos."
+    },
+    {
+      "type": "paragraph",
+      "text": "Como desarrollador encargado del mantenimiento del sistema, deberás analizar cuidadosamente el código, localizar todos los errores y realizar las correcciones necesarias."
+    },
+    {
+      "type": "paragraph",
+      "text": "Este ejercicio reúne los tres tipos de errores estudiados en esta unidad: errores de sintaxis, errores en tiempo de ejecución y errores lógicos."
+    },
+    {
+      "type": "paragraph",
+      "text": "Código inicial:"
+    },
+    {
+      "type": "code",
+      "text": "precios = [80, 150, 220, 95, 310]\n\ndescuento = 15\n\nfor precio in precios\n\n\tif precio > 100:\n\n\t\tprecio_final = precio + (precio * descuento / 100)\n\n\telse\n\n\t\tprecio_final = precio\n\nprint(\"Precio final:\", precio_final)\n\nprint(precios[10])"
+    },
+    {
+      "type": "paragraph",
+      "text": "Instrucciones:"
+    },
+    {
+      "type": "paragraph",
+      "text": "Analiza cuidadosamente el programa y realiza todas las correcciones necesarias."
+    },
+    {
+      "type": "paragraph",
+      "text": "Para ello deberás:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Identificar todos los errores de sintaxis presentes en el código.",
+        "Hacer las correcciones respectivas.",
+        "Analizar el cálculo del descuento e identificar el error lógico presente.",
+        "Hacer las modificaciones requeridas para que el descuento se aplique.",
+        "Mostrar el precio final correspondiente para cada producto procesado.",
+        "Eliminar el error asociado a la lista.",
+        "Verificar que el programa complete toda su ejecución sin producir excepciones.",
+        "Mostrar un mensaje indicando que el procesamiento de ventas finalizó correctamente."
+      ]
+    },
+        {
+      "type": "test-button",
+      "text": "Practicar >>",
+      "code": "# Una tienda desea calcular el precio final de varios productos\n# aplicando un descuento del 15% a aquellos cuyo precio sea superior a\n# 100 unidades monetarias.\n#\n# Sin embargo, el programa desarrollado presenta múltiples errores de\n# diferente naturaleza. Algunos impiden su ejecución, otros generan\n# excepciones y algunos producen resultados incorrectos.\n#\n# Como desarrollador encargado del mantenimiento del sistema, deberás\n# analizar cuidadosamente el código, localizar todos los errores y\n# realizar las correcciones necesarias.\n#\n# Este ejercicio reúne los tres tipos de errores estudiados en esta\n# unidad: errores de sintaxis, errores en tiempo de ejecución y\n# errores lógicos.\n#\n# Código inicial:\n#\n# precios = [80, 150, 220, 95, 310]\n#\n# descuento = 15\n#\n# for precio in precios\n#\n# \tif precio > 100:\n#\n# \t\tprecio_final = precio + (precio * descuento / 100)\n#\n# \telse\n#\n# \t\tprecio_final = precio\n#\n# print(\"Precio final:\", precio_final)\n#\n# print(precios[10])\n#\n# Instrucciones:\n#\n# Analiza cuidadosamente el programa y realiza todas las correcciones\n# necesarias.\n#\n# Para ello deberás:\n#\n# -Identificar todos los errores de sintaxis presentes en el código.\n# - Hacer las correcciones respectivas.\n# - Analizar el cálculo del descuento e identificar el error lógico\n#   presente.\n# - Hacer las modificaciones requeridas para que el descuento se\n#   aplique.\n# - Mostrar el precio final correspondiente para cada producto\n#   procesado.\n# - Eliminar el error asociado a la lista.\n# - Verificar que el programa complete toda su ejecución sin producir\n#   excepciones.\n# - Mostrar un mensaje indicando que el procesamiento de ventas\n#   finalizó correctamente."
+    },
+    {
+      "type": "collapsible",
+      "title": "Observar posible solución",
+      "content": [
+        {
+          "type": "code",
+          "text": "# Crear la lista con los precios de los productos.\nprecios = [80, 150, 220, 95, 310]\n\n# Definir el porcentaje de descuento.\ndescuento = 15\n\n# Recorrer todos los precios almacenados en la lista.\nfor precio in precios:\n\n\t# Verificar si el producto debe recibir descuento.\n\tif precio > 100:\n\n\t\t# Corregir el error lógico restando el descuento al precio original.\n\t\tprecio_final = precio - (precio * descuento / 100)\n\n\t# Mantener el precio original cuando no aplica descuento.\n\telse:\n\n\t\tprecio_final = precio\n\n\t# Mostrar el precio final correspondiente al producto procesado.\n\tprint(\"Precio final:\", precio_final)\n\n# Eliminar el acceso a una posición inexistente de la lista para evitar un IndexError.\n\n# Mostrar un mensaje indicando que todo el proceso terminó correctamente.\nprint(\"Procesamiento de ventas finalizado correctamente.\")"
+        },
+        {
+          "type": "test-button",
+          "text": "Probar Solución >>",
+          "code": "# Crear la lista con los precios de los productos.\nprecios = [80, 150, 220, 95, 310]\n\n# Definir el porcentaje de descuento.\ndescuento = 15\n\n# Recorrer todos los precios almacenados en la lista.\nfor precio in precios:\n\n\t# Verificar si el producto debe recibir descuento.\n\tif precio > 100:\n\n\t\t# Corregir el error lógico restando el descuento al precio original.\n\t\tprecio_final = precio - (precio * descuento / 100)\n\n\t# Mantener el precio original cuando no aplica descuento.\n\telse:\n\n\t\tprecio_final = precio\n\n\t# Mostrar el precio final correspondiente al producto procesado.\n\tprint(\"Precio final:\", precio_final)\n\n# Eliminar el acceso a una posición inexistente de la lista para evitar un IndexError.\n\n# Mostrar un mensaje indicando que todo el proceso terminó correctamente.\nprint(\"Procesamiento de ventas finalizado correctamente.\")"
+        }
+      ]
+    },
+    {
+      "type": "subtitle1",
+      "text": "Conclusiones de la Unidad"
+    },
+    {
+      "type": "paragraph",
+      "text": "A lo largo de esta unidad aprendiste que los errores forman parte natural del proceso de desarrollo de software y que identificarlos correctamente es una habilidad fundamental para cualquier programador. Conociste las diferencias entre los errores de sintaxis, que impiden la ejecución del programa; los errores en tiempo de ejecución, que aparecen mientras el código se está ejecutando; y los errores lógicos, que producen resultados incorrectos sin generar mensajes de error. Además, comprendiste la importancia de interpretar los mensajes proporcionados por Python, analizar cuidadosamente el comportamiento del programa y aplicar un proceso sistemático de depuración para localizar y corregir fallos. Estos conocimientos constituyen la base para abordar el manejo de excepciones en las siguientes unidades, permitiéndote desarrollar aplicaciones más robustas, confiables y fáciles de mantener."
+    }
+  ]
+}
